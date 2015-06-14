@@ -42,6 +42,14 @@ visibility:hidden;
 .clear{
 clear:both;
 }
+
+.align_left {
+	text-align: left;
+}
+
+.align_right {
+	text-align: right;
+}
 /* font-size */
 .normal {
 	font-size: 1em;
@@ -280,8 +288,19 @@ section h2 {
 	border-radius: 10px;
 	opacity: 0;
 	cursor: pointer;
+	position: relative;
 
 
+}
+
+.close {
+	position: absolute;
+	top:2%;
+	right:1%;
+}
+
+.s2box .fa {
+	display:none;
 }
 
 .s2box h2 {

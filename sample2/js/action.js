@@ -75,11 +75,20 @@ $('nav a').click(function(evt){
 
 
 //s2の箱のclickアクション
-$('#s2_1').click(function(){
-	$(this).animate({height:'600px'},500,'linear');
-	$('.s2boxwrap').children('article').not(this).fadeOut();
 
+$('#s2_1 h2').click(function(){
+	$('#s2_1').animate({height:'600px'},500,'linear');
+	$('.s2boxwrap').children('article').not('#s2_1').fadeOut();
+	$('#s2_1 #close').css({display:'inline-block'});
+});
 
+//s2の箱の閉じるアクション
+$('.s2box #close').click(function(){
+	$(this).css({display:'none'});
+	$(this).parent().animate({height:'200px'},500,'linear',function(){
+		$('#s2_2').fadeIn();
+		$('#s2_3').fadeIn();
+	})
 
 });
 
