@@ -77,10 +77,13 @@ $('nav a').click(function(evt){
 //s2の箱のclickアクション
 
 $('#s2_1 h2').click(function(){
-	$('#s2_1').animate({height:'600px'},500,'linear');
-	$('.s2boxwrap').children('article').not('#s2_1').fadeOut();
-	$('#s2_1 #close').css({display:'inline-block'});
+	var obj=$(this).parent();
+	obj.animate({height:'600px'},500,'linear');
+	$('.s2boxwrap').children('article').not(obj).fadeOut();
+	$(this).parent().children('#close').css({display:'inline-block'});
 });
+
+
 
 //s2の箱の閉じるアクション
 $('.s2box #close').click(function(){
