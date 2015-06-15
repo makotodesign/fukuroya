@@ -14,24 +14,33 @@ $('nav a').click(function(evt){
 
 
 
-//s2の箱のclickアクション
+//s2の箱のclickopenアクション
+openbox(s2_1);
+openbox(s2_2);
+openbox(s2_3);
 
-$('#s2_1 h2').click(function(){
-	var obj=$(this).parent();
-	obj.animate({height:'600px'},500,'linear');
-	$('.s2boxwrap').children('article').not(obj).fadeOut();
-	$(this).parent().children('#close').css({display:'inline-block'});
-});
+
+function openbox(box) {
+	$(box).children('h2').click(function(){
+		var obj=$(this).parent();
+		$('.s2boxwrap').children('article').not(obj).fadeOut();
+		obj.animate({height:'600px'},500,'linear');
+		$(this).parent().children('#close').css({display:'inline-block'});
+	});
+}
+
 
 
 
 //s2の箱の閉じるアクション
-$('.s2box #close').click(function(){
+$('.s2box').children('#close').click(function(){
 	$(this).css({display:'none'});
 	$(this).parent().animate({height:'200px'},500,'linear',function(){
+		$('#s2_1').fadeIn();		
 		$('#s2_2').fadeIn();
 		$('#s2_3').fadeIn();
 	});
 
 });
-})	
+
+})//jquery end	
