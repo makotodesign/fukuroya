@@ -23,9 +23,10 @@ openbox(s2_3);
 function openbox(box) {
 	$(box).children('h2').click(function(){
 		var obj=$(this).parent();
-		$('.s2boxwrap').children('article').not(obj).fadeOut();
+		$('.s2boxwrap').children('article').not(obj).fadeTo(500,0,function(){
 		obj.animate({height:'600px'},500,'linear');
-		$(this).parent().children('#close').css({display:'inline-block'});
+		obj.children('#close').css({display:'inline-block'});
+		});
 	});
 }
 
@@ -36,9 +37,9 @@ function openbox(box) {
 $('.s2box').children('#close').click(function(){
 	$(this).css({display:'none'});
 	$(this).parent().animate({height:'200px'},500,'linear',function(){
-		$('#s2_1').fadeIn();		
-		$('#s2_2').fadeIn();
-		$('#s2_3').fadeIn();
+		$('#s2_1').fadeTo(500,1);		
+		$('#s2_2').fadeTo(500,1);
+		$('#s2_3').fadeTo(500,1);
 	});
 
 });
