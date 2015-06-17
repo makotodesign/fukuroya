@@ -14,13 +14,7 @@ function timer() {
 }
 setInterval(timer,9000);
 //orderpage_action
-/*
-$('.order').hover(function(){
-	$(this).css({backgroundColor: '#11B8C4',color:'#fff'})
-},function(){
-	$(this).css({backgroundColor: '#EFE8E8',color:'#000'})
-});
-*/
+//order1
 $('#order1 h2').click(function(){
 	$('#order2').fadeOut();
 	$('#order3').fadeOut();
@@ -38,7 +32,26 @@ $('#close1').click(function(){
 	})
 
 });
+//order2
+$('#order2 h2').click(function(){
+	$('#order3').fadeOut();
+	$('#order1').fadeOut(300,function(){
+		$('#order2').animate({top:'-5%',height:'95%'},1000,'linear',function(){
+			$('#order2 h2').fadeOut();
+			$('#close2').fadeIn();
+		});
 
+		});
+});
+$('#close2').click(function(){
+	$('#order2').animate({height:'25%',top:'30%'},1000,'linear',function(){
+	$('#order1').fadeIn();
+	$('#order3').fadeIn();
+	$('#order2 h2').fadeIn();
+	$('#close2').fadeOut();		
+	})
+
+});
 
 
 });
