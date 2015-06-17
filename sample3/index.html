@@ -9,7 +9,9 @@
 <link type="text/css" rel="stylesheet" href="./css/style.css">
 <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
-<script src="./js/action.js"></script>
+<script src="./js/scrollsmoothly.js"></script>
+<script src="./js/pageload.js"></script>
+
 
 
 </head>
@@ -23,17 +25,30 @@
 	<header id="header" class="header">					
 		<nav id="mainnav" class="mainnav">
 			<ul>
-				<li><a href="#s1" class="fa fa-home mc1">&nbsp;top</a></li>
-				<li><a href="#s2" class="fa fa-cube mc1">&nbsp;order</a></li>
-				<li><a href="#s4" class="fa fa-user mc1">&nbsp;about</a></li>
-				<li><a href="#s3" class="fa fa-envelope-o mc1">&nbsp;contact</a></li>
+				<li><a href="#top" id="mainnav1" class="fa fa-home mc1">&nbsp;top</a></li>
+				<li><a href="#s2" id="mainnav2" class="fa fa-cube mc1">&nbsp;order</a></li>
+				<li><a href="#s3" id="mainnav3" class="fa fa-user mc1">&nbsp;about</a></li>
+				<li><a href="#s4" id="mainnav4" class="fa fa-envelope-o mc1">&nbsp;contact</a></li>
 
 			</ul>
+			<button id="prev">前へ</button>
+			<button id="next">次へ</button>
 		</nav>
 	</header>
 	<main>
-		<div class="sectionwrap clearfix">
-
+		<div id="mainsection" class="sectionwrap clearfix">
+			<section id="top" class="content top_content ">
+				<h1>toppage</h1>
+			</section>
+			<section id="s2" class="content c2_content">
+				<h1>s2</h1>
+			</section>
+			<section id="s3" class="content c3_content">
+				<h1>s3</h1>
+			</section>
+			<section id="s4" class="content c4_content">
+				<h1>s4</h1>
+			</section>							
 		</div>
 
 
