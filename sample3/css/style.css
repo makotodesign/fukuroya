@@ -37,6 +37,8 @@ body,html {
 	text-align: center;
 	margin: 3% 0 3% 5%;
 	padding:3%;
+	text-shadow: 1px 1px 3px rgba(255, 255, 255, 1);
+
 }
 
 .mainnav a:hover {
