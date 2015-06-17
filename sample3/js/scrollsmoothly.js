@@ -15,7 +15,7 @@
 */
 
 (function(){
-   var easing = 0.25;
+   var easing = 0.1;
    var interval = 20;
    var d = document;
    var targetX = 0;
