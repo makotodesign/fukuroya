@@ -18,25 +18,26 @@ setInterval(timer,9000);
 $('#order1 h2').click(function(){
 	$('#order2').fadeOut();
 	$('#order3').fadeOut();
-	$(this).parent().animate({height:'95%',top:'-5%'},1000,'linear',function(){
+	$('#order1 h2').animate({fontSize:'500%'},1000,'easeOutBounce').delay(1000);
+	$('#order1').animate({height:'95%',top:'-5%'},1000,'easeOutExpo',function(){
 		$('#order1 h2').fadeOut();
 		$('#close1').fadeIn();
 	});
 });
 $('#close1').click(function(){
-	$('#order1').animate({height:'25%',top:'0%'},1000,'linear',function(){
+	$('#order1').animate({height:'25%',top:'0%'},1000,'easeOutExpo',function(){
 	$('#order2').fadeIn();
 	$('#order3').fadeIn();
-	$('#order1 h2').fadeIn();
+	$('#order1 h2').css({fontSize:'300%'}).fadeIn();
 	$('#close1').fadeOut();		
 	})
 
-});
-//order2
+});//order2
 $('#order2 h2').click(function(){
 	$('#order3').fadeOut();
+	$('#order2 h2').animate({fontSize:'500%'},1000,'easeOutBounce').delay(1000);
 	$('#order1').fadeOut(300,function(){
-		$('#order2').animate({top:'-5%',height:'95%'},1000,'linear',function(){
+		$('#order2').animate({top:'-5%',height:'95%'},1000,'easeOutExpo',function(){
 			$('#order2 h2').fadeOut();
 			$('#close2').fadeIn();
 		});
@@ -44,15 +45,33 @@ $('#order2 h2').click(function(){
 		});
 });
 $('#close2').click(function(){
-	$('#order2').animate({height:'25%',top:'30%'},1000,'linear',function(){
+	$('#order2').animate({height:'25%',top:'30%'},1000,'easeOutExpo',function(){
 	$('#order1').fadeIn();
 	$('#order3').fadeIn();
-	$('#order2 h2').fadeIn();
+	$('#order2 h2').css({fontSize:'300%'}).fadeIn();
 	$('#close2').fadeOut();		
 	})
-
 });
+//order3
+$('#order3 h2').click(function(){
+	$('#order2').fadeOut();
+	$('#order3 h2').animate({fontSize:'500%'},1000,'easeOutBounce').delay(1000);
+	$('#order1').fadeOut(300,function(){
+		$('#order3').animate({top:'-5%',height:'95%'},1000,'easeOutExpo',function(){
+			$('#order3 h2').fadeOut();
+			$('#close3').fadeIn();
+		});
 
+		});
+});
+$('#close3').click(function(){
+	$('#order3').animate({height:'25%',top:'60%'},1000,'easeOutExpo',function(){
+	$('#order1').fadeIn();
+	$('#order2').fadeIn();
+	$('#order3 h2').css({fontSize:'300%'}).fadeIn();
+	$('#close3').fadeOut();		
+	})
+});
 
 });
 
