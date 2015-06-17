@@ -1,0 +1,81 @@
+@import url(http://fonts.googleapis.com/css?family=Amatic+SC:700);
+
+.clearfix:after{
+content:".";
+display:block;
+height:0px;
+clear:both;
+visibility:hidden;
+}
+
+.clear{
+clear:both;
+}
+
+.align_left {
+	text-align: left;
+}
+
+.align_right {
+	text-align: right;
+}
+/* font-size */
+.normal {
+	font-size: 1em;
+}
+
+.big {
+	font-size: 1.8em;
+}
+
+.bigger {
+	font-size: 2.2em;
+}
+
+/* font-family */
+.mincho {
+	font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+}
+
+.marug {
+	 font-family: "Lucida Grande", "segoe UI", "ヒラギノ丸ゴ ProN W4", "Hiragino Maru Gothic ProN", Meiryo, Arial, sans-serif;
+}
+
+.gothic {
+	font-family:'Lucida Grande','Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3',Meiryo, メイリオ, sans-serif;
+
+}
+
+/* fontcolor */
+.red {
+	color: #E85E5E;
+}
+
+.gray {
+	color: #666161;
+}
+
+.blue {
+	color: #15C6D6;
+}
+
+.orange {
+	color: #F28509;
+}
+
+.green {
+	color: #6EE59F;
+}
+
+/* bgcolor */
+.bgblue {
+	background-color: #15C6D6;
+}
+
+.bgorange {
+	background-color: #F28509;
+}
+
+.bggreen {
+	background-color: #6EE59F;
+}
