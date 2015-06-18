@@ -25,6 +25,13 @@ body,html {
 	line-height: 30px;
 }
 
+.gloval .tel {
+	color:#fff;
+	float: right;
+	font-size: 150%;
+	line-height: 30px;
+}
+
 /* mainnav */
 
 .mainnav {
@@ -88,6 +95,7 @@ body,html {
 width: 100%;
 height:100%;
 position: relative;
+min-width: 320px;
 }
 
 main {
@@ -320,6 +328,14 @@ left:45%;
 
 /*レスポンシブ*/
 @media screen and (max-width:1150px) {
+.gloval h1{
+	visibility: hidden;	
+}
+.gloval .tel {
+	float:none;
+	position: absolute;
+	left:calc(50% - 190px);
+} 	
 .mainnav {
 	width: 100%;
 	text-align: center;
@@ -355,10 +371,6 @@ left:45%;
 
 
 @media screen and (max-width:880px){
-.gloval h1{
-	visibility: hidden;
-	
-} 
 
 .order h2 {
 	font-size: 200%;
