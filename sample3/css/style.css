@@ -12,12 +12,13 @@ body,html {
 	left:0;
 	top:0;
 	z-index:1000;
-	background-color: #6A6D6D;
+	background-color: #333131;
 	padding:0 30px;
 }
 
 .gloval h1 {
-	text-align: right;
+	display: inline-block;
+	float: left;
 	font-weight: normal;
 	color: #fff;
 	font-size: 0.7em;
@@ -29,7 +30,7 @@ body,html {
 .mainnav {
 	width:10rem;
 	position:fixed;
-	top:5%;
+	top:40px;
 	z-index: 1000;
 }
 
@@ -42,10 +43,10 @@ body,html {
 
 }
 
+
 .mainnav a:hover {
 	background-color: #FF5151;
 	color:#fff;
-	margin-left:13%;
 	padding-left: 20%;
 	padding-right: 20%;
 	-webkit-transition: all .25s linear;
@@ -56,16 +57,30 @@ body,html {
 
 }
 
-.prevnextbox {
-	width: 100%;
-	position: fixed;
-	bottom:0;
-	text-align: center;
-	color: #6A6D6D;
-	z-index: 1000;
+/*socialbox*/
+.social {
+	position:fixed;
+	right: 1%;
+	top:5%;
+	z-index: 1002;
+
 }
-.prevnextbox span {
-	cursor: pointer;
+
+.social li {
+	display: inline-block;
+} 
+
+.social .fa-facebook-official{
+	font-size: 250%;
+
+}
+.social .fa-twitter-square {
+	font-size: 250%;
+
+}
+
+.social li a span:hover {
+	color:#F24437;
 }
 
 /* layout*/
@@ -127,7 +142,7 @@ main {
 	height: 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: center center;
+	background-position: top center;
 	position:absolute;
 	top:0;
 	left:0;
@@ -304,8 +319,51 @@ left:45%;
 }
 
 /*レスポンシブ*/
+@media screen and (max-width:1150px) {
+.mainnav {
+	width: 100%;
+	text-align: center;
+}
+.mainnav li {
+	display: inline-block;
+}
 
-@media screen and (max-width:800px){
+.mainnav li a:hover {
+	padding-left: 3%;
+	padding-right: 3%;
+	background:none;
+	color:#FF5151;
+}
+.social {
+	top:11%;
+}
+.social li {
+	display: block;
+	margin-bottom: 10%;
+} 
+
+.social .fa-facebook-official{
+	font-size: 250%;
+
+}
+.social .fa-twitter-square {
+	font-size: 250%;
+
+}
+
+}
+
+
+@media screen and (max-width:880px){
+.gloval h1{
+	visibility: hidden;
+	
+} 
+
+.order h2 {
+	font-size: 200%;
+}
+
 .order .lineup {
 	width: 98%;	
 }	
