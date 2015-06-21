@@ -1,18 +1,22 @@
 $(function(){
+//topcontent Load
+$('#topwrapInner').load('topcontent.html');
 //topslideshow
-$('#bg1').css({opacity:1});
-var no = 1;
-var max = $('#top article').length;
-function timer() {
-	$('#bg'+no).animate({opacity:0},3000,'linear');
-	$('#bg'+(1+no)).animate({opacity:1},3000,'linear');
-	no++;
-	if(no>max){
-		no=1;
-		$('#bg1').animate({opacity:1},3000,'linear');
+setTimeout(function(){
+	$('#bg1').css({opacity:1});
+	var no = 1;
+	var max = $('#top article').length;
+	function timer() {
+		$('#bg'+no).animate({opacity:0},3000,'linear');
+		$('#bg'+(1+no)).animate({opacity:1},3000,'linear');
+		no++;
+		if(no>max){
+			no=1;
+			$('#bg1').animate({opacity:1},3000,'linear');
+		}
 	}
-}
-setInterval(timer,9000);
+	setInterval(timer,9000);
+},10);//loadしてから開始
 //window幅取得
 var w_width = $(document).width();
 var w_calwidth = w_width / 4;//横並び4枚分で割る
@@ -109,6 +113,28 @@ $('#close3').click(function(){
 	}	
 	})
 });
+//main nav 文字出現action
+if(w_calwidth>=1150){
+	$('#mainnav a').text('');
+	$('#mainnav1').hover(function(){
+		$(this).text('\n\ntop');
+	},function(){
+		$(this).text('');
+	});
+	navtext('#mainnav1','\ntop');
+	navtext('#mainnav2','\norder');
+	navtext('#mainnav3','\nabout');
+	navtext('#mainnav4','\ncontact');
+};
+function navtext(node,title) {
+	$(node).hover(function(){
+		$(this).text(title);
+	},function(){
+		$(this).text('');
+	});
+};
+
+
 
 });
 

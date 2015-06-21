@@ -38,18 +38,19 @@ body,html {
 /* mainnav */
 
 .mainnav {
-	width:10rem;
+	width:18em;
 	position:fixed;
-	top:40px;
+	top:6%;
 	z-index: 1000;
 }
 
 .mainnav a {
-	font-size: 150%;
+	font-size: 220%;
 	text-align: center;
-	margin: 3% 0 3% 5%;
+	margin: 2% 0 2% 8%;
 	padding:3%;
-	text-shadow: 1px 1px 3px rgba(255, 255, 255, 1);
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
+
 
 }
 
@@ -57,8 +58,9 @@ body,html {
 .mainnav a:hover {
 	background-color: #FF5151;
 	color:#fff;
-	padding-left: 15%;
-	padding-right: 15%;
+	padding-left: 8%;
+	padding-right: 8%;
+	text-shadow: 0px 0px 0px rgba(255, 255, 255, 0);
 	-webkit-transition: all .25s linear;
 	   -moz-transition: all .25s linear;
 	    -ms-transition: all .25s linear;
@@ -227,10 +229,10 @@ left:45%;
    background-image: -ms-linear-gradient(top, #3e779d 0%, #65a9d7 100%);
    color: #fff;
    }
-
+/*top bottom area*/
 .info {
 	width: 100%;
-	height: 15%;
+	height: 10%;
 	position: fixed;
 	bottom: 0;
 	z-index: 1100;
@@ -245,12 +247,13 @@ left:45%;
 	height: 100%;
 	background-color: #ccc;
 	float:left;
+	cursor: pointer;
 }
 
 .info h2 {
 	text-align: center;
 	position: relative;
-	padding-top: 15%;
+	padding-top: 5%;
 }
 
 .info li:first-child {
@@ -375,6 +378,20 @@ left:45%;
 	padding:1% 0;
 }
 
+/*top_add_contet*/
+.top_add_content {
+	width:80%;
+	height:75%;
+	background-color: #fff;
+	border-radius: 10px;
+	position: fixed;
+	top:10%;
+	left:10%;
+	z-index: 1020;
+	display: none;
+}
+
+
 /*レスポンシブ*/
 @media screen and (max-width:1150px) {
 .gloval h1{
@@ -388,11 +405,17 @@ left:45%;
 .mainnav {
 	width: 100%;
 	text-align: center;
+	top:3.5%;
+	background-color:rgba(255,255,255,0.7);
 }
 .mainnav li {
 	display: inline-block;
 }
 
+.mainnav a {
+	margin-left:10%;
+	font-size: 150%;
+}
 .mainnav li a:hover {
 	padding-left: 3%;
 	padding-right: 3%;
@@ -447,7 +470,18 @@ left:45%;
 .social li span{
     color: #e0dfdc;
     text-shadow: 0 -1px 0 #ffffff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c;	
-}	
+}
+
+.info {
+	height:8%;
+}
+
+.info h2 {
+	font-size: 80%;
+	padding-top:20%;
+}
+
+
 }
 
 @media screen and (max-width:680px){
@@ -458,6 +492,8 @@ left:45%;
 .orderwrap ul > li {
 	width:98%;
 }
+
+
 
 }
 
