@@ -380,13 +380,12 @@ left:45%;
 
 /*top_add_contet*/
 .top_add_content {
-	width:80%;
-	height:75%;
+	width:90%;
 	background-color: #fff;
 	border-radius: 10px;
 	position: fixed;
 	top:10%;
-	left:10%;
+	left:5%;
 	z-index: 1020;
 	display: none;
 }
