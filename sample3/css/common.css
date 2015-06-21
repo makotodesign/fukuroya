@@ -84,3 +84,25 @@ clear:both;
 .mc1 {
 	color:#2E75F7;
 }
+
+/* colmn */
+.col2 {
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+	-o-column-count: 2;
+	column-count: 2;
+}
+}
+.col3 {
+	-webkit-column-count: 3;
+	-moz-column-count: 3;
+	-o-column-count: 3;
+	column-count: 3;
+}
+
+.col4 {
+	-webkit-column-count: 4;
+	-moz-column-count: 4;
+	-o-column-count: 4;
+	column-count: 4;
+}

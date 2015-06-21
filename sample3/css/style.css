@@ -278,6 +278,52 @@ left:45%;
 .info li:hover {
 	opacity:0.5;
 }
+.top_add_content_detail {
+	height:100%;
+	overflow: scroll;
+}
+
+.top_add_body {
+	padding: 3% 3% 0 3%;
+
+}
+
+.top_add_body dd img {
+	float: left;
+	margin:0 2% 2% 0; 
+}
+
+.top_add_body dt,.top_add_body dd {
+	width: 80%;
+	margin:0 auto;
+}
+.top_add_body dt {
+	clear: left;
+	text-align: center;
+	font-size: 200%;
+	border-top:2px dotted #ccc;
+	padding: 2% 0;
+
+}
+
+.top_add_body dd {
+	word-wrap: break-word;
+	position: relative;
+
+}
+
+.top_add_body dd:after {
+	content:'';
+	visibility: hidden;
+	clear: left;
+}
+
+.date {
+	font-size: 80%;
+	color:#8A8C8C;
+	letter-spacing: 0.1em;
+}
+
 
 /*order_page_style*/
 .orderwrap {
