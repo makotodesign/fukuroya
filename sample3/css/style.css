@@ -56,16 +56,19 @@ body,html {
 
 
 .mainnav a:hover {
-	background-color: #FF5151;
+	background-color: #53CACB;
 	color:#fff;
 	padding-left: 8%;
 	padding-right: 8%;
 	text-shadow: 0px 0px 0px rgba(255, 255, 255, 0);
-	-webkit-transition: all .25s linear;
-	   -moz-transition: all .25s linear;
-	    -ms-transition: all .25s linear;
-	     -o-transition: all .25s linear;
-	        transition: all .25s linear;
+	-webkit-transition: all .15s linear;
+	   -moz-transition: all .15s linear;
+	    -ms-transition: all .15s linear;
+	     -o-transition: all .15s linear;
+	        transition: all .15s linear;
+	-webkit-box-shadow: 2px 2px 7px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    2px 2px 7px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         2px 2px 7px 0px rgba(50, 50, 50, 0.75);
 
 }
 
