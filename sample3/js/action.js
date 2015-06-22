@@ -48,12 +48,14 @@ $('#order1>h2').click(function(){
 			//ここから商品詳細をクリックアクション
 			$('.lineup_a').click(function(evt){//クリックした詳細ボタンを判定。クリックした以外の要素を操作する
 				var target=$(evt.target);
-				$('.lineup_a_wrap a').not(target).parent().parent().fadeOut(800,function(){
+				$('.lineup_a_wrap a').not(target).parent().parent().fadeOut(300,function(){
 					$('#close1').fadeOut(100);
+					$('#lineup_close').fadeIn(100);
+					$('#lineup_close').fadeIn(100);
 					$('.lineup_box p img').fadeOut(100);
 					$('.lineup').animate({width:'98%',height:'95%',marginRight:'1%',marginLeft:'1%'},800,'swing',function(){
 
-						$('.lineup_a').text('注文する');
+						$('#lineup_order').text('注文する');
 
 					});
 						
