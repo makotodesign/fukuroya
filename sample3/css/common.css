@@ -106,3 +106,12 @@ clear:both;
 	-o-column-count: 4;
 	column-count: 4;
 }
+
+/* float */
+.float_left {
+float: left;
+}
+
+.float_right {
+float: right;
+}

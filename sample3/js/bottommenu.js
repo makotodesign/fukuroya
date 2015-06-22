@@ -27,16 +27,16 @@ $('#bottommenu > li').click(function(){
 var openflag = true;
 $('#bottommenu').click(function(){
 	if(openflag){	
-		$('#topwrapInner article,#topbtn,#mainnav').fadeOut(400,function(){
-			$('#topwrapInner').html('');
+		$('#topwrapInner article,#topbtn,#mainnav,#bottommenu,#social').fadeOut(400,function(){
+			$('#topwrapInner').html('');	
 		});
 		setTimeout(function(){
 			$('#topwrapInner').wrapInner('<div class="top_add_content"></div>');
-			$('.top_add_content').css({display:'block'}).animate({height:'75%'},1000,'easeOutBounce').prepend('<span id="top_add_close" class="fa fa-times-circle fa-2x" style="position:absolute;right:1%;top:1%;display:block;cursor:pointer;"></span><div class="top_add_content_detail"></div>');
+			$('.top_add_content').css({display:'block'}).animate({height:'91%'},1000,'easeOutBounce').prepend('<span id="top_add_close" class="fa fa-times-circle fa-2x" style="position:absolute;right:1%;top:1%;display:block;cursor:pointer;"></span><div class="top_add_content_detail"></div>');
 			if(clicked_li=='top_b1'){
 				$('.top_add_content_detail').load('top_b1.html');
 			}else if(clicked_li=='top_b2'){
-				$('.top_add_content_detail').html('<h1>お客様の声のCONTENT</h1>');
+				$('.top_add_content_detail').load('top_b2.html');
 			}else if(clicked_li=='top_b3'){
 				$('.top_add_content_detail').html('<h1>なぜ格安料金で高品質？</h1>');
 			}else if(clicked_li=='top_b4'){
@@ -50,7 +50,7 @@ $('#bottommenu').click(function(){
 									setTimeout(function(){
 									$('#bg1').animate({opacity:1},500,'linear');
 									},10);
-									$('#topbtn,#mainnav').fadeIn(500);
+									$('#topbtn,#mainnav,#bottommenu,#social').fadeIn(500);
 
 
 					},200);
