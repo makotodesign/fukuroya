@@ -51,7 +51,8 @@ $('#order1>h2').click(function(){
 				$('.lineup_a_wrap a').not(target).parents('.lineup').fadeOut(800,function(){
 					$('#close1').hide();					
 					$('.lineup_box p img').hide();
-					$('.lineup').animate({width:'98%',height:'95%',marginRight:'1%',marginLeft:'1%'},200,'easeOutElastic',function(){
+					$('body,html').animate({scrollTop:0},300,'linear');
+					$('.lineup').animate({width:'98%',height:'95%',marginRight:'1%',marginLeft:'1%'},300,'easeOutElastic',function(){
 						$('.lineup_close').show();
 						$('#lineup_order').text('注文する');
 
@@ -65,13 +66,16 @@ $('#order1>h2').click(function(){
 			//ここから商品詳細戻るアクション
 			$('.lineup_close').click(function(evt){
 				var target_back =$(evt.target);
-				target_back.parents('.lineup').animate({width:'31%',height:'40%',marginRight:'0.8%',marginLeft:'0.8%'},200,'easeOutElastic',function(){
-					$('#close1').show();
-					$('.lineup_box p img').show();
-					$('.lineup_close').hide();
-					$('#lineup_order').text('詳細/注文');
-					$('.lineup_close').not(target_back).parents('.lineup').css({width:'31%',height:'40%',marginRight:'0.8%',marginLeft:'0.8%'}).fadeIn(300);
-				});//.lineup復活のcallback
+				target_back.parents('.lineup').css({width:'31%',height:'40%',marginRight:'0.8%',marginLeft:'0.8%'});
+				$('#close1').show();
+				
+				$('.lineup_box p img').show();
+				$('.lineup_close').hide();
+				$('#lineup_order').text('詳細/注文');
+				$('.lineup_close').not(target_back).parents('.lineup').css({width:'31%',height:'40%',marginRight:'0.8%',marginLeft:'0.8%'}).fadeIn(1500,function(){
+					$('body,html').delay(800).animate({scrollTop:0},500,'linear');
+
+				});
 
 			});	//ここから商品詳細戻るclickend
 
