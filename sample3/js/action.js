@@ -47,6 +47,7 @@ $('#order1>h2').click(function(){
 			$('#close1').fadeIn();
 			//ここから商品詳細をクリックアクション
 			$('.lineup_a').click(function(evt){//クリックした詳細ボタンを判定。クリックした以外の要素を操作する
+				$('.order_inner h2').hide();
 				var target=$(evt.target);
 				$('.lineup_a_wrap a').not(target).parents('.lineup').fadeOut(800,function(){
 					$('#close1').hide();					
@@ -65,6 +66,7 @@ $('#order1>h2').click(function(){
 			});//end .lineup_a click
 			//ここから商品詳細戻るアクション
 			$('.lineup_close').click(function(evt){
+				$('.order_inner h2').show();
 				var target_back =$(evt.target);
 				target_back.parents('.lineup').css({width:'31%',height:'40%',marginRight:'0.8%',marginLeft:'0.8%'});
 				$('#close1').show();
@@ -72,8 +74,9 @@ $('#order1>h2').click(function(){
 				$('.lineup_box p img').show();
 				$('.lineup_close').hide();
 				$('#lineup_order').text('詳細/注文');
-				$('.lineup_close').not(target_back).parents('.lineup').css({width:'31%',height:'40%',marginRight:'0.8%',marginLeft:'0.8%'}).fadeIn(1500,function(){
-					$('body,html').delay(800).animate({scrollTop:0},500,'linear');
+				$('.lineup_close').not(target_back).parents('.lineup').css({width:'31%',height:'40%',marginRight:'0.8%',marginLeft:'0.8%'}).fadeIn(800,function(){
+					var order_top = $('.orderwrap').offset().top;
+					$('body,html').delay(100).animate({scrollTop:order_top},300,'linear');
 
 				});
 
