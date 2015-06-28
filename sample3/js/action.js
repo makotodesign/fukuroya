@@ -31,6 +31,19 @@ $('#order1>h2').click(function(){
 	$('#order1>h2').animate({fontSize:'200%'},1000,'easeOutBounce').delay(1000);	
 	}
 	$('#order1').animate({height:'95%'},1000,'easeOutExpo',function(){
+		//lineupの画像orコンテンツのグローバル変数
+		var lineup1 ='<img src="img/order/lineup1.jpg" alt="" width="100%">';
+		var lineup2 ='<img src="img/order/lineup2.jpg" alt="" width="100%">';
+		var lineup3 ='<img src="img/order/lineup3.jpg" alt="" width="100%">';
+		var lineup4 ='<img src="img/order/lineup4.jpg" alt="" width="100%">';
+		var lineup5 ='<img src="img/order/lineup5.jpg" alt="" width="100%">';
+		var lineup6 ='<img src="img/order/lineup6.jpg" alt="" width="100%">';
+		//lineup画像読み込み関数
+		function lineup_load(no){
+		target=eval('lineup'+no);	
+		$('.lineup:nth-child('+no+') .lineup_img').html(target);
+		}
+
 		$('#order1>h2').fadeOut(500,function(){
 			if(w_calwidth <= 880){
 			$('.c2_content').css({top:'-6%',height:'500%'});	
@@ -45,15 +58,40 @@ $('#order1>h2').click(function(){
 			}
 			$('#order1_inner').fadeIn();
 			$('#close1').fadeIn();
+			//lineup画像をそれぞれに読み込み
+			for(i=1;i<=6;i++){
+			eval(`lineup_load(`+i+`)`);
+			}
 			//ここから商品詳細をクリックアクション
 			$('.lineup_a').click(function(evt){//クリックした詳細ボタンを判定。クリックした以外の要素を操作する
 				$('.order_inner h2').hide();
 				var target=$(evt.target);
+				var click_flag=target.attr('title');
 				$('.lineup_a_wrap a').not(target).parents('.lineup').fadeOut(800,function(){
 					$('#close1').hide();					
-					$('.lineup_box p img').hide();
+					$('.lineup_img').hide();
 					$('body,html').animate({scrollTop:0},300,'linear');
-					$('.lineup').animate({width:'98%',height:'95%',marginRight:'1%',marginLeft:'1%'},300,'easeOutElastic',function(){
+					$('.lineup').animate({width:'98%',height:'95%',marginRight:'1%',marginLeft:'1%'},300,'easeOutElastic',function(){											
+						switch(click_flag){
+							case 'order1':
+							$('.lineup_box').load('order1.html');
+							break;
+							case 'order2':
+							$('.lineup_box').load('order2.html');
+							break;
+							case 'order3':
+							$('.lineup_box').load('order3.html');
+							break;
+							case 'order4':
+							$('.lineup_box').load('order4.html');
+							break;
+							case 'order5':
+							$('.lineup_box').load('order5.html');
+							break;
+							case 'order6':
+							$('.lineup_box').load('order6.html');
+							break;
+						}
 						$('.lineup_close').show();
 						$('#lineup_order').text('注文する');
 
@@ -66,12 +104,13 @@ $('#order1>h2').click(function(){
 			});//end .lineup_a click
 			//ここから商品詳細戻るアクション
 			$('.lineup_close').click(function(evt){
-				$('.order_inner h2').show();
 				var target_back =$(evt.target);
 				target_back.parents('.lineup').css({width:'31%',height:'40%',marginRight:'0.8%',marginLeft:'0.8%'});
-				$('#close1').show();
-				
-				$('.lineup_box p img').show();
+				$('#close1').show().css('z-index',2);
+				$('.lineup_box').html('<p class="lineup_img"></p>');
+				for(i=1;i<=6;i++){
+					eval(`lineup_load(`+i+`)`);
+				}
 				$('.lineup_close').hide();
 				$('#lineup_order').text('詳細/注文');
 				$('.lineup_close').not(target_back).parents('.lineup').css({width:'31%',height:'40%',marginRight:'0.8%',marginLeft:'0.8%'}).fadeIn(800,function(){
