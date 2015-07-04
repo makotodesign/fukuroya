@@ -15,8 +15,25 @@ setTimeout(function(){
 			$('#bg1').animate({opacity:1},3000,'linear');
 		}
 	}
-	setInterval(timer,9000);
+	var topslidectl=setInterval(timer,9000);
+	var topslidectl_2;
+	$('#mainnav1').click(function(){
+ 		topslidectl_2=setInterval(timer,9000);
+	});
+	
+	$('#mainnav li:not(":first-child") a').click(function(){
+	clearInterval(topslidectl);
+	clearInterval(topslidectl_2);
+	});
+
+	
+
+
 },10);//loadしてから開始
+
+
+
+
 //window幅取得
 var w_width = $(document).width();
 var w_calwidth = w_width / 4;//横並び4枚分で割る
@@ -103,7 +120,6 @@ $('#order1>h2').click(function(){
 			//ここから商品オーダーページへ
 			$('.next_order1').click(function(event){
 				event.preventDefault();
-				alert('やっほ');
 				location.href='./order_make.html';
 				
 
