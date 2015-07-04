@@ -100,9 +100,20 @@ $('#order1>h2').click(function(){
 					});
 
 				});
+			//ここから商品オーダーページへ
+			$('.next_order1').click(function(event){
+				event.preventDefault();
+				alert('やっほ');
+				location.href='./order_make.html';
+				
+
+
+
+			});//ここまで商品オーダーページへ
 
 
 			});//end .lineup_a click
+
 			//ここから商品詳細戻るアクション
 			$('.lineup_close').click(function(evt){				
 				var target_back =$(evt.target);
@@ -123,10 +134,13 @@ $('#order1>h2').click(function(){
 
 				});
 
-			});	//ここから商品詳細戻るclickend
+			});	//ここまで商品詳細戻るclickend
+
+
 
 
 		});
+
 
 	});//#order1 animate
 });
