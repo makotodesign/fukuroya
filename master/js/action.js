@@ -67,6 +67,7 @@ $('#order1>h2').click(function(){
 				$('.order_inner h2').hide();
 				var target=$(evt.target);
 				var click_flag=target.attr('title');
+				$(this).addClass('next_'+click_flag);//クリックしたaにclassを付与
 				$('.lineup_a_wrap a').not(target).parents('.lineup').fadeOut(800,function(){
 					$('#close1').hide();					
 					$('.lineup_img').hide();
@@ -103,8 +104,11 @@ $('#order1>h2').click(function(){
 
 			});//end .lineup_a click
 			//ここから商品詳細戻るアクション
-			$('.lineup_close').click(function(evt){
+			$('.lineup_close').click(function(evt){				
 				var target_back =$(evt.target);
+				target_back.next().removeClass (function (index, css) {
+				    return (css.match (/(^|\s)next\S+/g) || []).join(' ');//class="nextなんちゃら"をリセット
+				});
 				target_back.parents('.lineup').css({width:'31%',height:'40%',marginRight:'0.8%',marginLeft:'0.8%'});
 				$('#close1').show().css('z-index',2);
 				$('.lineup_box').html('<p class="lineup_img"></p>');
@@ -120,6 +124,7 @@ $('#order1>h2').click(function(){
 				});
 
 			});	//ここから商品詳細戻るclickend
+
 
 		});
 
