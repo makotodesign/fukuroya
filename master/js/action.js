@@ -47,7 +47,7 @@ $('#order1>h2').click(function(){
 		$('#order1>h2').fadeOut(500,function(){
 			if(w_calwidth <= 880){
 			$('.c2_content').css({top:'-6%',height:'500%'});	
-			$('#order1').animate({height:'100%'},800,'linear');
+			$('#order1').animate({height:'100%',top:'-7%'},800,'linear');
 			$('#order1_inner .lineup').css('height','16%');
 			$('#close1').css('top','0.5%');
 			}else{
