@@ -18,14 +18,21 @@
 
 <div class="order_make">
 	<div class="controll">
-		<div class="uploadButton">
-			<label>ロゴファイルを選択</label>
-			<input class="fileInput" type="file" onchange="uv.style.display='inline-block'; uv.value = this.value;" />
+		<div class="controll_value">
+			<label for="fileInput">ロゴファイルを選択</label>
+			<input id="fileInput" type="file" onchange="uv.style.display='inline-block'; uv.value = this.value;" />
 			<input type="text" id="uv" class="uploadValue" disabled />
+		</div>
+		<div class="controll_value">
+			<label for="imgsize">画像の拡大／縮小</label>
+			<input id="imgsize" type="range" min="100" max="800" step="10"/>
+
 		</div>
 	</div>
 	<div class="bag">
+	<div id="imgwrap" class="imgwrap">
 		<img id="userlogo" class="userlogo" src="" alt="" width="400px"/>
+	</div>	
 	</div>
 
 

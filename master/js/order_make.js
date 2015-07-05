@@ -4,7 +4,7 @@ if (!window.File) {
 }
 
 //ファイル読み込み
-$('.fileInput').change(function(){
+$('#fileInput').change(function(){
                 // 1. 選択されたファイルがない場合は何もせずにreturn
                 if (!this.files.length) {
                 	alert('ファイルが選択されていません');
@@ -24,11 +24,22 @@ $('.fileInput').change(function(){
                 fileReader.readAsDataURL(file);
             });
 //ロゴを動かせるように
-$('#userlogo').draggable({
+$('#imgwrap').draggable({
 	containment:"parent",
-	cursor:"pointer",
 	opacity:"0.6"
-})
+});
+
+
+
+//画像のサイズ変更
+////初期値
+var size=$('#imgsize').val();
+$('#userlogo').attr('width', +size+'px');
+$('#imgsize').on('input change',function(){
+var size=$('#imgsize').val();
+$('#userlogo').attr('width', +size+'px');
+
+});
 
 
 });
