@@ -1,4 +1,9 @@
 $(function(){
+if (!window.File) {
+  window.alert("本ブラウザではファイルの表示ができません");
+}
+
+//ファイル読み込み
 $('.fileInput').change(function(){
                 // 1. 選択されたファイルがない場合は何もせずにreturn
                 if (!this.files.length) {
@@ -18,9 +23,17 @@ $('.fileInput').change(function(){
                 // 6. 画像読み込み
                 fileReader.readAsDataURL(file);
             });
+//ロゴを動かせるように
+$('#userlogo').draggable({
+	containment:"parent",
+	cursor:"pointer",
+	opacity:"0.6"
+})
 
 
 });
+
+
 
 
 
