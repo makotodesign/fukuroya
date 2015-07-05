@@ -1,0 +1,12 @@
+@charset "utf-8";
+.order_make{
+height: 80%;
+margin:-5% auto 0 auto;
+background-color: #5EB6B3;
+
+}
+
+.controll {
+	height: 200px;
+	background-color: #ccc;
+}

@@ -26,9 +26,6 @@ setTimeout(function(){
 	clearInterval(topslidectl_2);
 	});
 
-	
-
-
 },10);//loadしてから開始
 
 
@@ -120,12 +117,14 @@ $('#order1>h2').click(function(){
 			//ここから商品オーダーページへ
 			$('.next_order1').click(function(event){
 				event.preventDefault();
-				location.href='./order_make.html';
+				$('#order1').css({border:'none'}).load('order_make_1.html');
 				
 
 
 
 			});//ここまで商品オーダーページへ
+
+
 
 
 			});//end .lineup_a click
