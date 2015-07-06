@@ -18,20 +18,39 @@
 
 <div class="order_make clearfix">
 	<div class="controll">
+		<form>
 		<div class="controll_value">
 			<label for="fileInput">ロゴファイルを選択</label>
 			<input id="fileInput" type="file" onchange="uv.style.display='inline-block'; uv.value = this.value;" />
 			<input type="text" id="uv" class="uploadValue" disabled />
 		</div>
+
 		<div class="controll_value">
 			<label for="imgsize">画像の拡大／縮小</label>
 			<input id="imgsize" type="range" min="100" max="800" step="10"/>
 		</div>
+
 		<div class="controll_value">
 			<label for="logostring1">文字を入力</label>
-			<input id="logostring1" class="logostring" type="text" />
+			<textarea id="logostring1" name="logostring1"class="logostring" placeholder="Enter title here" />
+			</textarea>
+			<label for="range01">fontsize</label>
+			<input id="fontsize" type="range" min="100" max="1000" step="10"/>
+			<label for="color">fontColor</label>
+			<input id="color" type="color" value="#F75D86">
+			<label for="fontfamily">fontFamily</label>
+			<select name='fontfamily' id="fontfamily">
+			<option value='"ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif'>明朝 or selif</option>
+			<option value='"メイリオ","Meiryo","ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","ＭＳ Ｐゴシック","MS P Gothic",Verdana, Arial, Helvetica, sans-serif'>ゴシック or sans-selif</option>
+			<option value='"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO"'>丸ゴシック</option>
+			</select>  
 
-		</div>		
+		</div>
+		<div class="controll_value">
+		<input id="reset" type="reset" />
+
+		</div>
+	</form>			
 	</div>
 	<div class="bag">
 	<div id="imgwrap" class="imgwrap">

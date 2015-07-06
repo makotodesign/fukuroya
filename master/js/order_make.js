@@ -23,6 +23,10 @@ $('#fileInput').change(function(){
                 // 6. 画像読み込み
                 fileReader.readAsDataURL(file);
             });
+
+
+
+
 //ロゴを動かせるように
 $('#imgwrap').draggable({
 	containment:"parent",
