@@ -1,6 +1,6 @@
 $(function(){
 if (!window.File) {
-  window.alert("本ブラウザではファイルの表示ができません");
+  window.alert("本ブラウザでは画像の登録と表示ができません,最新のブラウザにアップデートをお願いします");
 }
 
 //ファイル読み込み
@@ -45,6 +45,19 @@ $('#userlogo').attr('width', +size+'px');
 
 });
 
+//文字入力コーナー
+////input type="text"に入れた文字がリアルタイムに反映
+  $('#logoinput1').on('click blur keydown keyup keypress change',function(){
+    var title_value=$(this).val();
+    console.log(title_value);
+    $('#title_prev1').text(title_value);
+  });
+//// ドラッグできるように 
+$('#title_prev1').draggable({
+	containment:"parent",
+	cursor:"move",
+	opacity:"0.6"
+});
 
 
 });
