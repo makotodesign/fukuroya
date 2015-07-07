@@ -42,6 +42,7 @@ $('#userlogo').attr('width', +size+'px');
 $('#imgsize').on('input change',function(){
 var size=$('#imgsize').val();
 $('#userlogo').attr('width', +size+'px');
+$('#imgwrap').css('width',+size+'px');
 
 });
 
@@ -62,7 +63,7 @@ $('#title_prev1').draggable({
     $('#title_prev1').css('font-size',f_size+'pt');
 $('#fontsize1').on('input change',function(){
     var f_size =$(this).val();
-    $('#title_prev1').css('display','inline').css('font-size',f_size+'pt');
+    $('#title_prev1').css({fontSize:f_size+'pt',display:'inline'});
     
   });
 ////fontcolor change
