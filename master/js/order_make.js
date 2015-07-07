@@ -52,13 +52,28 @@ $('#userlogo').attr('width', +size+'px');
     console.log(title_value);
     $('#title_prev1').text(title_value);
   });
-//// ドラッグできるように 
+//// drag
 $('#title_prev1').draggable({
 	containment:"parent",
-	cursor:"move",
 	opacity:"0.6"
 });
+////fontsize change
+    var f_size =$('#fontsize1').val();
+    $('#title_prev1').css('font-size',f_size+'pt');
+$('#fontsize1').on('input change',function(){
+    var f_size =$(this).val();
+    $('#title_prev1').css('display','inline').css('font-size',f_size+'pt');
+    
+  });
+////fontcolor change
+  var f_color =$('#color').val();
+  $('#title_prev1').css('color',f_color);
+  //input type="color"からの入力値に対応
 
+  $('#color').on('input change',function(){
+   var f_color =$('#color').val();	
+  $('#title_prev1').css('color',f_color);
+  });
 
 });
 

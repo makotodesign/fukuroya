@@ -19,12 +19,14 @@ z-index: 1;
 	position: relative;
 	padding:2%;
 	float: right;
+	z-index: 10;
 }
 
 .bag {
 	width:70%;
 	height: 100%;
 	float:left;
+
 }
 
 .imgwrap {
@@ -87,12 +89,12 @@ z-index: 1;
 }
 .imgwrap{
 	display: inline;
-	position: relative;
-	z-index: 1;	
+	position: absolute;
+	
 }
 .title_prev {
-	display: inline;
-	position: relative;
-	z-index: 2;
+	position: absolute;
+	cursor:move;
+
 }
 
