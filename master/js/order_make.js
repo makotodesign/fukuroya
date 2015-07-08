@@ -7,7 +7,7 @@ if (!window.File) {
 $('#fileInput').change(function(){
                 // 1. 選択されたファイルがない場合は何もせずにreturn
                 if (!this.files.length) {
-                	alert('ファイルが選択されていません');
+                    alert('ファイルが選択されていません');
                     return;
                 }
  
@@ -29,8 +29,8 @@ $('#fileInput').change(function(){
 
 //ロゴを動かせるように
 $('#imgwrap').draggable({
-	containment:"parent",
-	opacity:"0.6"
+    containment:"parent",
+    opacity:"0.6"
 });
 
 
@@ -42,6 +42,7 @@ $('#userlogo').attr('width', +size+'px');
 $('#imgsize').on('input change',function(){
 var size=$('#imgsize').val();
 $('#userlogo').attr('width', +size+'px');
+$('#imgwrap').css('width',+size+'px');
 
 });
 
@@ -52,15 +53,32 @@ $('#userlogo').attr('width', +size+'px');
     console.log(title_value);
     $('#title_prev1').text(title_value);
   });
-//// ドラッグできるように 
+//// drag
 $('#title_prev1').draggable({
-	containment:"parent",
-	cursor:"move",
-	opacity:"0.6"
+    containment:"parent",
+    opacity:"0.6"
+});
+////fontsize change
+    var f_size =$('#fontsize1').val();
+    $('#title_prev1').css('font-size',f_size+'pt');
+$('#fontsize1').on('input change',function(){
+    var f_size =$(this).val();
+    $('#title_prev1').css({fontSize:f_size+'pt',display:'inline'});
+    
+  });
+////fontcolor change
+  var f_color =$('#color').val();
+  $('#title_prev1').css('color',f_color);
+  //input type="color"からの入力値に対応
+
+  $('#color').on('input change',function(){
+   var f_color =$('#color').val();  
+  $('#title_prev1').css('color',f_color);
+  });
+
 });
 
 
-});
 
 
 
