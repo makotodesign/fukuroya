@@ -75,6 +75,20 @@ $('#fontsize1').on('input change',function(){
    var f_color =$('#color').val();	
   $('#title_prev1').css('color',f_color);
   });
+////fontfamily change
+  //初期値
+  var f_family=$('#fontfamily').val();
+  $('#title_prev1').css('font-family',f_family);
+  //selectからの入力値に対応
+  $('#fontfamily').on('change',function(){
+    var f_family=$(this).val();
+  $('#title_prev1').css('font-family',f_family); 
+  });
+////resetbutoopn
+$('#reset').click(function(){
+	location.reload;
+
+});
 
 });
 
