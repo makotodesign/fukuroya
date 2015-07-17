@@ -65,5 +65,35 @@ background-color: #fff;
 	background-image: url(../img/bg4.jpg);
 }
 
+/*topbottom*/
+.top_bottom {
+	width:100%;
+	position: absolute;
+	bottom:0;
+	z-index: 11;
+}
+
+.tb {
+	display: block;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+
+}
+
+.tb:hover {
+	text-decoration: none;
+}
+
+
+.tb h2 {
+	line-height: 60px;
+}
+
+#tb1 {
+	background-color: #16C0C4;
+	color:#fff;
+}
+
 
 
