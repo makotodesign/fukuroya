@@ -3,6 +3,32 @@ body,html {
 	height: 100%;
 
 }
+/*animation_class*/
+
+/*.width0 {
+	width: 0%;
+}
+
+.width100{
+	width: 100%;
+}
+*/
+
+/*common clases*/
+.rem1.5{
+	font-style: 1.5rem;
+}
+.rem2 {
+	font-size: 2rem;
+}
+
+.rem3 {
+	font-size:3rem;
+}
+
+.rem4 {
+	font-size:4rem;
+}
 
 .wrap {
 	height: 100%;
@@ -11,6 +37,7 @@ body,html {
 
 .mainheader {
 	margin-bottom: 0;
+	background-image: url(../img/paper1.png);
 }
 
 .globalnav{
@@ -25,17 +52,17 @@ body,html {
 }
 
 .navbar-collapse {
-background-color: #fff;
+	background-image: url(../img/paper1.png);
 }
 
 .topmain {
-	height: 87%;
+	height: 86%;
 	padding: 0;
 }
 
 /*topslide*/
 .top_slide{
-	height: 95%;
+	height: 86%;
 	min-height:500px;
 	position: relative;
 	z-index: 10;
@@ -65,35 +92,42 @@ background-color: #fff;
 	background-image: url(../img/bg4.jpg);
 }
 
+
+
+
+
 /*topbottom*/
 .top_bottom {
 	width:100%;
 	position: absolute;
 	bottom:0;
 	z-index: 11;
+
 }
 
 .tb {
 	display: block;
 	height: 60px;
-	line-height: 60px;
+	line-height: 59px;
 	text-align: center;
+	background-color: #fff;
+	color:#303F9F;
+
+
+}
+
+.tb:first-child {
+	background-color:#303F9F;
+	color:#fff;
 
 }
 
 .tb:hover {
 	text-decoration: none;
-}
-
-
-.tb h2 {
-	line-height: 60px;
-}
-
-#tb1 {
-	background-color: #16C0C4;
+	background-color: #C45E00;
 	color:#fff;
 }
+
 
 
 
