@@ -1,5 +1,5 @@
 @charset "UTF-8";
-body,html {	height: 100%;}
+body,html {	height: 100%;background-color: #fff;}
 a:focus, *:focus { outline:none; }
 
 /*common clases*/
@@ -35,9 +35,15 @@ a:focus, *:focus { outline:none; }
 	margin-right: 2%;
 }
 
+/*header*/
+
 .mainheader {
 	margin-bottom: 0;
 	/*background-image: url(../img/paper1.png);*/
+}
+
+.mainheader a {
+	color:#000;
 }
 
 .globalnav{
@@ -59,6 +65,8 @@ a:focus, *:focus { outline:none; }
 	height: 86%;
 	padding: 0;
 }
+
+
 
 /*topslide*/
 .top_slide{
