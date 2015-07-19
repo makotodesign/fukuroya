@@ -22,9 +22,19 @@
   </head>
   <body>
   <div class="wrap">
-  <!--   <nav class="globalnav container-fluid">
-      <h1>fukuroya.jp</h1> 
-    </nav> -->
+      <nav class="globalnav">
+      <div class="container clearfix">
+        <h1 class="text-hide">格安オリジナル紙袋制作の袋屋.jp Fukuroya.jp</h1>
+        <ul class="clearfix">
+          <li><a href="">サイトマップ</a></li>
+          <li><a href="">プライバシーポリシー</a></li>
+          <li><a href="">特定商取引法に基づく表記</a></li>
+
+
+        </ul>
+      </div>    
+    </nav> 
+
     <header class="mainheader navbar container-fluid">
 
       <div class="container text-muted">
@@ -33,7 +43,10 @@
           <i class="glyphicon glyphicon-menu-hamburger"></i>
           </button>
 
-          <a class="navbar-brand">Fukuroya</a>
+          <a class="navbar-brand logo-wrap clearfix" href="http://makotoschool.net/fukuroya/boot">
+            <div class="logo pull-left"><?php require_once('logo-svg.php') ?></div>
+            <div class="logoword pull-left"><?php require_once('logo-svg-word.php') ?></div>
+          </a>
         </div>
         <nav class="collapse navbar-collapse target">
           <ul class="nav navbar-nav navbar-right">

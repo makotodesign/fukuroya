@@ -78,21 +78,9 @@
         <a href="#tel" id="tb3" class="tb col-md-3 col-sm-6" data-toggle="modal"><span class="title_hide title_position"><span class="glyphicon glyphicon-phone-alt rem3"></span>&nbsp;気軽に<span class="rem3">電話</span>下さい</span>
         <a href="" id="tb4" class="tb col-md-3 col-sm-6"><span class="title_hide title_position"><span class="glyphicon glyphicon-user rem3"></span>&nbsp;<span class="rem3">袋屋.jp</span>とは</span></a>
         <a href="" id="tb5" class="tb col-md-3 col-sm-6"><span class="title_hide title_position"><span class="fa fa-question-circle rem4"></span>&nbsp;よくある<span class="rem3">質問</span></span></a>
-
-
-        </nav>
-        
-      </section>
-
-
-
-      
+        </nav>       
+      </section>   
     </main>
-    
-
-
-
-
 
   </div>
 <?php require_once('footer.php')?>
