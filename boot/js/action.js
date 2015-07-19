@@ -13,15 +13,9 @@ var no =1;
   setTimeout(fade,time*5);  
 })();
 // 文字あくしょん
-$('#title_hide1,#tb1,#pushme').hide();
-$('.title_hide').css('opacity',0);
-setTimeout(function(){
-	$('.title_hide').animate({'opacity':1},2000,function(){
-		// $(this).textillate({in: { effect: 'bounce' }});
+$('#tb1,#title_hide1').hide();
 
-	});
 
-},2000);
 setTimeout(function(){
 
 		$('#tb1').show('fold','swing',1000,function(){
@@ -36,7 +30,7 @@ setTimeout(function(){
 		});
 		});
 
-},3000);
+},4000);
 
 // 文字ホバーアクション
 
