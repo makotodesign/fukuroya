@@ -32,7 +32,17 @@ setTimeout(function(){
 
 },4000);
 
-// 文字ホバーアクション
+// telリンクclick
+$('#call').click(function(){
+	location.href="tel:0798612826";
+
+});
+// tellリンクpcの時非表示
+var ua = navigator.userAgent;
+if(ua.indexOf('iPhone') < 0 && ua.indexOf('Android') < 0){
+	$('#call').remove();
+
+}
 
 
 
