@@ -211,7 +211,13 @@ padding-right:15px;
 
 /*------page-product style-----*/
 .product_main {
+	min-height:1000px;
+}
+
+.product_main .content_box {
+
 	min-height:800px;
+	background-color: #ccc;
 }
 
 

@@ -6,7 +6,7 @@
     <script src="js/jquery.textillate.js"></script>
     <script src="js/action.js"></script>
     <script src="js/navactive.js"></script>
-
+ 	<script src="js/product_page.js"></script>
 
   </body>
 </html>
