@@ -1,3 +1,6 @@
+<?php
+$filename=basename($_SERVER['PHP_SELF']);
+?>
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -19,9 +22,18 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
   </head>
   <body>
-  <div class="wrap">
+  <div id="pagewrap" class="<?php 
+    if($filename=='index.php'){
+      echo 'flexwrap';
+    }else{
+      echo 'absolutewrap';
+    }
+
+  ?>">
+
       <nav class="globalnav">
       <div class="container clearfix">
         <h1 class="text-hide">格安オリジナル紙袋制作の袋屋.jp Fukuroya.jp</h1>
@@ -49,13 +61,34 @@
           </a>
         </div>
         <nav class="collapse navbar-collapse target">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="">商品一覧</a></li>
-          <li><a href="">注文</a></li>
-          <li><a href="">会社概要</a></li>
-          <li><a href="">お問い合わせ</a></li>
-
+          <div id="page_flug" class="<?php 
+            switch ($filename) {
+              case 'index.php':
+                echo 'index_flug';
+                break;
+              case 'page-product.php':
+                echo 'product_flug';
+                break;
+              case 'page-order.php':
+                echo 'order_flug';
+                break;
+              case 'page-company.php':
+                echo 'company_flug';
+                break;
+              case 'page-contact.php':
+                echo 'contact_flug';
+                break;    
+            }?>">
+          <ul id="mainnav" class="nav navbar-nav navbar-right">
+          <li><a href="index.php" id="top">Top</a></li>
+          <li><a href="page-product.php" id="product">商品一覧</a></li>
+          <li><a href="page-order.php" id="order">注文</a></li>
+          <li><a href="page-company.php" id="company">会社概要</a></li>
+          <li><a href="page-contact.php" id="contact">お問い合わせ</a></li>
+          <li><a href="" class="socialicon"><i class="fa fa-facebook-official fa-2x"></i></a></li>
+          <li><a href="" class="socialicon"><i class="fa fa-twitter-square fa-2x"></i></a></li>
           </ul>
+          </div>
         </nav>
       </div>
     </header>

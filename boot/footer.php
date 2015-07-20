@@ -5,5 +5,8 @@
     <script src="js/jquery.lettering-0.6.1.min.js"></script>
     <script src="js/jquery.textillate.js"></script>
     <script src="js/action.js"></script>
+    <script src="js/navactive.js"></script>
+
+
   </body>
 </html>

@@ -44,6 +44,13 @@ if(ua.indexOf('iPhone') < 0 && ua.indexOf('Android') < 0){
 
 }
 
+// mainnavi active
+// $('#mainnav a').on('click',function(event){
+// 	$('#mainnav a').not(event.target).parent().removeClass('active');
+// 	$(event.target).parent().addClass('active');
+// 	return false;
+// });
+
 
 
 
