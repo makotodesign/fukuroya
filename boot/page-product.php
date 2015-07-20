@@ -75,8 +75,14 @@
 						</div>
 					</div>					
 					<div class="row product_row">
-						<div class="col-md-4">
+						<div class="col-md-4 bag_inq mini_bag">
 							<div class="product_box">
+								<h2><span class="rem10">S</span>サイズ</h2>
+								<p class="bagcaption">
+									A4サイズの商品を入れたり、お菓子、小物類に最適です。<br>
+									Toolサイズはワイン、お酒にもちょうど良いサイズです。
+									<span class="bagsize">幅22cm×奥行き6.5cm<br>×高さ(26.5cm or 32cm)</span>
+								</p>							
 							</div>	
 						</div>
 						<div class="col-md-4">

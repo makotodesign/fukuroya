@@ -241,24 +241,15 @@ padding-right:15px;
 .product_row:last-child {
 	border: 5px solid #54C4B9;
 }
-.product_row div{
+.product_row > div{
 	/*margin-bottom: 10px;*/
-	min-height:480px;
+	min-height:600px;
 }
 
-.big_bag {
-	background-color: #FFBCBC;
-	position: relative;
-}
-
-.mid_bag {
-	background-color: #44D1DD;
-	position: relative;
-}
-
-
-
-
+.bag_inq{position: relative;}
+.big_bag {background-color: #FFBCBC;}
+.mid_bag {background-color: #44D1DD;}
+.mini_bag {background-color: #54C4B9;}
 .bag_inq h2 {
 	color:#fff;
 	font-size:6rem;
