@@ -43,6 +43,80 @@
 							</div>
 						</div>
 						<div class="col-md-4">
+							<div class="view1">
+							<?php require_once('svg/bug_5_big_s.svg')?>
+
+
+
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="product_box">
+							</div>
+						</div>
+					</div>
+					<div class="row product_row">
+						<div class="col-md-4 bag_inq mid_bag">
+							<div class="product_box">
+								<h2><span class="rem10">M</span>サイズ</h2>
+								<p class="bagcaption">
+									少し小振りのサイズです。小物雑貨、枚数の少ない服などでよく使われるサイズです。
+									雑貨、アパレル、服など様々な用途に対応出来ます。
+									<span class="bagsize">幅28cm×奥行き8cm<br>×高さ(26.5cm or 40cm)</span>
+								</p>							
+							</div>	
+						</div>
+						<div class="col-md-4">
+							<div class="product_box">
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="product_box">
+							</div>
+						</div>
+					</div>					
+					<div class="row product_row">
+						<div class="col-md-4 bag_inq mini_bag">
+							<div class="product_box">
+								<h2><span class="rem10">S</span>サイズ</h2>
+								<p class="bagcaption">
+									A4サイズの商品を入れたり、お菓子、小物類に最適です。<br>
+									Toolサイズはワイン、お酒にもちょうど良いサイズです。
+									<span class="bagsize">幅22cm×奥行き6.5cm<br>×高さ(26.5cm or 32cm)</span>
+								</p>							
+							</div>	
+						</div>
+						<div class="col-md-4">
+							<div class="product_box">
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="product_box">
+							</div>
+						</div>
+					</div>
+				
+						
+				</article>
+				<article id="day7" class="product_select container">
+					<div class="row">
+					<h2 class="bg-primary text-center margin-top-0">納期7営業日</h2>
+					</div>
+					<div class="row product_row">
+						<div class="col-md-4 bag_inq big_bag">
+							<div class="product_box">
+								<h2><span class="rem10">L</span>サイズ</h2>
+								<p class="bagcaption">
+									雑貨店、食料品店の店舗でよく使われるサイズです。
+									雑貨、アパレル、服など様々な用途に対応出来ます。
+									背の高いトールサイズとスタンダードサイズをご用意いたしました
+									<span class="bagsize">幅32cm×奥行き11cm<br>×高さ(26.5cm or 45cm)</span>
+								</p>
+								
+
+							</div>
+						</div>
+						<div class="col-md-4">
 							<div class="product_box">
 
 
@@ -97,53 +171,6 @@
 				
 						
 				</article>
-				<article id="day7" class="product_select">
-					<h2 class="bg-primary text-center margin-top-0">納期7営業日</h2>
-					<div class="row product_row">
-						<div class="col-md-4">
-							<div class="product_box">
-							</div>	
-						</div>
-						<div class="col-md-4">
-							<div class="product_box">
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="product_box">
-							</div>
-						</div>
-					</div>
-					<div class="row product_row">
-						<div class="col-md-4">
-							<div class="product_box">
-							</div>	
-						</div>
-						<div class="col-md-4">
-							<div class="product_box">
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="product_box">
-							</div>
-						</div>
-					</div>					
-					<div class="row product_row">
-						<div class="col-md-4">
-							<div class="product_box">
-							</div>	
-						</div>
-						<div class="col-md-4">
-							<div class="product_box">
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="product_box">
-							</div>
-						</div>
-					</div>
-				
-						
-				</article>	
 			</div>	
 
 

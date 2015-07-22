@@ -56,8 +56,8 @@ $filename=basename($_SERVER['PHP_SELF']);
           </button>
 
           <a class="navbar-brand logo-wrap clearfix" href="http://makotoschool.net/fukuroya/boot">
-            <div class="logo pull-left"><?php require_once('logo-svg.php') ?></div>
-            <div class="logoword pull-left"><?php require_once('logo-svg-word.php') ?></div>
+            <div class="logo pull-left"><?php require_once('svg/logo-svg.php') ?></div>
+            <div class="logoword pull-left"><?php require_once('svg/logo-svg-word.php') ?></div>
           </a>
         </div>
         <nav class="collapse navbar-collapse target">
