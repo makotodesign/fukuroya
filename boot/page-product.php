@@ -44,9 +44,30 @@
 						</div>
 						<div class="col-md-4">
 							<div class="view1">
+								<h2 class="text-center">スタンダード</h2>
 							<?php require_once('svg/bug_5_big_s.svg')?>
+							<div class="view_description margin-bottom-20">
+							</div>
+							<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#ls_5">この仕様で見積もり</button>
+							<button type="button" class="btn btn-default btn-lg btn-block">注文する</button>
+							<section class="modal fade" id="ls_5" tabindex="-1" role="dialog">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<header class="modal-header text-center">
+										<button class="close" data-dismiss="modal">&times;</button>
+										<h2 class="text-primary font-bold">納期5営業日　Lサイズスタンダード見積もり</h2>
+									</header>
+									<div class="modal-body">
+					                                   
+									</div>
+									<div class="modal-footer">
+
+									</div>
+								</div>
 
 
+							</div>
+							</section>	
 
 							</div>
 						</div>
@@ -54,6 +75,7 @@
 							<div class="product_box">
 							</div>
 						</div>
+
 					</div>
 					<div class="row product_row">
 						<div class="col-md-4 bag_inq mid_bag">
