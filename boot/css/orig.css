@@ -288,15 +288,19 @@ padding-right:15px;
 
 }
 
-.view1_space {
-	margin-bottom: 77px;
+.bagimage {
+	min-height:400px;
 }
 
+.s {
+	padding-top:40px 
+}
 
 
 
 section table th{
 	width:20%;
+	text-align: right;
 }
 section table td {
 	text-align:right;

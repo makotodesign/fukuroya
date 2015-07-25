@@ -45,12 +45,12 @@
 						</div>
 						<div class="col-md-4">
 							<div class="view1">
-								<h2 class="text-center view1_space">スタンダード</h2>
-							<?php require_once('svg/bug_5_big_s.svg')?>
-							<div class="view_description margin-bottom-20">
-							</div>
-							<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#ls_5">この仕様で見積もり</button>
-							<button type="button" class="btn btn-default btn-lg btn-block">注文する</button>
+								<h2 class="text-center">スタンダード</h2>
+								<div class="bagimage s">
+									<?php require_once('svg/bug_5_big_s.svg')?>
+								</div>
+								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ls_5" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
+								<button type="button" class="btn btn-default btn-lg btn-block">注文する</button>
 
 							
 							</div>
@@ -58,12 +58,12 @@
 						<div class="col-md-4">
 							<div class="view1">
 								<h2 class="text-center">トール</h2>
-							<?php require_once('svg/bug_5_big_t.svg')?>
-							<div class="view_description margin-bottom-20">
-							</div>
-							<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#ls_5">この仕様で見積もり</button>
-							<button type="button" class="btn btn-default btn-lg btn-block">注文する</button>
-							
+								<div class="bagimage">	
+									<?php require_once('svg/bug_5_big_t.svg')?>
+								</div>
+								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ls_5" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
+								<button type="button" class="btn btn-default btn-lg btn-block">注文する</button>
+								
 							</div>
 						</div>
 						<section class="modal fade l_5" id="ls_5" tabindex="-1" role="dialog">
@@ -71,7 +71,7 @@
 								<div class="modal-content">
 									<header class="modal-header text-center">
 										<button class="close" data-dismiss="modal">&times;</button>
-										<h2 class="text-primary font-bold">納期5営業日　Lサイズスタンダード見積もり</h2>
+										<h2 class="text-primary font-bold">納期5営業日&nbsp;Lサイズスタンダード見積もり</h2>
 									</header>
 									<div class="modal-body">
 										<table class="table table-striped">
@@ -132,7 +132,15 @@
 							</div>	
 						</div>
 						<div class="col-md-4">
-							<div class="product_box">
+							<div class="view1">
+								<h2 class="text-center">スタンダード</h2>
+								<div class="bagimage s">
+									<?php require_once('svg/bug_5_mid_s.svg')?>
+								</div>
+								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ls_5" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
+								<button type="button" class="btn btn-default btn-lg btn-block">注文する</button>
+
+							
 							</div>
 						</div>
 						<div class="col-md-4">
