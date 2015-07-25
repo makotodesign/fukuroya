@@ -37,6 +37,7 @@
 									雑貨、アパレル、服など様々な用途に対応出来ます。
 									背の高いトールサイズとスタンダードサイズをご用意いたしました
 									<span class="bagsize">幅32cm×奥行き11cm<br>×高さ(26.5cm or 45cm)</span>
+									
 								</p>
 								
 
@@ -44,13 +45,28 @@
 						</div>
 						<div class="col-md-4">
 							<div class="view1">
-								<h2 class="text-center">スタンダード</h2>
+								<h2 class="text-center view1_space">スタンダード</h2>
 							<?php require_once('svg/bug_5_big_s.svg')?>
 							<div class="view_description margin-bottom-20">
 							</div>
 							<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#ls_5">この仕様で見積もり</button>
 							<button type="button" class="btn btn-default btn-lg btn-block">注文する</button>
-							<section class="modal fade" id="ls_5" tabindex="-1" role="dialog">
+
+							
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="view1">
+								<h2 class="text-center">トール</h2>
+							<?php require_once('svg/bug_5_big_t.svg')?>
+							<div class="view_description margin-bottom-20">
+							</div>
+							<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#ls_5">この仕様で見積もり</button>
+							<button type="button" class="btn btn-default btn-lg btn-block">注文する</button>
+							
+							</div>
+						</div>
+						<section class="modal fade l_5" id="ls_5" tabindex="-1" role="dialog">
 							<div class="modal-dialog">
 								<div class="modal-content">
 									<header class="modal-header text-center">
@@ -58,6 +74,38 @@
 										<h2 class="text-primary font-bold">納期5営業日　Lサイズスタンダード見積もり</h2>
 									</header>
 									<div class="modal-body">
+										<table class="table table-striped">
+											<thead>
+												<tr>
+													<th>部数</th>
+													<th>単価</th>
+													<th>合計</th>
+													<th>消費税</th>
+													<th>送料</th>													
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<select name="copies" id="copies">
+															<option value="0">選んで下さい</option>
+															<script>
+															for(i=500;i<=10000;i=i+100){
+																document.write('<option value="'+i+'">'+i+'部</option>');
+															}
+															</script>
+														</select>
+													</td>
+													<td><span id="price"></span>円/1部</td>
+													<td><span id="total"></span>円</td>
+													<td><span id="tax"></span>円</td>
+													<td><span id="ship"></span>円</td>	
+												</tr>
+												<tr class="danger">
+													<th colspan="5" class="text-right">総合計&nbsp;&nbsp;<span id="all_total"></span>円</th>
+												</tr>
+											</tbody>
+										</table>
 					                                   
 									</div>
 									<div class="modal-footer">
@@ -69,14 +117,9 @@
 							</div>
 							</section>	
 
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="product_box">
-							</div>
-						</div>
-
 					</div>
+					
+
 					<div class="row product_row">
 						<div class="col-md-4 bag_inq mid_bag">
 							<div class="product_box">

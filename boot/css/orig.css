@@ -284,12 +284,22 @@ padding-right:15px;
 .view1 {
 	width:100%;
 	height:auto;
+	margin-bottom:20px;
 
 }
 
-.view_description{
-	height:100px;
-	background-color: #ccc;
+.view1_space {
+	margin-bottom: 77px;
+}
+
+
+
+
+section table th{
+	width:20%;
+}
+section table td {
+	text-align:right;
 }
 /*------END-page-product style-----*/
 
