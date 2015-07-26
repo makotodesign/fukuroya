@@ -138,13 +138,19 @@
 									<?php require_once('svg/bug_5_mid_s.svg')?>
 								</div>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ls_5" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
-								<button type="button" class="btn btn-default btn-lg btn-block">注文する</button>
-
-							
+								<button type="button" class="btn btn-default btn-lg btn-block">注文する</button>							
 							</div>
 						</div>
 						<div class="col-md-4">
-							<div class="product_box">
+							<div class="view1">
+								<h2 class="text-center">トール</h2>
+								<div class="bagimage">
+									<?php require_once('svg/bug_5_mid_t.svg')?>
+								</div>
+								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ls_5" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
+								<button type="button" class="btn btn-default btn-lg btn-block">注文する</button>
+
+							
 							</div>
 						</div>
 					</div>					
@@ -160,11 +166,22 @@
 							</div>	
 						</div>
 						<div class="col-md-4">
-							<div class="product_box">
+							<div class="view1">
+								<h2 class="text-center">スタンダード</h2>
+								<div class="bagimage s">
+									<?php require_once('svg/bug_5_sm_s.svg')?>
+								</div>
+								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ls_5" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
+								<button type="button" class="btn btn-default btn-lg btn-block">注文する</button>							
 							</div>
 						</div>
 						<div class="col-md-4">
-							<div class="product_box">
+								<h2 class="text-center">トール</h2>
+								<div class="bagimage">
+									<?php require_once('svg/bug_5_sm_l.svg')?>
+								</div>
+								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ls_5" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
+								<button type="button" class="btn btn-default btn-lg btn-block">注文する</button>							
 							</div>
 						</div>
 					</div>
