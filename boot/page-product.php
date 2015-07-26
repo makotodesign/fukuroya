@@ -50,7 +50,7 @@
 									<?php require_once('svg/bug_5_big_s.svg')?>
 								</div>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ls_5" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
-								<button type="button" class="btn btn-default btn-lg btn-block">注文する</button>
+								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#template_l_s">テンプレートをダウンロード</button>
 
 							
 							</div>
@@ -62,7 +62,7 @@
 									<?php require_once('svg/bug_5_big_t.svg')?>
 								</div>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ls_5" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
-								<button type="button" class="btn btn-default btn-lg btn-block">注文する</button>
+								<button type="button" class="btn btn-default btn-lg btn-block">テンプレートをダウンロード</button>
 								
 							</div>
 						</div>
@@ -104,6 +104,10 @@
 												<tr class="danger">
 													<th colspan="5" class="text-right">総合計&nbsp;&nbsp;<span id="all_total"></span>円</th>
 												</tr>
+												<tr>
+													<td colspan="3"></td>
+													<td colspan="2" id="msg"></td>
+												</tr>
 											</tbody>
 										</table>
 					                                   
@@ -116,7 +120,54 @@
 
 							</div>
 							</section>	
+							<section class="modal fade" id="template_l_s" tabindex="-1" role="dialog">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<header class="modal-header text-center">
+										<button class="close" data-dismiss="modal">&times;</button>
+										<h2 class="text-primary font-bold">Lサイズ（スタンダード）テンプレート</h2>
+									</header>
+									<div class="modal-body">
+										<h2>ソフトを選択</h2>
+										<label class="radio-inline">
+										<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Illustrator
+										</label>
+										<label class="radio-inline">
+										<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Photoshop
+										</label>
 
+
+										<div id="il_ver_wrap" class="hidden">
+											<label for="#il_ver">Illustratorバージョンを選択</label>
+											<select class="form-control" id="il_ver">
+											  <option>1</option>
+											  <option>2</option>
+											  <option>3</option>
+											  <option>4</option>
+											  <option>5</option>
+											</select>
+										</div>
+										<div id="ph_ver_wrap" class="hidden">
+											<label for="#il_ver">Photoshopバージョンを選択</label>
+											<select class="form-control" id="ph_ver">
+											  <option>1</option>
+											  <option>2</option>
+											  <option>3</option>
+											  <option>4</option>
+											  <option>5</option>
+											</select>
+										</div>
+															
+					                                   
+									</div>
+									<div class="modal-footer">
+
+									</div>
+								</div>
+
+
+							</div>
+							</section>	
 					</div>
 					
 
@@ -137,8 +188,8 @@
 								<div class="bagimage s">
 									<?php require_once('svg/bug_5_mid_s.svg')?>
 								</div>
-								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ls_5" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
-								<button type="button" class="btn btn-default btn-lg btn-block">注文する</button>							
+								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ms_5" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
+								<button type="button" class="btn btn-default btn-lg btn-block">テンプレートをダウンロード</button>							
 							</div>
 						</div>
 						<div class="col-md-4">
@@ -147,12 +198,66 @@
 								<div class="bagimage">
 									<?php require_once('svg/bug_5_mid_t.svg')?>
 								</div>
-								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ls_5" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
-								<button type="button" class="btn btn-default btn-lg btn-block">注文する</button>
+								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ms_5" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
+								<button type="button" class="btn btn-default btn-lg btn-block">テンプレートをダウンロード</button>
 
 							
 							</div>
 						</div>
+						<section class="modal fade m_5" id="ms_5" tabindex="-1" role="dialog">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<header class="modal-header text-center">
+										<button class="close" data-dismiss="modal">&times;</button>
+										<h2 class="text-primary font-bold">納期5営業日&nbsp;Mサイズスタンダード見積もり</h2>
+									</header>
+									<div class="modal-body">
+										<table class="table table-striped">
+											<thead>
+												<tr>
+													<th>部数</th>
+													<th>単価</th>
+													<th>合計</th>
+													<th>消費税</th>
+													<th>送料</th>													
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<select name="copies" id="copies">
+															<option value="0">選んで下さい</option>
+															<script>
+															for(i=500;i<=10000;i=i+100){
+																document.write('<option value="'+i+'">'+i+'部</option>');
+															}
+															</script>
+														</select>
+													</td>
+													<td><span id="price"></span>円/1部</td>
+													<td><span id="total"></span>円</td>
+													<td><span id="tax"></span>円</td>
+													<td><span id="ship"></span>円</td>	
+												</tr>
+												<tr class="danger">
+													<th colspan="5" class="text-right">総合計&nbsp;&nbsp;<span id="all_total"></span>円</th>
+												</tr>
+												<tr>
+													<td colspan="3"></td>
+													<td colspan="2" id="msg"></td>
+												</tr>
+											</tbody>
+										</table>
+					                                   
+									</div>
+									<div class="modal-footer">
+
+									</div>
+								</div>
+
+
+							</div>
+							</section>	
 					</div>					
 					<div class="row product_row">
 						<div class="col-md-4 bag_inq mini_bag">
@@ -171,8 +276,8 @@
 								<div class="bagimage s">
 									<?php require_once('svg/bug_5_sm_s.svg')?>
 								</div>
-								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ls_5" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
-								<button type="button" class="btn btn-default btn-lg btn-block">注文する</button>							
+								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ss_5" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
+								<button type="button" class="btn btn-default btn-lg btn-block">テンプレートをダウンロード</button>							
 							</div>
 						</div>
 						<div class="col-md-4">
@@ -180,10 +285,65 @@
 								<div class="bagimage">
 									<?php require_once('svg/bug_5_sm_l.svg')?>
 								</div>
-								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ls_5" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
-								<button type="button" class="btn btn-default btn-lg btn-block">注文する</button>							
+								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ss_5" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
+								<button type="button" class="btn btn-default btn-lg btn-block">テンプレートをダウンロード</button>							
 							</div>
+													<section class="modal fade m_5" id="ss_5" tabindex="-1" role="dialog">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<header class="modal-header text-center">
+										<button class="close" data-dismiss="modal">&times;</button>
+										<h2 class="text-primary font-bold">納期5営業日&nbsp;Sサイズスタンダード見積もり</h2>
+									</header>
+									<div class="modal-body">
+										<table class="table table-striped">
+											<thead>
+												<tr>
+													<th>部数</th>
+													<th>単価</th>
+													<th>合計</th>
+													<th>消費税</th>
+													<th>送料</th>													
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<select name="copies" id="copies">
+															<option value="0">選んで下さい</option>
+															<script>
+															for(i=500;i<=10000;i=i+100){
+																document.write('<option value="'+i+'">'+i+'部</option>');
+															}
+															</script>
+														</select>
+													</td>
+													<td><span id="price"></span>円/1部</td>
+													<td><span id="total"></span>円</td>
+													<td><span id="tax"></span>円</td>
+													<td><span id="ship"></span>円</td>	
+												</tr>
+												<tr class="danger">
+													<th colspan="5" class="text-right">総合計&nbsp;&nbsp;<span id="all_total"></span>円</th>
+												</tr>
+												<tr>
+													<td colspan="3"></td>
+													<td colspan="2" id="msg"></td>
+												</tr>
+											</tbody>
+										</table>
+					                                   
+									</div>
+									<div class="modal-footer">
+
+									</div>
+								</div>
+
+
+							</div>
+							</section>	
 						</div>
+
 					</div>
 				
 						
