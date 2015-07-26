@@ -31,13 +31,13 @@ $(section).find('#copies').on('change',function(){
 }
 
 // テンプレートダウンロード
-$('#template_l_s').find('#il').on('change',function(){
-	$('#template_l_s').find('#il_ver_wrap').removeClass().addClass('show');
-
+$('.template_download').find('#il').on('change',function(){
+	$('.template_download').find('#il_ver_wrap').removeClass().addClass('show');
+	$('.template_download').find('#ph_ver_wrap').removeClass().addClass('hide');
 });
-$('#template_l_s').find('#ph').on('change',function(){
-	$('#template_l_s').find('#ph_ver_wrap').removeClass().addClass('show');
-
+$('.template_download').find('#ph').on('change',function(){
+	$('.template_download').find('#ph_ver_wrap').removeClass().addClass('show');
+	$('.template_download').find('#il_ver_wrap').removeClass().addClass('hide');
 });
 
 

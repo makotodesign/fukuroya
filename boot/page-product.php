@@ -62,7 +62,7 @@
 									<?php require_once('svg/bug_5_big_t.svg')?>
 								</div>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ls_5" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
-								<button type="button" class="btn btn-default btn-lg btn-block">テンプレートをダウンロード</button>
+								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#template_l_t">テンプレートをダウンロード</button>
 								
 							</div>
 						</div>
@@ -120,7 +120,7 @@
 
 							</div>
 							</section>	
-							<section class="modal fade" id="template_l_s" tabindex="-1" role="dialog">
+							<section class="modal fade template_download" id="template_l_s" tabindex="-1" role="dialog">
 							<div class="modal-dialog">
 								<div class="modal-content">
 									<header class="modal-header text-center">
@@ -128,34 +128,25 @@
 										<h2 class="text-primary font-bold">Lサイズ（スタンダード）テンプレート</h2>
 									</header>
 									<div class="modal-body">
+										<div class="margin-bottom-20">
 										<h2>ソフトを選択</h2>
 										<label class="radio-inline">
-										<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Illustrator
+										<input type="radio" name="inlineRadioOptions" id="il" value="illustrator"> Illustrator
 										</label>
 										<label class="radio-inline">
-										<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Photoshop
+										<input type="radio" name="inlineRadioOptions" id="ph" value="photoshop"> Photoshop
 										</label>
-
-
+										</div>
 										<div id="il_ver_wrap" class="hidden">
-											<label for="#il_ver">Illustratorバージョンを選択</label>
-											<select class="form-control" id="il_ver">
-											  <option>1</option>
-											  <option>2</option>
-											  <option>3</option>
-											  <option>4</option>
-											  <option>5</option>
-											</select>
+	
+											<button id="i_temp_download_btn" type="button" class="btn btn-primary btn-lg">
+											<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> Illustratorテンプレート<br>ダウンロード
+											</button>
 										</div>
 										<div id="ph_ver_wrap" class="hidden">
-											<label for="#il_ver">Photoshopバージョンを選択</label>
-											<select class="form-control" id="ph_ver">
-											  <option>1</option>
-											  <option>2</option>
-											  <option>3</option>
-											  <option>4</option>
-											  <option>5</option>
-											</select>
+											<button id="p_temp_download_btn" type="button" class="btn btn-primary btn-lg">
+											<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> Photoshopテンプレート<br>ダウンロード
+											</button>				
 										</div>
 															
 					                                   
@@ -167,7 +158,46 @@
 
 
 							</div>
-							</section>	
+							</section>
+							<section class="modal fade template_download" id="template_l_t" tabindex="-1" role="dialog">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<header class="modal-header text-center">
+										<button class="close" data-dismiss="modal">&times;</button>
+										<h2 class="text-primary font-bold">Lサイズ（トール）テンプレート</h2>
+									</header>
+									<div class="modal-body">
+										<div class="margin-bottom-20">
+										<h2>ソフトを選択</h2>
+										<label class="radio-inline">
+										<input type="radio" name="inlineRadioOptions" id="il" value="illustrator"> Illustrator
+										</label>
+										<label class="radio-inline">
+										<input type="radio" name="inlineRadioOptions" id="ph" value="photoshop"> Photoshop
+										</label>
+										</div>
+										<div id="il_ver_wrap" class="hidden">
+	
+											<button id="i_temp_download_btn" type="button" class="btn btn-primary btn-lg">
+											<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> Illustratorテンプレート<br>ダウンロード
+											</button>
+										</div>
+										<div id="ph_ver_wrap" class="hidden">
+											<button id="p_temp_download_btn" type="button" class="btn btn-primary btn-lg">
+											<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> Photoshopテンプレート<br>ダウンロード
+											</button>				
+										</div>
+															
+					                                   
+									</div>
+									<div class="modal-footer">
+
+									</div>
+								</div>
+
+
+							</div>
+							</section>		
 					</div>
 					
 
@@ -189,7 +219,7 @@
 									<?php require_once('svg/bug_5_mid_s.svg')?>
 								</div>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ms_5" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
-								<button type="button" class="btn btn-default btn-lg btn-block">テンプレートをダウンロード</button>							
+								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#template_m_s">テンプレートをダウンロード</button>							
 							</div>
 						</div>
 						<div class="col-md-4">
@@ -199,7 +229,7 @@
 									<?php require_once('svg/bug_5_mid_t.svg')?>
 								</div>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ms_5" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
-								<button type="button" class="btn btn-default btn-lg btn-block">テンプレートをダウンロード</button>
+								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#template_m_t">テンプレートをダウンロード</button>
 
 							
 							</div>
@@ -257,7 +287,85 @@
 
 
 							</div>
-							</section>	
+							</section>
+							<section class="modal fade template_download" id="template_m_s" tabindex="-1" role="dialog">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<header class="modal-header text-center">
+										<button class="close" data-dismiss="modal">&times;</button>
+										<h2 class="text-primary font-bold">Mサイズ（スタンダード）テンプレート</h2>
+									</header>
+									<div class="modal-body">
+										<div class="margin-bottom-20">
+										<h2>ソフトを選択</h2>
+										<label class="radio-inline">
+										<input type="radio" name="inlineRadioOptions" id="il" value="illustrator"> Illustrator
+										</label>
+										<label class="radio-inline">
+										<input type="radio" name="inlineRadioOptions" id="ph" value="photoshop"> Photoshop
+										</label>
+										</div>
+										<div id="il_ver_wrap" class="hidden">
+	
+											<button id="i_temp_download_btn" type="button" class="btn btn-primary btn-lg">
+											<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> Illustratorテンプレート<br>ダウンロード
+											</button>
+										</div>
+										<div id="ph_ver_wrap" class="hidden">
+											<button id="p_temp_download_btn" type="button" class="btn btn-primary btn-lg">
+											<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> Photoshopテンプレート<br>ダウンロード
+											</button>				
+										</div>
+															
+					                                   
+									</div>
+									<div class="modal-footer">
+
+									</div>
+								</div>
+
+
+							</div>
+							</section>
+							<section class="modal fade template_download" id="template_m_t" tabindex="-1" role="dialog">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<header class="modal-header text-center">
+										<button class="close" data-dismiss="modal">&times;</button>
+										<h2 class="text-primary font-bold">Mサイズ（トール）テンプレート</h2>
+									</header>
+									<div class="modal-body">
+										<div class="margin-bottom-20">
+										<h2>ソフトを選択</h2>
+										<label class="radio-inline">
+										<input type="radio" name="inlineRadioOptions" id="il" value="illustrator"> Illustrator
+										</label>
+										<label class="radio-inline">
+										<input type="radio" name="inlineRadioOptions" id="ph" value="photoshop"> Photoshop
+										</label>
+										</div>
+										<div id="il_ver_wrap" class="hidden">
+	
+											<button id="i_temp_download_btn" type="button" class="btn btn-primary btn-lg">
+											<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> Illustratorテンプレート<br>ダウンロード
+											</button>
+										</div>
+										<div id="ph_ver_wrap" class="hidden">
+											<button id="p_temp_download_btn" type="button" class="btn btn-primary btn-lg">
+											<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> Photoshopテンプレート<br>ダウンロード
+											</button>				
+										</div>
+															
+					                                   
+									</div>
+									<div class="modal-footer">
+
+									</div>
+								</div>
+
+
+							</div>
+							</section>			
 					</div>					
 					<div class="row product_row">
 						<div class="col-md-4 bag_inq mini_bag">
@@ -277,7 +385,7 @@
 									<?php require_once('svg/bug_5_sm_s.svg')?>
 								</div>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ss_5" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
-								<button type="button" class="btn btn-default btn-lg btn-block">テンプレートをダウンロード</button>							
+								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#template_s_s">テンプレートをダウンロード</button>							
 							</div>
 						</div>
 						<div class="col-md-4">
@@ -286,7 +394,7 @@
 									<?php require_once('svg/bug_5_sm_l.svg')?>
 								</div>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ss_5" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
-								<button type="button" class="btn btn-default btn-lg btn-block">テンプレートをダウンロード</button>							
+								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#template_s_l">テンプレートをダウンロード</button>							
 							</div>
 													<section class="modal fade m_5" id="ss_5" tabindex="-1" role="dialog">
 							<div class="modal-dialog">
@@ -341,7 +449,85 @@
 
 
 							</div>
-							</section>	
+							</section>
+							<section class="modal fade template_download" id="template_s_s" tabindex="-1" role="dialog">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<header class="modal-header text-center">
+										<button class="close" data-dismiss="modal">&times;</button>
+										<h2 class="text-primary font-bold">Sサイズ（スタンダード）テンプレート</h2>
+									</header>
+									<div class="modal-body">
+										<div class="margin-bottom-20">
+										<h2>ソフトを選択</h2>
+										<label class="radio-inline">
+										<input type="radio" name="inlineRadioOptions" id="il" value="illustrator"> Illustrator
+										</label>
+										<label class="radio-inline">
+										<input type="radio" name="inlineRadioOptions" id="ph" value="photoshop"> Photoshop
+										</label>
+										</div>
+										<div id="il_ver_wrap" class="hidden">
+	
+											<button id="i_temp_download_btn" type="button" class="btn btn-primary btn-lg">
+											<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> Illustratorテンプレート<br>ダウンロード
+											</button>
+										</div>
+										<div id="ph_ver_wrap" class="hidden">
+											<button id="p_temp_download_btn" type="button" class="btn btn-primary btn-lg">
+											<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> Photoshopテンプレート<br>ダウンロード
+											</button>				
+										</div>
+															
+					                                   
+									</div>
+									<div class="modal-footer">
+
+									</div>
+								</div>
+
+
+							</div>
+							</section>
+							<section class="modal fade template_download" id="template_s_t" tabindex="-1" role="dialog">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<header class="modal-header text-center">
+										<button class="close" data-dismiss="modal">&times;</button>
+										<h2 class="text-primary font-bold">Sサイズ（トール）テンプレート</h2>
+									</header>
+									<div class="modal-body">
+										<div class="margin-bottom-20">
+										<h2>ソフトを選択</h2>
+										<label class="radio-inline">
+										<input type="radio" name="inlineRadioOptions" id="il" value="illustrator"> Illustrator
+										</label>
+										<label class="radio-inline">
+										<input type="radio" name="inlineRadioOptions" id="ph" value="photoshop"> Photoshop
+										</label>
+										</div>
+										<div id="il_ver_wrap" class="hidden">
+	
+											<button id="i_temp_download_btn" type="button" class="btn btn-primary btn-lg">
+											<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> Illustratorテンプレート<br>ダウンロード
+											</button>
+										</div>
+										<div id="ph_ver_wrap" class="hidden">
+											<button id="p_temp_download_btn" type="button" class="btn btn-primary btn-lg">
+											<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> Photoshopテンプレート<br>ダウンロード
+											</button>				
+										</div>
+															
+					                                   
+									</div>
+									<div class="modal-footer">
+
+									</div>
+								</div>
+
+
+							</div>
+							</section>				
 						</div>
 
 					</div>
