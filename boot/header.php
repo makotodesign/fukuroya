@@ -77,11 +77,15 @@ $filename=basename($_SERVER['PHP_SELF']);
                 break;
               case 'page-contact.php':
                 echo 'contact_flug';
-                break;    
+                break;
+              case 'page-beginner.php':
+                echo 'beginner_flug';
+                break;         
             }?>">
           <ul id="mainnav" class="nav navbar-nav navbar-right">
           <li><a href="index.php" id="top">Top</a></li>
-          <li><a href="page-product.php" id="product">商品一覧</a></li>
+          <li><a href="page-beginner.php" id="beginner">初めての方</a></li>
+          <li><a href="page-product.php" id="product" data-toggle="popover"  data-html="true" data-placement="bottom" title="Click!"  data-content="こちらから簡単見積もり、テンプレートダウンロードも可能です">商品一覧</a></li>
           <li><a href="page-order.php" id="order">注文</a></li>
           <li><a href="page-company.php" id="company">会社概要</a></li>
           <li><a href="page-contact.php" id="contact">お問い合わせ</a></li>

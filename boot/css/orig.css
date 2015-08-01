@@ -18,8 +18,10 @@ a:focus, *:focus { outline:none; }
 .margin-right-2{margin-right: 2%;}
 .margin-top-0 {margin-top:0;}
 .margin-bottom-20{margin-bottom: 20px;}
-
-
+.popover {
+	width: 400px;
+	text-align: center;	
+}
 /*header*/
 
 .mainheader {
@@ -59,7 +61,7 @@ a:focus, *:focus { outline:none; }
 	color: #489AEC;
 }
 
-.active {
+.navbar-nav .active {
 	color: #F46767 !important;
 }
 
@@ -307,8 +309,10 @@ section table td {
 	text-align:right;
 }
 /*------END-page-product style-----*/
-
-
+/*------page-order style-----*/
+.orderselect {
+	padding-top: 40px;
+}
 
 
 

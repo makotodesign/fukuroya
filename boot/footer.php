@@ -7,6 +7,8 @@
     <script src="js/action.js"></script>
     <script src="js/navactive.js"></script>
  	<script src="js/product_page.js"></script>
+ 	<script src="js/pagechange.js"></script>
 	<script src="js/calc_and_td.js"></script>
+	<script src="js/form.js"></script>
   </body>
 </html>

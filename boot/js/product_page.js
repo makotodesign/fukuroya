@@ -21,17 +21,17 @@ $(function(){
 	// 		});
 	// 	});
 	// });
-$('.product_select').hide();
-$('#nouki_select1').on('click',function(){
-	$('.product_select').hide();
-	$('#day5').show('size',300);
-	return false;
-});
-$('#nouki_select2').on('click',function(){
-	$('.product_select').hide();
-	$('#day7').show('size',300);
-	return false;
-});
+// $('.product_select').hide();
+// $('#nouki_select1').on('click',function(){
+// 	$('.product_select').hide();
+// 	$('#day5').show('size',300);
+// 	return false;
+// });
+// $('#nouki_select2').on('click',function(){
+// 	$('.product_select').hide();
+// 	$('#day7').show('size',300);
+// 	return false;
+// });
 
 
 

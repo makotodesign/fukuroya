@@ -21,5 +21,9 @@ switch (name){
 	$('#mainnav li a').removeClass('active');
 	$('#contact').addClass('active');
 	break;
+	case 'beginner_flug':
+	$('#mainnav li a').removeClass('active');
+	$('#contact').addClass('active');
+	break;
 }
 });

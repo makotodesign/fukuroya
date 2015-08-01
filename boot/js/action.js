@@ -44,6 +44,14 @@ if(ua.indexOf('iPhone') < 0 && ua.indexOf('Android') < 0){
 
 }
 
+// ポップオーバー
+$('#product').popover({
+	trigger:'hover'
+
+});
+
+
+
 
 
 
