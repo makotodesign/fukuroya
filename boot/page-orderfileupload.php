@@ -1,4 +1,5 @@
 <?php
+require_once('token.php');
 require_once('header.php');
 ?>
     <main class="conatact_main container">
@@ -16,6 +17,7 @@ require_once('header.php');
 			  </div>		
 				<p>
 				<input type="hidden" name="time" id="time" >
+				<input type="hidden" name="token" value="<?=Token::generate()?>" />
 				</p>
 				<button type="submit" id="filesubmit" class="btn btn-default">アップロード</button>
 			</form>
