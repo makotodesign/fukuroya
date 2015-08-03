@@ -22,6 +22,23 @@ a:focus, *:focus { outline:none; }
 	width: 400px;
 	text-align: center;	
 }
+/*gotopボタン*/
+#pageTop{
+	background:rgba(137,212,244,0.9);
+	border-radius:5px;
+	color:#FFF;
+	padding:10px;
+	position:fixed;
+	bottom:20px;
+	right:20px;
+	text-decoration: none;
+	}
+#pageTop:hover{
+	background:#FC8383;
+
+	}
+
+
 /*header*/
 
 .mainheader {

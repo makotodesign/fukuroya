@@ -19,9 +19,16 @@ require_once('header.php');
 				<input type="hidden" name="time" id="time" >
 				<input type="hidden" name="token" value="<?=Token::generate()?>" />
 				</p>
-				<button type="submit" id="filesubmit" class="btn btn-default">アップロード</button>
-			</form>
+				<button type="submit" id="filesubmit" class="btn btn-default margin-bottom-20">アップロード</button>
 
+
+			</form>
+			<div id="loadingmsg" class="panel panel-danger" style="display:none;">
+				<div class="panel-body">
+				<span class="fa fa-spinner fa-spin"></span>
+				ファイルをアップロードしています。このままお待ち下さい。
+				</div>
+			</div>
 
 
 		</div>	

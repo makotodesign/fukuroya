@@ -9,6 +9,7 @@
  	<script src="js/product_page.js"></script>
  	<script src="js/pagechange.js"></script>
 	<script src="js/calc_and_td.js"></script>
-	<script src="js/form.js"></script>
+	<script src="js/gotop.js"></script>
+    <script src="js/form.js"></script>
   </body>
 </html>
