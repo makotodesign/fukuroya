@@ -20,14 +20,14 @@
 			<div class="form-group control-group">
 				<label for="Name" class="col-sm-2 control-label">ご担当者名</label>
 				<div class="col-sm-10 controls">
-					<input type="text" class="form-control" name="Name" id="Name" placeholder="氏名:必須" required>
+					<input type="text" class="form-control" name="Name" id="Name" placeholder="氏名:必須">
 				</div>
 
 			</div>
 			<div class="form-group control-group">
 				<label for="Kana" class="col-sm-2 control-label">よみがな</label>
 				<div class="col-sm-10 controls">
-					<input type="text" class="form-control" name="Kana" id="Kana" placeholder="よみがな:必須" required>
+					<input type="text" class="form-control" name="Kana" id="Kana" placeholder="よみがな:必須">
 				</div>
 			</div>
 			<div class="form-group control-group">
