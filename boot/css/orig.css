@@ -331,6 +331,21 @@ section table td {
 	padding-top: 40px;
 }
 
+/*form*/
+.help-inline {
+	color:#FC9797;
+
+}
+
+.success span{
+	color:#5cb85c;
+	padding-left: 10px;
+}
+
+.success input {
+	color:#606060;
+}
+
 
 
 

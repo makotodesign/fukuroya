@@ -10,6 +10,8 @@
  	<script src="js/pagechange.js"></script>
 	<script src="js/calc_and_td.js"></script>
 	<script src="js/gotop.js"></script>
+    <script src="js/jquery.validate.min.js"></script><!-- バリデートプラグイン -->
     <script src="js/form.js"></script>
+
   </body>
 </html>
