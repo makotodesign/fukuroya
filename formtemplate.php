@@ -6,7 +6,7 @@
 		</div>
 		<div class="formbox">
 		<h3 class="margin-bottom-20 text-center">原稿ファイルのアップロードが完了しました。続けて注文フォームにご記入下さい</h3>
-		<form action="page-orderfileupload3.php" method="POST" id="orderform1" class="form-horizontal" novalidate="novalidate">
+		<form action="page-order3.php" method="POST" id="orderform1" class="form-horizontal" novalidate="novalidate">
 		<fieldset>
 			<legend class="text-primary">ご注文内容</legend>
 
@@ -55,7 +55,7 @@
 				</div>
 			</div>
 			<div class="form-group control-group">
-				<label for="confirmEmail" class="col-sm-2 control-label">注文商品ジャンル</label>
+				<label for="select01" class="col-sm-2 control-label">注文商品ジャンル</label>
 				<div class="col-sm-5 controls">
 					<select id="select01" name="select01" class="form-control">
 			          <option value="">--選択して下さい</option>
@@ -65,7 +65,7 @@
 				</div>	
 			</div>
 			<div class="form-group control-group">
-				<label for="confirmEmail" class="col-sm-2 control-label">商品サイズ</label>
+				<label for="select02" class="col-sm-2 control-label">商品サイズ</label>
 				<div class="col-sm-5 controls">
 					<select id="select02" name="select02" class="form-control" disabled>
 			          <option value="">--選択して下さい</option>
@@ -85,6 +85,13 @@
 				</div>
 			</div>
 			<legend class="text-primary">お届け先情報</legend>
+			<div class="form-group control-group">
+				<label for="shipName" class="col-sm-2 control-label">お届け先名</label>
+				<div class="col-sm-10 controls">
+					<input type="text" class="form-control" name="shipName" id="shipName" placeholder="注文情報と異なる場合のみ記載してください">
+				</div>
+
+			</div>
 			<div class="form-group control-group">
 				<label for="postcode1" class="col-sm-2 control-label">郵便番号</label>
 				<div class="col-sm-10 controls">
@@ -178,7 +185,7 @@
 
 			</fieldset>
 			<div class="form-actions text-center margin-bottom-20">
-			  <button type="submit" class="btn btn-primary">送信</button>
+			  <button type="submit" class="btn btn-primary">次へ</button>
 			  <button type="reset" class="btn">リセット</button>
 			</div>
 		</form>

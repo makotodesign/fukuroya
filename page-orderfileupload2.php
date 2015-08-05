@@ -1,10 +1,12 @@
 <?php
+session_cache_expire(0);
+session_cache_limiter('private_no_expire');
 session_start();
-require_once('token.php');
-if (!isset($_POST['token']) || !Token::validate($_POST['token'])) {
-	header("Content-type: text/html; charset=UTF-8");		
-    die('不正な処理が行われました');
-}
+// require_once('token.php');
+// if (!isset($_POST['token']) || !Token::validate($_POST['token'])) {
+// 	header("Content-type: text/html; charset=UTF-8");		
+//     die('不正な処理が行われました');
+// }
 $time=htmlspecialchars($_POST['time'],ENT_QUOTES);
 $_SESSION['time']=$time;
 $dir_name="../uploadfile";
@@ -41,7 +43,7 @@ require_once('header.php');
 
 		?>
 		<h3 class="margin-bottom-20 text-center">原稿ファイルのアップロードが完了しました。続けて注文フォームにご記入下さい</h3>
-		<form action="page-orderfileupload3.php" method="POST" id="orderform1" class="form-horizontal" novalidate="novalidate">
+		<form action="page-order3.php" method="POST" id="orderform1" class="form-horizontal" novalidate="novalidate">
 		<fieldset>
 			<legend class="text-primary">ご注文内容</legend>
 
@@ -213,7 +215,7 @@ require_once('header.php');
 
 			</fieldset>
 			<div class="form-actions text-center">
-			  <button type="submit" class="btn btn-primary">送信</button>
+			  <button type="submit" class="btn btn-primary">次へ</button>
 			  <button type="reset" class="btn">リセット</button>
 			</div>
 		</form>

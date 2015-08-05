@@ -17,7 +17,7 @@ require_once('header.php');
 			  </div>		
 				<p>
 				<input type="hidden" name="time" id="time" >
-				<input type="hidden" name="token" value="<?=Token::generate()?>" />
+				<!-- <input type="hidden" name="token" value="<?=Token::generate()?>" /> -->
 				</p>
 				<button type="submit" id="filesubmit" class="btn btn-default margin-bottom-20">アップロード</button>
 

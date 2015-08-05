@@ -51,6 +51,7 @@ $('#select01').on('change',function(){
             },
             tel1: {
                 required: true,
+                number: true,
             },
             Email: {
                 required: true,

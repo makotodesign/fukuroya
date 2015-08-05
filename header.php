@@ -6,6 +6,7 @@ $filename=basename($_SERVER['PHP_SELF']);
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--     <meta content="86400" http-equiv="Expires"/> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>袋屋|top</title>

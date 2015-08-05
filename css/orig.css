@@ -344,6 +344,11 @@ span[id $='error'] {
 	color:#606060;
 }
 
+.confirm th,.confirm td {
+	text-align: center;
+	vertical-align: middle;
+}
+
 
 
 
