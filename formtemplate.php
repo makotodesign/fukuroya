@@ -41,7 +41,37 @@
 				<div class="col-sm-10 controls">
 					<input type="email" class="form-control" name="confirmEmail" id="confirmEmail" placeholder="e-mail再入力" pattern="^[0-9a-zA-Z]+[\w-]+@[\w\.-]+\.\w{2,}$">
 				</div>
-			</div>			
+			</div>
+			<div class="form-group control-group">
+				<label for="confirmEmail" class="col-sm-2 control-label">注文商品ジャンル</label>
+				<div class="col-sm-10 controls">
+					<select id="select01" name="select01" class="form-control">
+			          <option value="">--選択して下さい</option>
+			          <option value="eco">エコノミー</option>
+			          <option value="std">スタンダード</option>
+			        </select>
+				</div>	
+			</div>
+			<div class="form-group control-group">
+				<label for="confirmEmail" class="col-sm-2 control-label">商品サイズ</label>
+				<div class="col-sm-10 controls">
+				<select id="select02" name="select02" class="form-control" disabled>
+		          <option value="">--選択して下さい</option>
+		          <optgroup label="Lサイズ">
+			          <option value="L-st">L:高さ:スタンダード</option>
+			          <option value="L-tl">L:高さ:トール</option>
+		      	  </optgroup>
+		      	  <optgroup label="Mサイズ">
+			          <option value="M-st">M:高さ:スタンダード</option>
+			          <option value="M-tl">M:高さ:トール</option>
+		      	  </optgroup>
+		      	  <optgroup label="Sサイズ">
+			          <option value="S-st">S:高さ:スタンダード</option>
+			          <option value="S-tl">S:高さ:トール</option>
+		      	  </optgroup>
+			    </select>
+			</div>
+			</div>					
 			<div class="form-actions text-center">
 			  <button type="submit" class="btn btn-primary">送信</button>
 			  <button type="reset" class="btn">リセット</button>

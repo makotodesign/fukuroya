@@ -19,7 +19,13 @@ $('#filesubmit').on('click',function(){
 });
 
 
-// emailチェック
+// form disable制御
+$('#select01').on('change',function(){
+    $('#select02').attr('disabled',false);
+
+});
+
+
 // validate the comment form when it is submitted
     $.extend(jQuery.validator.messages, {
         required: "必須項目です",
@@ -62,13 +68,14 @@ $('#filesubmit').on('click',function(){
             $(wrapper).parents('.control-group').removeClass('success').addClass('error');
         },
         success: function(wrapper, validClass) {
-            wrapper.text('OK!').addClass('success').closest('.control-group').addClass('success');
+            wrapper.text('OK!').addClass('help-inline').closest('.control-group').addClass('success');
         }
     });
     $('button:reset').click(function() {
         $('span.help-inline').hide();
         $('.error').removeClass('error');
         $('.success').removeClass('success');
+        $('#select02').attr('disabled',true);
     });
 
 });
