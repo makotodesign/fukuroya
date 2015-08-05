@@ -49,6 +49,9 @@ $('#select01').on('change',function(){
             Name: {
                 required: true,
             },
+            tel1: {
+                required: true,
+            },
             Email: {
                 required: true,
                 email: true,
@@ -57,7 +60,10 @@ $('#select01').on('change',function(){
                 required: true,
                 email: true,
 		        equalTo: '#Email',
-            }
+            },
+            checkread: {
+                required: true,
+            },
         },
         errorClass: "help-inline",
         validClass: "help-inline",
@@ -77,6 +83,19 @@ $('#select01').on('change',function(){
         $('.success').removeClass('success');
         $('#select02').attr('disabled',true);
     });
+
+    // 郵便番号入力補完
+    $('#postcode1').jpostal({
+    postcode : [
+        '#postcode1',
+        '#postcode2'
+    ],
+    address : {
+        '#address1'  : '%3',
+        '#address2'  : '%4',
+        '#address3'  : '%5'
+    }
+});
 
 });
 

@@ -332,8 +332,9 @@ section table td {
 }
 
 /*form*/
-
-
+span[id $='error'] {
+	color:#F98484;
+}
 .success span{
 	color:#5cb85c;
 	padding-left: 10px;
