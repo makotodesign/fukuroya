@@ -18,10 +18,13 @@ a:focus, *:focus { outline:none; }
 .margin-right-2{margin-right: 2%;}
 .margin-top-0 {margin-top:0;}
 .margin-bottom-20{margin-bottom: 20px;}
+.margin-right-10{margin-right: 10px;}
+.padding-top-5{padding-top: 5px};
 .popover {
 	width: 400px;
 	text-align: center;	
 }
+.no-point{cursor: default;}
 /*gotopボタン*/
 #pageTop{
 	background:rgba(137,212,244,0.9);
@@ -348,6 +351,13 @@ span[id $='error'] {
 	text-align: center;
 	vertical-align: middle;
 }
+
+
+/*select:disabled{
+  color:red;
+
+}*/
+
 
 
 

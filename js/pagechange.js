@@ -1,7 +1,11 @@
 $(function(){
 $('#orderbtn1').on('click',function(){
-location.href="page-orderfileupload.php";
+location.href="page-order_2.php";
 
+});
+
+$('.back').on('click',function(){
+	history.back();
 });
 
 

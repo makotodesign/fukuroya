@@ -20,10 +20,19 @@ $('#filesubmit').on('click',function(){
 
 
 // form disable制御
-$('#select01').on('change',function(){
-    $('#select02').attr('disabled',false);
+$('#select_grade').on('change',function(){
+    $('#select_size').attr('disabled',false);
+    $('.disabled_msg').remove();
 
 });
+$('#select_size').on('change',function(){
+    $('#select_qty').attr('disabled',false);
+
+});
+
+$('select:disabled').parent().append('<span class="text-muted disabled_msg">上の項目を入力すると有効になります</span>');
+
+
 
 
 // validate the comment form when it is submitted
@@ -46,6 +55,32 @@ $('#select01').on('change',function(){
 
     $("#orderform1").validate({
         rules: {
+            select_grade: {
+                required: true,
+            },
+            select_size: {
+                required: true,
+            },
+            select_qty: {
+                required: true,
+            }
+
+
+        },
+        errorClass: "help-inline",
+        validClass: "help-inline",
+        errorElement: "span",
+        validElement: "span",
+        wrapper: "span",
+        highlight: function(wrapper) {
+            $(wrapper).parents('.control-group').removeClass('success').addClass('error');
+        },
+        success: function(wrapper, validClass) {
+            wrapper.text('OK!').addClass('help-inline').closest('.control-group').addClass('success');
+        }
+    });
+        $("#orderform2").validate({
+        rules: {
             Name: {
                 required: true,
             },
@@ -60,7 +95,7 @@ $('#select01').on('change',function(){
             confirmEmail: {
                 required: true,
                 email: true,
-		        equalTo: '#Email',
+                equalTo: '#Email',
             },
             checkread: {
                 required: true,
