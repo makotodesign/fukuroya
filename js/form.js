@@ -133,6 +133,12 @@ $('select:disabled').parent().append('<span class="text-muted disabled_msg">上�
     }
 });
 
+// アップロードファイル名取得
+$('#upfile').on('change',function(){
+$('#filename').val($(this).val());
+
+});   
+
 });
 
 

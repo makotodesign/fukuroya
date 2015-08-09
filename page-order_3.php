@@ -1,9 +1,14 @@
 <?php
+session_cache_limiter('none');
 session_start();
 $select_grade=h($_POST['select_grade']);
 $select_size=h($_POST['select_size']);
 $select_qty=h($_POST['select_qty']);
 $print_or_none=h($_POST['radio_type']);
+$_SESSION['grade']=$select_grade;
+$_SESSION['size']=$select_size;
+$_SESSION['qty']=$select_qty;
+$_SESSION['print_or_none']=$print_or_none;
 
 
 
@@ -19,7 +24,7 @@ require_once('header.php');
    				<button class="btn btn-default no-point" type="button"> ご注文内容入力 <span class="glyphicon glyphicon-arrow-right"></span></button>
    				<button class="btn btn-success no-point" type="button"> お客様情報入力 <span class="glyphicon glyphicon-arrow-right"></span></button>
    				<button class="btn btn-default no-point" type="button"> 原稿ファイルアップロード <span class="glyphicon glyphicon-arrow-right"></span></button>
-   				<button class="btn btn-default no-point" type="button"> お支払い情報入力 <span class="glyphicon glyphicon-arrow-right"></span></button>
+   				<button class="btn btn-default no-point" type="button"> お支払い手続き <span class="glyphicon glyphicon-arrow-right"></span></button>
    				<button class="btn btn-default no-point" type="button"> ご注文手続き完了 </button>
 
 

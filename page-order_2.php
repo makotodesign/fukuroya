@@ -7,7 +7,7 @@ require_once('header.php');
    				<button class="btn btn-success no-point" type="button"> ご注文内容入力 <span class="glyphicon glyphicon-arrow-right"></span></button>
    				<button class="btn btn-default no-point" type="button"> お客様情報入力 <span class="glyphicon glyphicon-arrow-right"></span></button>
    				<button class="btn btn-default no-point" type="button"> 原稿ファイルアップロード <span class="glyphicon glyphicon-arrow-right"></span></button>
-   				<button class="btn btn-default no-point" type="button"> お支払い情報入力 <span class="glyphicon glyphicon-arrow-right"></span></button>
+   				<button class="btn btn-default no-point" type="button"> お支払い手続き <span class="glyphicon glyphicon-arrow-right"></span></button>
    				<button class="btn btn-default no-point" type="button"> ご注文手続き完了 </button>
 
 

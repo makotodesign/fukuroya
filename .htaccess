@@ -1,0 +1,12 @@
+
+# BEGIN heteml
+# 注意:
+# このブロックはヘテムルのコントロールパネルによって作成されました。
+# # BEGIN heteml 〜 # END heteml は編集を行わないようにご注意ください。
+
+AuthUserFile /home/sites/heteml/users/m/a/k/makotodesign/web/fukuroya/.htpasswd
+AuthGroupFile /dev/null
+AuthName "fukuroya.jp now constracting"
+AuthType Basic
+require valid-user
+# END heteml
