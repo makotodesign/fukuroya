@@ -79,7 +79,7 @@ $('select:disabled').parent().append('<span class="text-muted disabled_msg">ä¸Šã
             wrapper.text('OK!').addClass('help-inline').closest('.control-group').addClass('success');
         }
     });
-        $("#orderform2").validate({
+        $("#orderform2,#contactform1").validate({
         rules: {
             Name: {
                 required: true,
@@ -100,6 +100,9 @@ $('select:disabled').parent().append('<span class="text-muted disabled_msg">ä¸Šã
             checkread: {
                 required: true,
             },
+            q_select: {
+                required: true,
+            }
         },
         errorClass: "help-inline",
         validClass: "help-inline",

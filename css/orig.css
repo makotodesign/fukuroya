@@ -352,11 +352,11 @@ span[id $='error'] {
 	vertical-align: middle;
 }
 
-
-/*select:disabled{
-  color:red;
-
-}*/
+/*------------privacy------------*/
+.privacy h2 {
+	font-size: 2rem;
+	padding: 5px 0 5px 10px;
+}
 
 
 

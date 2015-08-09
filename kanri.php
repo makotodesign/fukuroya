@@ -8,6 +8,8 @@ try {
  $db = new PDO(PDO_DSN,DB_USERNAME,DB_PASSWORD);
 	$stmt = $db->query('SELECT * FROM orders ORDER BY modification_time DESC');
  	$results=$stmt->fetchAll(PDO::FETCH_ASSOC);
+ 	$stmt =$db->query('SELECT * FROM contact');
+ 	$contact=$stmt->fetchAll(PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
   echo $e->getMessage();
   exit;
@@ -39,19 +41,21 @@ try {
 <body>
 <div class="container-fluid">
 	<div class="page-header">
-	  <h1>袋屋注文管理ページ <small>現在まだ簡易の状態です</small></h1>
-	  <button class="btn btn-primary" onClick="location.reload(true)">最新情報に更新</button>
+	  <h1>袋屋注文管理ページ <small>簡易版</small></h1>
+	  <button class="btn btn-default" onClick="location.reload(true)">最新情報に更新</button>
+	  <button class="btn btn-default" onClick="location.href='#order'">注文一覧</button>
+	  <button class="btn btn-default" onClick="location.href='#contact'">問い合わせ一覧</button>
 	</div>
-	<div class="panel panel-primary">
+	<div id="order" class="panel panel-primary">
 	  <div class="panel-heading">
 	    <h3 class="panel-title">注文一覧</h3>
 	  </div>
 	  <div class="panel-body">
-	    <table class="table table-bordered table-striped" style="font-size:1rem;">
+	    <table class="table table-bordered table-striped" style="font-size:0.9rem;">
 			<thead>
 			<tr>
 				<th width="50">注文日時</th>
-				<th width="50">注文ID</th>
+				<th width="40">注文ID</th>
 				<th width="50">会社名</th>
 				<th width="50">名前</th>
 				<th width="50">よみがな</th>
@@ -103,6 +107,38 @@ try {
 			<?php endforeach; ?>
 			</tbody>
 	    </table>
+	  </div>
+	</div>
+	<div id="contact" class="panel panel-primary">
+	  <div class="panel-heading">
+	    <h3 class="panel-title">問い合わせ一覧</h3>
+	  </div>
+	  <div class="panel-body">
+	  	<table class="table table-bordered table-striped" style="font-size:0.9rem;">
+			<thead>
+				<tr>
+					<th width="50">問い合わせ日時</th>
+					<th width="40">種別</th>
+					<th width="50">名前</th>
+					<th width="50">email</th>
+					<th width="300">問い合わせ内容</th>	
+				</tr>
+			</thead>
+			<tbody>
+				<?php foreach($contact AS $msg):?>
+				<tr>
+					<td><?php echo $msg['creation_time']; ?></td>
+					<td><?php echo $msg['type']; ?></td>
+					<td><?php echo $msg['name']; ?></td>
+					<td><?php echo $msg['email']; ?></td>
+					<td><?php echo $msg['inquiry']; ?></td>
+
+				</tr>
+				<?php endforeach; ?>
+			</tbody>
+
+
+	  	</table>
 	  </div>
 	</div>
 

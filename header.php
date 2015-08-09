@@ -39,8 +39,8 @@ $filename=basename($_SERVER['PHP_SELF']);
       <div class="container clearfix">
         <h1 class="text-hide">格安オリジナル紙袋制作の袋屋.jp Fukuroya.jp</h1>
         <ul class="clearfix">
-          <li><a href="">サイトマップ</a></li>
-          <li><a href="">プライバシーポリシー</a></li>
+         <!--  <li><a href="">サイトマップ</a></li> -->
+          <li><a href="page-privacy.php">プライバシーポリシー</a></li>
           <li><a href="">特定商取引法に基づく表記</a></li>
 
 
