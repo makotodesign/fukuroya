@@ -1,6 +1,7 @@
 <?php
 session_cache_limiter('none');
 session_start();
+$id=h($_POST['time']);
 $company_Name=h($_POST['company_Name']);
 $Name=h($_POST['Name']);
 $Kana=h($_POST['Kana']);
@@ -15,6 +16,7 @@ $address2=h($_POST['address2']);
 $address3=h($_POST['address3']);
 $address4=h($_POST['address4']);
 $_SESSION['company_Name']=$company_Name;
+$_SESSION['id']=$id;
 $_SESSION['Name']=$Name;
 $_SESSION['Kana']=$Kana;
 $_SESSION['Email']=$Email;
@@ -61,7 +63,6 @@ require_once('header.php');
 				    <p class="help-block">.ai/.pdf/.psd/.epsが入稿可能です。最大サイズは50MBです。</p>
 				  </div>		
 					<p>
-					<input type="hidden" name="time" id="time" >
 					<input type="hidden" name="filename" id="filename" >
 
 					</p>

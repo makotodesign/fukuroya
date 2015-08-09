@@ -179,6 +179,7 @@ require_once('header.php');
 					個人情報の取り扱いについて同意して送信する
 				</div>
 			</div>
+			<input type="hidden" name="time" id="time">
 									
 			
 

@@ -6,7 +6,7 @@ define('PDO_DSN','mysql:host=mysql507.heteml.jp;dbname='.DB_DATABASE.';charset=u
 try {
   // connect
  $db = new PDO(PDO_DSN,DB_USERNAME,DB_PASSWORD);
-	$stmt = $db->query('SELECT * FROM orders');
+	$stmt = $db->query('SELECT * FROM orders ORDER BY modification_time DESC');
  	$results=$stmt->fetchAll(PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
   echo $e->getMessage();
@@ -47,10 +47,11 @@ try {
 	    <h3 class="panel-title">注文一覧</h3>
 	  </div>
 	  <div class="panel-body">
-	    <table class="table table-bordered" style="font-size:1rem;">
+	    <table class="table table-bordered table-striped" style="font-size:1rem;">
 			<thead>
 			<tr>
 				<th width="50">注文日時</th>
+				<th width="50">注文ID</th>
 				<th width="50">会社名</th>
 				<th width="50">名前</th>
 				<th width="50">よみがな</th>
@@ -76,6 +77,7 @@ try {
 			<?php foreach($results AS $result):?>
 				<tr>
 					<td><?php echo $result["creation_time"]; ?></td>
+					<td><?php echo $result["order_id"]; ?></td>
 					<td><?php echo $result["company_name"]; ?></td>
 					<td><?php echo $result["name"]; ?></td>
 					<td><?php echo $result["kana"]; ?></td>

@@ -1,9 +1,8 @@
 <?php
 session_cache_limiter('none');
 session_start();
-$time=h($_POST['time']);
 $prefilename=h($_POST['filename']);
-$_SESSION['time']=$time;
+$id=$_SESSION['id'];
 $_SESSION['prefilename']=$prefilename;
 $dir_name="../uploadfile";
 $max_size=1024*1024*50;
@@ -40,7 +39,7 @@ require_once('header.php');
 				}
 				$extension=pathinfo($_FILES["upfile"]["name"],PATHINFO_EXTENSION );
 				if($extension== "ai" || $extension== "psd" || $extension== "pdf" || $extension== "eps"){
-					$file_name="upload_".$time.".".$extension;
+					$file_name="upload_".$id.".".$extension;
 					$uploaded_file="$dir_name/$file_name";
 					move_uploaded_file($_FILES["upfile"]["tmp_name"],$uploaded_file);
 					$_SESSION['file_name']=$file_name;

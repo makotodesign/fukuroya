@@ -7,10 +7,11 @@ define('PDO_DSN','mysql:host=mysql507.heteml.jp;dbname='.DB_DATABASE.';charset=u
 try {
   // connect
  $db = new PDO(PDO_DSN,DB_USERNAME,DB_PASSWORD);
- $stmt = $db->prepare('INSERT INTO orders(company_name,name,kana,send_place,email,tel,fax,postcode,pref,city,area1,area2,grade,size,qty,print_flug,prefilename,modfilename)
-  VALUES (:company_name,:name,:kana,:send_place,:email,:tel,:fax,:postcode,:pref,:city,:area1,:area2,:grade,:size,:qty,:print_flug,:prefilename,:modfilename);');
+ $stmt = $db->prepare('INSERT INTO orders(order_id,company_name,name,kana,send_place,email,tel,fax,postcode,pref,city,area1,area2,grade,size,qty,print_flug,prefilename,modfilename)
+  VALUES (:company_name,:name,:kana,:send_place,:email,:tel,:fax,:postcode,:pref,:city,:area1,:area2,:grade,:size,:qty,:print_flug,:prefilename,:modfilename,:orderid);');
 $stmt = $stmt->execute(
 		array(
+			':orderid'=>$_SESSION['id'],
 			':company_name'=>$_SESSION['company_Name'],
 			':name'=>$_SESSION['Name'],
 			':kana'=>$_SESSION['Kana'],
@@ -28,10 +29,13 @@ $stmt = $stmt->execute(
 			':qty'=>$_SESSION['qty'],
 			':print_flug'=>$_SESSION['print_or_none'],
 			':prefilename'=>$_SESSION['prefilename'],
-			':modfilename'=>$_SESSION['file_name']
+			':modfilename'=>$_SESSION['file_name'],
+	
 		)
 
 	);
+
+
 
 } catch (PDOException $e) {
   echo $e->getMessage();
@@ -57,9 +61,10 @@ require_once('header.php');
 			</div>
 		</div>
 		<div class="well">
-			<p>
-				<strong>ご注文ありがとうございます。担当者より今後の流れについて、再度ご連絡させていただきます。</strong>	
-			</p>
+			<p>ご注文ありがとうございます。</p>
+				
+			<h2>今回のご注文ID【<?php echo $_SESSION['id']; ?>】</h2>
+			<p>担当者より今後の流れについて、E-mailにてご連絡させていただきます。</p>
 		</div>
 		<div class="submit_check col-sm-6">
 			<div class="panel panel-primary">
