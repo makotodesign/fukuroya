@@ -102,6 +102,9 @@ $('select:disabled').parent().append('<span class="text-muted disabled_msg">ä¸Šã
             },
             q_select: {
                 required: true,
+            },
+            inquiry: {
+                required: true,
             }
         },
         errorClass: "help-inline",

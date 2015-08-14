@@ -10,7 +10,7 @@
 		  <div class="panel-body">
     		<form action="page-contact_2.php" method="POST" id="contactform1" class="form-horizontal" novalidate="novalidate">
     			<div class="form-group control-group">
-				<label for="q_select" class="col-sm-2 control-label">お問い合わせ項目</label>
+				<label for="q_select" class="col-sm-2 control-label">項目</label>
 					<div class="col-sm-4 controls">
 						<select id="q_select" name="q_select" class="form-control">
 				          <option value="">--選択して下さい</option>
@@ -39,11 +39,9 @@
 					</div>
 				</div>
 				<div class="form-group control-group">
-					<label for="inquiry" class="col-sm-2 control-label">お問い合わせ内容</label>
+					<label for="inquiry" class="col-sm-2 control-label">内容</label>
 					<div class="col-sm-10 controls">
-						<textarea class="form-control" name="inquiry" id="inquiry" style="height:300px;">
-
-						</textarea>
+						<textarea class="form-control" name="inquiry" id="inquiry" style="height:300px;" placeholder="お問い合わせ内容を入力して下さい:必須"></textarea>
 					</div>
 
 				</div>

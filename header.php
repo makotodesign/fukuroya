@@ -41,7 +41,7 @@ $filename=basename($_SERVER['PHP_SELF']);
         <ul class="clearfix">
          <!--  <li><a href="">サイトマップ</a></li> -->
           <li><a href="page-privacy.php">プライバシーポリシー</a></li>
-          <li><a href="">特定商取引法に基づく表記</a></li>
+          <li><a href="page-storihiki.php">特定商取引法に基づく表記</a></li>
 
 
         </ul>
@@ -56,7 +56,7 @@ $filename=basename($_SERVER['PHP_SELF']);
           <i class="glyphicon glyphicon-menu-hamburger"></i>
           </button>
 
-          <a class="navbar-brand logo-wrap clearfix" href="http://makotoschool.net/fukuroya/boot">
+          <a class="navbar-brand logo-wrap clearfix" href="http://fukuroya.jp">
             <div class="logo pull-left"><?php require_once('svg/logo-svg.php') ?></div>
             <div class="logoword pull-left"><?php require_once('svg/logo-svg-word.php') ?></div>
           </a>
@@ -86,7 +86,7 @@ $filename=basename($_SERVER['PHP_SELF']);
           <ul id="mainnav" class="nav navbar-nav navbar-right">
           <li><a href="index.php" id="top">Top</a></li>
           <li><a href="page-beginner.php" id="beginner">初めての方</a></li>
-          <li><a href="page-product.php" id="product" data-toggle="popover"  data-html="true" data-placement="bottom" title="Click!"  data-content="こちらから簡単見積もり、テンプレートダウンロードも可能です">商品一覧</a></li>
+          <li><a href="page-product.php" id="product" data-toggle="popover" data-container="body" data-html="true" data-placement="bottom" title="Click!"  data-content="こちらから簡単見積もり、テンプレートダウンロードも可能です">商品一覧</a></li>
           <li><a href="page-order.php" id="order">注文</a></li>
           <li><a href="page-company.php" id="company">会社概要</a></li>
           <li><a href="page-contact.php" id="contact">お問い合わせ</a></li>

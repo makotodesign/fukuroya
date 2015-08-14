@@ -1,37 +1,29 @@
 $(function(){
-$('#orderbtn1').on('click',function(){
-location.href="page-order_2.php";
+pagechange('.go_top',"index.php");
+pagechange('#orderbtn1',"page-order_2.php");
+pagechange('#fileup_next',"page-order_6.php");
+pagechange('#pay_next',"page-order_7.php");
+pagechange('#mujinext',"page-order_6.php");
 
-});
-
-$('#orderbtn2').on('click',function(){
-alert('現在、工事中です。');
-});
 
 $('.back').on('click',function(){
 	history.back();
 });
 
-$('#fileup_next').on('click',function(){
-location.href="page-order_6.php";
 
-});
+// アラート
+alertmsg('#orderbtn2','現在、工事中です。');
 
-$('#pay_next').on('click',function(){
-location.href="page-order_7.php";
-
-});
-
-$('.go_top').on('click',function(){
-location.href="index.php";
-
-});
-
-$('#mujinext').on('click',function(){
-location.href="page-order_6.php";
-
-});
-
+function pagechange(name,file){
+	$(name).on('click',function(){
+		location.href=file;
+	});
+}
+function alertmsg(name,msg){
+	$(name).on('click',function(){
+		alert(msg);
+	});
+}
 
 
 });

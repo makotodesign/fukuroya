@@ -358,6 +358,18 @@ span[id $='error'] {
 	padding: 5px 0 5px 10px;
 }
 
+/*------------privacy------------*/
+.tokutei th{
+	text-align: center;
+	vertical-align: middle;
+	background-color: #D3F9FF;
+}
+
+.tokutei td {
+	text-align: left;
+	vertical-align: middle;
+}
+
 
 
 
