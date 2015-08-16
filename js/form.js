@@ -32,7 +32,12 @@ $('#select_size').on('change',function(){
 
 $('select:disabled').parent().append('<span class="text-muted disabled_msg">上の項目を入力すると有効になります</span>');
 
-
+//カナ自動入力
+$(function() {
+    $.fn.autoKana('#Name', '#Kana', {
+        katakana : true  //true：カタカナ、false：ひらがな（デフォルト）
+    });
+});
 
 
 // validate the comment form when it is submitted

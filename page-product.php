@@ -137,7 +137,7 @@
 										</div>
 										<div id="il_ver_wrap" class="hidden">
 	
-											<button id="i_temp_download_btn" type="button" class="btn btn-primary btn-lg">
+											<button id="i_temp_download_btn" type="button" class="btn btn-primary btn-lg download_i_l_s">
 											<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> Illustratorテンプレート<br>ダウンロード
 											</button>
 										</div>

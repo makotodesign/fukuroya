@@ -53,9 +53,9 @@ require_once('header.php');
 
 			</div>
 			<div class="form-group control-group">
-				<label for="Kana" class="col-sm-2 control-label">よみがな</label>
+				<label for="Kana" class="col-sm-2 control-label">ヨミガナ</label>
 				<div class="col-sm-10 controls">
-					<input type="text" class="form-control" name="Kana" id="Kana" placeholder="よみがな">
+					<input type="text" class="form-control" name="Kana" id="Kana" placeholder="氏名:カナ">
 				</div>
 			</div>
 			<div class="form-group control-group">
