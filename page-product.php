@@ -17,16 +17,16 @@
 
 			</div>
 			<div id="product_detail">
-				<ul class="nav nav-tabs" style="margin-bottom:15px;">
+				<ul class="nav nav-tabs">
 				<li class="active"><a href="#eco" data-toggle="tab">エコノミープラン</a></li>
 				<li ><a href="#st" data-toggle="tab">スタンダードプラン</a></li>
 				</ul>
 				<div class="tab-content">
 				<article id="eco" class="tab-pane active">
-					<div class="row">
-					<h2 class="text-center margin-top-0">エコノミープラン</h2>
+					<div class="row row_margin_clear">
+						<h2>エコノミープラン&nbsp;&nbsp;<small>リーズナブルとクオリティを両立させた人気のプランです</small></h2>
 					</div>
-					<div class="row product_row">
+					<div class="row product_row row_margin_clear">
 						<div class="col-md-4 bag_inq big_bag">
 							<div class="product_box">
 								<h2><span class="rem10">L</span>サイズ</h2>
@@ -43,9 +43,9 @@
 						</div>
 						<div class="col-md-4">
 							<div class="view1">
-								<h2 class="text-center">スタンダード</h2>
+								<h2 class="text-center">標準</h2>
 								<div class="bagimage s">
-									<?php require_once('svg/bug_5_big_s.svg')?>
+									<?php include('svg/bug_5_big_s.svg')?>
 								</div>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ls_5" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#template_l_s">テンプレートをダウンロード</button>
@@ -57,7 +57,7 @@
 							<div class="view1">
 								<h2 class="text-center">トール</h2>
 								<div class="bagimage">	
-									<?php require_once('svg/bug_5_big_t.svg')?>
+									<?php include('svg/bug_5_big_t.svg')?>
 								</div>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ls_5" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#template_l_t">テンプレートをダウンロード</button>
@@ -69,7 +69,7 @@
 								<div class="modal-content">
 									<header class="modal-header text-center">
 										<button class="close" data-dismiss="modal">&times;</button>
-										<h2 class="text-primary font-bold">納期5営業日&nbsp;Lサイズスタンダード見積もり</h2>
+										<h2 class="text-primary font-bold">エコノミープラン<br>Lサイズ見積もり</h2>
 									</header>
 									<div class="modal-body">
 										<table class="table table-striped">
@@ -123,7 +123,7 @@
 								<div class="modal-content">
 									<header class="modal-header text-center">
 										<button class="close" data-dismiss="modal">&times;</button>
-										<h2 class="text-primary font-bold">Lサイズ（スタンダード）テンプレート</h2>
+										<h2 class="text-primary font-bold">Lサイズ（標準）テンプレート</h2>
 									</header>
 									<div class="modal-body">
 										<div class="margin-bottom-20">
@@ -199,7 +199,7 @@
 					</div>
 					
 
-					<div class="row product_row">
+					<div class="row product_row row_margin_clear">
 						<div class="col-md-4 bag_inq mid_bag">
 							<div class="product_box">
 								<h2><span class="rem10">M</span>サイズ</h2>
@@ -212,9 +212,9 @@
 						</div>
 						<div class="col-md-4">
 							<div class="view1">
-								<h2 class="text-center">スタンダード</h2>
+								<h2 class="text-center">標準</h2>
 								<div class="bagimage s">
-									<?php require_once('svg/bug_5_mid_s.svg')?>
+									<?php include('svg/bug_5_mid_s.svg')?>
 								</div>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ms_5" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#template_m_s">テンプレートをダウンロード</button>							
@@ -224,7 +224,7 @@
 							<div class="view1">
 								<h2 class="text-center">トール</h2>
 								<div class="bagimage">
-									<?php require_once('svg/bug_5_mid_t.svg')?>
+									<?php include('svg/bug_5_mid_t.svg')?>
 								</div>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ms_5" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#template_m_t">テンプレートをダウンロード</button>
@@ -237,7 +237,7 @@
 								<div class="modal-content">
 									<header class="modal-header text-center">
 										<button class="close" data-dismiss="modal">&times;</button>
-										<h2 class="text-primary font-bold">納期5営業日&nbsp;Mサイズスタンダード見積もり</h2>
+										<h2 class="text-primary font-bold">エコエコノミープラン<br>Mサイズ見積もり</h2>
 									</header>
 									<div class="modal-body">
 										<table class="table table-striped">
@@ -291,7 +291,7 @@
 								<div class="modal-content">
 									<header class="modal-header text-center">
 										<button class="close" data-dismiss="modal">&times;</button>
-										<h2 class="text-primary font-bold">Mサイズ（スタンダード）テンプレート</h2>
+										<h2 class="text-primary font-bold">Mサイズ（標準）テンプレート</h2>
 									</header>
 									<div class="modal-body">
 										<div class="margin-bottom-20">
@@ -365,7 +365,7 @@
 							</div>
 							</section>			
 					</div>					
-					<div class="row product_row">
+					<div class="row product_row row_margin_clear">
 						<div class="col-md-4 bag_inq mini_bag">
 							<div class="product_box">
 								<h2><span class="rem10">S</span>サイズ</h2>
@@ -378,9 +378,9 @@
 						</div>
 						<div class="col-md-4">
 							<div class="view1">
-								<h2 class="text-center">スタンダード</h2>
+								<h2 class="text-center">標準</h2>
 								<div class="bagimage s">
-									<?php require_once('svg/bug_5_sm_s.svg')?>
+									<?php include('svg/bug_5_sm_s.svg')?>
 								</div>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ss_5" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#template_s_s">テンプレートをダウンロード</button>							
@@ -389,7 +389,7 @@
 						<div class="col-md-4">
 								<h2 class="text-center">トール</h2>
 								<div class="bagimage">
-									<?php require_once('svg/bug_5_sm_l.svg')?>
+									<?php include('svg/bug_5_sm_l.svg')?>
 								</div>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ss_5" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#template_s_t">テンプレートをダウンロード</button>							
@@ -399,7 +399,7 @@
 								<div class="modal-content">
 									<header class="modal-header text-center">
 										<button class="close" data-dismiss="modal">&times;</button>
-										<h2 class="text-primary font-bold">納期5営業日&nbsp;Sサイズスタンダード見積もり</h2>
+										<h2 class="text-primary font-bold">エコノミープラン<br>Sサイズ見積もり</h2>
 									</header>
 									<div class="modal-body">
 										<table class="table table-striped">
@@ -453,7 +453,7 @@
 								<div class="modal-content">
 									<header class="modal-header text-center">
 										<button class="close" data-dismiss="modal">&times;</button>
-										<h2 class="text-primary font-bold">Sサイズ（スタンダード）テンプレート</h2>
+										<h2 class="text-primary font-bold">Sサイズ（標準）テンプレート</h2>
 									</header>
 									<div class="modal-body">
 										<div class="margin-bottom-20">
@@ -533,10 +533,10 @@
 						
 				</article>
 				<article id="st" class="tab-pane">
-					<div class="row">
-					<h2 class="text-center margin-top-0">スタンダードプラン</h2>
+					<div class="row row_margin_clear">
+					<h2>スタンダードプラン&nbsp;&nbsp;<small>ワンランク上の仕上がりをあえて「スタンダード」で提供します</small></h2>
 					</div>
-					<div class="row product_row">
+					<div class="row product_row row_margin_clear">
 						<div class="col-md-4 bag_inq big_bag">
 							<div class="product_box">
 								<h2><span class="rem10">L</span>サイズ</h2>
@@ -545,24 +545,171 @@
 									雑貨、アパレル、服など様々な用途に対応出来ます。
 									背の高いトールサイズとスタンダードサイズをご用意いたしました
 									<span class="bagsize">幅32cm×奥行き11cm<br>×高さ(26.5cm or 45cm)</span>
+									
 								</p>
 								
 
 							</div>
 						</div>
 						<div class="col-md-4">
-							<div class="product_box">
+							<div class="view1">
+								<h2 class="text-center">標準</h2>
+								<div class="bagimage s">
+									<?php include('svg/bug_5_big_s.svg')?>
+								</div>
+								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ls_s" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
+								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#template_s_l_s">テンプレートをダウンロード</button>
 
-
-
+							
 							</div>
 						</div>
 						<div class="col-md-4">
-							<div class="product_box">
+							<div class="view1">
+								<h2 class="text-center">トール</h2>
+								<div class="bagimage">	
+									<?php include('svg/bug_5_big_t.svg')?>
+								</div>
+								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ls_s" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
+								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#template_s_l_t">テンプレートをダウンロード</button>
+								
 							</div>
 						</div>
+						<section class="modal fade l_s" id="ls_s" tabindex="-1" role="dialog">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<header class="modal-header text-center">
+										<button class="close" data-dismiss="modal">&times;</button>
+										<h2 class="text-primary font-bold">スタンダードプラン<br>Lサイズ見積もり</h2>
+									</header>
+									<div class="modal-body">
+										<table class="table table-striped">
+											<thead>
+												<tr>
+													<th>部数</th>
+													<th>単価</th>
+													<th>合計</th>
+													<th>消費税</th>
+													<th>送料</th>													
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<select name="copies" id="copies">
+															<option value="0">選んで下さい</option>
+															<script>
+															for(i=500;i<=10000;i=i+100){
+																document.write('<option value="'+i+'">'+i+'部</option>');
+															}
+															</script>
+														</select>
+													</td>
+													<td><span id="price"></span>円/1部</td>
+													<td><span id="total"></span>円</td>
+													<td><span id="tax"></span>円</td>
+													<td><span id="ship"></span>円</td>	
+												</tr>
+												<tr class="danger">
+													<th colspan="5" class="text-right">総合計&nbsp;&nbsp;<span id="all_total"></span>円</th>
+												</tr>
+												<tr>
+													<td colspan="3"></td>
+													<td colspan="2" id="msg"></td>
+												</tr>
+											</tbody>
+										</table>
+					                                   
+									</div>
+									<div class="modal-footer">
+
+									</div>
+								</div>
+
+
+							</div>
+							</section>	
+							<section class="modal fade template_download" id="template_s_l_s" tabindex="-1" role="dialog">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<header class="modal-header text-center">
+										<button class="close" data-dismiss="modal">&times;</button>
+										<h2 class="text-primary font-bold">Lサイズ（標準）テンプレート</h2>
+									</header>
+									<div class="modal-body">
+										<div class="margin-bottom-20">
+										<h2>ソフトを選択</h2>
+										<label class="radio-inline">
+										<input type="radio" name="inlineRadioOptions" id="il" value="illustrator"> Illustrator
+										</label>
+										<label class="radio-inline">
+										<input type="radio" name="inlineRadioOptions" id="ph" value="photoshop"> Photoshop
+										</label>
+										</div>
+										<div id="il_ver_wrap" class="hidden">
+	
+											<button id="i_temp_download_btn" type="button" class="btn btn-primary btn-lg download_i_l_s">
+											<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> Illustratorテンプレート<br>ダウンロード
+											</button>
+										</div>
+										<div id="ph_ver_wrap" class="hidden">
+											<button id="p_temp_download_btn" type="button" class="btn btn-primary btn-lg">
+											<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> Photoshopテンプレート<br>ダウンロード
+											</button>				
+										</div>
+															
+					                                   
+									</div>
+									<div class="modal-footer">
+
+									</div>
+								</div>
+
+
+							</div>
+							</section>
+							<section class="modal fade template_download" id="template_s_l_t" tabindex="-1" role="dialog">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<header class="modal-header text-center">
+										<button class="close" data-dismiss="modal">&times;</button>
+										<h2 class="text-primary font-bold">Lサイズ（トール）テンプレート</h2>
+									</header>
+									<div class="modal-body">
+										<div class="margin-bottom-20">
+										<h2>ソフトを選択</h2>
+										<label class="radio-inline">
+										<input type="radio" name="inlineRadioOptions" id="il" value="illustrator"> Illustrator
+										</label>
+										<label class="radio-inline">
+										<input type="radio" name="inlineRadioOptions" id="ph" value="photoshop"> Photoshop
+										</label>
+										</div>
+										<div id="il_ver_wrap" class="hidden">
+	
+											<button id="i_temp_download_btn" type="button" class="btn btn-primary btn-lg download_i_l_t">
+											<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> Illustratorテンプレート<br>ダウンロード
+											</button>
+										</div>
+										<div id="ph_ver_wrap" class="hidden">
+											<button id="p_temp_download_btn" type="button" class="btn btn-primary btn-lg">
+											<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> Photoshopテンプレート<br>ダウンロード
+											</button>				
+										</div>
+															
+					                                   
+									</div>
+									<div class="modal-footer">
+
+									</div>
+								</div>
+
+
+							</div>
+							</section>		
 					</div>
-					<div class="row product_row">
+					
+
+					<div class="row product_row row_margin_clear">
 						<div class="col-md-4 bag_inq mid_bag">
 							<div class="product_box">
 								<h2><span class="rem10">M</span>サイズ</h2>
@@ -574,15 +721,161 @@
 							</div>	
 						</div>
 						<div class="col-md-4">
-							<div class="product_box">
+							<div class="view1">
+								<h2 class="text-center">標準</h2>
+								<div class="bagimage s">
+									<?php include('svg/bug_5_mid_s.svg')?>
+								</div>
+								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ms_s" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
+								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#template_s_m_s">テンプレートをダウンロード</button>							
 							</div>
 						</div>
 						<div class="col-md-4">
-							<div class="product_box">
+							<div class="view1">
+								<h2 class="text-center">トール</h2>
+								<div class="bagimage">
+									<?php include('svg/bug_5_mid_t.svg')?>
+								</div>
+								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ms_s" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
+								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#template_s_m_t">テンプレートをダウンロード</button>
+
+							
 							</div>
 						</div>
+						<section class="modal fade m_5" id="ms_s" tabindex="-1" role="dialog">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<header class="modal-header text-center">
+										<button class="close" data-dismiss="modal">&times;</button>
+										<h2 class="text-primary font-bold">スタンダードプラン<br>Mサイズ見積もり</h2>
+									</header>
+									<div class="modal-body">
+										<table class="table table-striped">
+											<thead>
+												<tr>
+													<th>部数</th>
+													<th>単価</th>
+													<th>合計</th>
+													<th>消費税</th>
+													<th>送料</th>													
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<select name="copies" id="copies">
+															<option value="0">選んで下さい</option>
+															<script>
+															for(i=500;i<=10000;i=i+100){
+																document.write('<option value="'+i+'">'+i+'部</option>');
+															}
+															</script>
+														</select>
+													</td>
+													<td><span id="price"></span>円/1部</td>
+													<td><span id="total"></span>円</td>
+													<td><span id="tax"></span>円</td>
+													<td><span id="ship"></span>円</td>	
+												</tr>
+												<tr class="danger">
+													<th colspan="5" class="text-right">総合計&nbsp;&nbsp;<span id="all_total"></span>円</th>
+												</tr>
+												<tr>
+													<td colspan="3"></td>
+													<td colspan="2" id="msg"></td>
+												</tr>
+											</tbody>
+										</table>
+					                                   
+									</div>
+									<div class="modal-footer">
+
+									</div>
+								</div>
+
+
+							</div>
+							</section>
+							<section class="modal fade template_download" id="template_s_m_s" tabindex="-1" role="dialog">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<header class="modal-header text-center">
+										<button class="close" data-dismiss="modal">&times;</button>
+										<h2 class="text-primary font-bold">Mサイズ（標準）テンプレート</h2>
+									</header>
+									<div class="modal-body">
+										<div class="margin-bottom-20">
+										<h2>ソフトを選択</h2>
+										<label class="radio-inline">
+										<input type="radio" name="inlineRadioOptions" id="il" value="illustrator"> Illustrator
+										</label>
+										<label class="radio-inline">
+										<input type="radio" name="inlineRadioOptions" id="ph" value="photoshop"> Photoshop
+										</label>
+										</div>
+										<div id="il_ver_wrap" class="hidden">
+	
+											<button id="i_temp_download_btn" type="button" class="btn btn-primary btn-lg download_i_m_s">
+											<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> Illustratorテンプレート<br>ダウンロード
+											</button>
+										</div>
+										<div id="ph_ver_wrap" class="hidden">
+											<button id="p_temp_download_btn" type="button" class="btn btn-primary btn-lg">
+											<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> Photoshopテンプレート<br>ダウンロード
+											</button>				
+										</div>
+															
+					                                   
+									</div>
+									<div class="modal-footer">
+
+									</div>
+								</div>
+
+
+							</div>
+							</section>
+							<section class="modal fade template_download" id="template_s_m_t" tabindex="-1" role="dialog">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<header class="modal-header text-center">
+										<button class="close" data-dismiss="modal">&times;</button>
+										<h2 class="text-primary font-bold">Mサイズ（トール）テンプレート</h2>
+									</header>
+									<div class="modal-body">
+										<div class="margin-bottom-20">
+										<h2>ソフトを選択</h2>
+										<label class="radio-inline">
+										<input type="radio" name="inlineRadioOptions" id="il" value="illustrator"> Illustrator
+										</label>
+										<label class="radio-inline">
+										<input type="radio" name="inlineRadioOptions" id="ph" value="photoshop"> Photoshop
+										</label>
+										</div>
+										<div id="il_ver_wrap" class="hidden">
+	
+											<button id="i_temp_download_btn" type="button" class="btn btn-primary btn-lg download_i_m_t">
+											<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> Illustratorテンプレート<br>ダウンロード
+											</button>
+										</div>
+										<div id="ph_ver_wrap" class="hidden">
+											<button id="p_temp_download_btn" type="button" class="btn btn-primary btn-lg">
+											<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> Photoshopテンプレート<br>ダウンロード
+											</button>				
+										</div>
+															
+					                                   
+									</div>
+									<div class="modal-footer">
+
+									</div>
+								</div>
+
+
+							</div>
+							</section>			
 					</div>					
-					<div class="row product_row">
+					<div class="row product_row row_margin_clear">
 						<div class="col-md-4 bag_inq mini_bag">
 							<div class="product_box">
 								<h2><span class="rem10">S</span>サイズ</h2>
@@ -594,15 +887,160 @@
 							</div>	
 						</div>
 						<div class="col-md-4">
-							<div class="product_box">
+							<div class="view1">
+								<h2 class="text-center">標準</h2>
+								<div class="bagimage s">
+									<?php include('svg/bug_5_sm_s.svg')?>
+								</div>
+								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ss_s" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
+								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#template_s_s_s">テンプレートをダウンロード</button>							
 							</div>
 						</div>
 						<div class="col-md-4">
-							<div class="product_box">
+								<h2 class="text-center">トール</h2>
+								<div class="bagimage">
+									<?php include('svg/bug_5_sm_l.svg')?>
+								</div>
+								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ss_s" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
+								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#template_s_s_t">テンプレートをダウンロード</button>							
 							</div>
-						</div>
+						<section class="modal fade m_5" id="ss_s" tabindex="-1" role="dialog">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<header class="modal-header text-center">
+										<button class="close" data-dismiss="modal">&times;</button>
+										<h2 class="text-primary font-bold">スタンダードプラン<br>Sサイズ見積もり</h2>
+									</header>
+									<div class="modal-body">
+										<table class="table table-striped">
+											<thead>
+												<tr>
+													<th>部数</th>
+													<th>単価</th>
+													<th>合計</th>
+													<th>消費税</th>
+													<th>送料</th>													
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<select name="copies" id="copies">
+															<option value="0">選んで下さい</option>
+															<script>
+															for(i=500;i<=10000;i=i+100){
+																document.write('<option value="'+i+'">'+i+'部</option>');
+															}
+															</script>
+														</select>
+													</td>
+													<td><span id="price"></span>円/1部</td>
+													<td><span id="total"></span>円</td>
+													<td><span id="tax"></span>円</td>
+													<td><span id="ship"></span>円</td>	
+												</tr>
+												<tr class="danger">
+													<th colspan="5" class="text-right">総合計&nbsp;&nbsp;<span id="all_total"></span>円</th>
+												</tr>
+												<tr>
+													<td colspan="3"></td>
+													<td colspan="2" id="msg"></td>
+												</tr>
+											</tbody>
+										</table>
+					                                   
+									</div>
+									<div class="modal-footer">
+
+									</div>
+								</div>
+
+
+							</div>
+							</section>
+							<section class="modal fade template_download" id="template_s_s_s" tabindex="-1" role="dialog">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<header class="modal-header text-center">
+										<button class="close" data-dismiss="modal">&times;</button>
+										<h2 class="text-primary font-bold">Sサイズ（標準）テンプレート</h2>
+									</header>
+									<div class="modal-body">
+										<div class="margin-bottom-20">
+										<h2>ソフトを選択</h2>
+										<label class="radio-inline">
+										<input type="radio" name="inlineRadioOptions" id="il" value="illustrator"> Illustrator
+										</label>
+										<label class="radio-inline">
+										<input type="radio" name="inlineRadioOptions" id="ph" value="photoshop"> Photoshop
+										</label>
+										</div>
+										<div id="il_ver_wrap" class="hidden">
+	
+											<button id="i_temp_download_btn" type="button" class="btn btn-primary btn-lg download_i_s_s">
+											<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> Illustratorテンプレート<br>ダウンロード
+											</button>
+										</div>
+										<div id="ph_ver_wrap" class="hidden">
+											<button id="p_temp_download_btn" type="button" class="btn btn-primary btn-lg">
+											<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> Photoshopテンプレート<br>ダウンロード
+											</button>				
+										</div>
+															
+					                                   
+									</div>
+									<div class="modal-footer">
+
+									</div>
+								</div>
+
+
+							</div>
+							</section>
+							<section class="modal fade template_download" id="template_s_s_t" tabindex="-1" role="dialog">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<header class="modal-header text-center">
+										<button class="close" data-dismiss="modal">&times;</button>
+										<h2 class="text-primary font-bold">Sサイズ（トール）テンプレート</h2>
+									</header>
+									<div class="modal-body">
+										<div class="margin-bottom-20">
+										<h2>ソフトを選択</h2>
+										<label class="radio-inline">
+										<input type="radio" name="inlineRadioOptions" id="il" value="illustrator"> Illustrator
+										</label>
+										<label class="radio-inline">
+										<input type="radio" name="inlineRadioOptions" id="ph" value="photoshop"> Photoshop
+										</label>
+										</div>
+										<div id="il_ver_wrap" class="hidden">
+	
+											<button id="i_temp_download_btn" type="button" class="btn btn-primary btn-lg download_i_s_t">
+											<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> Illustratorテンプレート<br>ダウンロード
+											</button>
+										</div>
+										<div id="ph_ver_wrap" class="hidden">
+											<button id="p_temp_download_btn" type="button" class="btn btn-primary btn-lg">
+											<span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> Photoshopテンプレート<br>ダウンロード
+											</button>				
+										</div>
+															
+					                                   
+									</div>
+									<div class="modal-footer">
+
+									</div>
+								</div>
+
+
+							</div>
+							</section>				
+						
+
 					</div>
 				
+						
 						
 				</article>
 				</div>

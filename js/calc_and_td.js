@@ -1,8 +1,12 @@
 $(function(){
-// 見積もり	
+// 見積もり エコノミー	
 calc('#ls_5',96,77.5,1500);
 calc('#ms_5',93,73.5,1500);
 calc('#ss_5',102.5,72,1500);
+// 見積もり　スタンダード
+calc('#ls_s',106,87.5,1500);
+calc('#ms_s',103,83.5,1500);
+calc('#ss_s',105,77,1500);
 
 function calc(section,price1,price2,shipval){	
 var tanka=price1;

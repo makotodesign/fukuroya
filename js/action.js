@@ -6,11 +6,11 @@ var no =1;
   $('.top_slide_img').fadeOut(time);
   $('#top'+no).fadeIn(time);
   no++;
-  if(no==5){
+  if(no==3){
     no=1;
   }
  
-  setTimeout(fade,time*5);  
+  setTimeout(fade,time*6);  
 })();
 // 文字あくしょん
 $('#tb1,#title_hide1').hide();

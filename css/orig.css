@@ -19,7 +19,12 @@ a:focus, *:focus { outline:none; }
 .margin-top-0 {margin-top:0;}
 .margin-bottom-20{margin-bottom: 20px;}
 .margin-right-10{margin-right: 10px;}
-.padding-top-5{padding-top: 5px};
+.padding-top-5{padding-top: 5px;}
+.row_margin_clear{
+margin-left:0px;
+margin-right:0px;
+
+}
 .popover {
 	width: 400px;
 	text-align: center;	
@@ -143,7 +148,7 @@ content:'\a|';
 
 /*topslide*/
 .top_slide{
-	height: 86%;
+	height: 91%;
 	min-height:500px;
 	position: relative;
 	z-index: 10;
@@ -154,7 +159,7 @@ content:'\a|';
 	height:100%;
 	position:absolute;
 	background-repeat:no-repeat;
-	background-position: top center;
+	background-position: center center;
 	background-size:cover;
 }
 #top1 {
@@ -328,6 +333,27 @@ section table th{
 section table td {
 	text-align:right;
 }
+
+/* tabmenu */
+.product_main .tab-content article {
+	padding: 2%;
+
+}
+
+.product_main .tab-content .active {
+	background-color:#FFF7CE;
+	border-left:1px solid #E7E7E7;
+	border-right:1px solid #E7E7E7;
+	border-bottom:1px solid #E7E7E7;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover{
+	background-color:#FFF7CE;	
+}
+
+.product_row {
+	background-color: #fff;
+}
+
 /*------END-page-product style-----*/
 /*------page-order style-----*/
 .orderselect {
