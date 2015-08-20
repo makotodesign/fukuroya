@@ -45,10 +45,34 @@ $('#fontsize1').on('input change',function(){
 // 入力1ドラッグ移動	
 $('#k-title1').mousedown(function(event){
 	$(this).addClass('drag');
-	var eX = event.pageX-parseInt($(this).css("left"));
- 	var eY = event.pageY-parseInt($(this).css("top"));
+	var left_limit=parseInt($('.bgpoint').css('left'));
+	var right_limit =left_limit + parseInt($('.bgpoint').width());
+	var top_limit = $('.bgpoint').offset().top;
+	var container_height=parseInt($('.bgpoint').css('height'));
+	var bottom_limit =top_limit + container_height;
+	var content_width=parseInt($('#k-title1').width());
+	var content_height=parseInt($('#k-title1').height());
+	var eX = event.pageX-parseInt($('#k-title1').css("left"));
+ 	var eY = event.pageY-parseInt($('#k-title1').css("top"));
+ 	$('#test1').text(top_limit);
+ 	
  	$(document).mousemove(function(event){
  		$('.drag').css("left",event.pageX - eX).css("top",event.pageY - eY);
+ 		$('#test2').text(event.pageY);
+ 		if(event.pageX - eX>=right_limit-content_width){
+ 			$('.drag').css('left',right_limit - content_width+'px');
+ 		}
+ 		if(event.pageX - eX<=left_limit){
+ 		$('.drag').css('left',0);
+ 		}
+ 		if(event.pageY<=top_limit){
+ 		$('.drag').css('top',0);
+ 		}
+ 		if(event.pageY>=bottom_limit){
+ 		　$('.drag').css('top',container_height-content_height+'px');
+ 		}
+
+ 		
  	});
  	$(document).mouseup(function(event){
  		$('.drag').unbind('mousemove');

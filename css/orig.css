@@ -415,7 +415,7 @@ span[id $='error'] {
 /*------------かんたんデザイン------------*/
 .canvas {
 	height:800px;
-	pisition:relative;
+	pisition:absolute;
 
 }
 
@@ -450,7 +450,19 @@ span[id $='error'] {
 	cursor: move;
 	top:100px;
 	left:100px;
+	margin:0;
+	padding:0;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+    user-select: none;
 
+}
+.bgpoint{
+	width:100%;
+	height:100%;
+	position: absolute;
+	background-color: red;
+	margin:0;
 }
 
 

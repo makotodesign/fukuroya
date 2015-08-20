@@ -45,21 +45,26 @@ require_once('header.php');
 	
 
 			</form>
+			  <p id="test1">eeee</p>
+			  <p id="test2">eeee</p>
 		</div>
 		<div class="canvas col-md-9">
 			<div class="handle">
 				<?php include('svg/handle.svg'); ?>
 			</div>
 			<div class="bagbody">
+				<div class="bgpoint">
 				<p id="k-title1" class="k-title">お店の名前を入力してください</p>
-				
+				</div>
 			</div>
 			
 
 		</div>
+
 		
 
     </main>
+
 
   </div>
 <?php require_once('footer.php')?>
