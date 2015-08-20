@@ -1,6 +1,7 @@
 $(function(){
 pagechange('.go_top',"index.php");
 pagechange('#orderbtn1',"page-order_2.php");
+pagechange('#orderbtn2',"page-k-order.php");
 pagechange('#fileup_next',"page-order_6.php");
 pagechange('#pay_next',"page-order_7.php");
 pagechange('#mujinext',"page-order_6.php");
@@ -17,8 +18,8 @@ $('.back').on('click',function(){
 });
 
 
-// アラート
-alertmsg('#orderbtn2','現在、工事中です。');
+
+
 
 function pagechange(name,file){
 	$(name).on('click',function(){

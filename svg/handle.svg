@@ -1,0 +1,31 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 263 123" enable-background="new 0 0 263 123" xml:space="preserve">
+<g id="handle">
+	<g>
+		<path fill="none" stroke="#231815" stroke-miterlimit="10" d="M33,97.7c2,1.6,3.3,4,3.3,6.6c0,5-4.6,9-10.4,9s-10.4-4-10.4-9
+			c0-3.7,2.6-6.9,6.4-8.3"/>
+		<path fill="none" stroke="#231815" stroke-miterlimit="10" d="M22.4,93.9c-5.3,1.4-9.2,5.6-9.2,10.7c0,6.1,5.7,11.1,12.8,11.1
+			s12.8-5,12.8-11.1c0-3.8-2.2-7.1-5.4-9.1"/>
+	</g>
+	<g>
+		<path fill="none" stroke="#231815" stroke-miterlimit="10" d="M232,97.7c-2,1.6-3.3,4-3.3,6.6c0,5,4.6,9,10.4,9s10.4-4,10.4-9
+			c0-3.7-2.6-6.9-6.4-8.3"/>
+		<path fill="none" stroke="#231815" stroke-miterlimit="10" d="M242.6,93.9c5.3,1.4,9.2,5.6,9.2,10.7c0,6.1-5.7,11.1-12.8,11.1
+			s-12.8-5-12.8-11.1c0-3.8,2.2-7.1,5.4-9.1"/>
+	</g>
+	<path fill="none" stroke="#231815" stroke-miterlimit="10" d="M33.4,95.4"/>
+	<path fill="none" stroke="#231815" stroke-miterlimit="10" d="M33,97.7"/>
+	<g>
+		<path fill="none" stroke="#231815" stroke-width="2" stroke-miterlimit="10" d="M21,110C21,53.7,70.9,8,132.5,8S244,53.7,244,110"
+			/>
+		<path fill="none" stroke="#231815" stroke-width="2" stroke-miterlimit="10" d="M32.2,109.9c0-50.7,44.9-91.8,100.3-91.8
+			s100.4,41.1,100.4,91.8"/>
+	</g>
+</g>
+<g id="white">
+	<g>
+		<path fill="#FFFFFF" d="M232.9,109.9c0-50.7-44.9-91.8-100.4-91.8S32.2,59.2,32.2,109.9L21,110C21,53.7,70.9,8,132.5,8
+			S244,53.7,244,110L232.9,109.9z"/>
+	</g>
+</g>
+</svg>

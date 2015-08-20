@@ -1,4 +1,8 @@
 @charset "UTF-8";
+@font-face{
+font-family: tanuki;
+src:url(../fonts/TanukiMagic.ttf) format('truetype');	
+}
 body,html {	height: 100%;min-height:600px;background-color: #fff;}
 a:focus, *:focus { outline:none; }
 
@@ -20,11 +24,23 @@ a:focus, *:focus { outline:none; }
 .margin-bottom-20{margin-bottom: 20px;}
 .margin-right-10{margin-right: 10px;}
 .padding-top-5{padding-top: 5px;}
+.padding5 {
+	padding:5px;
+}
+.f-right {
+	float: right;
+}
 .row_margin_clear{
 margin-left:0px;
 margin-right:0px;
-
 }
+.f-pop {
+	font-family: tanuki;
+}
+.f-color1{
+	color: #3283FC;
+}
+
 .popover {
 	width: 400px;
 	text-align: center;	
@@ -394,6 +410,37 @@ span[id $='error'] {
 .tokutei td {
 	text-align: left;
 	vertical-align: middle;
+}
+
+/*------------かんたんデザイン------------*/
+.canvas {
+	height:800px;
+	pisition:relative;
+
+}
+
+.ctrl {
+	height:600px;
+	border-radius: 10px;
+}
+
+.handle {
+	width:300px;
+	height:200px;
+	margin:0px auto 0 auto;
+	position:relative;
+	z-index:2;
+}
+
+.bagbody {
+	width:600px;
+	height:600px;
+	border:2px solid #000;
+	margin:0 auto;
+	position:relative;
+	top:-110px;
+	z-index: 1;
+
 }
 
 
