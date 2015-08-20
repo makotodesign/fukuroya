@@ -14,5 +14,6 @@
     <script src="js/jquery.validate.min.js"></script><!-- バリデートプラグイン -->
     <script src="js/jquery.autoKana.js"></script><!-- formカナ自動入力プラグイン -->
     <script src="js/form.js"></script>
+    <script src="js/kantan_order.js"></script>
   </body>
 </html>

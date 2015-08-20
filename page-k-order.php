@@ -19,22 +19,27 @@ require_once('header.php');
 		</div>
 		<div class="ctrl col-md-3 bg-primary">
 			<h2 class="text-center">かんたんデザイン</h2>
-			<form action="" class="form" method="post">
+			<form action="" class="form" id="kantan" method="post">
 			
 					<div class="form-group">
-						<label class="control-label">紙袋サイズ</label>
+						<label class="control-label" for="size">紙袋サイズ</label>
 						<select id="size" name="size" class="form-control">
 						  <option value="LS">Lサイズ:高さスタンダード</option>
 						  <option value="LT">Lサイズ:高さトール</option>
 						  <option value="MS">Mサイズ:高さスタンダード</option>
 						  <option value="MT">Mサイズ:高さトール</option>
 						  <option value="SS">Sサイズ:高さスタンダード</option>
-						  <option value="ST">サイズ:高さトール</option>
-
+						  <option value="ST">Sサイズ:高さトール</option>
 						</select>
-
 					</div>
-					
+					<div class="form-group">
+						<label class="control-label">文字入力1<br><small>入力後ドラッグして移動できます</small></label>
+						<input type="text" class="form-control" name="title1" id="input-title1" placeholder="お店の名前を入力してください">
+					</div>
+					<div class="form-group">
+						<label class="control-label">入力1の文字の大きさ<span id="size1">100</span>%</label>
+						<input type="range" id="fontsize1" class="form-control" min="100" max="500" step="1" value="100"/>
+					</div>					
 
 	
 	
@@ -46,6 +51,7 @@ require_once('header.php');
 				<?php include('svg/handle.svg'); ?>
 			</div>
 			<div class="bagbody">
+				<p id="k-title1" class="k-title">お店の名前を入力してください</p>
 				
 			</div>
 			

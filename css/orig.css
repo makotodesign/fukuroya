@@ -420,12 +420,13 @@ span[id $='error'] {
 }
 
 .ctrl {
-	height:600px;
+	margin-top: 20px;
+	padding-bottom:20px;
 	border-radius: 10px;
 }
 
 .handle {
-	width:300px;
+	width:250px;
 	height:200px;
 	margin:0px auto 0 auto;
 	position:relative;
@@ -433,13 +434,22 @@ span[id $='error'] {
 }
 
 .bagbody {
-	width:600px;
-	height:600px;
+	width:480px;
+	height:397.5px;
 	border:2px solid #000;
 	margin:0 auto;
 	position:relative;
-	top:-110px;
+	top:-130px;
 	z-index: 1;
+
+}
+
+.k-title {
+	display: inline-block;
+	position: absolute;
+	cursor: move;
+	top:100px;
+	left:100px;
 
 }
 
