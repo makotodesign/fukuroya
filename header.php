@@ -18,6 +18,7 @@ $filename=basename($_SERVER['PHP_SELF']);
     <link rel="stylesheet" type="text/css" href="css/animate.min.css">
     <link rel="stylesheet" href="css/orig.css">
     <link rel="stylesheet" href="css/dic.css">
+    <link rel="stylesheet" href="css/font-prev.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

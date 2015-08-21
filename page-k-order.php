@@ -53,48 +53,45 @@ require_once('header.php');
 						</div>
 					</div>
 				</div>
+				<h3>文字入力1</h3>
 
-				
-					<div class="form-group">
-						<label class="control-label">文字1入力<br><small>入力後ドラッグして移動できます</small></label>
-						<input type="text" class="form-control input-sm" name="title1" id="input-title1" placeholder="お店の名前を入力してください">
-					</div>
 				<div class="row">
-						<div class="col-xs-5">
-							<div class="form-group">
-								<label class="fontcolor1" for="basecolor">文字色</label>
-								<select id="fontcolor1" name="fontcolor1" class="form-control input-sm">
-								　<option>選択---</option>	
-								  <option class="black" value="black">黒</option>
-								  <option class="white" value="white">白</option>
-					  			  <option class="dic003" value="Dic003">Dic003</option>
-								  <option class="dic009" value="Dic009">Dic009</option>
-								  <option class="dic016" value="Dic016">Dic016</option>
-								  <option class="dic021" value="Dic021">Dic021</option>
-								  <option class="dic032" value="Dic032">Dic032</option>
-								  <option class="dic051" value="Dic051">Dic051</option>
-								  <option class="dic080" value="Dic080">Dic080</option>
-								  <option class="dic144" value="Dic144">Dic144</option>
-								</select>
-						
-							</div>
+					<div class="col-xs-12">
+						<div class="form-group">
+							<label class="control-label">文字をこちらに書いてください</label>
+							<input type="text" class="form-control input-sm" name="title1" id="input-title1" placeholder="お店の名前を入力してください">
+							<small>入力後ドラッグして移動できます</small>
 						</div>
-						<div class="col-xs-7">
+					</div>
+				</div>
+	
+				<div class="row">
+						
+						<div class="col-xs-12">
 							<div class="form-group">
 								<label class="fontfamily1" for="basecolor"><i class="fa fa-font"></i>字体</label>
 								<select id="fontfamily1" name="fontfamily1" class="form-control input-sm">
 								  <option>選択---</option>
-								  <OPTGROUP label="日本語フォント">
-								   <option value="明朝体">明朝</option>
-								   <option value="ゴシック">ゴシック</option>
-								   <option value="mplus-thin">mplus-thin</option>
-								   <option value="mplus-light">mplus-light</option>
-								   <option value="mplus-regular">mplus-regular</option>
-								   <option value="mplus-bold">mplus-bold</option>
-								   <option value="はんなり明朝">はんなり明朝</option>
+								  <OPTGROUP label="和文フォント">
+								   <option class="mincho" value="明朝体">明朝</option>
+								   <option class="gothic" value="ゴシック">ゴシック</option>
+								   <option class="mplus-thin" value="mplus-thin">mplus-thin</option>
+								   <option class="mplus-light" value="mplus-light">mplus-light</option>
+								   <option class="mplus-regular" value="mplus-regular">mplus-regular</option>
+								   <option class="mplus-bold" value="mplus-bold">mplus-bold</option>
+								   <option class="hiraginoMaru" value="hiraginoMaru">ヒラギノ丸ゴ Pro</option>
+								   <option class="hannari" value="はんなり明朝">はんなり明朝</option>
 								  </OPTGROUP>
 								  <OPTGROUP label="欧文フォント">
-								  <option value="ArialBlack">ArialBlack</option>
+								  <option class="ArialBlack" value="ArialBlack">ArialBlack</option>
+								  <option class="TimesNewRoman" value="TimesNewRoman">TimesNewRoman</option>
+								  <option class="CourierNew" value="CourierNew">Courier New</option>
+								  <option class="Helvetica" value="Helvetica">Helvetica</option>
+								  <option class="Marvel" value="Marvel">Marvel</option>
+								  <option class="Oswald" value="Oswald">Oswald</option>
+								  <option class="GreatVibes" value="GreatVibes">GreatVibes</option>
+								  <option class="PoiretOne" value="PoiretOne">PoiretOne</option>
+								  <option class="PermanentMarker" value="PermanentMarker">PermanentMarker</option>
 								  </OPTGROUP>
 					  		
 								</select>
@@ -115,6 +112,28 @@ require_once('header.php');
 							</div>
 
 						</div>
+				</div>
+				<h3>文字色を選ぶ</h3>
+				<div class="row">
+					<div class="col-xs-12">
+							<div class="form-group">
+								<label class="fontcolor1" for="basecolor">文字色</label>
+								<select id="fontcolor1" name="fontcolor1" class="form-control input-sm">
+								　<option>選択---</option>	
+								  <option class="black" value="black">黒</option>
+								  <option class="white" value="white">白</option>
+					  			  <option class="dic003" value="Dic003">Dic003</option>
+								  <option class="dic009" value="Dic009">Dic009</option>
+								  <option class="dic016" value="Dic016">Dic016</option>
+								  <option class="dic021" value="Dic021">Dic021</option>
+								  <option class="dic032" value="Dic032">Dic032</option>
+								  <option class="dic051" value="Dic051">Dic051</option>
+								  <option class="dic080" value="Dic080">Dic080</option>
+								  <option class="dic144" value="Dic144">Dic144</option>
+								</select>
+						
+							</div>
+						</div>
 				</div>	
 					
 
@@ -128,7 +147,7 @@ require_once('header.php');
 			</div>
 			<div class="bagbody">
 				<div class="bgpoint">
-				<p id="k-title1" class="k-title">お店の名前を入力してください</p>
+				<p id="k-title1" class="k-title">お店の名前</p>
 				</div>
 			</div>
 			

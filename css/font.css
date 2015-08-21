@@ -1,4 +1,9 @@
 @charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,300);
+@import url(http://fonts.googleapis.com/css?family=Great+Vibes);
+@import url(http://fonts.googleapis.com/css?family=Permanent+Marker);
+@import url(http://fonts.googleapis.com/css?family=Marvel:400,400italic);
+@import url(http://fonts.googleapis.com/css?family=Poiret+One);
 @font-face{
 font-family: tanuki;
 src:url(../fonts/TanukiMagic.ttf) format('truetype');	

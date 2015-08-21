@@ -1,5 +1,13 @@
 $(function(){
 $('.ctrl').draggable();
+// enterで送信できないように
+$("input"). keydown(function(e) {
+            if ((e.which && e.which === 13) || (e.keyCode && e.keyCode === 13)) {
+                return false;
+            } else {
+                return true;
+            }
+        });
 
 //袋サイズ選択	
 $('#kantan #size').on('change',function(){
@@ -114,7 +122,9 @@ $('#k-title1').on('mousedown',function(event){
 	});
 });
 // 文字色選択
-$('#fontcolor1').on('change',function(){
+fontcolor('#fontcolor1','.k-title');
+function fontcolor(obj1,obj2){
+$(obj1).on('change',function(){
 	var hex='';
 	var color=$(this).val();
 	switch (color){
@@ -150,15 +160,19 @@ $('#fontcolor1').on('change',function(){
 		break;
 
 	}
-	$('#k-title1').css({color:hex});
+	$(obj2).css({color:hex});
 });
+}
 // font-family
-$('#fontfamily1').on('change',function(){
+fontfamily('#fontfamily1','#k-title1');
+
+function fontfamily(obj1,obj2){
+$(obj1).on('change',function(){
 	var font='';
 	var f=$(this).val();
 	switch (f){
 		case '明朝体':
-		font='"ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif';
+		font='"ヒラギノ明朝 ProN W6", "HiraMinProN-W6","MS 明朝", serif';
 		break;
 		case 'ゴシック':
 		font='"Hiragino Kaku Gothic ProN", "Meiryo", "sans-serif"';
@@ -175,13 +189,44 @@ $('#fontfamily1').on('change',function(){
 		case 'mplus-bold':
 		font='mplus-bold';
 		break;
+		case 'hiraginoMaru':
+		font='ヒラギノ丸ゴ Pro';
+		break;
 		case 'はんなり明朝':
 		font='hannari';
 		break;
+		case 'ArialBlack':
+		font='Arial Black';
+		break;
+		case 'TimesNewRoman':
+		font='Times New Roman';
+		break;
+		case 'CourierNew':
+		font='Courier New';
+		break;
+		case 'Helvetica':
+		font='Helvetica';
+		break;
+		case 'Oswald':
+		font='Oswald';
+		break;
+		case 'GreatVibes':
+		font='Great Vibes';
+		break;
+		case 'PermanentMarker':
+		font='Permanent Marker';
+		break;
+		case 'Marvel':
+		font='Marvel';
+		break;
+		case 'PoiretOne':
+		font='Poiret One';
+		break; 
 
 	}
-	$('#k-title1').css({fontFamily:font});
+	$(obj2).css({fontFamily:font});
 });
+}
 // 文字間
 $('#letter_spacing1').on('change',function(){
 	var s=$(this).val();

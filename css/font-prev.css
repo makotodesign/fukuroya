@@ -1,0 +1,59 @@
+@charset 'UTF-8';
+/*font*/
+.ArialBlack {
+	font-family: 'Arial Black';
+}
+.mincho {
+	font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6","MS 明朝", serif;
+}
+.gothic {
+	font-family:"Hiragino Kaku Gothic ProN", "Meiryo", "sans-serif";
+}
+
+.mplus-thin {
+	font-family:'mplus-thin';
+}
+
+.mplus-light {
+	font-family:'mplus-light';
+}
+
+.mplus-regular {
+	font-family:'mplus-regular';
+}
+
+.mplus-bold {
+	font-family:'mplus-bold';
+}
+
+.hannari {
+	font-family:'hannari';
+}
+.TimesNewRoman {
+	font-family:'Times New Roman';
+}
+.CourierNew {
+	font-family:'Courier New';
+}
+.Helvetica {
+	font-family:'Helvetica';
+}
+.Oswald {
+	font-family: 'Oswald';
+}
+.GreatVibes {
+	font-family:'Great Vibes';
+}
+.PermanentMarker {
+	font-family:'Permanent Marker';
+}
+.Marvel {
+	font-family: 'Marvel';
+}
+.PoiretOne {
+	font-family:'Poiret One';
+}
+.hiraginoMaru {
+	font-family:'ヒラギノ丸ゴ Pro';
+}
+ 
