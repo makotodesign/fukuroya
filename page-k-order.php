@@ -18,12 +18,13 @@ require_once('header.php');
 			</div>
 		</div>
 		<div class="ctrl col-md-3 bg-primary">
-			<h3 class="text-center">かんたんデザイン</h3>
 			<form action="" class="form" id="kantan" method="post">
+			<h3>紙袋を選ぶ</h3>
 				<div class="row">
+					
 					<div class="col-xs-7">
 						<div class="form-group">
-							<label class="control-label" for="size">紙袋サイズ</label>
+							<label class="control-label" for="size">サイズ</label>
 							<select id="size" name="size" class="form-control input-sm">
 							  <option value="LS">L:高さスタンダード</option>
 							  <option value="LT">L:高さトール</option>
@@ -36,7 +37,7 @@ require_once('header.php');
 					</div>
 					<div class="col-xs-5">
 						<div class="form-group">
-							<label class="control-label" for="basecolor">紙印刷色</label>
+							<label class="control-label" for="basecolor">印刷色</label>
 							<select id="basecolor" name="basecolor" class="form-control input-sm">
 							<option value="white">無地</option>
 							  <option class="dic003" value="Dic003">Dic003</option>
@@ -52,18 +53,16 @@ require_once('header.php');
 						</div>
 					</div>
 				</div>
+
+				
 					<div class="form-group">
 						<label class="control-label">文字1入力<br><small>入力後ドラッグして移動できます</small></label>
 						<input type="text" class="form-control input-sm" name="title1" id="input-title1" placeholder="お店の名前を入力してください">
 					</div>
-					<div class="form-group">
-						<label class="control-label">文字1の大きさ<span id="size1">200</span>%</label>
-						<input type="range" id="fontsize1" class="form-control　input-sm" min="100" max="800" step="5" value="200"/>
-					</div>
-					<div class="row">
+				<div class="row">
 						<div class="col-xs-5">
 							<div class="form-group">
-								<label class="fontcolor1" for="basecolor">文字1の色</label>
+								<label class="fontcolor1" for="basecolor">文字色</label>
 								<select id="fontcolor1" name="fontcolor1" class="form-control input-sm">
 								　<option>選択---</option>	
 								  <option class="black" value="black">黒</option>
@@ -82,12 +81,17 @@ require_once('header.php');
 						</div>
 						<div class="col-xs-7">
 							<div class="form-group">
-								<label class="fontfamily1" for="basecolor">文字1の字体</label>
+								<label class="fontfamily1" for="basecolor"><i class="fa fa-font"></i>字体</label>
 								<select id="fontfamily1" name="fontfamily1" class="form-control input-sm">
 								  <option>選択---</option>
 								  <OPTGROUP label="日本語フォント">
 								   <option value="明朝体">明朝</option>
 								   <option value="ゴシック">ゴシック</option>
+								   <option value="mplus-thin">mplus-thin</option>
+								   <option value="mplus-light">mplus-light</option>
+								   <option value="mplus-regular">mplus-regular</option>
+								   <option value="mplus-bold">mplus-bold</option>
+								   <option value="はんなり明朝">はんなり明朝</option>
 								  </OPTGROUP>
 								  <OPTGROUP label="欧文フォント">
 								  <option value="ArialBlack">ArialBlack</option>
@@ -96,7 +100,24 @@ require_once('header.php');
 								</select>
 							</div>
 						</div>
-					</div>						
+					</div>	
+				<div class="row">
+					<div class="col-xs-6">	
+						<div class="form-group">
+							<label class="control-label">大きさ<span id="size1">200</span>%</label>
+							<input type="range" id="fontsize1" name="fontsize1" class="form-control　input-sm" min="100" max="800" step="5" value="200"/>
+						</div>
+					</div>
+					<div class="col-xs-6">
+							<div class="form-group">
+								<label class="letter_spacing">文字間</label>
+								<input type="range" id="letter_spacing1" name="letter_spacing1" class="form-control　input-sm" min="0.01" max="1.8" step="0.05" value="0.05"/>
+							</div>
+
+						</div>
+				</div>	
+					
+
 
 			</form>
 

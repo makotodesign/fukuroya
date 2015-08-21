@@ -12,11 +12,11 @@ $filename=basename($_SERVER['PHP_SELF']);
     <title>袋屋|top</title>
 
     <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/font.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/animate.min.css">
     <link rel="stylesheet" href="css/orig.css">
-    <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/dic.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->

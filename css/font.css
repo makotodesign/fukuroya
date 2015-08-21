@@ -1,0 +1,25 @@
+@charset "UTF-8";
+@font-face{
+font-family: tanuki;
+src:url(../fonts/TanukiMagic.ttf) format('truetype');	
+}
+@font-face{
+font-family: mplus-thin;
+src:url(../fonts/mplus-1p-thin.ttf) format('truetype');	
+}
+@font-face{
+font-family: mplus-light;
+src:url(../fonts/mplus-1p-light.ttf) format('truetype');	
+}
+@font-face{
+font-family: mplus-regular;
+src:url(../fonts/mplus-1p-regular.ttf) format('truetype');	
+}
+@font-face{
+font-family: mplus-bold;
+src:url(../fonts/mplus-1p-bold.ttf) format('truetype');	
+}
+@font-face{
+font-family: hannari;
+src:url(../fonts/Hannari.otf) format('opentype');	
+}

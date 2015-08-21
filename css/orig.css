@@ -1,8 +1,4 @@
 @charset "UTF-8";
-@font-face{
-font-family: tanuki;
-src:url(../fonts/TanukiMagic.ttf) format('truetype');	
-}
 body,html {	height: 100%;min-height:600px;background-color: #fff;}
 a:focus, *:focus { outline:none; }
 
@@ -422,7 +418,6 @@ span[id $='error'] {
 .ctrl {
 	margin-top: 20px;
 	padding-bottom:10px;
-	padding-top:10px;
 	border-radius: 10px;
 	position:relative;
 	z-index:10;
@@ -434,6 +429,9 @@ span[id $='error'] {
 
 .ctrl h3 {
 	cursor: move;
+	font-size: 1.8rem;
+	border-bottom: 1px dotted #fff;
+
 }
 
 .handle {

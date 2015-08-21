@@ -152,7 +152,42 @@ $('#fontcolor1').on('change',function(){
 	}
 	$('#k-title1').css({color:hex});
 });
+// font-family
+$('#fontfamily1').on('change',function(){
+	var font='';
+	var f=$(this).val();
+	switch (f){
+		case '明朝体':
+		font='"ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif';
+		break;
+		case 'ゴシック':
+		font='"Hiragino Kaku Gothic ProN", "Meiryo", "sans-serif"';
+		break;
+		case 'mplus-thin':
+		font='mplus-thin';
+		break;
+		case 'mplus-light':
+		font='mplus-light';
+		break;
+		case 'mplus-regular':
+		font='mplus-regular';
+		break;
+		case 'mplus-bold':
+		font='mplus-bold';
+		break;
+		case 'はんなり明朝':
+		font='hannari';
+		break;
 
-
+	}
+	$('#k-title1').css({fontFamily:font});
+});
+// 文字間
+$('#letter_spacing1').on('change',function(){
+	var s=$(this).val();
+	$('#k-title1').css({letterSpacing:s+'rem'});
 
 });
+
+
+});//endjQuery
