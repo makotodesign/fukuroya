@@ -421,8 +421,19 @@ span[id $='error'] {
 
 .ctrl {
 	margin-top: 20px;
-	padding-bottom:20px;
+	padding-bottom:10px;
+	padding-top:10px;
 	border-radius: 10px;
+	position:relative;
+	z-index:10;
+
+	-webkit-box-shadow: 1px 5px 11px 0px rgba(50, 50, 50, 0.62);
+	-moz-box-shadow:    1px 5px 11px 0px rgba(50, 50, 50, 0.62);
+	box-shadow:         1px 5px 11px 0px rgba(50, 50, 50, 0.62);
+}
+
+.ctrl h3 {
+	cursor: move;
 }
 
 .handle {
@@ -444,26 +455,38 @@ span[id $='error'] {
 
 }
 
+
 .k-title {
 	display: inline-block;
 	position: absolute;
 	cursor: move;
 	top:100px;
-	left:100px;
+	left:3%;
 	margin:0;
 	padding:0;
+	font-size: 200%;
+	color:#ccc;
+	 vertical-align: top;
 	-webkit-user-select: none;
 	-moz-user-select: none;
     user-select: none;
-
 }
+
+.k-title:hover {
+	outline:1px dashed #7B7E7F;
+}
+
 .bgpoint{
 	width:100%;
 	height:100%;
 	position: absolute;
-	background-color: red;
 	margin:0;
 }
+
+
+
+
+
 
 
 

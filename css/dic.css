@@ -1,0 +1,95 @@
+@charset 'UTF-8';
+/*色サンプル*/
+
+
+.dic003:before{
+	content:'';
+	display:block;
+	width:20%;
+	height:15px;
+	background-color: #FDD2E5;
+	float:left;
+	margin-right:5px;
+}
+.dic009:before{
+	content:'';
+	display:block;
+	width:20%;
+	height:15px;
+	background-color: #FFEA98;
+	float:left;
+	margin-right:5px;
+}
+.dic016:before{
+	content:'';
+	display:block;
+	width:20%;
+	height:15px;
+	background-color: #84D7CB;
+	float:left;
+	margin-right:5px;
+}
+.dic021:before{
+	content:'';
+	display:block;
+	width:20%;
+	height:15px;
+	background-color: #B5DCF2;
+	float:left;
+	margin-right:5px;
+}
+.dic032:before{
+	content:'';
+	display:block;
+	width:20%;
+	height:15px;
+	background-color: #FFD78C;
+	float:left;
+	margin-right:5px;
+}
+.dic051:before{
+	content:'';
+	display:block;
+	width:20%;
+	height:15px;
+	background-color: #FF686C;
+	float:left;
+	margin-right:5px;
+}
+.dic080:before{
+	content:'';
+	display:block;
+	width:20%;
+	height:15px;
+	background-color: #FF4220;
+	float:left;
+	margin-right:5px;
+}
+.dic144:before{
+	content:'';
+	display:block;
+	width:20%;
+	height:15px;
+	background-color: #3E63B4;
+	float:left;
+	margin-right:5px;
+}
+.black:before{
+	content:'';
+	display:block;
+	width:20%;
+	height:15px;
+	background-color: #000;
+	float:left;
+	margin-right:5px;
+}
+.white:before{
+	content:'';
+	display:block;
+	width:20%;
+	height:15px;
+	background-color: #fff;
+	float:left;
+	margin-right:5px;
+	border:1px solid #000;
+}
