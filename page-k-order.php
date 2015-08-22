@@ -82,7 +82,7 @@ require_once('header.php');
 					<div class="col-xs-12">
 						<div class="form-group">
 							<label class="control-label">文字をこちらに書いてください</label>
-							<input type="text" class="form-control input-sm" name="title1" id="input-title1" placeholder="お店の名前を入力してください">
+							<textarea class="form-control input-sm" name="title1" id="input-title1" placeholder="文字を入力してください。複数行入力可能"></textarea>
 							<small>入力後ドラッグして移動できます</small>
 						</div>
 					</div>
@@ -90,7 +90,7 @@ require_once('header.php');
 	
 				<div class="row">
 						
-						<div class="col-xs-12">
+						<div class="col-xs-6">
 							<div class="form-group">
 								<label class="fontfamily1" for="basecolor"><i class="fa fa-font"></i>字体</label>
 								<select id="fontfamily1" name="fontfamily1" class="form-control input-sm">
@@ -120,21 +120,43 @@ require_once('header.php');
 								</select>
 							</div>
 						</div>
+						<div class="col-xs-6">	
+							<div class="form-group">
+								<label class="control-label">大きさ<span id="size1">200</span>%</label>
+								<input type="range" id="fontsize1" name="fontsize1" class="form-control　input-sm" min="100" max="800" step="5" value="200"/>
+							</div>
+						</div>
 					</div>	
 				<div class="row">
-					<div class="col-xs-6">	
+					<div class="col-xs-6">
 						<div class="form-group">
-							<label class="control-label">大きさ<span id="size1">200</span>%</label>
-							<input type="range" id="fontsize1" name="fontsize1" class="form-control　input-sm" min="100" max="800" step="5" value="200"/>
+							<label class="letter_spacing">文字間</label>
+							<input type="range" id="letter_spacing1" name="letter_spacing1" class="form-control　input-sm" min="0.01" max="1.8" step="0.05" value="0.05"/>
 						</div>
 					</div>
 					<div class="col-xs-6">
-							<div class="form-group">
-								<label class="letter_spacing">文字間</label>
-								<input type="range" id="letter_spacing1" name="letter_spacing1" class="form-control　input-sm" min="0.01" max="1.8" step="0.05" value="0.05"/>
-							</div>
-
+						<div class="form-group">
+							<label class="line_height1">行間</label>
+							<input type="range" id="line_height1" name="line_height1" class="form-control　input-sm" min="0.7" max="2.8" step="0.1" value="1.3"/>
 						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="form-group">
+						<label >行揃え</label>&nbsp;&nbsp;
+							<label class="radio-inline">
+							  <input type="radio" name="align1" value="left"><i class="fa fa-align-left"></i>
+							</label>
+							<label class="radio-inline">
+							  <input type="radio" name="align1" value="center"><i class="fa fa-align-center"></i>
+							</label>
+							<label class="radio-inline">
+							  <input type="radio" name="align1" value="right"><i class="fa fa-align-right"></i>
+							</label>
+						
+						</div>
+					</div>
 				</div>
 				<div class="row">
 					<div class="col-xs-11 col-xs-offset-1">
@@ -208,6 +230,23 @@ require_once('header.php');
 							</div>
 						</div>
 					</div>
+					<div class="row">
+					<div class="col-xs-12">
+						<div class="form-group">
+						<label >行揃え</label>&nbsp;&nbsp;
+							<label class="radio-inline">
+							  <input type="radio" name="align2" value="left"><i class="fa fa-align-left"></i>
+							</label>
+							<label class="radio-inline">
+							  <input type="radio" name="align2" value="center"><i class="fa fa-align-center"></i>
+							</label>
+							<label class="radio-inline">
+							  <input type="radio" name="align2" value="right"><i class="fa fa-align-right"></i>
+							</label>
+						
+						</div>
+					</div>
+				</div>
 					
 
 

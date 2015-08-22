@@ -469,10 +469,14 @@ span[id $='error'] {
 	padding:0;
 	font-size: 150%;
 	color:#ccc;
-	 vertical-align: top;
+	vertical-align: top;
 	-webkit-user-select: none;
 	-moz-user-select: none;
     user-select: none;
+}
+
+#k-title1{
+	text-align: left;
 }
 
 .k-title:first-of-type {

@@ -79,23 +79,18 @@ $('#basecolor').on('change',function(){
 	$('.bgpoint').animate({backgroundColor:hex},1000,'linear');
 });
 
-// 文字入力
-k_title('#input-title1','#k-title1');
-function k_title(obj1,obj2){
-$(obj1).on('click blur keydown keyup keypress change',function(){
-	var text1=$(this).val();
-	$(obj2).text(text1);
-});
-}
-
 // textarea改行を反映して
-$('#input-title2').on('click blur keydown keyup keypress change',function(){
+k_textarea('#input-title1','#k-title1');
+k_textarea('#input-title2','#k-title2');
+function k_textarea(obj1,obj2){
+$(obj1).on('click blur keydown keyup keypress change',function(){
 	var text=$(this).val();
 	text=text.replace(/\r\n/g, "<br />");
 	text = text.replace(/(\n|\r)/g, "<br />");
 
-	$('#k-title2').html(text);
-});
+	$(obj2).html(text);
+});	
+}
 
 // 入力1 font-size
 k_fontsize('#fontsize1','#size1','#k-title1');
@@ -264,7 +259,7 @@ $(obj1).on('change',function(){
 }
 
 // 行間
-
+k_lineheight('#line_height1','#k-title1');
 k_lineheight('#line_height2','#k-title2');
 function k_lineheight(obj1,obj2){
 	$(obj1).on('change',function(){
@@ -272,6 +267,18 @@ function k_lineheight(obj1,obj2){
 	$(obj2).css({lineHeight:s});
 });
 }
+// 行揃え
+$('input[name="align1"]:radio').on('change',function(){
+	var a=$(this).val();
+	$('#k-title1').css({textAlign:a});
+});
+$('input[name="align2"]:radio').on('change',function(){
+	var a=$(this).val();
+	$('#k-title2').css({textAlign:a});
+});
+
+
+
 
 // 入力エリア追加
 $('#k-input2,#k-title2').hide();
