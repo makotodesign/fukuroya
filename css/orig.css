@@ -421,7 +421,7 @@ span[id $='error'] {
 	border-radius: 10px;
 	position:relative;
 	z-index:10;
-
+	background-color: #6F9AF7;
 	-webkit-box-shadow: 1px 5px 11px 0px rgba(50, 50, 50, 0.62);
 	-moz-box-shadow:    1px 5px 11px 0px rgba(50, 50, 50, 0.62);
 	box-shadow:         1px 5px 11px 0px rgba(50, 50, 50, 0.62);
@@ -439,9 +439,10 @@ span[id $='error'] {
 
 .handle {
 	width:250px;
-	height:200px;
+	height:auto;
 	margin:0px auto 0 auto;
 	position:relative;
+	top:50px;
 	z-index:2;
 }
 
@@ -451,13 +452,12 @@ span[id $='error'] {
 	border:2px solid #000;
 	margin:0 auto;
 	position:relative;
-	top:-130px;
 	z-index: 1;
-
 }
 
 #bagwrap {
 	position:relative;
+
 }
 
 
@@ -469,7 +469,7 @@ span[id $='error'] {
 	padding:0;
 	font-size: 150%;
 	color:#ccc;
-	vertical-align: top;
+	line-height: 100%;
 	-webkit-user-select: none;
 	-moz-user-select: none;
     user-select: none;
@@ -498,6 +498,7 @@ span[id $='error'] {
 	height:100%;
 	position: absolute;
 	margin:0;
+	background-color: #fff;
 }
 
 

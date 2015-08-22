@@ -43,7 +43,7 @@ require_once('header.php');
 						<div class="form-group">
 							<label class="control-label" for="basecolor">印刷色</label>
 							<select id="basecolor" name="basecolor" class="form-control input-sm">
-							<option value="white">無地</option>
+							<option value="white" selected>無地</option>
 							  <option class="dic003" value="Dic003">Dic003</option>
 							  <option class="dic009" value="Dic009">Dic009</option>
 							  <option class="dic016" value="Dic016">Dic016</option>
@@ -58,7 +58,7 @@ require_once('header.php');
 					</div>
 					<div class="col-xs-6">
 							<div class="form-group">
-								<label class="fontcolor1" for="basecolor">文字色</label>
+								<label for="fontcolor1">文字色</label>
 								<select id="fontcolor1" name="fontcolor1" class="form-control input-sm">
 								　<option>選択---</option>	
 								  <option class="black" value="black">黒</option>
@@ -76,7 +76,7 @@ require_once('header.php');
 							</div>
 						</div>
 				</div>	
-				<h3>文字入力1</h3>
+				<h3><i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;文字入力1</h3>
 
 				<div class="row">
 					<div class="col-xs-12">
@@ -122,7 +122,7 @@ require_once('header.php');
 						</div>
 						<div class="col-xs-6">	
 							<div class="form-group">
-								<label class="control-label">大きさ<span id="size1">200</span>%</label>
+								<label class="control-label">文字サイズ</label>
 								<input type="range" id="fontsize1" name="fontsize1" class="form-control　input-sm" min="100" max="800" step="5" value="200"/>
 							</div>
 						</div>
@@ -159,14 +159,47 @@ require_once('header.php');
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-xs-11 col-xs-offset-1">
-						<label class="checkbox">
-						  <input type="checkbox" id="areaadd1" value="areaadd1"> 文字入力エリアを追加
-						</label>
+						<div class="col-xs-5">
+							<div class="form-group">
+								<label class="outline1" for="outline1">
+								  <input type="checkbox" name="outline1" id="outline1" value="true"> 囲み枠
+								</label>
+							</div>
+						</div>
+						<div class="col-xs-7">
+							<div class="form-group">
+							<label for="outline1_bwidth">囲み枠線幅</label>
+							<input type="range" id="outline1_bwidth" name="outline1_bwidth" class="form-control　input-sm" min="1" max="10" step="1" value="1" />
+							</div>
+						</div>	
+				</div>
+				<div class="row">
+					<div class="col-xs-5">
+						<div class="form-group">
+							<label for="input_t1_bg">
+							  <input type="checkbox" name="input_t1_bg" id="input_t1_bg" value="true"> 背景枠
+							</label>
+						</div>
+					</div>
+					<div class="col-xs-7">
+						<div class="form-group">
+						<label for="input_t1_bgsize">背景枠サイズ</label>
+						<input type="range" id="input_t1_bgsize" name="input_t1_bgsize" class="form-control　input-sm" min="1" max="10" step="1" value="1" />
+						</div>
+					</div>
+					
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="form-group">
+							<h3><label class="checkbox-inline">
+							  <input type="checkbox" id="areaadd1" value="areaadd1"> 文字入力エリアを追加
+							</label></h3>
+						</div>
 					</div>
 				</div>	
 				<div id="k-input2">
-					<h3>文字入力2</h3>
+					<h3><i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;文字入力2</h3>
 
 					<div class="row">
 						<div class="col-xs-12">
@@ -211,7 +244,7 @@ require_once('header.php');
 						</div>
 						<div class="col-xs-6">	
 							<div class="form-group">
-								<label class="control-label">大きさ<span id="size2">100</span>%</label>
+								<label class="control-label">文字サイズ</label>
 								<input type="range" id="fontsize2" name="fontsize2" class="form-control　input-sm" min="50" max="800" step="5" value="100"/>
 							</div>
 						</div>
@@ -231,22 +264,22 @@ require_once('header.php');
 						</div>
 					</div>
 					<div class="row">
-					<div class="col-xs-12">
-						<div class="form-group">
-						<label >行揃え</label>&nbsp;&nbsp;
-							<label class="radio-inline">
-							  <input type="radio" name="align2" value="left"><i class="fa fa-align-left"></i>
-							</label>
-							<label class="radio-inline">
-							  <input type="radio" name="align2" value="center"><i class="fa fa-align-center"></i>
-							</label>
-							<label class="radio-inline">
-							  <input type="radio" name="align2" value="right"><i class="fa fa-align-right"></i>
-							</label>
-						
+						<div class="col-xs-12">
+							<div class="form-group">
+							<label >行揃え</label>&nbsp;&nbsp;
+								<label class="radio-inline">
+								  <input type="radio" name="align2" value="left"><i class="fa fa-align-left"></i>
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="align2" value="center"><i class="fa fa-align-center"></i>
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="align2" value="right"><i class="fa fa-align-right"></i>
+								</label>
+							</div>
 						</div>
 					</div>
-				</div>
+					
 					
 
 
@@ -264,8 +297,8 @@ require_once('header.php');
 				</div>
 				<div class="bagbody">
 					<div class="bgpoint">
-						<p id="k-title1" class="k-title">お店の名前</p>
-						<p id="k-title2" class="k-title">追加入力エリア</>
+						<p id="k-title1" class="k-title">文字スペース1</p>
+						<p id="k-title2" class="k-title">文字スペース2</p>
 					</div>
 				</div>
 			</div>

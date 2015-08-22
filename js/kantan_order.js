@@ -29,11 +29,11 @@ switch (flug){
 	$('.handle').animate({width:'230px'});
 	break;
 	case 'SS':
-	$('.bagbody').animate({width:'330px',height:'397.5px',top:'-140px'});
+	$('.bagbody').animate({width:'330px',height:'397.5px'});
 	$('.handle').animate({width:'200px'});
 	break;
 	case 'ST':
-	$('.bagbody').animate({width:'330px',height:'480px',top:'-140px'});
+	$('.bagbody').animate({width:'330px',height:'480px'});
 	$('.handle').animate({width:'200px'});
 	break;
 }
@@ -50,6 +50,9 @@ $('#basecolor').on('change',function(){
 	var hex='';
 	var color=$(this).val();
 	switch (color){
+		case 'white':
+		hex ='#FFFFFF';
+		break;
 		case 'Dic003':
 		hex ='#FDD2E5';
 		break;
@@ -77,6 +80,7 @@ $('#basecolor').on('change',function(){
 
 	}
 	$('.bgpoint').animate({backgroundColor:hex},1000,'linear');
+	$('.k-title-bg').css({color:hex});
 });
 
 // textarea改行を反映して
@@ -126,8 +130,8 @@ $(obj1).on('mousedown',function(event){
 	if(event.pageX - eX<=left_limit){
 	$('.drag').css('left',0);
 	}
-	if(event.pageY<=top_limit){
-	$('.drag').css('top',0);
+	if(event.pageY<=top_limit+50){
+	$('.drag').css('top','50px');
 	}
 	if(event.pageY>=bottom_limit){
 	　$('.drag').css('top',container_height-content_height+'px');
@@ -146,6 +150,7 @@ function fontcolor(obj1,obj2){
 $(obj1).on('change',function(){
 	var hex='';
 	var color=$(this).val();
+	var bc=$('.bgpoint').css('background-color');
 	switch (color){
 		case 'black':
 		hex ='#000';
@@ -180,6 +185,8 @@ $(obj1).on('change',function(){
 
 	}
 	$(obj2).css({color:hex});
+	$('.k-title').css({borderColor:hex});
+	$('.k-title-bg').css({backgroundColor:hex,color:bc});
 });
 }
 // font-family
@@ -276,7 +283,94 @@ $('input[name="align2"]:radio').on('change',function(){
 	var a=$(this).val();
 	$('#k-title2').css({textAlign:a});
 });
+// 囲み枠
+$('#outline1_bwidth').prop('disabled',true);
+$('#outline1').on('change',function(){
+	if($(this).is(':checked')){
+		$('#input_t1_bg').prop('disabled',true);
+		$('#outline1_bwidth').prop('disabled',false);
+		var c =$('#k-title1').css('color');
+		$('#k-title1').css({
+							borderStyle:'solid',
+							borderColor:c,
+							padding:'2%'
+							
+						});
+		$('#outline1_bwidth').on('change',function(){
+			var b=$('#outline1_bwidth').val();
+			$('#k-title1').css({borderWidth:b+'px'});
 
+		});
+	}else{
+		$('#input_t1_bg').prop('disabled',false);
+		$('#k-title1').css({border:'none',paddingRight:0,paddingLeft:0});
+		$('#outline1_bwidth').prop('disabled',true);
+	}
+});
+// 背景枠
+$('#input_t1_bgsize').prop('disabled',true);
+var fc=$('#k-title1').css('color');
+$('#input_t1_bg').on('change',function(){
+	if($(this).is(':checked')){
+		var fc=$('#k-title1').css('color');
+		var bc=$('.bgpoint').css('background-color');
+		$('#input_t1_bgsize').prop('disabled',false);
+		$('#outline1').prop('disabled',true);
+		$('#outline1').prop('checked',false);
+		$('#k-title1').addClass('k-title-bg').css({border:'none',paddingRight:0,paddingLeft:0});
+		$('.k-title-bg').css({
+			color:bc,
+			backgroundColor:fc
+		});
+		$('#input_t1_bgsize').on('change',function(){
+			var val =$(this).val();
+			$('.k-title-bg').css({padding:val+'%'});
+
+		});
+	}else{
+		$('#input_t1_bgsize').prop('disabled',true);
+		$('#outline1').prop('disabled',false);
+		var color=$('#fontcolor1').val();
+		switch (color){
+			case 'black':
+			hex ='#000';
+			break;
+			case 'white':
+			hex ='#FFFFFF';
+			break;
+			case 'Dic003':
+			hex ='#FDD2E5';
+			break;
+			case 'Dic009':
+			hex ='#FFEA98';
+			break;
+			case 'Dic016':
+			hex ='#84D7CB';
+			break;
+			case 'Dic021':
+			hex ='#B5DCF2';
+			break;
+			case 'Dic032':
+			hex ='#FFD78C';
+			break;
+			case 'Dic051':
+			hex ='#FF686C';
+			break;
+			case 'Dic080':
+			hex ='#FF4220';
+			break;
+			case 'Dic144':
+			hex ='#3E63B4';
+			break;
+
+		}
+		$('.k-title-bg').css({color:hex,background:'none',padding:0});
+		$('#k-title1').removeClass('k-title-bg');
+
+	}
+
+
+});
 
 
 
