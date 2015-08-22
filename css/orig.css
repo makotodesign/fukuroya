@@ -435,6 +435,8 @@ span[id $='error'] {
 
 }
 
+
+
 .handle {
 	width:250px;
 	height:200px;
@@ -454,13 +456,15 @@ span[id $='error'] {
 
 }
 
+#bagwrap {
+	position:relative;
+}
+
 
 .k-title {
 	display: inline-block;
 	position: absolute;
 	cursor: move;
-	top:100px;
-	left:3%;
 	margin:0;
 	padding:0;
 	font-size: 150%;
@@ -469,6 +473,16 @@ span[id $='error'] {
 	-webkit-user-select: none;
 	-moz-user-select: none;
     user-select: none;
+}
+
+.k-title:first-of-type {
+	top:100px;
+	left:10%;
+}
+
+.k-title:nth-of-type(2) {
+	top:300px;
+	left:10%;
 }
 
 .k-title:hover {
