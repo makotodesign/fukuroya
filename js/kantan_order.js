@@ -370,6 +370,68 @@ $(obj1).on('change',function(){
 	$(obj2).css({fontFamily:font});
 });
 }
+var fontfamily1_flug=$('.fontfamily1').is(':selected');
+if(fontfamily1_flug==true){
+var font='';
+	var f=$('#fontfamily1').val();
+	switch (f){
+		case 'mincho':
+		font='"ヒラギノ明朝 ProN W6", "HiraMinProN-W6","MS 明朝", serif';
+		break;
+		case 'gothic':
+		font='"Hiragino Kaku Gothic ProN", "Meiryo", "sans-serif"';
+		break;
+		case 'mplus-thin':
+		font='mplus-thin';
+		break;
+		case 'mplus-light':
+		font='mplus-light';
+		break;
+		case 'mplus-regular':
+		font='mplus-regular';
+		break;
+		case 'mplus-bold':
+		font='mplus-bold';
+		break;
+		case 'hiraginoMaru':
+		font='ヒラギノ丸ゴ Pro';
+		break;
+		case 'hannari':
+		font='hannari';
+		break;
+		case 'ArialBlack':
+		font='Arial Black';
+		break;
+		case 'TimesNewRoman':
+		font='Times New Roman';
+		break;
+		case 'CourierNew':
+		font='Courier New';
+		break;
+		case 'Helvetica':
+		font='Helvetica';
+		break;
+		case 'Oswald':
+		font='Oswald';
+		break;
+		case 'GreatVibes':
+		font='Great Vibes';
+		break;
+		case 'PermanentMarker':
+		font='Permanent Marker';
+		break;
+		case 'Marvel':
+		font='Marvel';
+		break;
+		case 'PoiretOne':
+		font='Poiret One';
+		break; 
+
+	}
+	$('#k-title1').css({fontFamily:font});
+
+
+}
 // 文字間
 k_letterspacing('#letter_spacing1','#k-title1');
 k_letterspacing('#letter_spacing2','#k-title2');
