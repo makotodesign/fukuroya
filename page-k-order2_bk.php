@@ -25,15 +25,15 @@ function h($val){
   
    		<div class="page-header">
    			<div class="row">
-   				<button class="btn btn-default no-point back" type="button"> かんたんデザイン <span class="glyphicon glyphicon-arrow-right"></span></button>
-   				<button class="btn btn-success no-point back" type="button"> 確認 <span class="glyphicon glyphicon-arrow-right"></span></button>
-   				<button class="btn btn-default no-point back" type="button"> 原稿ファイルアップロード <span class="glyphicon glyphicon-arrow-right"></span></button>
-   				<button class="btn btn-default no-point back" type="button"> お支払い手続き <span class="glyphicon glyphicon-arrow-right"></span></button>
-   				<button class="btn btn-default no-point back" type="button"> ご注文手続き完了 </button>
+   				<button class="btn btn-default no-point back" type="button"> ���󤿤�ǥ����� <span class="glyphicon glyphicon-arrow-right"></span></button>
+   				<button class="btn btn-success no-point back" type="button"> �_�J <span class="glyphicon glyphicon-arrow-right"></span></button>
+   				<button class="btn btn-default no-point back" type="button"> ԭ��ե����륢�åץ��`�� <span class="glyphicon glyphicon-arrow-right"></span></button>
+   				<button class="btn btn-default no-point back" type="button"> ��֧�B���־A�� <span class="glyphicon glyphicon-arrow-right"></span></button>
+   				<button class="btn btn-default no-point back" type="button"> ��ע���־A������ </button>
    			</div>
 
    			<div class="row">
-				<h2 class="f-pop f-color1 text-center rem3">デザインを確認しましょう！</h2>
+				<h2 class="f-pop f-color1 text-center rem3">�ǥ������_�J���ޤ��礦��</h2>
 			</div>
 		</div>
 		

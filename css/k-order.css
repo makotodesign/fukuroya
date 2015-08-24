@@ -158,8 +158,60 @@
 /*title*/
 .k-title-prev {
 	position:absolute;
+	font-size: 150%;
 }
 
-
+/*fontfamily*/
+.prev-mincho {
+	font-family: "ヒラギノ明朝 ProN W6", "HiraMinProN-W6","MS 明朝", serif;
+}
+.prev-gothic {
+	font-family:"Hiragino Kaku Gothic ProN", "Meiryo", "sans-serif" ;
+}
+.prev-mplus-thin {
+	font-family: "mplus-thin";
+}
+.prev-mplus-light {
+	font-family: "mplus-light";
+}
+.prev-mplus-regular {
+	font-family: "mplus-regular";
+}
+.prev-mplus-bold {
+	font-family: "mplus-bold";
+}
+.prev-hiraginoMaru {
+	font-family: "ヒラギノ丸ゴ Pro";
+}
+.prev-hannari {
+	font-family: "hannari";
+}
+.prev-ArialBlack {
+	font-family: "Arial Black";
+}
+.prev-TimesNewRoman {
+	font-family: "Times New Roman";
+}
+.prev-CourierNew {
+	font-family: "Courier New";
+}
+.prev-Helvetica {
+	font-family: "Helvetica";
+}
+.prev-Oswald {
+	font-family: "Oswald";
+}
+.prev-GreatVibes {
+	font-family: "Great Vibes";
+}
+.prev-PermanentMarker {
+	font-family: "Permanent Marker";
+}
+.prev-Marvel {
+	font-family: "Marvel";
+}
+.prev-PoiretOne {
+	font-family: "PoiretOne";
+}
 
 

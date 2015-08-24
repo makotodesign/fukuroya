@@ -1,4 +1,6 @@
 <?php
+session_cache_limiter('private_no_expire');
+
 require_once('header.php');
 ?>
     <main class="conatact_main container peage-k-order-main">
@@ -97,14 +99,14 @@ require_once('header.php');
 								<select id="fontfamily1" name="fontfamily1" class="form-control input-sm">
 								  <option>選択---</option>
 								  <OPTGROUP label="和文フォント">
-								   <option class="mincho" value="明朝体">明朝</option>
-								   <option class="gothic" value="ゴシック">ゴシック</option>
+								   <option class="mincho" value="mincho">明朝</option>
+								   <option class="gothic" value="gothic">ゴシック</option>
 								   <option class="mplus-thin" value="mplus-thin">mplus-thin</option>
 								   <option class="mplus-light" value="mplus-light">mplus-light</option>
 								   <option class="mplus-regular" value="mplus-regular">mplus-regular</option>
 								   <option class="mplus-bold" value="mplus-bold">mplus-bold</option>
 								   <option class="hiraginoMaru" value="hiraginoMaru">ヒラギノ丸ゴ Pro</option>
-								   <option class="hannari" value="はんなり明朝">はんなり明朝</option>
+								   <option class="hannari" value="hannari">はんなり明朝</option>
 								  </OPTGROUP>
 								  <OPTGROUP label="欧文フォント">
 								  <option class="ArialBlack" value="ArialBlack">ArialBlack</option>
@@ -313,6 +315,7 @@ require_once('header.php');
 		<input type="hidden" name="k-title1-left" id="k-title1-left" value="">
 		<input type="hidden" name="k-title2-top" id="k-title2-top" value="">
 		<input type="hidden" name="k-title2-left" id="k-title2-left" value="">
+		<input type="hidden" name="k-title1-mod" id="k-title1-mod" value="">
 	</form>
 		
 

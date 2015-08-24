@@ -89,8 +89,8 @@ k_textarea('#input-title2','#k-title2');
 function k_textarea(obj1,obj2){
 $(obj1).on('click blur keydown keyup keypress change',function(){
 	var text=$(this).val();
-	text=text.replace(/\r\n/g, "<br />");
-	text = text.replace(/(\n|\r)/g, "<br />");
+	text=text.replace(/\r\n/g, "<br>");
+	text = text.replace(/(\n|\r)/g, "<br>");
 
 	$(obj2).html(text);
 });	
@@ -198,10 +198,10 @@ $(obj1).on('change',function(){
 	var font='';
 	var f=$(this).val();
 	switch (f){
-		case '明朝体':
+		case 'mincho':
 		font='"ヒラギノ明朝 ProN W6", "HiraMinProN-W6","MS 明朝", serif';
 		break;
-		case 'ゴシック':
+		case 'gothic':
 		font='"Hiragino Kaku Gothic ProN", "Meiryo", "sans-serif"';
 		break;
 		case 'mplus-thin':
@@ -219,7 +219,7 @@ $(obj1).on('change',function(){
 		case 'hiraginoMaru':
 		font='ヒラギノ丸ゴ Pro';
 		break;
-		case 'はんなり明朝':
+		case 'hannari':
 		font='hannari';
 		break;
 		case 'ArialBlack':
@@ -411,17 +411,18 @@ $(window).scroll(function() {
 	}
 });
 
-// title1,title2位置決定
+// hiddenに仕込む
 $('#k-order-commit').on('mouseover',function(){
 	var t1top=parseInt($('#k-title1').css('top'));
 	var t1left=parseInt($('#k-title1').css('left'));
 	var t2top=parseInt($('#k-title2').css('top'));
 	var t2left=parseInt($('#k-title2').css('left'));
+	var t1_title=$('#k-title1').html();
 	$('#k-title1-top').val(t1top);
 	$('#k-title1-left').val(t1left);
 	$('#k-title2-top').val(t2top);
 	$('#k-title2-left').val(t2left);
-
+	$('#k-title1-mod').val(t1_title);
 
 });
 

@@ -1,5 +1,6 @@
 <?php
 $filename=basename($_SERVER['PHP_SELF']);
+
 ?>
 <!DOCTYPE html>
 <html lang="ja">
