@@ -45,6 +45,42 @@ if(flug=='LT'){
 }
 
 });
+var size_attr=$('.bag-size').prop('selected');
+if(size_attr==true){
+	var flug = $('#bag-size-select').val();
+	switch (flug){
+		case 'LS':
+		$('.bagbody').animate({width:'480px',height:'397.5px'});
+		break;
+		case 'LT':
+		$('.bagbody').animate({width:'480px',height:'675px'});
+		break;
+		case 'MS':
+		$('.bagbody').animate({width:'420px',height:'397.5px'});
+		$('.handle').animate({width:'230px'});
+		break;
+		case 'MT':
+		$('.bagbody').animate({width:'420px',height:'600px'});
+		$('.handle').animate({width:'230px'});
+		break;
+		case 'SS':
+		$('.bagbody').animate({width:'330px',height:'397.5px'});
+		$('.handle').animate({width:'200px'});
+		break;
+		case 'ST':
+		$('.bagbody').animate({width:'330px',height:'480px'});
+		$('.handle').animate({width:'200px'});
+		break;
+	}
+	if(flug=='LT'){
+		$('#bagwrap').css('top','-80px');
+
+	}else{
+		$('#bagwrap').css('top','0px');
+	}	
+
+
+}
 // 紙色選択
 $('#basecolor').on('change',function(){
 	var hex='';

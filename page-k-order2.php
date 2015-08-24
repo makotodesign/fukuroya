@@ -1,6 +1,5 @@
 <?php
-header("Content-Type: text/html; charset=UTF-8");
-session_cache_limiter('private_no_expire');
+session_cache_limiter('none');
 $size=h($_POST['size']);
 $basecolor=h($_POST['basecolor']);
 $fontcolor1=h($_POST['fontcolor1']);
@@ -60,10 +59,17 @@ function h($val){
 					</div>
 				</div>
 			</div>
-			<p class="text-center">
-			  <button type="button" class="btn btn-default btn-lg">aaa</button>
-			  <button type="button" class="btn btn-primary btn-lg">kkkk</button>
-			</p>
+			<div class="text-center">
+			<form method="post" action="page-k-order.php" class="inline-block">
+				<input type="hidden" name="back_title1" value="<?php $text=str_replace("<br>","\n",$title1);echo $text;?>">
+				<input type="hidden" name="back_title1_br" value="<?php echo $title1; ?>">
+				<input type="hidden" name="back_size" value="<?php echo $size; ?>">
+				<button type="submit" id="k-order2-backbtn" class="btn btn-default btn-lg">戻る</button>
+			</form>
+			<form class="inline-block">
+			  <button type="button" class="btn btn-primary btn-lg">注文へ進む</button>
+			</form>  
+			</div>
 
 			
 		</div>

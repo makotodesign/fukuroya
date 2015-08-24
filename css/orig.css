@@ -42,6 +42,9 @@ margin-right:0px;
 	text-align: center;	
 }
 .no-point{cursor: default;}
+.inline-block {
+	display: inline-block;
+}
 /*gotopボタン*/
 #pageTop{
 	background:rgba(137,212,244,0.9);

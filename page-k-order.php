@@ -1,6 +1,26 @@
 <?php
-session_cache_limiter('private_no_expire');
-
+// session_cache_limiter('none');
+$size_list=array(
+"default"=>"選択して下さい",
+"LS"=>"L:高さスタンダード",	
+"LT"=>"L:高さトール",	
+"MS"=>"M:高さスタンダード",	
+"MT"=>"M:高さトール",	
+"SS"=>"S:高さスタンダード",	
+"ST"=>"S:高さトール",	
+);
+$basecolor_list=array(
+"default"=>"--選択",
+"white"=>"無地",
+"Dic003"=>"Dic003",
+"Dic009"=>"Dic009",
+"Dic016"=>"Dic016",
+"Dic021"=>"Dic021",
+"Dic032"=>"Dic032",
+"Dic051"=>"Dic051",
+"Dic080"=>"Dic080",
+"Dic144"=>"Dic144",
+);
 require_once('header.php');
 ?>
     <main class="conatact_main container peage-k-order-main">
@@ -29,12 +49,14 @@ require_once('header.php');
 						<div class="form-group">
 							<label class="control-label" for="size">サイズ</label>
 							<select id="size" name="size" class="form-control input-sm">
-							  <option value="LS">L:高さスタンダード</option>
-							  <option value="LT">L:高さトール</option>
-							  <option value="MS">M:高さスタンダード</option>
-							  <option value="MT">M:高さトール</option>
-							  <option value="SS">S:高さスタンダード</option>
-							  <option value="ST">S:高さトール</option>
+							<?php 
+							foreach ($size_list as $key => $value) {
+								if($key==$_POST['back_size']){
+									echo "<option id='bag-size-select' class='bag-size' value='$key' selected>".$value."</option>";
+								}else{
+									echo "<option class='bag_size' value='$key'>".$value."</option>";
+								}
+							}?>
 							</select>
 						</div>
 					</div>
@@ -46,15 +68,13 @@ require_once('header.php');
 						<div class="form-group">
 							<label class="control-label" for="basecolor">印刷色</label>
 							<select id="basecolor" name="basecolor" class="form-control input-sm">
-							<option value="white" selected>無地</option>
-							  <option class="dic003" value="Dic003">Dic003</option>
-							  <option class="dic009" value="Dic009">Dic009</option>
-							  <option class="dic016" value="Dic016">Dic016</option>
-							  <option class="dic021" value="Dic021">Dic021</option>
-							  <option class="dic032" value="Dic032">Dic032</option>
-							  <option class="dic051" value="Dic051">Dic051</option>
-							  <option class="dic080" value="Dic080">Dic080</option>
-							  <option class="dic144" value="Dic144">Dic144</option>
+							<?php
+							foreach ($basecolor_list as $key => $value) {
+								echo "<option class='$key' value='$key'>$value</option>";
+							}
+
+							?>
+
 
 							</select>
 						</div>
@@ -85,7 +105,11 @@ require_once('header.php');
 					<div class="col-xs-12">
 						<div class="form-group">
 							<label class="control-label">文字をこちらに書いてください</label>
-							<textarea class="form-control input-sm" name="title1" id="input-title1" placeholder="文字を入力してください。複数行入力可能" required></textarea>
+							<textarea class="form-control input-sm" name="title1" id="input-title1" placeholder="文字を入力してください。複数行入力可能" required><?php 
+								if(isset($_POST['back_title1'])):echo $_POST['back_title1']; endif;
+								
+
+							?></textarea>
 							<small>入力後ドラッグして移動できます</small>
 						</div>
 					</div>
@@ -282,16 +306,7 @@ require_once('header.php');
 							</div>
 						</div>
 					</div>
-					
-					
-
-
-
 				</div>
-
-
-			
-
 		</div>
 		<div class="canvas col-md-7">
 			<div id="bagwrap">
@@ -300,7 +315,10 @@ require_once('header.php');
 				</div>
 				<div class="bagbody">
 					<div class="bgpoint">
-						<p id="k-title1" class="k-title">文字スペース1</p>
+						<p id="k-title1" class="k-title"><?php
+							if(isset($_POST['back_title1_br'])){
+								echo $_POST['back_title1_br'];
+							}else{echo '文字スペース1';}?></p>
 						<p id="k-title2" class="k-title">文字スペース2</p>
 					</div>
 				</div>
