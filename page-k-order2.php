@@ -26,7 +26,7 @@ function h($val){
    			<div class="row">
    				<button class="btn btn-default no-point back" type="button"> かんたんデザイン <span class="glyphicon glyphicon-arrow-right"></span></button>
    				<button class="btn btn-success no-point back" type="button"> 確認 <span class="glyphicon glyphicon-arrow-right"></span></button>
-   				<button class="btn btn-default no-point back" type="button"> 原稿ファイルアップロード <span class="glyphicon glyphicon-arrow-right"></span></button>
+   				<button class="btn btn-default no-point back" type="button"> お客様情報入力 <span class="glyphicon glyphicon-arrow-right"></span></button>
    				<button class="btn btn-default no-point back" type="button"> お支払い手続き <span class="glyphicon glyphicon-arrow-right"></span></button>
    				<button class="btn btn-default no-point back" type="button"> ご注文手続き完了 </button>
    			</div>
@@ -67,6 +67,9 @@ function h($val){
 				<input type="hidden" name="back_basecolor" value="<?php echo $basecolor; ?>">
 				<input type="hidden" name="back_fontcolor1" value="<?php echo $fontcolor1; ?>">
 				<input type="hidden" name="back_fontfamily1" value="<?php echo $fontfamily1; ?>">
+				<input type="hidden" name="back_fontsize1" value="<?php echo $t1_size; ?>">
+				<input type="hidden" name="back_top1" value="<?php echo $t1_top; ?>">
+				<input type="hidden" name="back_left1" value="<?php echo $t1_left; ?>">
 				<button type="submit" id="k-order2-backbtn" class="btn btn-default btn-lg">戻る</button>
 			</form>
 			<form class="inline-block">

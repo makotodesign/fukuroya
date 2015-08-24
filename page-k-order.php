@@ -63,7 +63,7 @@ require_once('header.php');
    			<div class="row">
    				<button class="btn btn-success no-point" type="button"> かんたんデザイン <span class="glyphicon glyphicon-arrow-right"></span></button>
    				<button class="btn btn-default no-point" type="button"> 確認 <span class="glyphicon glyphicon-arrow-right"></span></button>
-   				<button class="btn btn-default no-point" type="button"> 原稿ファイルアップロード <span class="glyphicon glyphicon-arrow-right"></span></button>
+   				<button class="btn btn-default no-point" type="button"> お客様情報入力 <span class="glyphicon glyphicon-arrow-right"></span></button>
    				<button class="btn btn-default no-point" type="button"> お支払い手続き <span class="glyphicon glyphicon-arrow-right"></span></button>
    				<button class="btn btn-default no-point" type="button"> ご注文手続き完了 </button>
 
@@ -349,10 +349,13 @@ require_once('header.php');
 				</div>
 				<div class="bagbody">
 					<div class="bgpoint">
-						<p id="k-title1" class="k-title"><?php
-							if(isset($_POST['back_title1_br'])){
-								echo $_POST['back_title1_br'];
-							}else{echo '文字スペース1';}?></p>
+						<p id="k-title1" class="k-title" style="
+						font-size:<?php if(isset($_POST['back_fontsize1'])){echo $_POST['back_fontsize1'].'%';}; ?>;
+						top:<?php if(isset($_POST['back_top1'])){echo $_POST['back_top1'].'px';}; ?>;
+						left:<?php if(isset($_POST['back_left1'])){echo $_POST['back_left1'].'px';}; ?>;
+
+							">
+						<?php if(isset($_POST['back_title1_br'])){echo $_POST['back_title1_br'];}else{echo '文字スペース1';}?></p>
 						<p id="k-title2" class="k-title">文字スペース2</p>
 					</div>
 				</div>
