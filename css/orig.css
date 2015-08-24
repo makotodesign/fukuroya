@@ -409,6 +409,10 @@ span[id $='error'] {
 }
 
 /*------------かんたんデザイン------------*/
+.peage-k-order-main {
+	min-height: 1500px;
+}
+
 .canvas {
 	height:800px;
 	pisition:absolute;
@@ -499,6 +503,11 @@ span[id $='error'] {
 	position: absolute;
 	margin:0;
 	background-color: #fff;
+}
+
+.k-order-submit {
+	position: absolute;
+	margin-top:30px;
 }
 
 

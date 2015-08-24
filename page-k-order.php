@@ -1,7 +1,8 @@
 <?php
 require_once('header.php');
 ?>
-    <main class="conatact_main container">
+    <main class="conatact_main container peage-k-order-main">
+    <form action="page-k-order2.php" class="form" id="kantan" method="post">
    		<div class="page-header">
    			<div class="row">
    				<button class="btn btn-success no-point" type="button"> 簡易デザイン <span class="glyphicon glyphicon-arrow-right"></span></button>
@@ -18,7 +19,7 @@ require_once('header.php');
 			</div>
 		</div>
 		<div class="ctrl col-md-3 bg-primary clearfix">
-			<form action="" class="form" id="kantan" method="post">
+		
 			<h3>サイズ&sdot;紙色&sdot;文字色</h3>
 				<div class="row">
 					
@@ -161,7 +162,7 @@ require_once('header.php');
 				<div class="row">
 						<div class="col-xs-5">
 							<div class="form-group">
-								<label class="outline1" for="outline1">
+								<label class="outline1" for="outline1" title="チェック→有効 チェック外す→無効">
 								  <input type="checkbox" name="outline1" id="outline1" value="true"> 囲み枠
 								</label>
 							</div>
@@ -176,7 +177,7 @@ require_once('header.php');
 				<div class="row">
 					<div class="col-xs-5">
 						<div class="form-group">
-							<label for="input_t1_bg">
+							<label id="input_t1_bg_ravel" for="input_t1_bg" title="チェック→有効 チェック外す→無効">
 							  <input type="checkbox" name="input_t1_bg" id="input_t1_bg" value="true"> 背景枠
 							</label>
 						</div>
@@ -287,10 +288,10 @@ require_once('header.php');
 				</div>
 
 
-			</form>
+			
 
 		</div>
-		<div class="canvas col-md-9">
+		<div class="canvas col-md-7">
 			<div id="bagwrap">
 				<div class="handle">
 					<?php include('svg/handle.svg'); ?>
@@ -302,10 +303,13 @@ require_once('header.php');
 					</div>
 				</div>
 			</div>
-			
-
 		</div>
-
+		<div class="col-md-2">
+			<div id="k-o-submit" class="k-order-submit">
+			<button type="submit" class="btn btn-primary btn-lg">このデザインで<br>決定する</button>
+			</div>
+		</div>
+	</form>
 		
 
     </main>

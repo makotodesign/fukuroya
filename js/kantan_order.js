@@ -1,5 +1,5 @@
 $(function(){
-$('.ctrl').draggable();
+// $('.ctrl').draggable();
 // enterで送信できないように
 $("input"). keydown(function(e) {
             if ((e.which && e.which === 13) || (e.keyCode && e.keyCode === 13)) {
@@ -289,6 +289,7 @@ $('#outline1').on('change',function(){
 	if($(this).is(':checked')){
 		$('#input_t1_bg').prop('disabled',true);
 		$('#outline1_bwidth').prop('disabled',false);
+		
 		var c =$('#k-title1').css('color');
 		$('#k-title1').css({
 							borderStyle:'solid',
@@ -305,6 +306,7 @@ $('#outline1').on('change',function(){
 		$('#input_t1_bg').prop('disabled',false);
 		$('#k-title1').css({border:'none',paddingRight:0,paddingLeft:0});
 		$('#outline1_bwidth').prop('disabled',true);
+		$('#outline1_bwidth').val(1);
 	}
 });
 // 背景枠
@@ -317,6 +319,7 @@ $('#input_t1_bg').on('change',function(){
 		$('#input_t1_bgsize').prop('disabled',false);
 		$('#outline1').prop('disabled',true);
 		$('#outline1').prop('checked',false);
+
 		$('#k-title1').addClass('k-title-bg').css({border:'none',paddingRight:0,paddingLeft:0});
 		$('.k-title-bg').css({
 			color:bc,
@@ -330,6 +333,7 @@ $('#input_t1_bg').on('change',function(){
 	}else{
 		$('#input_t1_bgsize').prop('disabled',true);
 		$('#outline1').prop('disabled',false);
+		$('#input_t1_bgsize').val(1);
 		var color=$('#fontcolor1').val();
 		switch (color){
 			case 'black':
@@ -393,12 +397,24 @@ $('#areaadd1').on('change',function(){
 });
 
 // スクロールで袋がついてくる
+	// $('.container').prepend('<p id="v" style="position:fixed;z-index:110"></p>');
 $(window).scroll(function() {
 	var svalue=$('html,body').scrollTop();
-	$('.canvas').css('top',svalue / 3);
+	// $('#v').text(svalue);
+	$('.canvas,#k-o-submit').css('top',svalue / 3);	
+	if(svalue>=480 && svalue<=800){
+		$('.canvas,#k-o-submit').css('top',svalue-300);
+	}
 
-	
+	else if(svalue >780){
+		$('.canvas,#k-o-submit').css('top',500);
+	}
 });
+
+
+
+
+
 
 
 
