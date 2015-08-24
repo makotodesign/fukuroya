@@ -21,6 +21,19 @@ $basecolor_list=array(
 "Dic080"=>"Dic080",
 "Dic144"=>"Dic144",
 );
+$fontcolor_list=array(
+"default"=>"--選択",
+"black"=>"黒",
+"white"=>"白",
+"Dic003"=>"Dic003",
+"Dic009"=>"Dic009",
+"Dic016"=>"Dic016",
+"Dic021"=>"Dic021",
+"Dic032"=>"Dic032",
+"Dic051"=>"Dic051",
+"Dic080"=>"Dic080",
+"Dic144"=>"Dic144",
+);
 require_once('header.php');
 ?>
     <main class="conatact_main container peage-k-order-main">
@@ -77,8 +90,6 @@ require_once('header.php');
 								}
 							}
 							?>
-
-
 							</select>
 						</div>
 					</div>
@@ -86,17 +97,15 @@ require_once('header.php');
 							<div class="form-group">
 								<label for="fontcolor1">文字色</label>
 								<select id="fontcolor1" name="fontcolor1" class="form-control input-sm">
-								　<option>選択---</option>	
-								  <option class="black" value="black">黒</option>
-								  <option class="white" value="white">白</option>
-					  			  <option class="dic003" value="Dic003">Dic003</option>
-								  <option class="dic009" value="Dic009">Dic009</option>
-								  <option class="dic016" value="Dic016">Dic016</option>
-								  <option class="dic021" value="Dic021">Dic021</option>
-								  <option class="dic032" value="Dic032">Dic032</option>
-								  <option class="dic051" value="Dic051">Dic051</option>
-								  <option class="dic080" value="Dic080">Dic080</option>
-								  <option class="dic144" value="Dic144">Dic144</option>
+								<?php								
+								foreach ($fontcolor_list as $key => $value) {
+									if($key==$_POST['back_fontcolor1']){
+									echo "<option class='$key fontcolor1_select' value='$key' selected>$value</option>";	
+									}else{
+									echo "<option class='$key fontcolor1_select' value='$key'>$value</option>";
+									}
+								}
+								?>
 								</select>
 						
 							</div>

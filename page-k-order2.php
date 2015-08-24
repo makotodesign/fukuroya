@@ -65,6 +65,7 @@ function h($val){
 				<input type="hidden" name="back_title1_br" value="<?php echo $title1; ?>">
 				<input type="hidden" name="back_size" value="<?php echo $size; ?>">
 				<input type="hidden" name="back_basecolor" value="<?php echo $basecolor; ?>">
+				<input type="hidden" name="back_fontcolor1" value="<?php echo $fontcolor1; ?>">
 				<button type="submit" id="k-order2-backbtn" class="btn btn-default btn-lg">戻る</button>
 			</form>
 			<form class="inline-block">
