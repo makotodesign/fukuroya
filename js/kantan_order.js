@@ -45,7 +45,7 @@ if(flug=='LT'){
 }
 
 });
-var size_attr=$('.bag-size').prop('selected');
+var size_attr=$('.bag-size').is(':selected');
 if(size_attr==true){
 	var flug = $('#bag-size-select').val();
 	switch (flug){
@@ -118,6 +118,44 @@ $('#basecolor').on('change',function(){
 	$('.bgpoint').animate({backgroundColor:hex},1000,'linear');
 	$('.k-title-bg').css({color:hex});
 });
+var bscolorprop=$('.basecolor_select').is(':selected');
+if(bscolorprop==true){
+	var hex='';
+	var color=$('#basecolor').val();
+	switch (color){
+		case 'white':
+		hex ='#FFFFFF';
+		break;
+		case 'Dic003':
+		hex ='#FDD2E5';
+		break;
+		case 'Dic009':
+		hex ='#FFEA98';
+		break;
+		case 'Dic016':
+		hex ='#84D7CB';
+		break;
+		case 'Dic021':
+		hex ='#B5DCF2';
+		break;
+		case 'Dic032':
+		hex ='#FFD78C';
+		break;
+		case 'Dic051':
+		hex ='#FF686C';
+		break;
+		case 'Dic080':
+		hex ='#FF4220';
+		break;
+		case 'Dic144':
+		hex ='#3E63B4';
+		break;
+
+	}
+	$('.bgpoint').animate({backgroundColor:hex},1000,'linear');
+	$('.k-title-bg').css({color:hex});	
+}
+
 
 // textarea改行を反映して
 k_textarea('#input-title1','#k-title1');

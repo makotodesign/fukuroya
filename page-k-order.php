@@ -70,9 +70,12 @@ require_once('header.php');
 							<select id="basecolor" name="basecolor" class="form-control input-sm">
 							<?php
 							foreach ($basecolor_list as $key => $value) {
-								echo "<option class='$key' value='$key'>$value</option>";
+								if($key==$_POST['back_basecolor']){
+									echo "<option class='$key basecolor_select' value='$key' selected>$value</option>";
+								}else{
+									echo "<option class='$key basecolor_select' value='$key'>$value</option>";
+								}
 							}
-
 							?>
 
 
@@ -341,4 +344,4 @@ require_once('header.php');
 
 
   </div>
-<?php require_once('footer.php')?>
+<?php require_once('footer.php'); ?>
