@@ -1,0 +1,165 @@
+@chaset 'UTF-8';
+/*------------かんたんデザイン------------*/
+.peage-k-order-main {
+	min-height: 1500px;
+}
+
+.canvas {
+	height:800px;
+	pisition:absolute;
+
+}
+
+.ctrl {
+	margin-top: 20px;
+	padding-bottom:10px;
+	border-radius: 10px;
+	position:relative;
+	z-index:10;
+	background-color: #6F9AF7;
+	-webkit-box-shadow: 1px 5px 11px 0px rgba(50, 50, 50, 0.62);
+	-moz-box-shadow:    1px 5px 11px 0px rgba(50, 50, 50, 0.62);
+	box-shadow:         1px 5px 11px 0px rgba(50, 50, 50, 0.62);
+}
+
+.ctrl h3 {
+	cursor: move;
+	font-size: 1.8rem;
+	border-bottom: 1px dotted #fff;
+
+
+}
+
+
+
+.handle {
+	width:250px;
+	height:auto;
+	margin:0px auto 0 auto;
+	position:relative;
+	top:50px;
+	z-index:2;
+}
+
+.bagbody {
+	width:480px;
+	height:397.5px;
+	border:2px solid #000;
+	margin:0 auto;
+	position:relative;
+	z-index: 1;
+}
+
+#bagwrap {
+	position:relative;
+
+}
+
+
+.k-title {
+	display: inline-block;
+	position: absolute;
+	cursor: move;
+	margin:0;
+	padding:0;
+	font-size: 150%;
+	color:#ccc;
+	line-height: 100%;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+    user-select: none;
+}
+
+#k-title1{
+	text-align: left;
+}
+
+.k-title:first-of-type {
+	top:100px;
+	left:10%;
+}
+
+.k-title:nth-of-type(2) {
+	top:300px;
+	left:10%;
+}
+
+.k-title:hover {
+	outline:1px dashed #7B7E7F;
+}
+
+.bgpoint{
+	width:100%;
+	height:100%;
+	position: absolute;
+	margin:0;
+	background-color: #fff;
+}
+
+.k-order-submit {
+	position: absolute;
+	margin-top:30px;
+}
+
+/*-------確認ページ--------*/
+/*サイズ*/
+.LS {
+	width: 480px;
+	height:397.5px;
+}
+.LT {
+	width: 480px;
+	height: 675px;
+}
+.MS {
+	width: 420px;
+	height: 397.5px;
+}
+.MT {
+	width: 420px;
+	height: 600px;
+}
+.SS {
+	width: 330px;
+	height: 397.5px;
+}
+.ST {
+	width: 330px;
+	height: 480px;
+}
+
+.small_handle {
+	width: 200px;
+	top:40px;
+}
+
+/*紙色*/
+.prev-white {background-color: #fff;}
+.prev-Dic003 {background-color: #FDD2E5;}
+.prev-Dic009 {background-color: #FFEA98;}
+.prev-Dic016 {background-color: #84D7CB;}
+.prev-Dic021 {background-color: #B5DCF2;}
+.prev-Dic032 {background-color: #FFD78C;}
+.prev-Dic051 {background-color: #FF686C;}
+.prev-Dic080 {background-color: #FF4220;}
+.prev-Dic144 {background-color: #3E63B4;}
+/*fontcolor*/
+.font1-black {color:#000;}
+.font1-white {color: #fff;}
+.font1-Dic003 {color: #FDD2E5;}
+.font1-Dic009 {color: #FFEA98;}
+.font1-Dic016 {color: #84D7CB;}
+.font1-Dic021 {color: #B5DCF2;}
+.font1-Dic032 {color: #FFD78C;}
+.font1-Dic051 {color: #FF686C;}
+.font1-Dic080 {color: #FF4220;}
+.font1-Dic144 {color: #3E63B4;}
+
+/*title*/
+.k-title-prev {
+	position:absolute;
+}
+
+
+
+

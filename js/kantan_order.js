@@ -411,6 +411,20 @@ $(window).scroll(function() {
 	}
 });
 
+// title1,title2位置決定
+$('#k-order-commit').on('mouseover',function(){
+	var t1top=parseInt($('#k-title1').css('top'));
+	var t1left=parseInt($('#k-title1').css('left'));
+	var t2top=parseInt($('#k-title2').css('top'));
+	var t2left=parseInt($('#k-title2').css('left'));
+	$('#k-title1-top').val(t1top);
+	$('#k-title1-left').val(t1left);
+	$('#k-title2-top').val(t2top);
+	$('#k-title2-left').val(t2left);
+
+
+});
+
 
 
 

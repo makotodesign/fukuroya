@@ -5,7 +5,7 @@ require_once('header.php');
     <form action="page-k-order2.php" class="form" id="kantan" method="post">
    		<div class="page-header">
    			<div class="row">
-   				<button class="btn btn-success no-point" type="button"> 簡易デザイン <span class="glyphicon glyphicon-arrow-right"></span></button>
+   				<button class="btn btn-success no-point" type="button"> かんたんデザイン <span class="glyphicon glyphicon-arrow-right"></span></button>
    				<button class="btn btn-default no-point" type="button"> 確認 <span class="glyphicon glyphicon-arrow-right"></span></button>
    				<button class="btn btn-default no-point" type="button"> 原稿ファイルアップロード <span class="glyphicon glyphicon-arrow-right"></span></button>
    				<button class="btn btn-default no-point" type="button"> お支払い手続き <span class="glyphicon glyphicon-arrow-right"></span></button>
@@ -83,7 +83,7 @@ require_once('header.php');
 					<div class="col-xs-12">
 						<div class="form-group">
 							<label class="control-label">文字をこちらに書いてください</label>
-							<textarea class="form-control input-sm" name="title1" id="input-title1" placeholder="文字を入力してください。複数行入力可能"></textarea>
+							<textarea class="form-control input-sm" name="title1" id="input-title1" placeholder="文字を入力してください。複数行入力可能" required></textarea>
 							<small>入力後ドラッグして移動できます</small>
 						</div>
 					</div>
@@ -306,9 +306,13 @@ require_once('header.php');
 		</div>
 		<div class="col-md-2">
 			<div id="k-o-submit" class="k-order-submit">
-			<button type="submit" class="btn btn-primary btn-lg">このデザインで<br>決定する</button>
+			<button type="submit" id="k-order-commit" class="btn btn-primary btn-lg">このデザインで<br>決定する</button>
 			</div>
 		</div>
+		<input type="hidden" name="k-title1-top" id="k-title1-top" value="">
+		<input type="hidden" name="k-title1-left" id="k-title1-left" value="">
+		<input type="hidden" name="k-title2-top" id="k-title2-top" value="">
+		<input type="hidden" name="k-title2-left" id="k-title2-left" value="">
 	</form>
 		
 
