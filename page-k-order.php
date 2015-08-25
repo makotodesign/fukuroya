@@ -266,7 +266,7 @@ require_once('header.php');
 						<div class="col-xs-7">
 							<div class="form-group">
 							<label for="outline1_bwidth">囲み枠線幅</label>
-							<input type="range" id="outline1_bwidth" name="outline1_bwidth" class="form-control　input-sm" min="1" max="10" step="1" value="1" />
+							<input type="range" id="outline1_bwidth" name="outline1_bwidth" class="form-control　input-sm" min="1" max="10" step="1" value="<?php if(isset($_POST['back_border1_width'])){echo $_POST['back_border1_width'];}else{echo '1';}  ?>" />
 							</div>
 						</div>	
 				</div>
