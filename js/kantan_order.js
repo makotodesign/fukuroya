@@ -461,6 +461,11 @@ $('input[name="align2"]:radio').on('change',function(){
 	var a=$(this).val();
 	$('#k-title2').css({textAlign:a});
 });
+var align1_flug=$('input[name=align1]').is(':checked');
+if(align1_flug==true){
+	var a=$('input[name=align1]:checked').val();
+	$('#k-title1').css({textAlign:a});	
+}
 // 囲み枠
 $('#outline1_bwidth').prop('disabled',true);
 $('#outline1').on('change',function(){

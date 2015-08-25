@@ -208,15 +208,24 @@ require_once('header.php');
 					<div class="col-xs-12">
 						<div class="form-group">
 						<label >行揃え</label>&nbsp;&nbsp;
-							<label class="radio-inline">
-							  <input type="radio" name="align1" value="left"><i class="fa fa-align-left"></i>
-							</label>
-							<label class="radio-inline">
-							  <input type="radio" name="align1" value="center"><i class="fa fa-align-center"></i>
-							</label>
-							<label class="radio-inline">
-							  <input type="radio" name="align1" value="right"><i class="fa fa-align-right"></i>
-							</label>
+							<?php
+								$align1=array('left','center','right');
+								foreach ($align1 as $key => $value) {
+									if(isset($_POST['back_align1'])){
+										if($_POST['back_align1']==$value){
+											echo "<label class='radio-inline'><input type='radio' name='align1' value='$value' checked><i class='fa fa-align-$value'></i></label>";
+
+										}else{
+											echo "<label class='radio-inline'><input type='radio' name='align1' value='$value'><i class='fa fa-align-$value'></i></label>";
+										}
+								
+									}else{
+										echo "<label class='radio-inline'><input type='radio' name='align1' value='$value'><i class='fa fa-align-$value'></i></label>";
+									}
+									
+								}
+							?>
+
 						
 						</div>
 					</div>
