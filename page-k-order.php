@@ -186,7 +186,7 @@ require_once('header.php');
 						<div class="col-xs-6">	
 							<div class="form-group">
 								<label class="control-label">文字サイズ</label>
-								<input type="range" id="fontsize1" name="fontsize1" class="form-control　input-sm" min="100" max="800" step="5" value="<?php if(isset($_POST['back_fontsize1'])){echo $_POST['back_fontsize1'];}else{echo '200px';}  ?>"/>
+								<input type="range" id="fontsize1" name="fontsize1" class="form-control　input-sm" min="100" max="800" step="5" value="<?php if(isset($_POST['back_fontsize1'])){echo $_POST['back_fontsize1'];}else{echo '150';}  ?>"/>
 							</div>
 						</div>
 					</div>	
@@ -200,7 +200,7 @@ require_once('header.php');
 					<div class="col-xs-6">
 						<div class="form-group">
 							<label class="line_height1">行間</label>
-							<input type="range" id="line_height1" name="line_height1" class="form-control　input-sm" min="0.7" max="2.8" step="0.1" value="1.3"/>
+							<input type="range" id="line_height1" name="line_height1" class="form-control　input-sm" min="0.7" max="2.8" step="0.1" value="<?php if(isset($_POST['back_l_h1'])){echo $_POST['back_l_h1'];}else{echo '1.3';}  ?>"/>
 						</div>
 					</div>
 				</div>
@@ -356,6 +356,7 @@ require_once('header.php');
 						top:<?php if(isset($_POST['back_top1'])){echo $_POST['back_top1'].'px';}; ?>;
 						left:<?php if(isset($_POST['back_left1'])){echo $_POST['back_left1'].'px';}; ?>;
 						letter-spacing:<?php if(isset($_POST['back_l_s1'])){echo $_POST['back_l_s1'].'rem';}; ?>;
+						line-height:<?php if(isset($_POST['back_l_h1'])){echo $_POST['back_l_h1'];}; ?>;
 
 							">
 						<?php if(isset($_POST['back_title1_br'])){echo $_POST['back_title1_br'];}else{echo '文字スペース1';}?></p>

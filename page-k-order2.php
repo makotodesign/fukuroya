@@ -72,6 +72,7 @@ function h($val){
 				<input type="hidden" name="back_left1" value="<?php echo $t1_left; ?>">
 				<input type="hidden" name="back_l_s1" value="<?php echo $t1_l_s; ?>"> 
 				<input type="hidden" name="back_l_h1" value="<?php echo $t1_l_h; ?>"> 
+				<input type="hidden" name="back_align1" value="<?php echo $t1_align; ?>"> 
 				<button type="submit" id="k-order2-backbtn" class="btn btn-default btn-lg">戻る</button>
 			</form>
 			<form class="inline-block">
