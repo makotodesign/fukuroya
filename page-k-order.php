@@ -6,7 +6,7 @@ $size_list=array(
 "LT"=>"L:高さトール",	
 "MS"=>"M:高さスタンダード",	
 "MT"=>"M:高さトール",	
-"SS"=>"S:高さスタンダード",	
+"SS"=>"S:高さスタンダード",
 "ST"=>"S:高さトール",	
 );
 $basecolor_list=array(
@@ -139,7 +139,9 @@ require_once('header.php');
 						<div class="form-group">
 							<label class="control-label">文字をこちらに書いてください</label>
 							<textarea class="form-control input-sm" name="title1" id="input-title1" placeholder="文字を入力してください。複数行入力可能" required><?php 
-								if(isset($_POST['back_title1'])):echo $_POST['back_title1']; endif;
+								if(isset($_POST['back_title1'])&&$_POST['back_title1']!=''):
+									echo $_POST['back_title1']; 
+								endif;
 								
 
 							?></textarea>
@@ -184,7 +186,7 @@ require_once('header.php');
 						<div class="col-xs-6">	
 							<div class="form-group">
 								<label class="control-label">文字サイズ</label>
-								<input type="range" id="fontsize1" name="fontsize1" class="form-control　input-sm" min="100" max="800" step="5" value="200"/>
+								<input type="range" id="fontsize1" name="fontsize1" class="form-control　input-sm" min="100" max="800" step="5" value="<?php if(isset($_POST['back_fontsize1'])){echo $_POST['back_fontsize1'];}else{echo '200px';}  ?>"/>
 							</div>
 						</div>
 					</div>	
@@ -192,7 +194,7 @@ require_once('header.php');
 					<div class="col-xs-6">
 						<div class="form-group">
 							<label class="letter_spacing">文字間</label>
-							<input type="range" id="letter_spacing1" name="letter_spacing1" class="form-control　input-sm" min="0.01" max="1.8" step="0.05" value="0.05"/>
+							<input type="range" id="letter_spacing1" name="letter_spacing1" class="form-control　input-sm" min="0.01" max="1.8" step="0.05" value="<?php if(isset($_POST['back_l_s1'])){echo $_POST['back_l_s1'];}else{echo '0.05';}  ?>"/>
 						</div>
 					</div>
 					<div class="col-xs-6">
@@ -353,6 +355,7 @@ require_once('header.php');
 						font-size:<?php if(isset($_POST['back_fontsize1'])){echo $_POST['back_fontsize1'].'%';}; ?>;
 						top:<?php if(isset($_POST['back_top1'])){echo $_POST['back_top1'].'px';}; ?>;
 						left:<?php if(isset($_POST['back_left1'])){echo $_POST['back_left1'].'px';}; ?>;
+						letter-spacing:<?php if(isset($_POST['back_l_s1'])){echo $_POST['back_l_s1'].'rem';}; ?>;
 
 							">
 						<?php if(isset($_POST['back_title1_br'])){echo $_POST['back_title1_br'];}else{echo '文字スペース1';}?></p>

@@ -45,6 +45,9 @@ margin-right:0px;
 .inline-block {
 	display: inline-block;
 }
+.popfont1 {
+	font-family: tanuki;
+}
 /*gotopボタン*/
 #pageTop{
 	background:rgba(137,212,244,0.9);
