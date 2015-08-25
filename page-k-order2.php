@@ -13,6 +13,12 @@ $t1_size=h($_POST['fontsize1']);
 $t1_l_s=h($_POST['letter_spacing1']);
 $t1_l_h=h($_POST['line_height1']);
 $t1_align=h($_POST['align1']);
+$t1_border=array(
+"bool"=>h($_POST['outline1']),
+"width"=>h($_POST['outline1_bwidth'])
+	);
+// $t1_border_boolean=h($_POST['outline1']);
+// $t1_border_width=h($_POST['outline1_bwidth']);
 
 require_once('header.php');
 function h($val){
@@ -54,7 +60,16 @@ function h($val){
 						font-size:<?php echo $t1_size; ?>%;
 						letter-spacing:<?php echo $t1_l_s; ?>rem;
 						line-height:<?php echo $t1_l_h; ?>;
-						text-align:<?php echo $t1_align; ?>;"><?php echo $title1; ?></p>
+						text-align:<?php echo $t1_align; ?>;
+						<?php
+						if($t1_border['bool']==true){
+						echo "border:{$t1_border['width']}px solid $fontcolor1;";
+						echo "padding:2%";	
+
+						}
+
+						?>
+						"><?php echo $title1;?></p>
 						<p id="k-title2-prev" class="k-title-prev" style="display:none"></p>
 					</div>
 				</div>
@@ -73,6 +88,8 @@ function h($val){
 				<input type="hidden" name="back_l_s1" value="<?php echo $t1_l_s; ?>"> 
 				<input type="hidden" name="back_l_h1" value="<?php echo $t1_l_h; ?>"> 
 				<input type="hidden" name="back_align1" value="<?php echo $t1_align; ?>"> 
+				<input type="hidden" name="back_border1_bool" value="<?php echo $t1_border['bool'] ?>"> 
+				<input type="hidden" name="back_border1_width" value="<?php echo $t1_border['width'] ?>"> 
 				<button type="submit" id="k-order2-backbtn" class="btn btn-default btn-lg">戻る</button>
 			</form>
 			<form class="inline-block">

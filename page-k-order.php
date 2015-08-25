@@ -34,6 +34,18 @@ $fontcolor_list=array(
 "Dic080"=>"Dic080",
 "Dic144"=>"Dic144",
 );
+$fontcolor_hex=array(
+"black"=>"#000",
+"white"=>"#fff",
+"Dic003"=>"#FDD2E5",
+"Dic009"=>"#FFEA98",
+"Dic016"=>"#84D7CB",
+"Dic021"=>"#B5DCF2",
+"Dic032"=>"#FFD78C",
+"Dic051"=>"#FF686C",
+"Dic080"=>"#FF4220",
+"Dic144"=>"",
+);
 $fontfamily_list1=array(
 "mincho"=>"明朝",
 "gothic"=>"ゴシック",
@@ -56,6 +68,7 @@ $fontfamily_list2=array(
 "PermanentMarker"=>"PermanentMarker"
 );
 require_once('header.php');
+
 ?>
     <main class="conatact_main container peage-k-order-main">
     <form action="page-k-order2.php" class="form" id="kantan" method="post">
@@ -234,7 +247,19 @@ require_once('header.php');
 						<div class="col-xs-5">
 							<div class="form-group">
 								<label class="outline1" for="outline1" title="チェック→有効 チェック外す→無効">
-								  <input type="checkbox" name="outline1" id="outline1" value="true"> 囲み枠
+								<?php
+								if(isset($_POST['back_border1_bool'])){
+									if($_POST['back_border1_bool']=='true'){
+										echo "<input type='checkbox' name='outline1' id='outline1' value='true' checked>";
+									}else{
+										echo "<input type='checkbox' name='outline1' id='outline1' value='true'>";
+									}
+								}else{
+									echo "<input type='checkbox' name='outline1' id='outline1' value='true'>";
+								}
+								   
+								 ?>
+								  囲み枠
 								</label>
 							</div>
 						</div>
@@ -366,7 +391,6 @@ require_once('header.php');
 						left:<?php if(isset($_POST['back_left1'])){echo $_POST['back_left1'].'px';}; ?>;
 						letter-spacing:<?php if(isset($_POST['back_l_s1'])){echo $_POST['back_l_s1'].'rem';}; ?>;
 						line-height:<?php if(isset($_POST['back_l_h1'])){echo $_POST['back_l_h1'];}; ?>;
-
 							">
 						<?php if(isset($_POST['back_title1_br'])){echo $_POST['back_title1_br'];}else{echo '文字スペース1';}?></p>
 						<p id="k-title2" class="k-title">文字スペース2</p>

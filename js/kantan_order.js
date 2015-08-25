@@ -492,6 +492,31 @@ $('#outline1').on('change',function(){
 		$('#outline1_bwidth').val(1);
 	}
 });
+var border_flug=$('#outline1').is(':checked');
+if(border_flug==true){
+if($('#outline1').is(':checked')){
+		$('#input_t1_bg').prop('disabled',true);
+		$('#outline1_bwidth').prop('disabled',false);
+		
+		var c =$('#k-title1').css('color');
+		$('#k-title1').css({
+							borderStyle:'solid',
+							borderColor:c,
+							padding:'2%'
+							
+						});
+		$('#outline1_bwidth').on('change',function(){
+			var b=$('#outline1_bwidth').val();
+			$('#k-title1').css({borderWidth:b+'px'});
+
+		});
+	}else{
+		$('#input_t1_bg').prop('disabled',false);
+		$('#k-title1').css({border:'none',paddingRight:0,paddingLeft:0});
+		$('#outline1_bwidth').prop('disabled',true);
+		$('#outline1_bwidth').val(1);
+	}
+}
 // 背景枠
 $('#input_t1_bgsize').prop('disabled',true);
 var fc=$('#k-title1').css('color');
