@@ -277,11 +277,13 @@ require_once('header.php');
 							<?php 
 								if(isset($_POST['back_bg_bool'])){
 									if($_POST['back_bg_bool']=='true'){
-									echo "<input type='checkbox' name='input_t1_bg' id='input_t1_bg' value='true' checked> ";
+										echo "<input type='checkbox' name='input_t1_bg' id='input_t1_bg' value='true' checked> ";
+									}else{
+										echo "<input type='checkbox' name='input_t1_bg' id='input_t1_bg' value='true'> ";		
 									}
 
 								}else{
-								echo "<input type='checkbox' name='input_t1_bg' id='input_t1_bg' value='true'> ";	
+									echo "<input type='checkbox' name='input_t1_bg' id='input_t1_bg' value='true'> ";	
 								}
 
 							?>
@@ -293,6 +295,8 @@ require_once('header.php');
 						<div class="form-group">
 						<label for="input_t1_bgsize">背景枠サイズ</label>
 						<input type="range" id="input_t1_bgsize" name="input_t1_bgsize" class="form-control　input-sm" min="1" max="10" step="1" value="1" />
+
+						
 						</div>
 					</div>
 					
@@ -403,6 +407,10 @@ require_once('header.php');
 						letter-spacing:<?php if(isset($_POST['back_l_s1'])){echo $_POST['back_l_s1'].'rem';}; ?>;
 						line-height:<?php if(isset($_POST['back_l_h1'])){echo $_POST['back_l_h1'];}; ?>;
 						<?php
+						if(isset($_POST['back_fontcolor1'])){
+							echo "color:{$color_hex[$_POST['back_fontcolor1']]};";
+
+						}
 						if(isset($_POST['back_bg_bool'])){
 							if($_POST['back_bg_bool']=='true'){					
 							echo "background-color:{$color_hex[$_POST['back_fontcolor1']]};";

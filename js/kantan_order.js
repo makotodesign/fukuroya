@@ -263,47 +263,47 @@ $(obj1).on('change',function(){
 	$('.k-title-bg').css({backgroundColor:hex,color:bc});
 });
 }
-var fontcolor1_flug=$('.fontcolor1_select').is(':selected');
-if(fontcolor1_flug==true){
-	var hex='';
-	var color=$('#fontcolor1').val();
-	var bc=$('.bgpoint').css('background-color');
-	switch (color){
-		case 'black':
-		hex ='#000';
-		break;
-		case 'white':
-		hex ='#FFFFFF';
-		break;
-		case 'Dic003':
-		hex ='#FDD2E5';
-		break;
-		case 'Dic009':
-		hex ='#FFEA98';
-		break;
-		case 'Dic016':
-		hex ='#84D7CB';
-		break;
-		case 'Dic021':
-		hex ='#B5DCF2';
-		break;
-		case 'Dic032':
-		hex ='#FFD78C';
-		break;
-		case 'Dic051':
-		hex ='#FF686C';
-		break;
-		case 'Dic080':
-		hex ='#FF4220';
-		break;
-		case 'Dic144':
-		hex ='#3E63B4';
-		break;
+// var fontcolor1_flug=$('.fontcolor1_select').is(':selected');
+// if(fontcolor1_flug==true){
+// 	var hex='';
+// 	var color=$('#fontcolor1').val();
+// 	var bc=$('.bgpoint').css('background-color');
+// 	switch (color){
+// 		case 'black':
+// 		hex ='#000';
+// 		break;
+// 		case 'white':
+// 		hex ='#FFFFFF';
+// 		break;
+// 		case 'Dic003':
+// 		hex ='#FDD2E5';
+// 		break;
+// 		case 'Dic009':
+// 		hex ='#FFEA98';
+// 		break;
+// 		case 'Dic016':
+// 		hex ='#84D7CB';
+// 		break;
+// 		case 'Dic021':
+// 		hex ='#B5DCF2';
+// 		break;
+// 		case 'Dic032':
+// 		hex ='#FFD78C';
+// 		break;
+// 		case 'Dic051':
+// 		hex ='#FF686C';
+// 		break;
+// 		case 'Dic080':
+// 		hex ='#FF4220';
+// 		break;
+// 		case 'Dic144':
+// 		hex ='#3E63B4';
+// 		break;
 
-	}
-	$('.k-title').css({color:hex,borderColor:hex});
-	$('.k-title-bg').css({backgroundColor:hex,color:bc});
-}
+// 	}
+// 	$('.k-title').css({color:hex,borderColor:hex});
+// 	$('.k-title-bg').css({backgroundColor:hex,color:bc});
+// }
 
 // font-family
 fontfamily('#fontfamily1','#k-title1');
