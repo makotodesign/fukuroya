@@ -512,7 +512,7 @@ if(border_flug==true){
 
 }else{
 		$('#input_t1_bg').prop('disabled',false);
-		$('#k-title1').css({border:'none',paddingRight:0,paddingLeft:0});
+		// $('#k-title1').css({border:'none',paddingRight:0,paddingLeft:0});
 		$('#outline1_bwidth').prop('disabled',true);
 		$('#outline1_bwidth').val(1);
 	}
@@ -537,6 +537,7 @@ $('#input_t1_bg').on('change',function(){
 			$('.k-title-bg').css({padding:val+'%'});
 
 		});
+
 	}else{
 		$('#input_t1_bgsize').prop('disabled',true);
 		$('#outline1').prop('disabled',false);
@@ -577,33 +578,63 @@ $('#input_t1_bg').on('change',function(){
 		}
 		$('.k-title-bg').css({color:hex,background:'none',padding:0});
 		$('#k-title1').removeClass('k-title-bg');
-
 	}
-
-
 });
-// var bg_flug=$('#input_t1_bg').is(':checked');
-// if(bg_flug==true){
-// 	var fc=$('#k-title1').css('color');
-// 	var bc=$('.bgpoint').css('background-color');
-// 	alert(bc);
-// 	$('#input_t1_bgsize').prop('disabled',false);
-// 	$('#outline1').prop('disabled',true);
-// 	$('#outline1').prop('checked',false);
+// 戻ってチェック外す時アクション
+$('#input_t1_bg:checked').on('change',function(){
+	$('#input_t1_bgsize').prop('disabled',true);
+		$('#outline1').prop('disabled',false);
+		$('#input_t1_bgsize').val(1);
+		var color=$('#fontcolor1').val();
+		switch (color){
+			case 'black':
+			hex ='#000';
+			break;
+			case 'white':
+			hex ='#FFFFFF';
+			break;
+			case 'Dic003':
+			hex ='#FDD2E5';
+			break;
+			case 'Dic009':
+			hex ='#FFEA98';
+			break;
+			case 'Dic016':
+			hex ='#84D7CB';
+			break;
+			case 'Dic021':
+			hex ='#B5DCF2';
+			break;
+			case 'Dic032':
+			hex ='#FFD78C';
+			break;
+			case 'Dic051':
+			hex ='#FF686C';
+			break;
+			case 'Dic080':
+			hex ='#FF4220';
+			break;
+			case 'Dic144':
+			hex ='#3E63B4';
+			break;
 
-// 	$('#k-title1').addClass('k-title-bg').css({border:'none',paddingRight:0,paddingLeft:0});
-// 	$('.k-title-bg').css({
-// 		color:bc,
-// 		backgroundColor:fc
-// 	});
-// 	$('#input_t1_bgsize').on('change',function(){
-// 		var val =$(this).val();
-// 		$('.k-title-bg').css({padding:val+'%'});
+		}
+		$('#k-title1').css({color:hex,background:'none',padding:0});
+	
+});
+var bg_flug=$('#input_t1_bg').is(':checked');
+if(bg_flug==true){
+	$('#input_t1_bgsize').prop('disabled',false);
 
-// 	});
+	$('#input_t1_bgsize').on('change',function(){
+		var val =$('#input_t1_bgsize').val();
+		$('#k-title1').css({padding:val+'%'});
+
+	});
 
 
-// }
+
+}
 // 入力エリア追加
 $('#k-input2,#k-title2').hide();
 $('#areaadd1').on('change',function(){

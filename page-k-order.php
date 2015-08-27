@@ -406,15 +406,13 @@ require_once('header.php');
 						left:<?php if(isset($_POST['back_left1'])){echo $_POST['back_left1'].'px';}; ?>;
 						letter-spacing:<?php if(isset($_POST['back_l_s1'])){echo $_POST['back_l_s1'].'rem';}; ?>;
 						line-height:<?php if(isset($_POST['back_l_h1'])){echo $_POST['back_l_h1'];}; ?>;
+						color:<?php if(isset($_POST['back_fontcolor1'])){echo $color_hex[$_POST['back_fontcolor1']];}; ?>;
 						<?php
-						if(isset($_POST['back_fontcolor1'])){
-							echo "color:{$color_hex[$_POST['back_fontcolor1']]};";
-
-						}
 						if(isset($_POST['back_bg_bool'])){
 							if($_POST['back_bg_bool']=='true'){					
 							echo "background-color:{$color_hex[$_POST['back_fontcolor1']]};";
 							echo "color:{$color_hex[$_POST['back_basecolor']]};";
+							echo "padding:{$_POST['back_bg_padding']}%";
 							}
 						}?>
 							">
