@@ -34,7 +34,7 @@ $fontcolor_list=array(
 "Dic080"=>"Dic080",
 "Dic144"=>"Dic144",
 );
-$fontcolor_hex=array(
+$color_hex=array(
 "black"=>"#000",
 "white"=>"#fff",
 "Dic003"=>"#FDD2E5",
@@ -44,7 +44,7 @@ $fontcolor_hex=array(
 "Dic032"=>"#FFD78C",
 "Dic051"=>"#FF686C",
 "Dic080"=>"#FF4220",
-"Dic144"=>"",
+"Dic144"=>"#3E63B4",
 );
 $fontfamily_list1=array(
 "mincho"=>"明朝",
@@ -152,7 +152,7 @@ require_once('header.php');
 						<div class="form-group">
 							<label class="control-label">文字をこちらに書いてください</label>
 							<textarea class="form-control input-sm" name="title1" id="input-title1" placeholder="文字を入力してください。複数行入力可能" required><?php 
-								if(isset($_POST['back_title1'])&&$_POST['back_title1']!=''):
+								if(isset($_POST['back_title1'])&&$_POST['back_title1']!=''&&$_POST['back_title1']!='\n'):
 									echo $_POST['back_title1']; 
 								endif;
 								
@@ -274,7 +274,18 @@ require_once('header.php');
 					<div class="col-xs-5">
 						<div class="form-group">
 							<label id="input_t1_bg_ravel" for="input_t1_bg" title="チェック→有効 チェック外す→無効">
-							  <input type="checkbox" name="input_t1_bg" id="input_t1_bg" value="true"> 背景枠
+							<?php 
+								if(isset($_POST['back_bg_bool'])){
+									if($_POST['back_bg_bool']=='true'){
+									echo "<input type='checkbox' name='input_t1_bg' id='input_t1_bg' value='true' checked> ";
+									}
+
+								}else{
+								echo "<input type='checkbox' name='input_t1_bg' id='input_t1_bg' value='true'> ";	
+								}
+
+							?>
+							 背景枠
 							</label>
 						</div>
 					</div>
@@ -391,6 +402,13 @@ require_once('header.php');
 						left:<?php if(isset($_POST['back_left1'])){echo $_POST['back_left1'].'px';}; ?>;
 						letter-spacing:<?php if(isset($_POST['back_l_s1'])){echo $_POST['back_l_s1'].'rem';}; ?>;
 						line-height:<?php if(isset($_POST['back_l_h1'])){echo $_POST['back_l_h1'];}; ?>;
+						<?php
+						if(isset($_POST['back_bg_bool'])){
+							if($_POST['back_bg_bool']=='true'){					
+							echo "background-color:{$color_hex[$_POST['back_fontcolor1']]};";
+							echo "color:{$color_hex[$_POST['back_basecolor']]};";
+							}
+						}?>
 							">
 						<?php if(isset($_POST['back_title1_br'])){echo $_POST['back_title1_br'];}else{echo '文字スペース1';}?></p>
 						<p id="k-title2" class="k-title">文字スペース2</p>

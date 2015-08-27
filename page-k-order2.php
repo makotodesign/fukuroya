@@ -1,5 +1,17 @@
 <?php
 session_cache_limiter('none');
+$color_hex=array(
+"black"=>"#000",
+"white"=>"#fff",
+"Dic003"=>"#FDD2E5",
+"Dic009"=>"#FFEA98",
+"Dic016"=>"#84D7CB",
+"Dic021"=>"#B5DCF2",
+"Dic032"=>"#FFD78C",
+"Dic051"=>"#FF686C",
+"Dic080"=>"#FF4220",
+"Dic144"=>"#3E63B4",
+);
 $size=h($_POST['size']);
 $basecolor=h($_POST['basecolor']);
 $fontcolor1=h($_POST['fontcolor1']);
@@ -17,9 +29,11 @@ $t1_border=array(
 "bool"=>h($_POST['outline1']),
 "width"=>h($_POST['outline1_bwidth'])
 	);
-// $t1_border_boolean=h($_POST['outline1']);
-// $t1_border_width=h($_POST['outline1_bwidth']);
-
+$t1_bg=array(
+"bool"=>h($_POST['input_t1_bg']),
+"padding"=>h($_POST['input_t1_bgsize'])
+	);
+print_r($t1_bg['padding']);
 require_once('header.php');
 function h($val){
 	$s=htmlspecialchars($val,ENT_QUOTES);
@@ -64,7 +78,13 @@ function h($val){
 						<?php
 						if($t1_border['bool']==true){
 						echo "border:{$t1_border['width']}px solid $fontcolor1;";
-						echo "padding:2%";	
+						echo "padding:2%;";	
+
+						}
+						if($t1_bg['bool']==true){
+						echo "padding:{$t1_bg['padding']}%;";
+						echo "background-color:{$color_hex[$fontcolor1]};";	
+						echo "color:{$color_hex[$basecolor]};";
 
 						}
 
@@ -89,7 +109,9 @@ function h($val){
 				<input type="hidden" name="back_l_h1" value="<?php echo $t1_l_h; ?>"> 
 				<input type="hidden" name="back_align1" value="<?php echo $t1_align; ?>"> 
 				<input type="hidden" name="back_border1_bool" value="<?php echo $t1_border['bool'] ?>"> 
-				<input type="hidden" name="back_border1_width" value="<?php echo $t1_border['width'] ?>"> 
+				<input type="hidden" name="back_border1_width" value="<?php echo $t1_border['width'] ?>">
+				<input type="hidden" name="back_bg_bool" value="<?php echo $t1_bg['bool'] ?>"> 
+				<input type="hidden" name="back_bg_padding" value="<?php echo $t1_bg['padding'] ?>">  
 				<button type="submit" id="k-order2-backbtn" class="btn btn-default btn-lg">戻る</button>
 			</form>
 			<form class="inline-block">

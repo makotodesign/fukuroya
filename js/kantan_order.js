@@ -494,7 +494,6 @@ $('#outline1').on('change',function(){
 });
 var border_flug=$('#outline1').is(':checked');
 if(border_flug==true){
-
 		$('#input_t1_bg').prop('disabled',true);
 		$('#outline1_bwidth').prop('disabled',false);
 		var b=$('#outline1_bwidth').val();
@@ -506,9 +505,17 @@ if(border_flug==true){
 							borderWidth:b+'px'
 							
 						});
-		
+		$('#outline1_bwidth').on('change',function(){
+			var b=$('#outline1_bwidth').val();
+			$('#k-title1').css({borderWidth:b+'px'});
+		});
 
-}
+}else{
+		$('#input_t1_bg').prop('disabled',false);
+		$('#k-title1').css({border:'none',paddingRight:0,paddingLeft:0});
+		$('#outline1_bwidth').prop('disabled',true);
+		$('#outline1_bwidth').val(1);
+	}
 // 背景枠
 $('#input_t1_bgsize').prop('disabled',true);
 var fc=$('#k-title1').css('color');
@@ -575,9 +582,28 @@ $('#input_t1_bg').on('change',function(){
 
 
 });
+// var bg_flug=$('#input_t1_bg').is(':checked');
+// if(bg_flug==true){
+// 	var fc=$('#k-title1').css('color');
+// 	var bc=$('.bgpoint').css('background-color');
+// 	alert(bc);
+// 	$('#input_t1_bgsize').prop('disabled',false);
+// 	$('#outline1').prop('disabled',true);
+// 	$('#outline1').prop('checked',false);
+
+// 	$('#k-title1').addClass('k-title-bg').css({border:'none',paddingRight:0,paddingLeft:0});
+// 	$('.k-title-bg').css({
+// 		color:bc,
+// 		backgroundColor:fc
+// 	});
+// 	$('#input_t1_bgsize').on('change',function(){
+// 		var val =$(this).val();
+// 		$('.k-title-bg').css({padding:val+'%'});
+
+// 	});
 
 
-
+// }
 // 入力エリア追加
 $('#k-input2,#k-title2').hide();
 $('#areaadd1').on('change',function(){
