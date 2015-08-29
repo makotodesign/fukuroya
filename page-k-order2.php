@@ -39,6 +39,7 @@ function h($val){
 	$s=htmlspecialchars($val,ENT_QUOTES);
 	return $s;
 }
+print_r($t1_border['width']);
 ?>
     <main class="conatact_main container peage-k-order-main">
   
@@ -77,7 +78,7 @@ function h($val){
 						text-align:<?php echo $t1_align; ?>;
 						<?php
 						if($t1_border['bool']==true){
-						echo "border:{$t1_border['width']}px solid $fontcolor1;";
+						echo "border:{$t1_border['width']}px solid $color_hex[$fontcolor1];";
 						echo "padding:2%;";	
 
 						}

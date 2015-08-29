@@ -68,7 +68,7 @@ $fontfamily_list2=array(
 "PermanentMarker"=>"PermanentMarker"
 );
 require_once('header.php');
-
+// print_r($_['back_bg_padding']);
 ?>
     <main class="conatact_main container peage-k-order-main">
     <form action="page-k-order2.php" class="form" id="kantan" method="post">
@@ -294,7 +294,7 @@ require_once('header.php');
 					<div class="col-xs-7">
 						<div class="form-group">
 						<label for="input_t1_bgsize">背景枠サイズ</label>
-						<input type="range" id="input_t1_bgsize" name="input_t1_bgsize" class="form-control　input-sm" min="1" max="10" step="1" value="1" />
+						<input type="range" id="input_t1_bgsize" name="input_t1_bgsize" class="form-control　input-sm" min="1" max="10" step="1" value="<?php if(isset($_POST['back_bg_padding'])){echo $_POST['back_bg_padding'];}else{echo "1";}?>" />
 
 						
 						</div>

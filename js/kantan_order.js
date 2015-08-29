@@ -625,10 +625,10 @@ $('#input_t1_bg:checked').on('change',function(){
 var bg_flug=$('#input_t1_bg').is(':checked');
 if(bg_flug==true){
 	$('#input_t1_bgsize').prop('disabled',false);
-
+	$('#outline1').prop('disabled',true);
 	$('#input_t1_bgsize').on('change',function(){
 		var val =$('#input_t1_bgsize').val();
-		$('#k-title1').css({padding:val+'%'});
+		$('#k-title1').css({padding:eval("'"+val+"%'")});
 
 	});
 
