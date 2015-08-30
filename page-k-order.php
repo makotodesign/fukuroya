@@ -347,28 +347,30 @@ require_once('header.php');
 							<div class="form-group">
 								<label class="fontfamily2" for="basecolor"><i class="fa fa-font"></i>字体</label>
 								<select id="fontfamily2" name="fontfamily2" class="form-control input-sm">
-								  <option>選択---</option>
+								<option>選択---</option>
 								  <OPTGROUP label="和文フォント">
-								   <option class="mincho" value="明朝体">明朝</option>
-								   <option class="gothic" value="ゴシック">ゴシック</option>
-								   <option class="mplus-thin" value="mplus-thin">mplus-thin</option>
-								   <option class="mplus-light" value="mplus-light">mplus-light</option>
-								   <option class="mplus-regular" value="mplus-regular">mplus-regular</option>
-								   <option class="mplus-bold" value="mplus-bold">mplus-bold</option>
-								   <option class="hiraginoMaru" value="hiraginoMaru">ヒラギノ丸ゴ Pro</option>
-								   <option class="hannari" value="はんなり明朝">はんなり明朝</option>
-								  </OPTGROUP>
+								  <?php
+								  foreach ($fontfamily_list1 as $key => $value) {
+								  	if($key==$_POST['back_fontfamily2']){
+								  		echo "<option class='$key fontfamily1' value='$key' selected>$value</option>";
+								  	}else{
+								  		echo "<option class='$key fontfamily1' value='$key'>$value</option>";
+								  	}
+								  }
+								  ?>
+								  </OPTGROUP>								  
 								  <OPTGROUP label="欧文フォント">
-								  <option class="ArialBlack" value="ArialBlack">ArialBlack</option>
-								  <option class="TimesNewRoman" value="TimesNewRoman">TimesNewRoman</option>
-								  <option class="CourierNew" value="CourierNew">Courier New</option>
-								  <option class="Helvetica" value="Helvetica">Helvetica</option>
-								  <option class="Marvel" value="Marvel">Marvel</option>
-								  <option class="Oswald" value="Oswald">Oswald</option>
-								  <option class="GreatVibes" value="GreatVibes">GreatVibes</option>
-								  <option class="PoiretOne" value="PoiretOne">PoiretOne</option>
-								  <option class="PermanentMarker" value="PermanentMarker">PermanentMarker</option>
+								  <?php
+								  foreach ($fontfamily_list2 as $key => $value) {
+								  	if($key==$_POST['back_fontfamily2']){
+								  		echo "<option class='$key fontfamily2' value='$key' selected>$value</option>";
+								  	}else{
+								  		echo "<option class='$key fontfamily2' value='$key'>$value</option>";
+								  	}
+								  }
+								  ?>
 								  </OPTGROUP>
+					  		
 					  		
 								</select>
 							</div>

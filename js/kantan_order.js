@@ -243,8 +243,12 @@ if(fontfamily1_flug==true){
 	var f=$('#fontfamily1').val();
 	var font=fontobj[f];
 	$('#k-title1').css({fontFamily:font});
-
-
+}
+var fontfamily2_flug=$('.fontfamily2').is(':selected');
+if(fontfamily2_flug==true){
+	var f=$('#fontfamily2').val();
+	var font=fontobj[f];
+	$('#k-title2').css({fontFamily:font});
 }
 // 文字間
 k_letterspacing('#letter_spacing1','#k-title1');

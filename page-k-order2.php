@@ -39,7 +39,8 @@ $area2=array(
 "title"=>strip_tags($_POST['k-title2-mod'],'<br>'),
 "top"=>h($_POST['k-title2-top']),
 "left"=>h($_POST['k-title2-left']),
-"color"=>$color_hex[h($_POST['fontcolor1'])]
+"color"=>$color_hex[h($_POST['fontcolor1'])],
+"fontfamily"=>h($_POST['fontfamily2'])
 );
 
 require_once('header.php');
@@ -99,7 +100,7 @@ function h($val){
 
 						?>
 						"><?php echo $title1;?></p>
-						<p id="k-title2-prev" class="k-title-prev" style="<?php 
+						<p id="k-title2-prev" class="k-title-prev prev-<?php echo $area2['fontfamily'] ?>" style="<?php 
 						if($area2['add']=='areaadd1'){
 							echo "display:inline-block;";		
 						}else{
@@ -136,6 +137,7 @@ function h($val){
 				<input type="hidden" name="back_title2" value="<?php $t2check=ltrim($area2['title'],'<br>'); $text2=str_replace("<br>","\n",$t2check); echo $text2;?>">
 				<input type="hidden" name="back_top2" value="<?php echo $area2['top']; ?>">
 				<input type="hidden" name="back_left2" value="<?php echo $area2['left']; ?>">
+				<input type="hidden" name="back_fontfamily2" value="<?php echo $area2['fontfamily']; ?>">
   
 				<button type="submit" id="k-order2-backbtn" class="btn btn-default btn-lg">戻る</button>
 			</form>
