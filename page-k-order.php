@@ -68,7 +68,7 @@ $fontfamily_list2=array(
 "PermanentMarker"=>"PermanentMarker"
 );
 require_once('header.php');
-// print_r($_['back_bg_padding']);
+// print_r($_POST['back_title1']);
 ?>
     <main class="conatact_main container peage-k-order-main">
     <form action="page-k-order2.php" class="form" id="kantan" method="post">
@@ -153,7 +153,8 @@ require_once('header.php');
 							<label class="control-label">文字をこちらに書いてください</label>
 							<textarea class="form-control input-sm" name="title1" id="input-title1" placeholder="文字を入力してください。複数行入力可能" required><?php 
 								if(isset($_POST['back_title1'])&&$_POST['back_title1']!=''&&$_POST['back_title1']!='\n'):
-									echo $_POST['back_title1']; 
+									$back_title=ltrim($_POST['back_title1'],'\n');
+									echo $back_title; 
 								endif;
 								
 
@@ -305,7 +306,18 @@ require_once('header.php');
 					<div class="col-xs-12">
 						<div class="form-group">
 							<h3><label class="checkbox-inline">
-							  <input type="checkbox" id="areaadd1" value="areaadd1"> 文字入力エリアを追加
+							<?php
+							if(isset($_POST['back_area2_check'])){
+								if($_POST['back_area2_check']=='areaadd1'){
+									echo '<input type="checkbox" id="areaadd1" name="areaadd1" value="areaadd1" checked>';		
+								}else{
+									echo '<input type="checkbox" id="areaadd1" name="areaadd1" value="areaadd1">'; 
+								}
+							}else{
+								echo '<input type="checkbox" id="areaadd1" name="areaadd1" value="areaadd1">';
+							}	
+							?>
+							   文字入力エリアを追加
 							</label></h3>
 						</div>
 					</div>
@@ -416,7 +428,7 @@ require_once('header.php');
 							}
 						}?>
 							">
-						<?php if(isset($_POST['back_title1_br'])){echo $_POST['back_title1_br'];}else{echo '文字スペース1';}?></p>
+						<!--<?php if(isset($_POST['back_title1_br'])){echo $_POST['back_title1_br'];}else{echo '文字スペース1';}?>--></p>
 						<p id="k-title2" class="k-title">文字スペース2</p>
 					</div>
 				</div>
@@ -432,6 +444,7 @@ require_once('header.php');
 		<input type="hidden" name="k-title2-top" id="k-title2-top" value="">
 		<input type="hidden" name="k-title2-left" id="k-title2-left" value="">
 		<input type="hidden" name="k-title1-mod" id="k-title1-mod" value="">
+		<input type="hidden" name="k-title2-mod" id="k-title2-mod" value="">
 	</form>
 		
 

@@ -33,13 +33,19 @@ $t1_bg=array(
 "bool"=>h($_POST['input_t1_bg']),
 "padding"=>h($_POST['input_t1_bgsize'])
 	);
-print_r($t1_bg['padding']);
+// 文字エリア2
+$area2=array(
+"add"=>h($_POST['areaadd1']),
+"title"=>strip_tags($_POST['k-title2-mod'],'<br>'),
+"top"=>h($_POST['k-title2-top']),
+"left"=>h($_POST['k-title2-left'])
+);
+
 require_once('header.php');
 function h($val){
 	$s=htmlspecialchars($val,ENT_QUOTES);
 	return $s;
 }
-print_r($t1_border['width']);
 ?>
     <main class="conatact_main container peage-k-order-main">
   
@@ -91,13 +97,23 @@ print_r($t1_border['width']);
 
 						?>
 						"><?php echo $title1;?></p>
-						<p id="k-title2-prev" class="k-title-prev" style="display:none"></p>
+						<p id="k-title2-prev" class="k-title-prev" style="<?php 
+						if($area2['add']=='areaadd1'){
+							echo "display:inline-block;";		
+						}else{
+							echo "display:none;"; 
+						}?>
+						left:<?php echo $area2['left']; ?>px;
+						top:<?php echo $area2['top']; ?>px;
+
+
+						"><?php echo $area2['title']; ?></p>
 					</div>
 				</div>
 			</div>
 			<div class="text-center">
 			<form method="post" action="page-k-order.php" class="inline-block">		
-				<input type="hidden" name="back_title1" value="<?php $text=str_replace("<br>","\n",$title1);echo $text;?>">
+				<input type="hidden" name="back_title1" value="<?php $text=str_replace("<br>","\n",$title1); echo $text;?>">
 				<input type="hidden" name="back_title1_br" value="<?php echo $title1; ?>">
 				<input type="hidden" name="back_size" value="<?php echo $size; ?>">
 				<input type="hidden" name="back_basecolor" value="<?php echo $basecolor; ?>">
@@ -112,7 +128,8 @@ print_r($t1_border['width']);
 				<input type="hidden" name="back_border1_bool" value="<?php echo $t1_border['bool'] ?>"> 
 				<input type="hidden" name="back_border1_width" value="<?php echo $t1_border['width'] ?>">
 				<input type="hidden" name="back_bg_bool" value="<?php echo $t1_bg['bool'] ?>"> 
-				<input type="hidden" name="back_bg_padding" value="<?php echo $t1_bg['padding'] ?>">  
+				<input type="hidden" name="back_bg_padding" value="<?php echo $t1_bg['padding'] ?>"> 
+				<input type="hidden" name="back_area2_check" value="<?php echo $area2['add'] ?>">  
 				<button type="submit" id="k-order2-backbtn" class="btn btn-default btn-lg">戻る</button>
 			</form>
 			<form class="inline-block">
