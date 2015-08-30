@@ -71,6 +71,10 @@ $align1=array('left','center','right');
 require_once('header.php');
 // print_r($_POST['back_l_s2']);
 ?>
+    <div id="load" class="load">
+    	<p><img src="img/icon/load.gif" height="200" width="200"><br>loading</p>
+
+    </div>
     <main class="conatact_main container peage-k-order-main">
     <form action="page-k-order2.php" class="form" id="kantan" method="post">
    		<div class="page-header">
@@ -490,10 +494,6 @@ require_once('header.php');
 		<input type="hidden" name="k-title1-mod" id="k-title1-mod" value="">
 		<input type="hidden" name="k-title2-mod" id="k-title2-mod" value="">
 	</form>
-		
-
     </main>
-
-
   </div>
 <?php require_once('footer.php'); ?>

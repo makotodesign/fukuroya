@@ -1,4 +1,5 @@
 @chaset 'UTF-8';
+
 /*------------かんたんデザイン------------*/
 .peage-k-order-main {
 	min-height: 1500px;
@@ -214,5 +215,6 @@
 .prev-PoiretOne {
 	font-family: Poiret One;
 }
+
 
 
