@@ -1,5 +1,12 @@
 <?php
-session_cache_limiter('none');
+session_start();
+header('Expires: -1');
+header('Cache-Control:');
+header('Pragma:');
+function h($val){
+	$s=htmlspecialchars($val,ENT_QUOTES);
+	return $s;
+}
 $color_hex=array(
 "black"=>"#000",
 "white"=>"#fff",
@@ -33,6 +40,7 @@ $t1_bg=array(
 "bool"=>h($_POST['input_t1_bg']),
 "padding"=>h($_POST['input_t1_bgsize'])
 	);
+
 // 文字エリア2
 $area2=array(
 "add"=>h($_POST['areaadd1']),
@@ -46,13 +54,36 @@ $area2=array(
 "space"=>h($_POST['letter_spacing2']),
 "lineheight"=>h($_POST['line_height2'])
 );
+// session
+$_SESSION["k-order-bagdata"]=array(
+	"size"=>$size,
+	"basecolor"=>$basecolor,
+	"fontcolor"=>$fontcolor1,
+	"title1"=>$title1,
+	"t1_top"=>$t1_top,
+	"t1_left"=>$t1_left,
+	"t1_fontfamily"=>$fontfamily1,
+	"t1_size"=>$t1_size,
+	"t1_l_s"=>$t1_l_s,
+	"t1_l_h"=>$t1_l_h,
+	"t1_align"=>$t1_align,
+	"t1_border_bool"=>$t1_border['bool'],
+	"t1_border_width"=>$t1_border['width'],
+	"t1_bg_bool"=>$t1_bg['bool'],
+	"t1_bg_padding"=>$t1_bg['padding'],
+	"title2"=>$area2['title'],
+	"t2_top"=>$t2_top,
+	"t2_left"=>$t2_left,
+	"t2_size"=>$area2['size'],
+	"t2_l_s"=>$area2['space'],
+	"t2_l_h"=>$area2['lineheight'],
+	"t2_align"=>$area2['align']
+);
+
 
 require_once('header.php');
 // print_r($area2['color']);
-function h($val){
-	$s=htmlspecialchars($val,ENT_QUOTES);
-	return $s;
-}
+
 ?>
     <main class="conatact_main container peage-k-order-main">
   
@@ -71,7 +102,7 @@ function h($val){
 		</div>
 		
 		<div class="col-md-12">
-			<div id="bagwrap" class="margin-bottom-20">
+			<div id="bagwrap" class="margin-bottom-40">
 				<div class="handle <?php 
 					if($size=='SS'|| $size=='ST'):
 						echo 'small_handle';
@@ -123,40 +154,44 @@ function h($val){
 					</div>
 				</div>
 			</div>
-			<div class="text-center">
-			<form method="post" action="page-k-order.php" class="inline-block">		
-				<input type="hidden" name="back_title1" value="<?php $text=str_replace("<br>","\n",$title1); echo $text;?>">
-				<input type="hidden" name="back_title1_br" value="<?php echo $title1; ?>">
-				<input type="hidden" name="back_size" value="<?php echo $size; ?>">
-				<input type="hidden" name="back_basecolor" value="<?php echo $basecolor; ?>">
-				<input type="hidden" name="back_fontcolor1" value="<?php echo $fontcolor1; ?>">
-				<input type="hidden" name="back_fontfamily1" value="<?php echo $fontfamily1; ?>">
-				<input type="hidden" name="back_fontsize1" value="<?php echo $t1_size; ?>">
-				<input type="hidden" name="back_top1" value="<?php echo $t1_top; ?>">
-				<input type="hidden" name="back_left1" value="<?php echo $t1_left; ?>">
-				<input type="hidden" name="back_l_s1" value="<?php echo $t1_l_s; ?>"> 
-				<input type="hidden" name="back_l_h1" value="<?php echo $t1_l_h; ?>"> 
-				<input type="hidden" name="back_align1" value="<?php echo $t1_align; ?>"> 
-				<input type="hidden" name="back_border1_bool" value="<?php echo $t1_border['bool'] ?>"> 
-				<input type="hidden" name="back_border1_width" value="<?php echo $t1_border['width'] ?>">
-				<input type="hidden" name="back_bg_bool" value="<?php echo $t1_bg['bool'] ?>"> 
-				<input type="hidden" name="back_bg_padding" value="<?php echo $t1_bg['padding'] ?>"> 
-				<input type="hidden" name="back_area2_check" value="<?php echo $area2['add'] ?>">
-				<input type="hidden" name="back_title2" value="<?php $t2check=ltrim($area2['title'],'<br>'); $text2=str_replace("<br>","\n",$t2check); echo $text2;?>">
-				<input type="hidden" name="back_top2" value="<?php echo $area2['top']; ?>">
-				<input type="hidden" name="back_left2" value="<?php echo $area2['left']; ?>">
-				<input type="hidden" name="back_fontfamily2" value="<?php echo $area2['fontfamily']; ?>">
-				<input type="hidden" name="back_fontsize2" value="<?php echo $area2['size']; ?>">
-				<input type="hidden" name="back_l_s2" value="<?php echo $area2['space']; ?>"> 
-				<input type="hidden" name="back_l_h2" value="<?php echo $area2['lineheight']; ?>">
-				<input type="hidden" name="back_align2" value="<?php echo $area2['align']; ?>">  
+			<div class="text-center margin-bottom-40">
+				<form method="post" action="page-k-order.php" class="inline-block">		
+					<input type="hidden" name="back_title1" value="<?php $text=str_replace("<br>","\n",$title1); echo $text;?>">
+					<input type="hidden" name="back_title1_br" value="<?php echo $title1; ?>">
+					<input type="hidden" name="back_size" value="<?php echo $size; ?>">
+					<input type="hidden" name="back_basecolor" value="<?php echo $basecolor; ?>">
+					<input type="hidden" name="back_fontcolor1" value="<?php echo $fontcolor1; ?>">
+					<input type="hidden" name="back_fontfamily1" value="<?php echo $fontfamily1; ?>">
+					<input type="hidden" name="back_fontsize1" value="<?php echo $t1_size; ?>">
+					<input type="hidden" name="back_top1" value="<?php echo $t1_top; ?>">
+					<input type="hidden" name="back_left1" value="<?php echo $t1_left; ?>">
+					<input type="hidden" name="back_l_s1" value="<?php echo $t1_l_s; ?>"> 
+					<input type="hidden" name="back_l_h1" value="<?php echo $t1_l_h; ?>"> 
+					<input type="hidden" name="back_align1" value="<?php echo $t1_align; ?>"> 
+					<input type="hidden" name="back_border1_bool" value="<?php echo $t1_border['bool'] ?>"> 
+					<input type="hidden" name="back_border1_width" value="<?php echo $t1_border['width'] ?>">
+					<input type="hidden" name="back_bg_bool" value="<?php echo $t1_bg['bool'] ?>"> 
+					<input type="hidden" name="back_bg_padding" value="<?php echo $t1_bg['padding'] ?>"> 
+					<input type="hidden" name="back_area2_check" value="<?php echo $area2['add'] ?>">
+					<input type="hidden" name="back_title2" value="<?php $t2check=ltrim($area2['title'],'<br>'); $text2=str_replace("<br>","\n",$t2check); echo $text2;?>">
+					<input type="hidden" name="back_top2" value="<?php echo $area2['top']; ?>">
+					<input type="hidden" name="back_left2" value="<?php echo $area2['left']; ?>">
+					<input type="hidden" name="back_fontfamily2" value="<?php echo $area2['fontfamily']; ?>">
+					<input type="hidden" name="back_fontsize2" value="<?php echo $area2['size']; ?>">
+					<input type="hidden" name="back_l_s2" value="<?php echo $area2['space']; ?>"> 
+					<input type="hidden" name="back_l_h2" value="<?php echo $area2['lineheight']; ?>">
+					<input type="hidden" name="back_align2" value="<?php echo $area2['align']; ?>">  
 
-  
-				<button type="submit" id="k-order2-backbtn" class="btn btn-default btn-lg">戻る</button>
-			</form>
-			<form class="inline-block">
-			  <button type="button" class="btn btn-primary btn-lg">注文へ進む</button>
-			</form>  
+	  
+					<button type="submit" id="k-order2-backbtn" class="btn btn-default btn-lg">戻る</button>
+				</form>
+	
+				<button type="button" id="k-order2-nextbtn" class="btn btn-primary btn-lg">注文する</button>
+
+			</div>
+			<div class="k-order" id="k-orderbox1">
+				
+
 			</div>
 
 			

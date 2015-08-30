@@ -1,7 +1,7 @@
 $(function(){
 // $('.ctrl').draggable();
 // enterで送信できないように
-$('#load').hide();
+
 $("input"). keydown(function(e) {
             if ((e.which && e.which === 13) || (e.keyCode && e.keyCode === 13)) {
                 return false;
@@ -419,6 +419,7 @@ $('#k-input2,#k-title2').show();
 
 }
 
+
 // スクロールで袋がついてくる
 	// $('.container').prepend('<p id="v" style="position:fixed;z-index:110"></p>');
 $(window).scroll(function() {
@@ -450,6 +451,18 @@ $('#k-order-commit').on('mouseover',function(){
 	$('#k-title2-mod').val(t2_title);
 
 });
+// 注文に進む
+$('.k-order').hide();
+$('#k-order2-nextbtn').click(function(){
+	$('#k-orderbox1').show();
+
+});
+
+// ローディングメッセージ
+$('#load').hide();
+
+
+
 
 
 

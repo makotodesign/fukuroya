@@ -1,5 +1,4 @@
 <?php
-// session_cache_limiter('none');
 $size_list=array(
 "default"=>"選択して下さい",
 "LS"=>"L:高さスタンダード",	
@@ -72,8 +71,7 @@ require_once('header.php');
 // print_r($_POST['back_l_s2']);
 ?>
     <div id="load" class="load">
-    	<p><img src="img/icon/load.gif" height="200" width="200"><br>loading</p>
-
+    	<p><img src="img/icon/load.gif" height="150" width="150"><br>loading</p>
     </div>
     <main class="conatact_main container peage-k-order-main">
     <form action="page-k-order2.php" class="form" id="kantan" method="post">
