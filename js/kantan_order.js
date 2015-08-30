@@ -8,6 +8,19 @@ $("input"). keydown(function(e) {
                 return true;
             }
         });
+// 色オブジェクト
+var hex={
+	'black':'#000',
+	'white':'#FFFFFF',
+	'Dic003':'#FDD2E5',
+	'Dic009':'#FFEA98',
+	'Dic016':'#84D7CB',
+	'Dic021':'#B5DCF2',
+	'Dic032':'#FFD78C',
+	'Dic051':'#FF686C',
+	'Dic080':'#FF4220',
+	'Dic144':'#3E63B4'
+}
 
 //袋サイズ選択	
 $('#kantan #size').on('change',function(){
@@ -169,11 +182,21 @@ $(obj1).on('click blur keydown keyup keypress change',function(){
 });	
 }
 //戻る時の処理
-if($('#input-title1')!=''){
+if($('#input-title1').val()!=''){
 	var text =$('#input-title1').val();
 	text = text.replace(/(\n|\r)/g, "<br>");
 	$('#k-title1').html(text);
+}else if($('#input-title1').val()==''){
+	$('#k-title1').html('文字スペース1');
 }
+if($('#input-title2').val()!=''){
+	var text =$('#input-title2').val();
+	text2 = text.replace(/(\n|\r)/g, "<br>");
+	$('#k-title2').html(text2);
+}else if($('#input-title2').val()==''){
+	$('#k-title2').html('文字スペース2');
+}
+
 
 // 入力1 font-size
 k_fontsize('#fontsize1','#size1','#k-title1');
@@ -268,47 +291,12 @@ $(obj1).on('change',function(){
 	$('.k-title-bg').css({backgroundColor:hex,color:bc});
 });
 }
-// var fontcolor1_flug=$('.fontcolor1_select').is(':selected');
-// if(fontcolor1_flug==true){
-// 	var hex='';
-// 	var color=$('#fontcolor1').val();
-// 	var bc=$('.bgpoint').css('background-color');
-// 	switch (color){
-// 		case 'black':
-// 		hex ='#000';
-// 		break;
-// 		case 'white':
-// 		hex ='#FFFFFF';
-// 		break;
-// 		case 'Dic003':
-// 		hex ='#FDD2E5';
-// 		break;
-// 		case 'Dic009':
-// 		hex ='#FFEA98';
-// 		break;
-// 		case 'Dic016':
-// 		hex ='#84D7CB';
-// 		break;
-// 		case 'Dic021':
-// 		hex ='#B5DCF2';
-// 		break;
-// 		case 'Dic032':
-// 		hex ='#FFD78C';
-// 		break;
-// 		case 'Dic051':
-// 		hex ='#FF686C';
-// 		break;
-// 		case 'Dic080':
-// 		hex ='#FF4220';
-// 		break;
-// 		case 'Dic144':
-// 		hex ='#3E63B4';
-// 		break;
 
-// 	}
-// 	$('.k-title').css({color:hex,borderColor:hex});
-// 	$('.k-title-bg').css({backgroundColor:hex,color:bc});
-// }
+
+
+// title2文字色ロード時
+var t2color=hex[$('#fontcolor1').val()];
+$('#k-title2').css({color:t2color});
 
 // font-family
 fontfamily('#fontfamily1','#k-title1');

@@ -68,7 +68,7 @@ $fontfamily_list2=array(
 "PermanentMarker"=>"PermanentMarker"
 );
 require_once('header.php');
-// print_r($_POST['back_title1']);
+print_r($_POST['back_title2']);
 ?>
     <main class="conatact_main container peage-k-order-main">
     <form action="page-k-order2.php" class="form" id="kantan" method="post">
@@ -329,7 +329,14 @@ require_once('header.php');
 						<div class="col-xs-12">
 							<div class="form-group">
 								<label class="control-labe2">文字をこちらに書いてください</label>
-								<textarea class="form-control input-sm" name="title2" id="input-title2" placeholder="追加入力（複数行入力可能）"></textarea>
+								<textarea class="form-control input-sm" name="title2" id="input-title2" placeholder="追加入力（複数行入力可能）"><?php 
+								if(isset($_POST['back_title2'])&&$_POST['back_title2']!=''):
+								
+									echo $_POST['back_title2']; 
+								endif;
+								
+
+								?></textarea>
 								<small>改行は反映されます</small>
 							</div>
 						</div>
@@ -428,8 +435,8 @@ require_once('header.php');
 							}
 						}?>
 							">
-						<!--<?php if(isset($_POST['back_title1_br'])){echo $_POST['back_title1_br'];}else{echo '文字スペース1';}?>--></p>
-						<p id="k-title2" class="k-title">文字スペース2</p>
+						</p>
+						<p id="k-title2" class="k-title"></p>
 					</div>
 				</div>
 			</div>

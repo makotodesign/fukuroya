@@ -38,10 +38,12 @@ $area2=array(
 "add"=>h($_POST['areaadd1']),
 "title"=>strip_tags($_POST['k-title2-mod'],'<br>'),
 "top"=>h($_POST['k-title2-top']),
-"left"=>h($_POST['k-title2-left'])
+"left"=>h($_POST['k-title2-left']),
+"color"=>$color_hex[h($_POST['fontcolor1'])]
 );
 
 require_once('header.php');
+// print_r($area2['color']);
 function h($val){
 	$s=htmlspecialchars($val,ENT_QUOTES);
 	return $s;
@@ -105,6 +107,7 @@ function h($val){
 						}?>
 						left:<?php echo $area2['left']; ?>px;
 						top:<?php echo $area2['top']; ?>px;
+						color:<?php echo $area2['color']; ?>;
 
 
 						"><?php echo $area2['title']; ?></p>
@@ -129,7 +132,9 @@ function h($val){
 				<input type="hidden" name="back_border1_width" value="<?php echo $t1_border['width'] ?>">
 				<input type="hidden" name="back_bg_bool" value="<?php echo $t1_bg['bool'] ?>"> 
 				<input type="hidden" name="back_bg_padding" value="<?php echo $t1_bg['padding'] ?>"> 
-				<input type="hidden" name="back_area2_check" value="<?php echo $area2['add'] ?>">  
+				<input type="hidden" name="back_area2_check" value="<?php echo $area2['add'] ?>">
+				<input type="hidden" name="back_title2" value="<?php $t2check=ltrim($area2['title'],'<br>'); $text2=str_replace("<br>","\n",$t2check); echo $text2;?>">
+  
 				<button type="submit" id="k-order2-backbtn" class="btn btn-default btn-lg">戻る</button>
 			</form>
 			<form class="inline-block">
