@@ -378,7 +378,13 @@ require_once('header.php');
 						<div class="col-xs-6">	
 							<div class="form-group">
 								<label class="control-label">文字サイズ</label>
-								<input type="range" id="fontsize2" name="fontsize2" class="form-control　input-sm" min="50" max="800" step="5" value="100"/>
+								<input type="range" id="fontsize2" name="fontsize2" class="form-control　input-sm" min="50" max="800" step="5" value="<?php
+									if(isset($_POST['back_fontsize2'])){
+										echo $_POST['back_fontsize2'];
+									}else{
+										echo "100";
+									}	
+								 ?>"/>
 							</div>
 						</div>
 					</div>	
@@ -422,7 +428,7 @@ require_once('header.php');
 				<div class="bagbody">
 					<div class="bgpoint">
 						<p id="k-title1" class="k-title" style="
-						font-size:<?php if(isset($_POST['back_fontsize1'])){echo $_POST['back_fontsize1'].'%';}; ?>;
+						font-size:<?php if(isset($_POST['back_fontsize1'])){echo $_POST['back_fontsize1'];}; ?>%;
 						top:<?php if(isset($_POST['back_top1'])){echo $_POST['back_top1'].'px';}; ?>;
 						left:<?php if(isset($_POST['back_left1'])){echo $_POST['back_left1'].'px';}; ?>;
 						letter-spacing:<?php if(isset($_POST['back_l_s1'])){echo $_POST['back_l_s1'].'rem';}; ?>;
@@ -441,6 +447,8 @@ require_once('header.php');
 						<p id="k-title2" class="k-title" style="
 						top:<?php if(isset($_POST['back_top2'])){echo $_POST['back_top2'].'px';}; ?>;
 						left:<?php if(isset($_POST['back_left2'])){echo $_POST['back_left2'].'px';}; ?>;
+						font-size:<?php if(isset($_POST['back_fontsize2'])){echo $_POST['back_fontsize2'];}; ?>%;
+
 
 						">							
 						</p>

@@ -40,7 +40,11 @@ $area2=array(
 "top"=>h($_POST['k-title2-top']),
 "left"=>h($_POST['k-title2-left']),
 "color"=>$color_hex[h($_POST['fontcolor1'])],
-"fontfamily"=>h($_POST['fontfamily2'])
+"fontfamily"=>h($_POST['fontfamily2']),
+"align"=>h($_POST['align2']),
+"size"=>h($_POST['fontsize2']),
+"space"=>h($_POST['letter_spacing2']),
+"lineheight"=>h($_POST['line_height2'])
 );
 
 require_once('header.php');
@@ -109,6 +113,10 @@ function h($val){
 						left:<?php echo $area2['left']; ?>px;
 						top:<?php echo $area2['top']; ?>px;
 						color:<?php echo $area2['color']; ?>;
+						text-align:<?php echo $area2['align']; ?>;
+						font-size:<?php echo $area2['size']; ?>%;
+						letter-spacing:<?php echo $area2['space']; ?>rem;
+						line-height:<?php echo $area2['lineheight'] ?>;
 
 
 						"><?php echo $area2['title']; ?></p>
@@ -138,6 +146,7 @@ function h($val){
 				<input type="hidden" name="back_top2" value="<?php echo $area2['top']; ?>">
 				<input type="hidden" name="back_left2" value="<?php echo $area2['left']; ?>">
 				<input type="hidden" name="back_fontfamily2" value="<?php echo $area2['fontfamily']; ?>">
+				<input type="hidden" name="back_fontsize2" value="<?php echo $area2['size']; ?>">
   
 				<button type="submit" id="k-order2-backbtn" class="btn btn-default btn-lg">戻る</button>
 			</form>
