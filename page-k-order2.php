@@ -134,6 +134,8 @@ function h($val){
 				<input type="hidden" name="back_bg_padding" value="<?php echo $t1_bg['padding'] ?>"> 
 				<input type="hidden" name="back_area2_check" value="<?php echo $area2['add'] ?>">
 				<input type="hidden" name="back_title2" value="<?php $t2check=ltrim($area2['title'],'<br>'); $text2=str_replace("<br>","\n",$t2check); echo $text2;?>">
+				<input type="hidden" name="back_top2" value="<?php echo $area2['top']; ?>">
+				<input type="hidden" name="back_left2" value="<?php echo $area2['left']; ?>">
   
 				<button type="submit" id="k-order2-backbtn" class="btn btn-default btn-lg">戻る</button>
 			</form>

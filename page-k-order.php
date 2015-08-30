@@ -68,7 +68,7 @@ $fontfamily_list2=array(
 "PermanentMarker"=>"PermanentMarker"
 );
 require_once('header.php');
-print_r($_POST['back_title2']);
+// print_r($_POST['back_title2']);
 ?>
     <main class="conatact_main container peage-k-order-main">
     <form action="page-k-order2.php" class="form" id="kantan" method="post">
@@ -436,7 +436,12 @@ print_r($_POST['back_title2']);
 						}?>
 							">
 						</p>
-						<p id="k-title2" class="k-title"></p>
+						<p id="k-title2" class="k-title" style="
+						top:<?php if(isset($_POST['back_top2'])){echo $_POST['back_top2'].'px';}; ?>;
+						left:<?php if(isset($_POST['back_left2'])){echo $_POST['back_left2'].'px';}; ?>;
+
+						">							
+						</p>
 					</div>
 				</div>
 			</div>

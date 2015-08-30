@@ -9,7 +9,7 @@ $("input"). keydown(function(e) {
             }
         });
 // 色オブジェクト
-var hex={
+var hexobj={
 	'black':'#000',
 	'white':'#FFFFFF',
 	'Dic003':'#FDD2E5',
@@ -20,6 +20,26 @@ var hex={
 	'Dic051':'#FF686C',
 	'Dic080':'#FF4220',
 	'Dic144':'#3E63B4'
+}
+// fontオブジェクト
+var fontobj={
+	'mincho':'"ヒラギノ明朝 ProN W6", "HiraMinProN-W6","MS 明朝", serif',
+	'gothic':'"Hiragino Kaku Gothic ProN", "Meiryo", "sans-serif"',
+	'mplus-thin':'mplus-thin',
+	'mplus-light':'mplus-light',
+	'mplus-regular':'mplus-regular',
+	'mplus-bold':'mplus-bold',
+	'hiraginoMaru':'ヒラギノ丸ゴ Pro',
+	'hannari':'hannari',
+	'ArialBlack':'Arial Black',
+	'TimesNewRoman':'Times New Roman',
+	'CourierNew':'Courier New',
+	'Helvetica':'Helvetica',
+	'Oswald':'Oswald',
+	'GreatVibes':'Great Vibes',
+	'PermanentMarker':'Permanent Marker',
+	'Marvel':'Marvel',
+	'PoiretOne':'Poiret One'
 }
 
 //袋サイズ選択	
@@ -96,76 +116,16 @@ if(size_attr==true){
 }
 // 紙色選択
 $('#basecolor').on('change',function(){
-	var hex='';
 	var color=$(this).val();
-	switch (color){
-		case 'white':
-		hex ='#FFFFFF';
-		break;
-		case 'Dic003':
-		hex ='#FDD2E5';
-		break;
-		case 'Dic009':
-		hex ='#FFEA98';
-		break;
-		case 'Dic016':
-		hex ='#84D7CB';
-		break;
-		case 'Dic021':
-		hex ='#B5DCF2';
-		break;
-		case 'Dic032':
-		hex ='#FFD78C';
-		break;
-		case 'Dic051':
-		hex ='#FF686C';
-		break;
-		case 'Dic080':
-		hex ='#FF4220';
-		break;
-		case 'Dic144':
-		hex ='#3E63B4';
-		break;
-
-	}
-	$('.bgpoint').animate({backgroundColor:hex},1000,'linear');
+	var hex=hexobj[color];
+	$('.bgpoint').css({backgroundColor:hex});
 	$('.k-title-bg').css({color:hex});
 });
 var bscolorprop=$('.basecolor_select').is(':selected');
 if(bscolorprop==true){
-	var hex='';
 	var color=$('#basecolor').val();
-	switch (color){
-		case 'white':
-		hex ='#FFFFFF';
-		break;
-		case 'Dic003':
-		hex ='#FDD2E5';
-		break;
-		case 'Dic009':
-		hex ='#FFEA98';
-		break;
-		case 'Dic016':
-		hex ='#84D7CB';
-		break;
-		case 'Dic021':
-		hex ='#B5DCF2';
-		break;
-		case 'Dic032':
-		hex ='#FFD78C';
-		break;
-		case 'Dic051':
-		hex ='#FF686C';
-		break;
-		case 'Dic080':
-		hex ='#FF4220';
-		break;
-		case 'Dic144':
-		hex ='#3E63B4';
-		break;
-
-	}
-	$('.bgpoint').animate({backgroundColor:hex},1000,'linear');
+	var hex=hexobj[color];
+	$('.bgpoint').css({backgroundColor:hex});
 	$('.k-title-bg').css({color:hex});	
 }
 
@@ -250,42 +210,9 @@ $(obj1).on('mousedown',function(event){
 fontcolor('#fontcolor1','.k-title');
 function fontcolor(obj1,obj2){
 $(obj1).on('change',function(){
-	var hex='';
 	var color=$(this).val();
 	var bc=$('.bgpoint').css('background-color');
-	switch (color){
-		case 'black':
-		hex ='#000';
-		break;
-		case 'white':
-		hex ='#FFFFFF';
-		break;
-		case 'Dic003':
-		hex ='#FDD2E5';
-		break;
-		case 'Dic009':
-		hex ='#FFEA98';
-		break;
-		case 'Dic016':
-		hex ='#84D7CB';
-		break;
-		case 'Dic021':
-		hex ='#B5DCF2';
-		break;
-		case 'Dic032':
-		hex ='#FFD78C';
-		break;
-		case 'Dic051':
-		hex ='#FF686C';
-		break;
-		case 'Dic080':
-		hex ='#FF4220';
-		break;
-		case 'Dic144':
-		hex ='#3E63B4';
-		break;
-
-	}
+	var hex=hexobj[color];
 	$(obj2).css({color:hex});
 	$('.k-title').css({borderColor:hex});
 	$('.k-title-bg').css({backgroundColor:hex,color:bc});
@@ -295,7 +222,7 @@ $(obj1).on('change',function(){
 
 
 // title2文字色ロード時
-var t2color=hex[$('#fontcolor1').val()];
+var t2color=hexobj[$('#fontcolor1').val()];
 $('#k-title2').css({color:t2color});
 
 // font-family
@@ -304,123 +231,17 @@ fontfamily('#fontfamily2','#k-title2');
 
 function fontfamily(obj1,obj2){
 $(obj1).on('change',function(){
-	var font='';
 	var f=$(this).val();
-	switch (f){
-		case 'mincho':
-		font='"ヒラギノ明朝 ProN W6", "HiraMinProN-W6","MS 明朝", serif';
-		break;
-		case 'gothic':
-		font='"Hiragino Kaku Gothic ProN", "Meiryo", "sans-serif"';
-		break;
-		case 'mplus-thin':
-		font='mplus-thin';
-		break;
-		case 'mplus-light':
-		font='mplus-light';
-		break;
-		case 'mplus-regular':
-		font='mplus-regular';
-		break;
-		case 'mplus-bold':
-		font='mplus-bold';
-		break;
-		case 'hiraginoMaru':
-		font='ヒラギノ丸ゴ Pro';
-		break;
-		case 'hannari':
-		font='hannari';
-		break;
-		case 'ArialBlack':
-		font='Arial Black';
-		break;
-		case 'TimesNewRoman':
-		font='Times New Roman';
-		break;
-		case 'CourierNew':
-		font='Courier New';
-		break;
-		case 'Helvetica':
-		font='Helvetica';
-		break;
-		case 'Oswald':
-		font='Oswald';
-		break;
-		case 'GreatVibes':
-		font='Great Vibes';
-		break;
-		case 'PermanentMarker':
-		font='Permanent Marker';
-		break;
-		case 'Marvel':
-		font='Marvel';
-		break;
-		case 'PoiretOne':
-		font='Poiret One';
-		break; 
-
-	}
+	var font=fontobj[f];
 	$(obj2).css({fontFamily:font});
 });
 }
+
+
 var fontfamily1_flug=$('.fontfamily1').is(':selected');
 if(fontfamily1_flug==true){
-var font='';
 	var f=$('#fontfamily1').val();
-	switch (f){
-		case 'mincho':
-		font='"ヒラギノ明朝 ProN W6", "HiraMinProN-W6","MS 明朝", serif';
-		break;
-		case 'gothic':
-		font='"Hiragino Kaku Gothic ProN", "Meiryo", "sans-serif"';
-		break;
-		case 'mplus-thin':
-		font='mplus-thin';
-		break;
-		case 'mplus-light':
-		font='mplus-light';
-		break;
-		case 'mplus-regular':
-		font='mplus-regular';
-		break;
-		case 'mplus-bold':
-		font='mplus-bold';
-		break;
-		case 'hiraginoMaru':
-		font='ヒラギノ丸ゴ Pro';
-		break;
-		case 'hannari':
-		font='hannari';
-		break;
-		case 'ArialBlack':
-		font='Arial Black';
-		break;
-		case 'TimesNewRoman':
-		font='Times New Roman';
-		break;
-		case 'CourierNew':
-		font='Courier New';
-		break;
-		case 'Helvetica':
-		font='Helvetica';
-		break;
-		case 'Oswald':
-		font='Oswald';
-		break;
-		case 'GreatVibes':
-		font='Great Vibes';
-		break;
-		case 'PermanentMarker':
-		font='Permanent Marker';
-		break;
-		case 'Marvel':
-		font='Marvel';
-		break;
-		case 'PoiretOne':
-		font='Poiret One';
-		break; 
-
-	}
+	var font=fontobj[f];
 	$('#k-title1').css({fontFamily:font});
 
 
@@ -537,39 +358,7 @@ $('#input_t1_bg').on('change',function(){
 		$('#outline1').prop('disabled',false);
 		$('#input_t1_bgsize').val(1);
 		var color=$('#fontcolor1').val();
-		switch (color){
-			case 'black':
-			hex ='#000';
-			break;
-			case 'white':
-			hex ='#FFFFFF';
-			break;
-			case 'Dic003':
-			hex ='#FDD2E5';
-			break;
-			case 'Dic009':
-			hex ='#FFEA98';
-			break;
-			case 'Dic016':
-			hex ='#84D7CB';
-			break;
-			case 'Dic021':
-			hex ='#B5DCF2';
-			break;
-			case 'Dic032':
-			hex ='#FFD78C';
-			break;
-			case 'Dic051':
-			hex ='#FF686C';
-			break;
-			case 'Dic080':
-			hex ='#FF4220';
-			break;
-			case 'Dic144':
-			hex ='#3E63B4';
-			break;
-
-		}
+		var hex=hexobj[color];
 		$('.k-title-bg').css({color:hex,background:'none',padding:0});
 		$('#k-title1').removeClass('k-title-bg');
 	}
@@ -580,39 +369,7 @@ $('#input_t1_bg:checked').on('change',function(){
 		$('#outline1').prop('disabled',false);
 		$('#input_t1_bgsize').val(1);
 		var color=$('#fontcolor1').val();
-		switch (color){
-			case 'black':
-			hex ='#000';
-			break;
-			case 'white':
-			hex ='#FFFFFF';
-			break;
-			case 'Dic003':
-			hex ='#FDD2E5';
-			break;
-			case 'Dic009':
-			hex ='#FFEA98';
-			break;
-			case 'Dic016':
-			hex ='#84D7CB';
-			break;
-			case 'Dic021':
-			hex ='#B5DCF2';
-			break;
-			case 'Dic032':
-			hex ='#FFD78C';
-			break;
-			case 'Dic051':
-			hex ='#FF686C';
-			break;
-			case 'Dic080':
-			hex ='#FF4220';
-			break;
-			case 'Dic144':
-			hex ='#3E63B4';
-			break;
-
-		}
+		var hex=hexobj[color];
 		$('#k-title1').css({color:hex,background:'none',padding:0});
 	
 });
