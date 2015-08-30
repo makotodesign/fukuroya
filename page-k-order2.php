@@ -147,6 +147,10 @@ function h($val){
 				<input type="hidden" name="back_left2" value="<?php echo $area2['left']; ?>">
 				<input type="hidden" name="back_fontfamily2" value="<?php echo $area2['fontfamily']; ?>">
 				<input type="hidden" name="back_fontsize2" value="<?php echo $area2['size']; ?>">
+				<input type="hidden" name="back_l_s2" value="<?php echo $area2['space']; ?>"> 
+				<input type="hidden" name="back_l_h2" value="<?php echo $area2['lineheight']; ?>">
+				<input type="hidden" name="back_align2" value="<?php echo $area2['align']; ?>">  
+
   
 				<button type="submit" id="k-order2-backbtn" class="btn btn-default btn-lg">戻る</button>
 			</form>

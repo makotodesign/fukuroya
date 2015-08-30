@@ -67,8 +67,9 @@ $fontfamily_list2=array(
 "PoiretOne"=>"PoiretOne",
 "PermanentMarker"=>"PermanentMarker"
 );
+$align1=array('left','center','right');
 require_once('header.php');
-// print_r($_POST['back_title2']);
+// print_r($_POST['back_l_s2']);
 ?>
     <main class="conatact_main container peage-k-order-main">
     <form action="page-k-order2.php" class="form" id="kantan" method="post">
@@ -223,7 +224,6 @@ require_once('header.php');
 						<div class="form-group">
 						<label >行揃え</label>&nbsp;&nbsp;
 							<?php
-								$align1=array('left','center','right');
 								foreach ($align1 as $key => $value) {
 									if(isset($_POST['back_align1'])){
 										if($_POST['back_align1']==$value){
@@ -392,13 +392,27 @@ require_once('header.php');
 						<div class="col-xs-6">
 							<div class="form-group">
 								<label class="letter_spacing2">文字間</label>
-								<input type="range" id="letter_spacing2" name="letter_spacing2" class="form-control　input-sm" min="0.01" max="1.8" step="0.05" value="0.05"/>
+								<input type="range" id="letter_spacing2" name="letter_spacing2" class="form-control　input-sm" min="0.01" max="1.8" step="0.05" value="<?php
+								if(isset($_POST['back_l_s2'])){
+									echo $_POST['back_l_s2'];
+								}else{
+									echo "0.05";
+								}
+
+								 ?>"/>
 							</div>
 						</div>
 						<div class="col-xs-6">
 							<div class="form-group">
 								<label class="line_height2">行間</label>
-								<input type="range" id="line_height2" name="line_height2" class="form-control　input-sm" min="0.7" max="2.8" step="0.1" value="1.3"/>
+								<input type="range" id="line_height2" name="line_height2" class="form-control　input-sm" min="0.7" max="2.8" step="0.1" value="<?php
+								if(isset($_POST['back_l_h2'])){
+									echo $_POST['back_l_h2'];
+								}else{
+									echo "1.3";
+								}
+
+								 ?>"/>
 							</div>
 						</div>
 					</div>
@@ -406,15 +420,20 @@ require_once('header.php');
 						<div class="col-xs-12">
 							<div class="form-group">
 							<label >行揃え</label>&nbsp;&nbsp;
-								<label class="radio-inline">
-								  <input type="radio" name="align2" value="left"><i class="fa fa-align-left"></i>
-								</label>
-								<label class="radio-inline">
-								  <input type="radio" name="align2" value="center"><i class="fa fa-align-center"></i>
-								</label>
-								<label class="radio-inline">
-								  <input type="radio" name="align2" value="right"><i class="fa fa-align-right"></i>
-								</label>
+								<?php
+								foreach ($align1 as $key => $value) {
+									if(isset($_POST['back_align2'])){
+										if($_POST['back_align2']==$value){
+											echo "<label class='radio-inline'><input type='radio' name='align2' value='$value' checked><i class='fa fa-align-$value'></i></label>";
+										}else{
+											echo "<label class='radio-inline'><input type='radio' name='align2' value='$value'><i class='fa fa-align-$value'></i></label>";
+										}
+									}else{
+										echo "<label class='radio-inline'><input type='radio' name='align2' value='$value'><i class='fa fa-align-$value'></i></label>";
+									}
+									
+								}
+							?>
 							</div>
 						</div>
 					</div>
@@ -431,7 +450,7 @@ require_once('header.php');
 						font-size:<?php if(isset($_POST['back_fontsize1'])){echo $_POST['back_fontsize1'];}; ?>%;
 						top:<?php if(isset($_POST['back_top1'])){echo $_POST['back_top1'].'px';}; ?>;
 						left:<?php if(isset($_POST['back_left1'])){echo $_POST['back_left1'].'px';}; ?>;
-						letter-spacing:<?php if(isset($_POST['back_l_s1'])){echo $_POST['back_l_s1'].'rem';}; ?>;
+						letter-spacing:<?php if(isset($_POST['back_l_s1'])){echo $_POST['back_l_s1'];}; ?>rem;
 						line-height:<?php if(isset($_POST['back_l_h1'])){echo $_POST['back_l_h1'];}; ?>;
 						color:<?php if(isset($_POST['back_fontcolor1'])){echo $color_hex[$_POST['back_fontcolor1']];}; ?>;
 						<?php
@@ -448,6 +467,9 @@ require_once('header.php');
 						top:<?php if(isset($_POST['back_top2'])){echo $_POST['back_top2'].'px';}; ?>;
 						left:<?php if(isset($_POST['back_left2'])){echo $_POST['back_left2'].'px';}; ?>;
 						font-size:<?php if(isset($_POST['back_fontsize2'])){echo $_POST['back_fontsize2'];}; ?>%;
+						letter-spacing:<?php if(isset($_POST['back_l_s2'])){echo $_POST['back_l_s2'];}; ?>rem;
+						line-height:<?php if(isset($_POST['back_l_h2'])){echo $_POST['back_l_h2'];}; ?>;
+
 
 
 						">							

@@ -284,6 +284,11 @@ if(align1_flug==true){
 	var a=$('input[name=align1]:checked').val();
 	$('#k-title1').css({textAlign:a});	
 }
+var align2_flug=$('input[name=align2]').is(':checked');
+if(align2_flug==true){
+	var a=$('input[name=align2]:checked').val();
+	$('#k-title2').css({textAlign:a});	
+}
 // 囲み枠
 $('#outline1_bwidth').prop('disabled',true);
 $('#outline1').on('change',function(){
