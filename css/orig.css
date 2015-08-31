@@ -49,6 +49,18 @@ margin-right:0px;
 .popfont1 {
 	font-family: tanuki;
 }
+.relative {
+	position: relative;
+}
+.absolute {
+	position: absolute;
+}
+.clear {
+	clear: both;
+}
+.margin_15 {
+	margin-left:-15px;
+}
 /*gotopボタン*/
 #pageTop{
 	background:rgba(137,212,244,0.9);
@@ -414,6 +426,21 @@ span[id $='error'] {
 	text-align: left;
 	vertical-align: middle;
 }
+
+/*title decoration*/
+.roundtitle {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	text-align: center;
+	padding:60px 5px;
+	font-size: 2.5rem;
+	line-height: 1.8em;
+	font-family:mplus-light;
+}
+
+
+
 /*loading message*/
 .load {
 	position:fixed;

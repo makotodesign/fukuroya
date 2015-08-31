@@ -216,10 +216,13 @@
 	font-family: Poiret One;
 }
 
-/*注文へ*/
+/*注文セクション*/
 .k-order {
-	min-height:600px;
+	width: 100%;
+	min-height:1000px;
 	background-color: #ccc;
+	display: none;
+	position: absolute;
 }
 
 

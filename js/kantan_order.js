@@ -451,15 +451,11 @@ $('#k-order-commit').on('mouseover',function(){
 	$('#k-title2-mod').val(t2_title);
 
 });
-// 注文に進む
-$('.k-order').hide();
-$('#k-order2-nextbtn').click(function(){
-	$('#k-orderbox1').show();
-
-});
 
 // ローディングメッセージ
 $('#load').hide();
+
+
 
 
 

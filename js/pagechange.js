@@ -17,6 +17,15 @@ $('.back').on('click',function(){
 	history.back();
 });
 
+// k-order page遷移
+$('#k-order2-nextbtn').on('click',function(){
+	$('#k-orderbox1').fadeIn('1000',function(){
+	var top=parseInt($('#k-orderbox1').offset().top);
+	$('html,body').animate({scrollTop:top},2000,'easeInOutExpo');	
+	});
+
+
+});
 
 
 
