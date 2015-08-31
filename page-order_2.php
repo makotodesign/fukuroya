@@ -79,7 +79,7 @@ require_once('header.php');
 			</div>
 
 		</fieldset>
-
+		</form>
 		</div>	
 
     </main>

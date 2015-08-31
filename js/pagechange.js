@@ -17,15 +17,27 @@ $('.back').on('click',function(){
 	history.back();
 });
 
-// k-order page遷移
+// k-order page2遷移
 $('#k-order2-nextbtn').on('click',function(){
-	$('#k-orderbox1').fadeIn('1000',function(){
+	$('#k-order-topbtn2').removeClass('btn-success').addClass('btn-default');
+	$('#k-order-topbtn3').removeClass('btn-default').addClass('btn-success');
+	$('#k-orderbox1').fadeIn(1000);
 	var top=parseInt($('#k-orderbox1').offset().top);
 	$('html,body').animate({scrollTop:top},2000,'easeInOutExpo');	
 	});
 
-
-});
+if($('.peage-k-order-main').find('div').is('#order2_header')){
+setTimeout(function(){
+	if($('.peage-k-order-main').find('div').is('.LT')){
+		var order2_header_offset2=$('.handle').offset().top;
+		$('html,body').animate({scrollTop:order2_header_offset2},1000,'easeOutBounce');
+	}else{
+	var order2_header_offset=$('#order2_header').offset().top;
+	$('html,body').animate({scrollTop:order2_header_offset},1000,'easeOutBounce');
+	}
+　	
+},1500);
+}
 
 
 

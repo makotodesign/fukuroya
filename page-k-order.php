@@ -77,13 +77,12 @@ require_once('header.php');
     <form action="page-k-order2.php" class="form" id="kantan" method="post">
    		<div class="page-header">
    			<div class="row">
-   				<button class="btn btn-success no-point" type="button"> かんたんデザイン <span class="glyphicon glyphicon-arrow-right"></span></button>
-   				<button class="btn btn-default no-point" type="button"> 確認 <span class="glyphicon glyphicon-arrow-right"></span></button>
-   				<button class="btn btn-default no-point" type="button"> お客様情報入力 <span class="glyphicon glyphicon-arrow-right"></span></button>
-   				<button class="btn btn-default no-point" type="button"> お支払い手続き <span class="glyphicon glyphicon-arrow-right"></span></button>
-   				<button class="btn btn-default no-point" type="button"> ご注文手続き完了 </button>
-
-
+   				<button id="k-order-topbtn1" class="btn btn-success no-point" type="button"> かんたんデザイン <span class="glyphicon glyphicon-arrow-right"></span></button>
+   				<button id="k-order-topbtn2" class="btn btn-default no-point" type="button"> 確認 <span class="glyphicon glyphicon-arrow-right"></span></button>
+   				<button id="k-order-topbtn3" class="btn btn-default no-point" type="button"> ご注文情報入力 <span class="glyphicon glyphicon-arrow-right"></span></button>
+   				<button id="k-order-topbtn4" class="btn btn-default no-point" type="button"> お客様情報入力 <span class="glyphicon glyphicon-arrow-right"></span></button>
+   				<button id="k-order-topbtn5" class="btn btn-default no-point" type="button"> お支払い手続き <span class="glyphicon glyphicon-arrow-right"></span></button>
+   				<button id="k-order-topbtn6" class="btn btn-default no-point" type="button"> ご注文手続き完了 </button>
    			</div>
 
    			<div class="row">

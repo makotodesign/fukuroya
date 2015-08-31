@@ -2,7 +2,7 @@
 
 /*------------かんたんデザイン------------*/
 .peage-k-order-main {
-	min-height: 1500px;
+	min-height: 500px;
 }
 
 .canvas {
@@ -220,9 +220,15 @@
 .k-order {
 	width: 100%;
 	min-height:1000px;
-	background-color: #ccc;
 	display: none;
 	position: absolute;
+}
+
+.k_form_wrap form {
+	background-color: #FCFBC4;
+	position: relative;
+	z-index:1;
+	padding-top:40px;
 }
 
 

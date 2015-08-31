@@ -20,9 +20,11 @@ a:focus, *:focus { outline:none; }
 .margin-bottom-20{margin-bottom: 20px;}
 .margin-bottom-40{margin-bottom: 40px;}
 .margin-right-10{margin-right: 10px;}
+.margin-right-20{margin-right: 20px;}
 .padding-top-5{padding-top: 5px;}
-.padding5 {
-	padding:5px;
+.padding5 {padding:5px;}
+.big-padding-top{
+	padding-top:10%;
 }
 .f-right {
 	float: right;
@@ -61,6 +63,20 @@ margin-right:0px;
 .margin_15 {
 	margin-left:-15px;
 }
+.z-2 {
+	z-index:2;
+}
+/*commoncolor*/
+.bg-popred {
+	background-color:#F99D9D;
+	color:#fff;
+}
+.bg-popgreen {
+	background-color:#3ED893;
+	color:#fff;
+}
+
+
 /*gotopボタン*/
 #pageTop{
 	background:rgba(137,212,244,0.9);
@@ -389,6 +405,40 @@ section table td {
 /*------page-order style-----*/
 .orderselect {
 	padding-top: 40px;
+}
+
+.order-btnwrap {
+	min-height:400px;
+}
+
+
+.order-btn {
+	height:94%;
+	border:5px solid #0C7CD5;
+	border-radius: 20px;
+	margin:3% auto 0 auto;
+	padding:5%;
+	cursor:pointer;
+	box-sizing:border-box;
+	position:relative;
+}
+
+.order-btn:hover {
+	border:5px solid rgba(255,255,255,0);
+	background-color: #F46767;
+	color:#fff;
+} 
+
+.order-icon1 {
+	width: 70%;
+	height:auto;
+	margin:0 auto;
+}
+
+.order-icon2 {
+	width: 60%;
+	height:auto;
+	margin:0 auto;
 }
 
 /*form*/

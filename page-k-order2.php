@@ -87,17 +87,18 @@ require_once('header.php');
 ?>
     <main class="conatact_main container peage-k-order-main relative">
   
-   		<div class="page-header">
-   				<button class="btn btn-default no-point" type="button"> かんたんデザイン <span class="glyphicon glyphicon-arrow-right"></span></button>
-   				<button class="btn btn-success no-point" type="button"> 確認 <span class="glyphicon glyphicon-arrow-right"></span></button>
-   				<button class="btn btn-default no-point" type="button"> お客様情報入力 <span class="glyphicon glyphicon-arrow-right"></span></button>
-   				<button class="btn btn-default no-point" type="button"> お支払い手続き <span class="glyphicon glyphicon-arrow-right"></span></button>
-   				<button class="btn btn-default no-point" type="button"> ご注文手続き完了 </button>
+   		<div id="order2_header" class="page-header">
+   				<button id="k-order-topbtn1" class="btn btn-default no-point" type="button"> かんたんデザイン <span class="glyphicon glyphicon-arrow-right"></span></button>
+   				<button id="k-order-topbtn2" class="btn btn-success no-point" type="button"> 確認 <span class="glyphicon glyphicon-arrow-right"></span></button>
+   				<button id="k-order-topbtn3" class="btn btn-default no-point" type="button"> ご注文情報入力 <span class="glyphicon glyphicon-arrow-right"></span></button>
+   				<button id="k-order-topbtn4" class="btn btn-default no-point" type="button"> お客様情報入力 <span class="glyphicon glyphicon-arrow-right"></span></button>
+   				<button id="k-order-topbtn5" class="btn btn-default no-point" type="button"> お支払い手続き <span class="glyphicon glyphicon-arrow-right"></span></button>
+   				<button id="k-order-topbtn6" class="btn btn-default no-point" type="button"> ご注文手続き完了 </button>
 		</div>
 		<div class="container clearfix">
 
 			<div class="col-md-1">
-				<h2 class="bg-primary roundtitle">デザインを確認しましょう！</h2>
+				<h2 class="bg-popred  roundtitle">デザインを確認しましょう！</h2>
 			</div>
 			<div class="col-md-11">
 				<div id="bagwrap" class="margin-bottom-40">
@@ -181,10 +182,10 @@ require_once('header.php');
 						<input type="hidden" name="back_align2" value="<?php echo $area2['align']; ?>">  
 
 		  
-						<button type="submit" id="k-order2-backbtn" class="btn btn-default btn-lg">戻る</button>
+						<button type="submit" id="k-order2-backbtn" class="btn btn-default btn-lg margin-bottom-20">簡単デザインに戻る</button>
 					</form>
 
-					<button type="button" id="k-order2-nextbtn" class="btn btn-primary btn-lg">注文する</button>
+					<button type="button" id="k-order2-nextbtn" class="btn btn-primary btn-lg margin-bottom-20">このデザインで注文する</button>
 
 				</div>
 
@@ -192,7 +193,66 @@ require_once('header.php');
 		</div>
 		<div class="k-order" id="k-orderbox1">
 			<div class="col-md-1">
-				<h2 class="bg-primary roundtitle">注文情報を入力してください</h2>
+				<h2 class="bg-popgreen roundtitle relative z-2">注文情報を入力してください</h2>
+			</div>
+			<div class="col-md-10 col-mf-offset-2 big-padding-top k_form_wrap">
+			<div class="formbox">
+			<form action="page-k-order3.php" method="POST" id="k_orderform1" class="form-horizontal" novalidate="novalidate">
+			<fieldset>
+				<!-- <legend class="text-primary">ご注文内容</legend> -->
+				<div class="form-group control-group margin-bottom-40">
+					<label for="k_select_grade" class="col-sm-3 col-sm-offset-2 control-label">注文商品グレード</label>
+					<div class="col-sm-5 controls">
+						<select id="k_select_grade" name="k_select_grade" class="form-control">
+				          <option value="">--選択して下さい</option>
+				          <option value="エコノミー">エコノミー</option>
+				          <option value="スタンダード">スタンダード</option>
+				        </select>
+					</div>	
+				</div>
+				<div class="form-group control-group margin-bottom-40">
+					<label for="k_select_size" class="col-sm-3 col-sm-offset-2 control-label">商品サイズ</label>
+					<div class="col-sm-5 controls">
+						<select id="k_select_size" name="k_select_size" class="form-control" disabled>
+				          <option value="">--選択して下さい</option>
+				          <optgroup label="Lサイズ">
+					          <option value="Lサイズ-高さ-スタンダード">L:高さ:スタンダード</option>
+					          <option value="Lサイズ-高さ-トール">L:高さ:トール</option>
+				      	  </optgroup>
+				      	  <optgroup label="Mサイズ">
+					          <option value="Mサイズ-高さ-スタンダード">M:高さ:スタンダード</option>
+					          <option value="Mサイズ-高さ-トール">M:高さ:トール</option>
+				      	  </optgroup>
+				      	  <optgroup label="Sサイズ">
+					          <option value="Sサイズ-高さ-スタンダード">S:高さ:スタンダード</option>
+					          <option value="Sサイズ-高さ-トール">S:高さ:トール</option>
+				      	  </optgroup>
+					    </select>
+					</div>
+				</div>
+				<div class="form-group control-group margin-bottom-40">
+					<label for="select_qty" class="col-sm-3 col-sm-offset-2 control-label">数量</label>
+					<div class="col-sm-5 controls">
+						<select id="k_select_qty" name="k_select_qty" class="form-control" disabled>
+				          <option value="">--選択して下さい</option>
+				          <script>
+				          for(i=500;i<=10000;i=i+100){
+				          	document.write('<option value="'+i+'部">'+i+'部</option>');
+				          }
+
+				          </script>
+				        </select>
+					</div>	
+				</div>
+				
+		
+
+			</fieldset>
+			</form>
+		</div>	
+
+    </main>
+				
 			</div>
 				
 
