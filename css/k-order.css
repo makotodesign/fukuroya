@@ -224,11 +224,17 @@
 	position: absolute;
 }
 
-.k_form_wrap form {
+.k-order-detail {
 	background-color: #FCFBC4;
 	position: relative;
 	z-index:1;
 	padding-top:40px;
+}
+
+.k-order-icon1 {
+	width: 80%;
+	height: auto;
+	margin:10% auto 0 auto;
 }
 
 
