@@ -18,13 +18,14 @@ a:focus, *:focus { outline:none; }
 .margin-right-2{margin-right: 2%;}
 .margin-top-0 {margin-top:0;}
 .margin-bottom-20{margin-bottom: 20px;}
+.margin-bottom-30{margin-bottom: 30px;}
 .margin-bottom-40{margin-bottom: 40px;}
 .margin-right-10{margin-right: 10px;}
 .margin-right-20{margin-right: 20px;}
 .padding-top-5{padding-top: 5px;}
 .padding5 {padding:5px;}
 .big-padding-top{
-	padding-top:10%;
+	padding-top:12%;
 }
 .f-right {
 	float: right;
@@ -488,8 +489,6 @@ span[id $='error'] {
 	line-height: 1.8em;
 	font-family:mplus-light;
 }
-
-
 
 /*loading message*/
 .load {

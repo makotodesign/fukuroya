@@ -39,6 +39,19 @@ setTimeout(function(){
 },1500);
 }
 
+////お客様情報入力
+$('#k-order2-nextbtn2').on('click',function(){
+	$('.k-order').css({minHeight:'2000px'});
+	var top=parseInt($('#k-order-sec2').offset().top);
+	$('html,body').animate({scrollTop:top},2000,'easeInOutExpo',function(){
+		$('#k-order2-sec2title').fadeIn(500,function(){
+			$('#k-order2-sec2body').fadeIn(500);
+		});
+
+	});
+
+});
+
 
 
 

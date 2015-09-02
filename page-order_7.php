@@ -8,7 +8,7 @@ try {
   // connect
  $db = new PDO(PDO_DSN,DB_USERNAME,DB_PASSWORD);
  $stmt = $db->prepare('INSERT INTO orders(order_id,company_name,name,kana,send_place,email,tel,fax,postcode,pref,city,area1,area2,grade,size,qty,print_flug,prefilename,modfilename)
-  VALUES (:company_name,:name,:kana,:send_place,:email,:tel,:fax,:postcode,:pref,:city,:area1,:area2,:grade,:size,:qty,:print_flug,:prefilename,:modfilename,:orderid);');
+  VALUES (:orderid,:company_name,:name,:kana,:send_place,:email,:tel,:fax,:postcode,:pref,:city,:area1,:area2,:grade,:size,:qty,:print_flug,:prefilename,:modfilename);');
 $stmt = $stmt->execute(
 		array(
 			':orderid'=>$_SESSION['id'],

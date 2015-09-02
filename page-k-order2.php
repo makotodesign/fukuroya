@@ -201,67 +201,85 @@ require_once('header.php');
 			</div>
 		</div>
 		<div class="k-order" id="k-orderbox1">
+		<form action="page-k-order3.php" method="POST" id="k_orderform1" class="form-horizontal" novalidate="novalidate">
 			<div class="col-md-1">
 				<h2 class="bg-popgreen roundtitle relative z-2">注文情報を入力してください</h2>
 			</div>
-			<div class="col-md-10 col-mf-offset-2 big-padding-top k_form_wrap">
-			<div class="formbox">
-				<form action="page-k-order3.php" method="POST" id="k_orderform1" class="form-horizontal" novalidate="novalidate">
+			<div class="col-md-10 col-mf-offset-2 big-padding-top k_form_wrap margin-bottom-40">
+				<div class="formbox">
 					<fieldset class="k-order-detail">
-					<div class="col-sm-3">
-						<div class="k-order-icon1">
-							<?php include('k-order-icon1.php')?>
-						</div>
-					</div>
-					<div class="col-sm-6">
-						<div class="form-group control-group margin-bottom-40">
-							<label for="k_select_grade" class="col-sm-4 control-label">注文商品グレード</label>
-							<div class="col-sm-6 controls">
-								<select id="k_select_grade" name="k_select_grade" class="form-control">
-						          <option value="">--選択して下さい</option>
-						          <option value="エコノミー">エコノミー</option>
-						          <option value="スタンダード">スタンダード</option>
-						        </select>
-							</div>	
-						</div>
-						<div class="form-group control-group margin-bottom-40">
-							<label for="k_select_size" class="col-sm-4 control-label">商品サイズ</label>
-							<div class="col-sm-6 controls">
-								<p id="k_select_size" class="form-control">
-								<?php foreach ($size_list as $key => $value):
-									if($key==$size): 
-										echo $value;
-
-										endif;
-									endforeach; ?>	
-							    </p>
+						<div class="col-sm-3">
+							<div class="k-order-icon1">
+								<?php include('k-order-icon1.php')?>
 							</div>
 						</div>
-						<div class="form-group control-group margin-bottom-40">
-							<label for="select_qty" class="col-sm-4 control-label">数量</label>
-							<div class="col-sm-6 controls">
-								<select id="k_select_qty" name="k_select_qty" class="form-control" >
-						          <option value="">--選択して下さい</option>
-						          <script>
-						          for(i=500;i<=10000;i=i+100){
-						          	document.write('<option value="'+i+'部">'+i+'部</option>');
-						          }
+						<div class="col-sm-6">
+							<div class="form-group control-group margin-bottom-30">
+								<label for="k_select_grade" class="col-sm-4 control-label">注文商品グレード</label>
+								<div class="col-sm-6 controls">
+									<select id="k_select_grade" name="k_select_grade" class="form-control">
+							          <option value="">--選択して下さい</option>
+							          <option value="エコノミー">エコノミー</option>
+							          <option value="スタンダード">スタンダード</option>
+							        </select>
+								</div>	
+							</div>
+							<div class="form-group control-group margin-bottom-30">
+								<label for="k_select_size" class="col-sm-4 control-label">商品サイズ</label>
+								<div class="col-sm-6 controls">
+									<p id="k_select_size" class="form-control">
+									<?php foreach ($size_list as $key => $value):
+										if($key==$size): 
+											echo $value;
 
-						          </script>
-						        </select>
-							</div>	
+											endif;
+										endforeach; ?>	
+								    </p>
+								</div>
+							</div>
+							<div class="form-group control-group margin-bottom-30">
+								<label for="select_qty" class="col-sm-4 control-label">数量</label>
+								<div class="col-sm-6 controls">
+									<select id="k_select_qty" name="k_select_qty" class="form-control" >
+							          <option value="">--選択して下さい</option>
+							          <script>
+							          for(i=500;i<=10000;i=i+100){
+							          	document.write('<option value="'+i+'部">'+i+'部</option>');
+							          }
+
+							          </script>
+							        </select>
+								</div>	
+							</div>
 						</div>
-					</div>
-				</fieldset>
-			</form>					
-		</div>
-
-
-    </main>
-				
+					</fieldset>
+									
+				</div>				
 			</div>
-				
+			<div class="text-center margin-bottom-40">
+			<button type="button" id="k-order2-nextbtn2" class="btn btn-primary btn-lg margin-bottom-20">お客様情報を入力する</button>
 
+			</div>
+			<div id="k-order-sec2" class="k-order-sec">
+				<div id="k-order2-sec2title" class="col-md-1">
+					<h2 class="bg-primary roundtitle relative z-2">注文情報を入力してください</h2>
+				</div>
+				<div id="k-order2-sec2body" class="col-md-10 col-mf-offset-2 big-padding-top k_form_wrap margin-bottom-40">
+					<div class="formbox">
+						<fieldset class="k-order-detail">
+							<div class="col-sm-3">
+		
+							</div>
+							<div class="col-sm-6">
+
+
+							</div>
+						</fieldset>
+										
+					</div>				
+				</div>
+			</div>
+		</form>		
 		</div>
 
 	

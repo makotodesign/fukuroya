@@ -40,6 +40,7 @@ require_once('header.php');
 				$extension=pathinfo($_FILES["upfile"]["name"],PATHINFO_EXTENSION );
 				if($extension== "ai" || $extension== "psd" || $extension== "pdf" || $extension== "eps"){
 					$file_name="upload_".$id.".".$extension;
+					print_r($file_name);
 					$uploaded_file="$dir_name/$file_name";
 					move_uploaded_file($_FILES["upfile"]["tmp_name"],$uploaded_file);
 					$_SESSION['file_name']=$file_name;
