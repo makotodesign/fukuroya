@@ -73,13 +73,13 @@ require_once('header.php');
 			<div class="form-group control-group">
 				<label for="tel1" class="col-sm-2 control-label">電話番号</label>
 				<div class="col-sm-5 controls">
-					<input type="text" class="form-control" name="tel1" id="tel1" placeholder="電話番号:必須">
+					<input type="tel" class="form-control" name="tel1" id="tel1" placeholder="電話番号:必須">
 				</div>
 			</div>
 			<div class="form-group control-group">
 				<label for="tel2" class="col-sm-2 control-label">FAX番号</label>
 				<div class="col-sm-5 controls">
-					<input type="text" class="form-control" name="tel2" id="tel2">
+					<input type="tel" class="form-control" name="tel2" id="tel2">
 				</div>
 			</div>
 			<h3 class="margin-bottom-20">お届け先情報</h3>

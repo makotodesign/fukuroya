@@ -228,21 +228,27 @@
 	background-color: #FCFBC4;
 	position: relative;
 	z-index:1;
-	padding-top:40px;
+	padding:40px 0;
+	border-radius: 20px;
 }
 
 .k-order-icon1 {
-	width: 100%;
+	width: 90%;
 	height: auto;
-	margin:10% 0 0 30px;
+	margin:5% 0 0 30px;
 }
 
 .k-order-sec {
 	position: absolute;
+	width:100%;
 }
 
 #k-order2-sec2title,
 #k-order2-sec2body{
+	display: none;
+}
+
+.k-order-error {
 	display: none;
 }
 

@@ -49,9 +49,9 @@ $(function() {
         email: "メールアドレスを入力してください",
         url: "URLを入力してください",
         dateISO: "日付を入力してください",
-        number: "有効な数字を入力してください",
+        number: "-(ハイフン)を除いた数字を入力してください",
         digits: "0-9までを入力してください",
-	    equalTo: "上の入力項目と同じ値を入力してください",
+	    equalTo: "emailで入力したメールアドレスと同じ値を入力してください",
         // range: jQuery.format(" {0} から {1} までの値を入力してください"),
         // max: jQuery.format("{0} 以下の値を入力してください"),
         // min: jQuery.format("{0} 以上の値を入力してください"),
@@ -124,6 +124,7 @@ $(function() {
             wrapper.text('OK!').addClass('help-inline').closest('.control-group').addClass('success');
         }
     });
+
     $('button:reset').click(function() {
         $('span.help-inline').hide();
         $('.error').removeClass('error');
@@ -148,7 +149,41 @@ $(function() {
 $('#upfile').on('change',function(){
 $('#filename').val($(this).val());
 
-});   
+});  
+
+// 簡単オーダーformチェック
+$("#k_orderform1").validate({
+        rules: {
+            k_name: {
+                required: true,
+            },
+            k_tel: {
+                required: true,
+                number: true,
+            },
+            k_email: {
+                required: true,
+                email: true,
+            },
+            k_confirm_email: {
+                required: true,
+                email: true,
+                equalTo: '#k_email',
+            }
+            
+        },
+        errorClass: "help-inline",
+        validClass: "help-inline",
+        errorElement: "span",
+        validElement: "span",
+        wrapper: "span",
+        highlight: function(wrapper) {
+            $(wrapper).parents('.control-group').removeClass('success').addClass('error');
+        },
+        success: function(wrapper, validClass) {
+            wrapper.text('OK!').addClass('help-inline').closest('.control-group').addClass('success');
+        }
+    }); 
 
 });
 

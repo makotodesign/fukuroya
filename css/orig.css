@@ -484,10 +484,19 @@ span[id $='error'] {
 	height: 200px;
 	border-radius: 50%;
 	text-align: center;
-	padding:60px 5px;
+
 	font-size: 2.5rem;
 	line-height: 1.8em;
 	font-family:mplus-light;
+}
+
+.rt2 {
+	padding:60px 5px;
+	line-height: 1.8em;	
+}
+
+.rt1 {
+	line-height: 200px;
 }
 
 /*loading message*/
