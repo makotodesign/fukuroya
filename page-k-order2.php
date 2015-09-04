@@ -202,121 +202,139 @@ require_once('header.php');
 		</div>
 		<div class="k-order" id="k-orderbox1">
 		<form action="page-k-order3.php" method="POST" id="k_orderform1" class="form-horizontal" novalidate="novalidate">
-			<div class="col-md-1">
-				<h2 class="bg-popgreen roundtitle rt2 relative z-2">注文情報を入力してください</h2>
-			</div>
-			<div class="col-md-10 col-mf-offset-2 big-padding-top k_form_wrap margin-bottom-40">
-				<div class="formbox">
-					<fieldset class="k-order-detail">
-						<div class="col-sm-3">
-							<div class="k-order-icon1">
-								<img src="img/svg/k-order-icon1.svg">
-							</div>
-						</div>
-						<div class="col-sm-6">
-							<div class="form-group control-group margin-bottom-30">
-								<label for="k_select_grade" class="col-sm-4 control-label">注文商品グレード</label>
-								<div class="col-sm-8 controls">
-									<select id="k_select_grade" name="k_select_grade" class="form-control">
-							          <option value="no">--選択して下さい</option>
-							          <option value="エコノミー">エコノミー</option>
-							          <option value="スタンダード">スタンダード</option>
-							        </select>
-								</div>	
-							</div>
-							<div class="form-group control-group margin-bottom-30">
-								<label for="k_select_size" class="col-sm-4 control-label">商品サイズ</label>
-								<div class="col-sm-8 controls">
-									<p id="k_select_size" class="form-control">
-									<?php foreach ($size_list as $key => $value):
-										if($key==$size): 
-											echo $value;
-
-											endif;
-										endforeach; ?>	
-								    </p>
-								</div>
-							</div>
-							<div class="form-group control-group margin-bottom-30">
-								<label for="select_qty" class="col-sm-4 control-label">数量</label>
-								<div class="col-sm-8 controls">
-									<select id="k_select_qty" name="k_select_qty" class="form-control" >
-							          <option value="no">--選択して下さい</option>
-							          <script>
-							          for(i=500;i<=10000;i=i+100){
-							          	document.write('<option value="'+i+'部">'+i+'部</option>');
-							          }
-
-							          </script>
-							        </select>
-								</div>	
-							</div>
-						</div>
-					</fieldset>									
-				</div>				
-			</div>
-			<div class="text-center margin-bottom-40 clear">
-				<button type="button" id="k-order2-backbtn2" class="btn btn-default btn-lg margin-bottom-20">デザイン確認に戻る</button>
-				<button type="button" id="k-order2-nextbtn2" class="btn btn-primary btn-lg margin-bottom-20" disabled>お客様情報を入力する</button>
-			</div>
-			<p id="k-order-error1" class="k-order-error col-sm-4 col-sm-offset-4 alert alert-warning text-center" role="alert">注文商品グレード、数量を入力してください</p>
-
-			<div id="k-order-sec2" class="k-order-sec">
-				<div id="k-order2-sec2title" class="col-md-1">
-					<h2 class="bg-primary roundtitle rt1 relative z-2">お客様情報</h2>
+		<div id="k-order-sec1">
+				<div class="col-md-1">
+					<h2 class="bg-popgreen roundtitle rt2 relative z-2">注文情報を入力してください</h2>
 				</div>
-				<div id="k-order2-sec2body" class="col-md-10 col-mf-offset-2 big-padding-top k_form_wrap margin-bottom-40">
+				<div class="col-md-10 col-mf-offset-2 big-padding-top k_form_wrap margin-bottom-40">
 					<div class="formbox">
-						<fieldset class="k-order-detail margin-bottom-40">
-							<div class="col-sm-10 col-sm-offset-2">
-								<div class="form-group control-group">									
-									<div class="col-sm-5 controls">
-									<label for="k_company_Name" class="control-label">会社名</label>
-										<input type="text" class="form-control" name="k_company_name" id="k_company_name" placeholder="御社名">
-									</div>									
-									
-								</div>
-								<div class="form-group control-group">									
-									<div class="col-sm-5 controls">
-										<label for="k_name" class="control-label">ご担当者名</label>
-										<input type="text" class="form-control" name="k_name" id="k_name" placeholder="氏名:必須" >
-									</div>								
-									<div class="col-sm-5 controls">
-										<label for="k_kana" class="control-label">ヨミガナ</label>
-										<input type="text" class="form-control" name="k_kana" id="k_kana" placeholder="氏名:カナ">
-									</div>
-								</div>
-								<div class="form-group control-group">									
-									<div class="col-sm-5 controls">
-										<label for="k_email" class="control-label">e-mail</label>
-										<input type="email" class="form-control" name="k_email" id="k_email" placeholder="e-mail:必須" pattern="^[0-9a-zA-Z]+[\w-]+@[\w\.-]+\.\w{2,}$">
-									</div>								
-									<div class="col-sm-5 controls">
-										<label for="k_confirm_email" class="control-label">e-mail再入力</label>
-										<input type="text" class="form-control" name="k_confirm_email" id="k_confirm_email" placeholder="e-mail:再入力" placeholder="e-mail:再入力" pattern="^[0-9a-zA-Z]+[\w-]+@[\w\.-]+\.\w{2,}$">
-									</div>
-								</div>
-								<div class="form-group control-group">									
-									<div class="col-sm-5 controls">
-										<label for="k_tel" class="control-label">電話番号</label>
-										<input type="text" class="form-control" name="k_tel" id="k_tel" placeholder="電話番号:必須 -(ハイフン除く)">
-									</div>								
-									<div class="col-sm-5 controls">
-										<label for="k_fax" class="control-label">FAX番号</label>
-										<input type="text" class="form-control" name="k_fax" id="k_fax">
-									</div>
+						<fieldset class="k-order-detail">
+							<div class="col-sm-3">
+								<div class="k-order-icon1">
+									<img src="img/svg/k-order-icon1.svg">
 								</div>
 							</div>
-					
-						</fieldset>
-						<div class="text-center margin-bottom-40 clear">
-							<button type="button" id="k-order2-backbtn3" class="btn btn-default btn-lg margin-bottom-20">注文情報入力に戻る</button>
-							<button type="button" id="k-order2-nextbtn3" class="btn btn-primary btn-lg margin-bottom-20" disabled>お届け先情報を入力する</button>
-						</div>
-						<p id="k-order-error2" class="k-order-error col-sm-4 col-sm-offset-4 alert alert-warning text-center" role="alert">必須項目を入力してください</p>
+							<div class="col-sm-6">
+								<div class="form-group control-group margin-bottom-30">
+									<label for="k_select_grade" class="col-sm-4 control-label">注文商品グレード</label>
+									<div class="col-sm-8 controls">
+										<select id="k_select_grade" name="k_select_grade" class="form-control">
+								          <option value="no">--選択して下さい</option>
+								          <option value="エコノミー">エコノミー</option>
+								          <option value="スタンダード">スタンダード</option>
+								        </select>
+									</div>	
+								</div>
+								<div class="form-group control-group margin-bottom-30">
+									<label for="k_select_size" class="col-sm-4 control-label">商品サイズ</label>
+									<div class="col-sm-8 controls">
+										<p id="k_select_size" class="form-control">
+										<?php foreach ($size_list as $key => $value):
+											if($key==$size): 
+												echo $value;
+
+												endif;
+											endforeach; ?>	
+									    </p>
+									</div>
+								</div>
+								<div class="form-group control-group margin-bottom-30">
+									<label for="select_qty" class="col-sm-4 control-label">数量</label>
+									<div class="col-sm-8 controls">
+										<select id="k_select_qty" name="k_select_qty" class="form-control" >
+								          <option value="no">--選択して下さい</option>
+								          <script>
+								          for(i=500;i<=10000;i=i+100){
+								          	document.write('<option value="'+i+'部">'+i+'部</option>');
+								          }
+
+								          </script>
+								        </select>
+									</div>	
+								</div>
+							</div>
+						</fieldset>									
 					</div>				
 				</div>
+				<div class="text-center margin-bottom-40 clear">
+					<button type="button" id="k-order2-backbtn2" class="btn btn-default btn-lg margin-bottom-20">デザイン確認に戻る</button>
+					<button type="button" id="k-order2-nextbtn2" class="btn btn-primary btn-lg margin-bottom-20" disabled>お客様情報を入力する</button>
+				</div>
+				<p id="k-order-error1" class="k-order-error col-sm-4 col-sm-offset-4 alert alert-warning text-center" role="alert">注文商品グレード、数量を入力してください</p>
+		</div>
+		<div id="k-order-sec2" class="k-order-sec">
+			<div id="k-order2-sec2title" class="col-md-1">
+				<h2 class="bg-primary roundtitle rt1 relative z-2">お客様情報</h2>
 			</div>
+			<div id="k-order2-sec2body" class="col-md-10 col-mf-offset-2 big-padding-top k_form_wrap margin-bottom-40">
+				<div class="formbox">
+					<fieldset class="k-order-detail margin-bottom-40">
+						<div class="col-sm-10 col-sm-offset-2">
+							<div class="form-group control-group">									
+								<div class="col-sm-10 controls">
+								<label for="k_company_Name" class="control-label">会社名</label>
+									<input type="text" class="form-control" name="k_company_name" id="k_company_name" placeholder="御社名">
+								</div>									
+								
+							</div>
+							<div class="form-group control-group">									
+								<div class="col-sm-5 controls">
+									<label for="k_name" class="control-label">ご担当者名</label>
+									<input type="text" class="form-control" name="k_name" id="k_name" placeholder="氏名:必須" >
+								</div>								
+								<div class="col-sm-5 controls">
+									<label for="k_kana" class="control-label">ヨミガナ</label>
+									<input type="text" class="form-control" name="k_kana" id="k_kana" placeholder="氏名:カナ">
+								</div>
+							</div>
+							<div class="form-group control-group">									
+								<div class="col-sm-5 controls">
+									<label for="k_email" class="control-label">e-mail</label>
+									<input type="email" class="form-control" name="k_email" id="k_email" placeholder="e-mail:必須" pattern="^[0-9a-zA-Z]+[\w-]+@[\w\.-]+\.\w{2,}$">
+								</div>								
+								<div class="col-sm-5 controls">
+									<label for="k_confirm_email" class="control-label">e-mail再入力</label>
+									<input type="text" class="form-control" name="k_confirm_email" id="k_confirm_email" placeholder="e-mail:再入力" placeholder="e-mail:再入力" pattern="^[0-9a-zA-Z]+[\w-]+@[\w\.-]+\.\w{2,}$">
+								</div>
+							</div>
+							<div class="form-group control-group">									
+								<div class="col-sm-5 controls">
+									<label for="k_tel" class="control-label">電話番号</label>
+									<input type="text" class="form-control" name="k_tel" id="k_tel" placeholder="電話番号:必須 -(ハイフン除く)">
+								</div>								
+								<div class="col-sm-5 controls">
+									<label for="k_fax" class="control-label">FAX番号</label>
+									<input type="text" class="form-control" name="k_fax" id="k_fax">
+								</div>
+							</div>
+							<div class="form-group control-group">									
+								<div class="col-sm-10 controls">
+									<label for="k_sendplace" class="control-label">お届け先宛名</label>
+									<input type="text" class="form-control" name="k_sendplace" id="k_sendplace" placeholder="お届け先が宛名が上記と違う場合のみご記入下さい">
+								</div>								
+								
+							</div>
+							<div class="form-group control-group">
+								<div class="col-sm-5 controls">
+									<label for="k_postcode1" class="control-label">郵便番号</label><br>
+									<input type="text" name="k_postcode1" id="k_postcode1" maxlength="3" style="width:4em;">-<input type="text" name="k_postcode2" id="k_postcode2" maxlength="4" style="width:4em;">
+									
+								</div>
+
+							</div>
+
+						</div>
+				
+					</fieldset>
+					<div class="text-center margin-bottom-40 clear">
+						<button type="button" id="k-order2-backbtn3" class="btn btn-default btn-lg margin-bottom-20">注文情報入力に戻る</button>
+						<button type="button" id="k-order2-nextbtn3" class="btn btn-primary btn-lg margin-bottom-20" disabled>お支払い手続きに進む</button>
+					</div>
+					<p id="k-order-error2" class="k-order-error col-sm-4 col-sm-offset-4 alert alert-warning text-center" role="alert">必須項目を入力してください</p>
+				</div>				
+			</div>
+		</div>
+
 		</form>		
 		</div>
 

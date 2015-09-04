@@ -85,8 +85,9 @@ $('＃k_name,#k_email,#k_tel').on('click blur keydown keyup keypress change',fun
 });
 var v1=$('＃k_name').val();
 var v2=$('#k_email').val();
-var v3=$('#k_tel').val();
-if(v1!=''&&v2!=''&&v3!=''){
+var v3=$('#k_confirm_email').val();
+var v4=$('#k_tel').val();
+if(v1!=''&&v2!=''&&v3!=''&&v4!=''){
 	$('#k-order2-nextbtn3').prop('disabled',false);
 	$('#k-order-error2').fadeOut('fast');
 }else{
@@ -106,6 +107,11 @@ $('#k-order2-nextbtn2').on('click',function(){
 	$('html,body').animate({scrollTop:top},800,'linear');
 
 	});
+//// お届け先情報入力
+
+$('#k-order2-nextbtn3').on('click',function(){
+	$('#k-order2-sec3title').fadeIn();
+});
 
 
 
