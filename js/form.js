@@ -49,7 +49,7 @@ $(function() {
         email: "メールアドレスを入力してください",
         url: "URLを入力してください",
         dateISO: "日付を入力してください",
-        number: "-(ハイフン)を除いた数字を入力してください",
+        number: "数字を入力してください",
         digits: "0-9までを入力してください",
 	    equalTo: "emailで入力したメールアドレスと同じ値を入力してください",
         // range: jQuery.format(" {0} から {1} までの値を入力してください"),
@@ -132,8 +132,8 @@ $(function() {
         $('#select02').attr('disabled',true);
     });
 
-    // 郵便番号入力補完
-    $('#postcode1').jpostal({
+// 郵便番号入力補完
+$('#postcode1').jpostal({
     postcode : [
         '#postcode1',
         '#postcode2'
@@ -182,10 +182,28 @@ $("#k_orderform1").validate({
         },
         success: function(wrapper, validClass) {
             wrapper.text('OK!').addClass('help-inline').closest('.control-group').addClass('success');
-        }
-    }); 
+            // var aflug=$('#k_address').find('.help-inline').prop('id');
+            // if(aflug=='k_postcode1-error'){
+            //     $('#k_postcode1-error').hide();
 
-});
+            // }
+        }
+        
+    });
+// 簡単オーダー郵便番号入力補完
+$('#k_postcode1').jpostal({
+    postcode : [
+        '#k_postcode1',
+        '#k_postcode2'
+    ],
+    address : {
+        '#k_address1'  : '%3',
+        '#k_address2'  : '%4',
+        '#k_address3'  : '%5'
+    }
+});     
+
+});//end Jquery
 
 
 

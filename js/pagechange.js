@@ -101,7 +101,7 @@ $('#k-order2-nextbtn2').on('click',function(){
 	$('#k-order2-sec2title').fadeIn(500,function(){
 		$('#k-order2-sec2body').fadeIn(500);
 	});
-	$('.conatact_main').css({minHeight:'3000px'});
+	$('.conatact_main').css({minHeight:'2000px'});
 
 	var top=$('#k-order-sec2').offset().top;
 	$('html,body').animate({scrollTop:top},800,'linear');

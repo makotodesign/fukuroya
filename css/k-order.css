@@ -252,3 +252,9 @@
 	display: none;
 }
 
+/*郵便番号OK非表示*/
+#k_postcode1+span,
+#k_postcode2+span
+ {
+	display:none!important;
+}
