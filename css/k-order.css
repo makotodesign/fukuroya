@@ -1,6 +1,10 @@
 @chaset 'UTF-8';
 
 /*------------かんたんデザイン------------*/
+button[id^='k-order-top'] {
+	width: 16%;
+}
+
 .peage-k-order-main {
 	min-height: 500px;
 }

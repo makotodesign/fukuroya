@@ -4,6 +4,7 @@
     <script type="text/javascript" src="http://jpostal.googlecode.com/svn/trunk/jquery.jpostal.js"></script><!--郵便番号　住所変換-->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.lettering-0.6.1.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
     <script src="js/jquery.textillate.js"></script>
     <script src="js/action.js"></script>
     <script src="js/navactive.js"></script>

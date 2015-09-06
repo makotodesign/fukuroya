@@ -88,16 +88,15 @@ $_SESSION["k-order-bagdata"]=array(
 	"t2_l_h"=>$area2['lineheight'],
 	"t2_align"=>$area2['align']
 );
-
-
 require_once('header.php');
-// print_r($area2['color']);
-
-?>
+?>   
+	<div id="load" class="load">
+    	<p><img src="img/icon/load.gif" height="150" width="150"><br>loading</p>
+    </div>
     <main class="conatact_main container page-k-order-main relative">
   
-   		<div id="order2_header" class="page-header">
-   				<button id="k-order-topbtn1" class="btn btn-default no-point" type="button"> かんたんデザイン <span class="glyphicon glyphicon-arrow-right"></span></button>
+   		<div id="order2_header" class="page-header hidden-xs hidden-sm">
+   				<button id="k-order-topbtn1" class="btn btn-default no-point" type="button"> 簡単デザイン <span class="glyphicon glyphicon-arrow-right"></span></button>
    				<button id="k-order-topbtn2" class="btn btn-success no-point" type="button"> 確認 <span class="glyphicon glyphicon-arrow-right"></span></button>
    				<button id="k-order-topbtn3" class="btn btn-default no-point" type="button"> ご注文情報入力 <span class="glyphicon glyphicon-arrow-right"></span></button>
    				<button id="k-order-topbtn4" class="btn btn-default no-point" type="button"> お客様情報入力 <span class="glyphicon glyphicon-arrow-right"></span></button>
@@ -209,7 +208,7 @@ require_once('header.php');
 				<div class="col-md-10 col-mf-offset-2 big-padding-top k_form_wrap margin-bottom-40">
 					<div class="formbox">
 						<fieldset class="k-order-detail">
-							<div class="col-sm-3">
+							<div class="col-sm-3 hidden-xs hidden-sm">
 								<div class="k-order-icon1">
 									<img src="img/svg/k-order-icon1.svg">
 								</div>
@@ -395,7 +394,7 @@ require_once('header.php');
 					</fieldset>
 					<div class="text-center margin-bottom-20 clear">
 						<button type="button" id="k-order2-backbtn3" class="btn btn-default btn-lg margin-bottom-20">注文情報入力に戻る</button>
-						<button type="button" id="k-order2-nextbtn3" class="btn btn-primary btn-lg margin-bottom-20" disabled>お支払い手続きに進む</button>
+						<button type="submit" id="k-order2-nextbtn3" class="btn btn-primary btn-lg margin-bottom-20" disabled>お支払い手続きに進む</button>
 					</div>
 					<p id="k-order-error2" class="k-order-error col-sm-4 col-sm-offset-4 alert alert-warning text-center" role="alert">必須項目を入力してください</p>
 				</div>				

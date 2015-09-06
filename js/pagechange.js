@@ -32,8 +32,10 @@ setTimeout(function(){
 		var order2_header_offset2=$('.handle').offset().top;
 		$('html,body').animate({scrollTop:order2_header_offset2},1000,'easeOutBounce');
 	}else{
-	var order2_header_offset=$('#order2_header').offset().top;
-	$('html,body').animate({scrollTop:order2_header_offset},1000,'easeOutBounce');
+		if(p3back_flug==null){
+			var order2_header_offset=$('#order2_header').offset().top;
+			$('html,body').animate({scrollTop:order2_header_offset},1000,'easeOutBounce');
+		}
 	}
 　	
 },1500);
@@ -98,6 +100,8 @@ if(v1!=''&&v2!=''&&v3!=''&&v4!=''){
 
 ////お客様情報入力
 $('#k-order2-nextbtn2').on('click',function(){
+	$('#k-order-topbtn3').removeClass('btn-success').addClass('btn-default');
+	$('#k-order-topbtn4').removeClass('btn-default').addClass('btn-success');
 	$('#k-order2-sec2title').fadeIn(500,function(){
 		$('#k-order2-sec2body').fadeIn(500);
 	});
@@ -107,15 +111,22 @@ $('#k-order2-nextbtn2').on('click',function(){
 	$('html,body').animate({scrollTop:top},800,'linear');
 
 	});
-//// お届け先情報入力
 
-$('#k-order2-nextbtn3').on('click',function(){
-	$('#k-order2-sec3title').fadeIn();
+// お支払い手続きから戻ったときアクション
+$('#k-order3-backbtn').hover(function(){
+	 $.cookie('frompage3','true');
 });
+var p3back_flug=$.cookie('frompage3');
+if(p3back_flug=='true'){
+	$('#k-orderbox1,#k-order2-sec2title,#k-order2-sec2body').show();
+	$('#load').hide();
 
+}
 
-
-
+// page1のアクションでcookieクリア
+$('#k-order-commit,#orderbtn1,#orderbtn2').hover(function(){
+	$.cookie('frompage3',null);
+});
 
 
 function pagechange(name,file){
