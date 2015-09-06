@@ -19,27 +19,34 @@ require_once('header.php');
 		<button id="k-order-topbtn3" class="btn btn-default no-point" type="button"> ご注文情報入力 <span class="glyphicon glyphicon-arrow-right"></span></button>
 		<button id="k-order-topbtn4" class="btn btn-default no-point" type="button"> お客様情報入力 <span class="glyphicon glyphicon-arrow-right"></span></button>
 		<button id="k-order-topbtn5" class="btn btn-default no-point" type="button"> お支払い手続き <span class="glyphicon glyphicon-arrow-right"></span></button>
-		<button id="k-order-topbtn6" class="btn btn-success no-point" type="button"> ご注文手続き完了 </button>
+		<button id="k-order-topbtn6" class="btn btn-success no-point" type="button"> ご注文手続き確定 </button>
 	</div>
-	<div class="col-md-10 col-md-offset-1">
-	<?php include('bagwrap.php');?>
-		<div class="panel panel-primary">	
-		  <div class="panel-heading text-center">
+	<div class="col-md-6">
+		<div class="panel panel-primary">
+			<div class="panel-heading text-center">
 			<?php
 				if(isset($_SESSION['k-order-cdata'])){
 				echo $_SESSION['k-order-cdata']['company']."&nbsp;".$_SESSION['k-order-cdata']['name']."様";}
-				 ?>&nbsp;&nbsp;簡単デザインご注文内容確認
+				 ?>&nbsp;&nbsp;ご注文デザイン
+			</div>
+			<div class="panel-body">
+				<?php include('bagwrap.php');?>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="panel panel-primary">	
+		  <div class="panel-heading text-center">
+			ご注文内容
 
 		  </div>
 		  <div class="panel-body">
-		  	<div class="col-md-5">
 			  <table class="table">
 			    <tr>
 			    	<th>サイズ</th>
 			    	<td><?php echo $size_list[$_SESSION["k-order-bagdata"]['size']]; ?></td>
 			    </tr>
-			  </table>
-			 </div> 
+			  </table> 
 		  </div>
 
 		</div>

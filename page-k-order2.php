@@ -80,15 +80,19 @@ $_SESSION["k-order-bagdata"]=array(
 	"t1_border_width"=>$t1_border['width'],
 	"t1_bg_bool"=>$t1_bg['bool'],
 	"t1_bg_padding"=>$t1_bg['padding'],
+	"t2_add"=>$area2['add'],
 	"title2"=>$area2['title'],
-	"t2_top"=>$t2_top,
-	"t2_left"=>$t2_left,
+	"t2_fontfamily"=>$area2['fontfamily'],
+	"t2_top"=>$area2['top'],
+	"t2_left"=>$$area2['left'],
 	"t2_size"=>$area2['size'],
 	"t2_l_s"=>$area2['space'],
 	"t2_l_h"=>$area2['lineheight'],
 	"t2_align"=>$area2['align']
 );
 require_once('header.php');
+echo $area2['top']."<br>";
+echo $_SESSION['k-order-bagdata']['t2_top'];
 ?>   
 	<div id="load" class="load">
     	<p><img src="img/icon/load.gif" height="150" width="150"><br>loading</p>
@@ -110,58 +114,7 @@ require_once('header.php');
 			</div>
 			<div class="col-md-11">
 				<?php include('bagwrap.php');?>
-				<!-- <div id="bagwrap" class="margin-bottom-40">
-					<div class="handle <?php 
-						if($size=='SS'|| $size=='ST'):
-							echo 'small_handle';
-						else:
-							echo '';
-						endif;?>">
-						<?php include('svg/handle.svg'); ?>
-					</div>
-					<div class="bagbody <?php echo $size; ?>">
-						<div class="bgpoint prev-<?php echo $basecolor; ?>">
-							<p id="k-title1-prev" class="k-title-prev font1-<?php echo $fontcolor1; ?> prev-<?php echo $fontfamily1; ?>" 
-							style="top:<?php echo $t1_top; ?>px;
-							left:<?php echo $t1_left; ?>px;
-							font-size:<?php echo $t1_size; ?>%;
-							letter-spacing:<?php echo $t1_l_s; ?>rem;
-							line-height:<?php echo $t1_l_h; ?>;
-							text-align:<?php echo $t1_align; ?>;
-							<?php
-							if($t1_border['bool']==true){
-							echo "border:{$t1_border['width']}px solid $color_hex[$fontcolor1];";
-							echo "padding:2%;";	
 
-							}
-							if($t1_bg['bool']==true){
-							echo "padding:{$t1_bg['padding']}%;";
-							echo "background-color:{$color_hex[$fontcolor1]};";	
-							echo "color:{$color_hex[$basecolor]};";
-
-							}
-
-							?>
-							"><?php echo $title1;?></p>
-							<p id="k-title2-prev" class="k-title-prev prev-<?php echo $area2['fontfamily'] ?>" style="<?php 
-							if($area2['add']=='areaadd1'){
-								echo "display:inline-block;";		
-							}else{
-								echo "display:none;"; 
-							}?>
-							left:<?php echo $area2['left']; ?>px;
-							top:<?php echo $area2['top']; ?>px;
-							color:<?php echo $area2['color']; ?>;
-							text-align:<?php echo $area2['align']; ?>;
-							font-size:<?php echo $area2['size']; ?>%;
-							letter-spacing:<?php echo $area2['space']; ?>rem;
-							line-height:<?php echo $area2['lineheight'] ?>;
-
-
-							"><?php echo $area2['title']; ?></p>
-						</div>
-					</div>
-				</div> -->
 				<div class="text-center margin-bottom-40">
 					<form method="post" action="page-k-order.php" class="inline-block">		
 						<input type="hidden" name="back_title1" value="<?php $text=str_replace("<br>","\n",$title1); echo $text;?>">
