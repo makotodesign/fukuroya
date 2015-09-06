@@ -22,6 +22,7 @@ require_once('header.php');
 		<button id="k-order-topbtn6" class="btn btn-success no-point" type="button"> ご注文手続き完了 </button>
 	</div>
 	<div class="col-md-10 col-md-offset-1">
+	<?php include('bagwrap.php');?>
 		<div class="panel panel-primary">	
 		  <div class="panel-heading text-center">
 			<?php

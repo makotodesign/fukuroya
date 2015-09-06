@@ -109,7 +109,8 @@ require_once('header.php');
 				<h2 class="bg-popred roundtitle rt2">デザインを確認しましょう！</h2>
 			</div>
 			<div class="col-md-11">
-				<div id="bagwrap" class="margin-bottom-40">
+				<?php include('bagwrap.php');?>
+				<!-- <div id="bagwrap" class="margin-bottom-40">
 					<div class="handle <?php 
 						if($size=='SS'|| $size=='ST'):
 							echo 'small_handle';
@@ -160,7 +161,7 @@ require_once('header.php');
 							"><?php echo $area2['title']; ?></p>
 						</div>
 					</div>
-				</div>
+				</div> -->
 				<div class="text-center margin-bottom-40">
 					<form method="post" action="page-k-order.php" class="inline-block">		
 						<input type="hidden" name="back_title1" value="<?php $text=str_replace("<br>","\n",$title1); echo $text;?>">
