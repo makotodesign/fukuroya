@@ -25,18 +25,42 @@
 				if(isset($_SESSION['k-order-bagdata'])){
 					echo $_SESSION['k-order-bagdata']['fontcolor'];
 				}else{echo $fontcolor1;}; 
-					
+
 				?> prev-<?php
 				if(isset($_SESSION['k-order-bagdata'])){
 					echo $_SESSION['k-order-bagdata']['t1_fontfamily'];
 				}else{echo $fontfamily1;}
 				?>" 
-				style="top:<?php echo $t1_top; ?>px;
-				left:<?php echo $t1_left; ?>px;
-				font-size:<?php echo $t1_size; ?>%;
-				letter-spacing:<?php echo $t1_l_s; ?>rem;
-				line-height:<?php echo $t1_l_h; ?>;
-				text-align:<?php echo $t1_align; ?>;
+				style="top:<?php
+				if(isset($_SESSION['k-order-bagdata'])){
+					echo $_SESSION['k-order-bagdata']['t1_top'];
+				}else{echo $t1_top;} 
+				?>px;
+				left:<?php
+				if(isset($_SESSION['k-order-bagdata'])){
+					echo $_SESSION['k-order-bagdata']['t1_left'];
+				}else{echo $t1_left;} 
+				?>px;
+				font-size:<?php
+				if(isset($_SESSION['k-order-bagdata'])){
+					echo $_SESSION['k-order-bagdata']['t1_size'];
+				}else{echo $t1_size;} 
+				?>%;
+				letter-spacing:<?php
+				if(isset($_SESSION['k-order-bagdata'])){
+					echo $_SESSION['k-order-bagdata']['t1_l_s'];
+				}else{echo $t1_l_s;} 
+				?>rem;
+				line-height:<?php
+				if(isset($_SESSION['k-order-bagdata'])){
+					echo $_SESSION['k-order-bagdata']['t1_l_h'];
+				}else{echo $t1_l_h;} 
+				?>;
+				text-align:<?php 
+				if(isset($_SESSION['k-order-bagdata'])){
+					echo $_SESSION['k-order-bagdata']['t1_align'];
+				}else{echo $t1_align;} 
+				?>;
 				<?php
 				if($t1_border['bool']==true){
 				echo "border:{$t1_border['width']}px solid $color_hex[$fontcolor1];";
