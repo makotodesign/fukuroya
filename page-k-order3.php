@@ -8,21 +8,28 @@ function h($val){
 	return $s;
 }
 
+$_SESSION["k-order-cdata"]=array(
+	"grade"=>h($_POST['k_select_grade']),
+	"qty"=>h($_POST['k_select_qty']),
+	"company"=>h($_POST['k_company_name']),
+	"name"=>h($_POST['k_name']),
+	"kana"=>h($_POST['k_kana']),
+	"email"=>h($_POST['k_confirm_email']),
+	"tel"=>h($_POST['k_tel']),
+	"fax"=>h($_POST['k_fax']),
+	"sendplace"=>h($_POST['k_sendplace']),
+	"postcode"=>h($_POST['k_postcode1']),
+	"pref"=>h($_POST['k_address1']),
+	"address2"=>h($_POST['k_address2']),
+	"address3"=>h($_POST['k_address3']),
+	"address4"=>h($_POST['k_address4']),
+);
+
+
 require_once('header.php');
 
 ?>
     <main class="conatact_main container page-k-order-main relative">
-    <script>
-    $(function(){
-    	$.cookie('page3flug','visited');
-	    alert($.cookie('page3flug'));
-    });
-
-
-
-
-    </script>
-  
    		<div id="order2_header" class="page-header hidden-xs hidden-sm">
    				<button id="k-order-topbtn1" class="btn btn-default no-point" type="button"> 簡単デザイン <span class="glyphicon glyphicon-arrow-right"></span></button>
    				<button id="k-order-topbtn2" class="btn btn-default no-point" type="button"> 確認 <span class="glyphicon glyphicon-arrow-right"></span></button>
@@ -40,31 +47,24 @@ require_once('header.php');
 				</div>
 				<div class="col-md-10 col-mf-offset-2 big-padding-top k_form_wrap margin-bottom-40">
 					<div class="formbox">
-						<fieldset class="k-order-detail">
-							<div class="col-sm-6">
-								
-								
+						<fieldset class="k-order-detail">							
+							<div class="well margin-xboth-30 margin-bottom-0 ">
+								<h2>現在お支払い方法は【代引き】のみとさせていただいております</h2>
+								<h3 class="text-muted">近日中に、各種決済方法を導入予定です。ご不便をおかけしますがいましばらくお待ち下さいませ。
+								</h3>	
 							</div>
 						</fieldset>									
 					</div>				
 				</div>
 				<div class="text-center margin-bottom-40 clear">
 					<button type="button" id="k-order3-backbtn" class="btn btn-default btn-lg margin-bottom-20 back">お客様情報入力に戻る</button>
-					<button type="button" id="k-order3-nextbtn" class="btn btn-primary btn-lg margin-bottom-20" disabled>進む</button>
+					<button type="submit" id="k-order3-nextbtn" class="btn btn-primary btn-lg margin-bottom-20">進む</button>
 				</div>
 
 		</div>
 
 		</form>		
 		</div>
-
-	
-
-	
-			
-
-
-	</div>
     </main>
 
 

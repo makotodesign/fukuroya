@@ -193,7 +193,7 @@ require_once('header.php');
 						<button type="submit" id="k-order2-backbtn" class="btn btn-default btn-lg margin-bottom-20">簡単デザインに戻る</button>
 					</form>
 
-					<button type="button" id="k-order2-nextbtn" class="btn btn-primary btn-lg margin-bottom-20">このデザインで注文する</button>
+					<button type="button" id="k-order2-nextbtn" class="btn btn-primary btn-lg margin-bottom-20">注文情報を入力する</button>
 
 				</div>
 
@@ -201,7 +201,7 @@ require_once('header.php');
 		</div>
 		<div class="k-order" id="k-orderbox1">
 		<form action="page-k-order3.php" method="POST" id="k_orderform1" class="form-horizontal" novalidate="novalidate">
-		<div id="k-order-sec1">
+			<div id="k-order-sec1">
 				<div class="col-md-1">
 					<h2 class="bg-popgreen roundtitle rt2 relative z-2">注文情報を入力してください</h2>
 				</div>
@@ -260,7 +260,7 @@ require_once('header.php');
 					<button type="button" id="k-order2-nextbtn2" class="btn btn-primary btn-lg margin-bottom-20" disabled>お客様情報を入力する</button>
 				</div>
 				<p id="k-order-error1" class="k-order-error col-sm-4 col-sm-offset-4 alert alert-warning text-center" role="alert">注文商品グレード、数量を入力してください</p>
-		</div>
+			</div>
 		<div id="k-order-sec2" class="k-order-sec">
 			<div id="k-order2-sec2title" class="col-md-1">
 				<h2 class="bg-primary roundtitle rt1 relative z-2">お客様情報</h2>
@@ -392,6 +392,7 @@ require_once('header.php');
 						</div>
 				
 					</fieldset>
+				</div>
 					<div class="text-center margin-bottom-20 clear">
 						<button type="button" id="k-order2-backbtn3" class="btn btn-default btn-lg margin-bottom-20">注文情報入力に戻る</button>
 						<button type="submit" id="k-order2-nextbtn3" class="btn btn-primary btn-lg margin-bottom-20" disabled>お支払い手続きに進む</button>
@@ -403,14 +404,6 @@ require_once('header.php');
 
 		</form>		
 		</div>
-
-	
-
-	
-			
-
-
-	</div>
     </main>
 
 

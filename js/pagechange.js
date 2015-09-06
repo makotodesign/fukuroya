@@ -13,6 +13,7 @@ pagechange('.download_i_s_s',"./template/fukuroya_template_S.zip");
 pagechange('.download_i_s_t',"./template/fukuroya_template_ST.zip");
 
 
+
 $('.back').on('click',function(){
 	history.back();
 });
@@ -128,6 +129,8 @@ $('#k-order-commit,#orderbtn1,#orderbtn2').hover(function(){
 	$.cookie('frompage3',null);
 });
 
+// ローディングストップ
+$('#load').hide();
 
 function pagechange(name,file){
 	$(name).on('click',function(){
