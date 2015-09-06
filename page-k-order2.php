@@ -92,7 +92,7 @@ $_SESSION["k-order-bagdata"]=array(
 );
 require_once('header.php');
 echo $area2['top']."<br>";
-echo $_SESSION['k-order-bagdata']['t2_top'];
+echo $t1_bg['bool'];
 ?>   
 	<div id="load" class="load">
     	<p><img src="img/icon/load.gif" height="150" width="150"><br>loading</p>
@@ -105,7 +105,7 @@ echo $_SESSION['k-order-bagdata']['t2_top'];
    				<button id="k-order-topbtn3" class="btn btn-default no-point" type="button"> ご注文情報入力 <span class="glyphicon glyphicon-arrow-right"></span></button>
    				<button id="k-order-topbtn4" class="btn btn-default no-point" type="button"> お客様情報入力 <span class="glyphicon glyphicon-arrow-right"></span></button>
    				<button id="k-order-topbtn5" class="btn btn-default no-point" type="button"> お支払い手続き <span class="glyphicon glyphicon-arrow-right"></span></button>
-   				<button id="k-order-topbtn6" class="btn btn-default no-point" type="button"> ご注文手続き完了 </button>
+   				<button id="k-order-topbtn6" class="btn btn-default no-point" type="button"> ご注文手続き確定 </button>
 		</div>
 		<div class="container clearfix">
 

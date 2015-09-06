@@ -40,18 +40,79 @@ require_once('header.php');
 			ご注文内容
 
 		  </div>
-		  <div class="panel-body">
-			  <table class="table">
+		  
+			  <table id="k-order-check" class="table">
 			    <tr>
-			    	<th>サイズ</th>
-			    	<td><?php echo $size_list[$_SESSION["k-order-bagdata"]['size']]; ?></td>
+			    	<th class="text-center">サイズ</th>
+			    	<td class="text-center"><?php echo $size_list[$_SESSION["k-order-bagdata"]['size']]; ?></td>
+			    </tr>
+			    <tr>
+			    	<th class="text-center">グレード</th>
+			    	<td class="text-center"><?php echo $_SESSION["k-order-cdata"]['grade']; ?></td>
+			    </tr>
+			    <tr>
+			    	<th class="text-center">印刷部数</th>
+			    	<td class="text-center"><?php echo $_SESSION["k-order-cdata"]['qty']; ?></td>
+			    </tr>
+			    <tr>
+			    	<th class="text-center">御社名</th>
+			    	<td class="text-center"><?php 
+			    	if(isset($_SESSION["k-order-cdata"]['company'])){
+			    		if($_SESSION["k-order-cdata"]['company']!=''){
+			    		echo $_SESSION["k-order-cdata"]['company']; 
+			    		}else{
+			    			echo "未記入";
+			    		}
+			    	}
+			    	?></td>
+			    </tr>
+			    <tr>
+			    	<th class="text-center">担当者名</th>
+			    	<td class="text-center">
+			    	<?php 
+			    	echo $_SESSION["k-order-cdata"]['name']; 
+			    	if($_SESSION["k-order-cdata"]['kana']!=''){
+			    		echo "&#40;{$_SESSION["k-order-cdata"]['kana']}&#41;";
+			    	}
+
+			    	?></td>
+			    </tr>
+			    <tr>
+			    	<th class="text-center">E-mail</th>
+			    	<td class="text-center"><?php echo $_SESSION["k-order-cdata"]['email']; ?></td>
+			    </tr>
+			    <tr>
+			    	<th class="text-center">Tel
+					<?php
+					if($_SESSION["k-order-cdata"]['fax']!=''){
+						echo "&frasl;&nbsp;fax";
+					}
+
+					?>
+			    	</th>
+			    	<td class="text-center"><?php echo $_SESSION["k-order-cdata"]['tel']; 
+			    		if($_SESSION["k-order-cdata"]['fax']!=''){
+						echo "&nbsp;&frasl;&nbsp;{$_SESSION["k-order-cdata"]['fax']}";
+					}
+
+			    	?></td>
+			    </tr>
+			    <tr>
+			    	<th class="text-center">お届け先住所</th>
+			    	<td class="text-center"><?php
+			    	if($_SESSION["k-order-cdata"]['postcode']!=''||$_SESSION["k-order-cdata"]['postcode2']!=''||$_SESSION["k-order-cdata"]['pref']!=''||$_SESSION["k-order-cdata"]['address2']!=''||$_SESSION["k-order-cdata"]['address3']!=''||$_SESSION["k-order-cdata"]['address4']!=''){ 
+			    	echo "&#12320;{$_SESSION["k-order-cdata"]['postcode']}-{$_SESSION["k-order-cdata"]['postcode2']}"; 
+			    	}else{
+			    		echo "未記入";
+			    	}
+			    	?></td>
 			    </tr>
 			  </table> 
-		  </div>
+		 
 
 		</div>
 		<div class="text-center margin-bottom-40 clear">
-			<button type="button" id="k-order-back4btn" class="btn btn-default btn-lg margin-bottom-20 back">お支払い手続きに戻る</button>
+			<button type="button" id="k-order-back4btn" class="btn btn-default btn-lg margin-bottom-20 back">戻る</button>
 			<button type="button" id="k-order-next4btn" class="btn btn-primary btn-lg margin-bottom-20">注文内容確定</button>
 		</div>
 	</div>

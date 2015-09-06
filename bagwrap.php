@@ -1,3 +1,17 @@
+<?php
+$color_hex=array(
+"black"=>"#000",
+"white"=>"#fff",
+"Dic003"=>"#FDD2E5",
+"Dic009"=>"#FFEA98",
+"Dic016"=>"#84D7CB",
+"Dic021"=>"#B5DCF2",
+"Dic032"=>"#FFD78C",
+"Dic051"=>"#FF686C",
+"Dic080"=>"#FF4220",
+"Dic144"=>"#3E63B4",
+);
+?>
 <div id="bagwrap" class="margin-bottom-40">
 		<div class="handle <?php 
 			if(isset($_SESSION['k-order-bagdata'])){
@@ -78,9 +92,9 @@
 					$t1color=$_SESSION['k-order-bagdata']['fontcolor'];
 					$t1bgcolor=$_SESSION['k-order-bagdata']['basecolor'];
 					if($_SESSION['k-order-bagdata']['t1_bg_bool']==true){
-					echo "padding:{$_SESSION['k-order-bagdata']['t1_bg_padding']}%;";
-					echo "background-color:{$color_hex[$t1color]};";	
-					echo "color:{$color_hex[$t1bgcolor]};";
+					echo "padding:".$_SESSION['k-order-bagdata']['t1_bg_padding']."%;";
+					echo "background-color:".$color_hex[$t1color].";";	
+					echo "color:".$color_hex[$t1bgcolor].";";
 					}
 
 				}

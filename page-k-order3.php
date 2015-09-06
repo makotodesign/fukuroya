@@ -19,6 +19,7 @@ $_SESSION["k-order-cdata"]=array(
 	"fax"=>h($_POST['k_fax']),
 	"sendplace"=>h($_POST['k_sendplace']),
 	"postcode"=>h($_POST['k_postcode1']),
+	"postcode2"=>h($_POST['k_postcode2']),
 	"pref"=>h($_POST['k_address1']),
 	"address2"=>h($_POST['k_address2']),
 	"address3"=>h($_POST['k_address3']),
