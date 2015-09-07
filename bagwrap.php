@@ -142,8 +142,9 @@ $color_hex=array(
 				 ?>px;
 				color:<?php 
 				if(isset($_SESSION['k-order-bagdata'])){
-					echo $_SESSION['k-order-bagdata']['fontcolor'];
-				}else{echo $area2['color'];} 
+					$color2=$_SESSION['k-order-bagdata']['fontcolor'];
+					echo $color_hex[$color2];
+				}else{echo $color_hex[$area2['color']];} 
 				?>;
 				text-align:<?php
 				if(isset($_SESSION['k-order-bagdata'])){

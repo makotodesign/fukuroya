@@ -49,6 +49,7 @@
 								</div>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ls_5" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#template_l_s">テンプレートをダウンロード</button>
+								<button type="button" class="btn btn-default btn-lg btn-block go-k-order">簡単デザイン</button>
 
 							
 							</div>
@@ -61,7 +62,7 @@
 								</div>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ls_5" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#template_l_t">テンプレートをダウンロード</button>
-								
+								<button type="button" class="btn btn-default btn-lg btn-block go-k-order">簡単デザイン</button>
 							</div>
 						</div>
 						<section class="modal fade l_5" id="ls_5" tabindex="-1" role="dialog">
@@ -217,7 +218,8 @@
 									<?php include('svg/bug_5_mid_s.svg')?>
 								</div>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ms_5" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
-								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#template_m_s">テンプレートをダウンロード</button>							
+								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#template_m_s">テンプレートをダウンロード</button>
+								<button type="button" class="btn btn-default btn-lg btn-block go-k-order">簡単デザイン</button>							
 							</div>
 						</div>
 						<div class="col-md-4">
@@ -228,7 +230,7 @@
 								</div>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ms_5" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#template_m_t">テンプレートをダウンロード</button>
-
+								<button type="button" class="btn btn-default btn-lg btn-block go-k-order">簡単デザイン</button>
 							
 							</div>
 						</div>
@@ -383,7 +385,8 @@
 									<?php include('svg/bug_5_sm_s.svg')?>
 								</div>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ss_5" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
-								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#template_s_s">テンプレートをダウンロード</button>							
+								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#template_s_s">テンプレートをダウンロード</button>
+								<button type="button" class="btn btn-default btn-lg btn-block go-k-order">簡単デザイン</button>							
 							</div>
 						</div>
 						<div class="col-md-4">
@@ -392,7 +395,8 @@
 									<?php include('svg/bug_5_sm_l.svg')?>
 								</div>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ss_5" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
-								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#template_s_t">テンプレートをダウンロード</button>							
+								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#template_s_t">テンプレートをダウンロード</button>
+								<button type="button" class="btn btn-default btn-lg btn-block go-k-order">簡単デザイン</button>							
 							</div>
 													<section class="modal fade m_5" id="ss_5" tabindex="-1" role="dialog">
 							<div class="modal-dialog">
@@ -559,8 +563,7 @@
 								</div>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ls_s" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#template_s_l_s">テンプレートをダウンロード</button>
-
-							
+								<button type="button" class="btn btn-default btn-lg btn-block go-k-order">簡単デザイン</button>							
 							</div>
 						</div>
 						<div class="col-md-4">
@@ -571,7 +574,7 @@
 								</div>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ls_s" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#template_s_l_t">テンプレートをダウンロード</button>
-								
+								<button type="button" class="btn btn-default btn-lg btn-block go-k-order">簡単デザイン</button>						
 							</div>
 						</div>
 						<section class="modal fade l_s" id="ls_s" tabindex="-1" role="dialog">
@@ -727,7 +730,8 @@
 									<?php include('svg/bug_5_mid_s.svg')?>
 								</div>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ms_s" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
-								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#template_s_m_s">テンプレートをダウンロード</button>							
+								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#template_s_m_s">テンプレートをダウンロード</button>
+								<button type="button" class="btn btn-default btn-lg btn-block go-k-order">簡単デザイン</button>							
 							</div>
 						</div>
 						<div class="col-md-4">
@@ -738,6 +742,7 @@
 								</div>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ms_s" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#template_s_m_t">テンプレートをダウンロード</button>
+								<button type="button" class="btn btn-default btn-lg btn-block go-k-order">簡単デザイン</button>
 
 							
 							</div>
@@ -893,7 +898,8 @@
 									<?php include('svg/bug_5_sm_s.svg')?>
 								</div>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ss_s" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
-								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#template_s_s_s">テンプレートをダウンロード</button>							
+								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#template_s_s_s">テンプレートをダウンロード</button>
+								<button type="button" class="btn btn-default btn-lg btn-block go-k-order">簡単デザイン</button>							
 							</div>
 						</div>
 						<div class="col-md-4">
@@ -902,7 +908,8 @@
 									<?php include('svg/bug_5_sm_l.svg')?>
 								</div>
 								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-toggle="tooltip" data-target="#ss_s" data-placement="top" title="クリックで見積もり計算フォームが開きます">この仕様で見積もり</button>
-								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#template_s_s_t">テンプレートをダウンロード</button>							
+								<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#template_s_s_t">テンプレートをダウンロード</button>
+								<button type="button" class="btn btn-default btn-lg btn-block go-k-order">簡単デザイン</button>							
 							</div>
 						<section class="modal fade m_5" id="ss_s" tabindex="-1" role="dialog">
 							<div class="modal-dialog">

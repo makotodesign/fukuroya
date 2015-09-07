@@ -1,5 +1,6 @@
 $(function(){
 pagechange('.go_top',"index.php");
+pagechange('.go-k-order',"page-k-order.php");
 pagechange('#orderbtn1',"page-order_2.php");
 pagechange('#orderbtn2',"page-k-order.php");
 pagechange('#fileup_next',"page-order_6.php");
@@ -138,7 +139,7 @@ $('#k_checkread').on('change',function(){
 		}
 });
 
-// ローディングストップs
+// ローディングストップ
 $('#load').hide();
 
 // 現在のURLを返す
