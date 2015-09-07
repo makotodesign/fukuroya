@@ -1,5 +1,8 @@
 <?php
 session_start();
+header('Expires: -1');
+header('Cache-Control:');
+header('Pragma:');
 define('DB_DATABASE','_fukuroyadb');
 define('DB_USERNAME','_fukuroyadb');
 define('DB_PASSWORD','pass1126');

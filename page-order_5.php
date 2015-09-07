@@ -1,6 +1,8 @@
 <?php
-session_cache_limiter('none');
 session_start();
+header('Expires: -1');
+header('Cache-Control:');
+header('Pragma:');
 $prefilename=h($_POST['filename']);
 $id=$_SESSION['id'];
 $_SESSION['prefilename']=$prefilename;

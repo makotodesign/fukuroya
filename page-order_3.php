@@ -1,6 +1,8 @@
 <?php
-session_cache_limiter('none');
 session_start();
+header('Expires: -1');
+header('Cache-Control:');
+header('Pragma:');
 $select_grade=h($_POST['select_grade']);
 $select_size=h($_POST['select_size']);
 $select_qty=h($_POST['select_qty']);
@@ -176,7 +178,7 @@ require_once('header.php');
 				<label for="checkread" class="col-sm-2 control-label"></label>
 				<div class="col-sm-8 controls">
 					<input type="checkbox" class="" name="checkread" id="checkread">
-					個人情報の取り扱いについて同意して送信する
+					<a href="./page-privacy.php" target="blank">個人情報の取り扱い</a>について同意して送信する
 				</div>
 			</div>
 			<input type="hidden" name="time" id="time">

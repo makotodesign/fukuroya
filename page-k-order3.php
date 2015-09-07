@@ -9,6 +9,7 @@ function h($val){
 }
 
 $_SESSION["k-order-cdata"]=array(
+	"id"=>'',
 	"grade"=>h($_POST['k_select_grade']),
 	"qty"=>h($_POST['k_select_qty']),
 	"company"=>h($_POST['k_company_name']),
@@ -30,6 +31,9 @@ $_SESSION["k-order-cdata"]=array(
 require_once('header.php');
 
 ?>
+	<div id="load" class="load">
+    	<p><img src="img/icon/load.gif" height="150" width="150"><br>loading</p>
+    </div>
     <main class="conatact_main container page-k-order-main relative">
    		<div id="order2_header" class="page-header hidden-xs hidden-sm">
    				<button id="k-order-topbtn1" class="btn btn-default no-point" type="button"> 簡単デザイン <span class="glyphicon glyphicon-arrow-right"></span></button>

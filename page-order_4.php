@@ -1,6 +1,8 @@
 <?php
-session_cache_limiter('none');
 session_start();
+header('Expires: -1');
+header('Cache-Control:');
+header('Pragma:');
 $id=h($_POST['time']);
 $company_Name=h($_POST['company_Name']);
 $Name=h($_POST['Name']);

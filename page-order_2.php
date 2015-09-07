@@ -1,4 +1,7 @@
 <?php
+header('Expires: -1');
+header('Cache-Control:');
+header('Pragma:');
 require_once('header.php');
 ?>
     <main class="conatact_main container">

@@ -2,7 +2,7 @@ $(function(){
 // $('.ctrl').draggable();
 // enterで送信できないように
 
-$("input"). keydown(function(e) {
+$("input").keydown(function(e) {
             if ((e.which && e.which === 13) || (e.keyCode && e.keyCode === 13)) {
                 return false;
             } else {
@@ -316,6 +316,7 @@ $('#outline1').on('change',function(){
 		$('#outline1_bwidth').val(1);
 	}
 });
+
 var border_flug=$('#outline1').is(':checked');
 if(border_flug==true){
 		$('#input_t1_bg').prop('disabled',true);
@@ -390,11 +391,7 @@ if(bg_flug==true){
 	$('#input_t1_bgsize').on('change',function(){
 		var val =$('#input_t1_bgsize').val();
 		$('#k-title1').css({padding:eval("'"+val+"%'")});
-
 	});
-
-
-
 }
 // 入力エリア追加
 $('#k-input2,#k-title2').hide();
@@ -428,9 +425,7 @@ $(window).scroll(function() {
 	$('.canvas,#k-o-submit').css('top',svalue / 3);	
 	if(svalue>=480 && svalue<=800){
 		$('.canvas,#k-o-submit').css('top',svalue-300);
-	}
-
-	else if(svalue >780){
+	}else if(svalue >780){
 		$('.canvas,#k-o-submit').css('top',500);
 	}
 });
@@ -452,19 +447,9 @@ $('#k-order-commit').on('mouseover',function(){
 
 });
 
+
 // ローディングメッセージ
 $('#load').hide();
-
-
-
-
-
-
-
-
-
-
-
 
 
 });//endjQuery

@@ -11,8 +11,7 @@ pagechange('.download_i_m_s',"./template/fukuroya_template_M.zip");
 pagechange('.download_i_m_t',"./template/fukuroya_template_MT.zip");
 pagechange('.download_i_s_s',"./template/fukuroya_template_S.zip");
 pagechange('.download_i_s_t',"./template/fukuroya_template_ST.zip");
-
-
+pagechange('#k-order-next4btn',"page-k-order5.php");
 
 $('.back').on('click',function(){
 	history.back();
@@ -129,8 +128,35 @@ $('#k-order-commit,#orderbtn1,#orderbtn2').hover(function(){
 	$.cookie('frompage3',null);
 });
 
+// 最終送信チェック
+$('#k_checkread').on('change',function(){
+	if($('#k_checkread').prop('checked')){
+		$('#k-order-next4btn').prop('disabled',false);
+	}else{
+		$('#k-order-next4btn').prop('disabled',true);
+
+		}
+});
+
 // ローディングストップ
 $('#load').hide();
+
+// 〜秒後にページチェンジカウントダウン。特定の要素がある時
+if($('main#k-compleate').find('#to_top_cont')){
+	var count=21;
+	(function countdown(){
+		count=count-1;
+		$('#to_top_cont').text(count);
+		var stop=setTimeout(countdown,1000);
+		if(count==0){
+			clearTimeout(stop);
+			location.href="http://fukuroya.jp";
+		}
+	})();	
+}
+
+
+
 
 function pagechange(name,file){
 	$(name).on('click',function(){

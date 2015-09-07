@@ -84,15 +84,13 @@ $_SESSION["k-order-bagdata"]=array(
 	"title2"=>$area2['title'],
 	"t2_fontfamily"=>$area2['fontfamily'],
 	"t2_top"=>$area2['top'],
-	"t2_left"=>$$area2['left'],
+	"t2_left"=>$area2['left'],
 	"t2_size"=>$area2['size'],
 	"t2_l_s"=>$area2['space'],
 	"t2_l_h"=>$area2['lineheight'],
 	"t2_align"=>$area2['align']
 );
 require_once('header.php');
-echo $area2['top']."<br>";
-echo $t1_bg['bool'];
 ?>   
 	<div id="load" class="load">
     	<p><img src="img/icon/load.gif" height="150" width="150"><br>loading</p>

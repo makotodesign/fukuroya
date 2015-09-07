@@ -266,4 +266,5 @@ button[id^='k-order-top'] {
 /*簡単オーダーチェック*/
 #k-order-check th {
 	background-color: #D1F1FC;
+	vertical-align: middle;
 }

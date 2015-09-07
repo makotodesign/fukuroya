@@ -12,6 +12,9 @@ $size_list=array(
 require_once('header.php');
 
 ?>
+<div id="load" class="load">
+	<p><img src="img/icon/load.gif" height="150" width="150"><br>loading</p>
+</div>
 <main class="conatact_main container page-k-order-main relative">
 	<div id="order2_header" class="page-header hidden-xs hidden-sm">
 		<button id="k-order-topbtn1" class="btn btn-default no-point" type="button"> 簡単デザイン <span class="glyphicon glyphicon-arrow-right"></span></button>
@@ -97,11 +100,23 @@ require_once('header.php');
 
 			    	?></td>
 			    </tr>
+			    <?php
+			    if($_SESSION["k-order-cdata"]['sendplace']!=''){
+			    	echo "<tr>
+			    	<th class='text-center'>お届け先名指定</th>
+			    	<td class='text-center'>{$_SESSION["k-order-cdata"]['sendplace']}</td>
+
+			    			</tr>";
+
+			    }
+
+			    ?>
 			    <tr>
 			    	<th class="text-center">お届け先住所</th>
 			    	<td class="text-center"><?php
 			    	if($_SESSION["k-order-cdata"]['postcode']!=''||$_SESSION["k-order-cdata"]['postcode2']!=''||$_SESSION["k-order-cdata"]['pref']!=''||$_SESSION["k-order-cdata"]['address2']!=''||$_SESSION["k-order-cdata"]['address3']!=''||$_SESSION["k-order-cdata"]['address4']!=''){ 
-			    	echo "&#12320;{$_SESSION["k-order-cdata"]['postcode']}-{$_SESSION["k-order-cdata"]['postcode2']}"; 
+			    	echo "&#12320;{$_SESSION["k-order-cdata"]['postcode']}-{$_SESSION["k-order-cdata"]['postcode2']}<br>"; 
+			    	echo $_SESSION["k-order-cdata"]['pref'].$_SESSION["k-order-cdata"]['address2'].$_SESSION["k-order-cdata"]['address3'].$_SESSION["k-order-cdata"]['address4'];
 			    	}else{
 			    		echo "未記入";
 			    	}
@@ -111,9 +126,14 @@ require_once('header.php');
 		 
 
 		</div>
+		<div class="controls text-center margin-bottom-20">
+			<input type="checkbox" name="k_checkread" id="k_checkread">
+			<a href="./page-privacy.php" target="blank">個人情報の取り扱い</a>について同意して送信する
+		</div>
+
 		<div class="text-center margin-bottom-40 clear">
-			<button type="button" id="k-order-back4btn" class="btn btn-default btn-lg margin-bottom-20 back">戻る</button>
-			<button type="button" id="k-order-next4btn" class="btn btn-primary btn-lg margin-bottom-20">注文内容確定</button>
+				<button type="button" id="k-order-back4btn" class="btn btn-default btn-lg margin-bottom-20 back">戻る</button>
+				<button type="button" id="k-order-next4btn" class="btn btn-primary btn-lg margin-bottom-20" disabled>注文内容確定</button>
 		</div>
 	</div>
 
