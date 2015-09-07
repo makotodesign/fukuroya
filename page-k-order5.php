@@ -21,7 +21,7 @@ require_once('header.php');
 					?>
 				</h3>
 				<p class="text-center">ご登録いただきましたメールアドレスに、ご注文詳細を送信させていただきました。<br>商品到着まで大切に保管して下さいませ。</p>
-				<p class="text-center rem2"><span id="to_top_cont"></span>秒後にトップページに戻ります</p>
+				<p class="text-center rem2"><span id="to_top_count"></span>秒後にトップページに戻ります</p>
 				
 
 			</div>	

@@ -138,16 +138,18 @@ $('#k_checkread').on('change',function(){
 		}
 });
 
-// ローディングストップ
+// ローディングストップs
 $('#load').hide();
 
-// 〜秒後にページチェンジカウントダウン。特定の要素がある時
-if($('main#k-compleate').find('#to_top_cont')){
+// 現在のURLを返す
+var location= document.location;
+//k-order5の時〜秒後にページチェンジカウントダウン。
+if(location=='http://fukuroya.jp/page-k-order5.php'){
 	var count=21;
 	(function countdown(){
 		count=count-1;
-		$('#to_top_cont').text(count);
-		var stop=setTimeout(countdown,1000);
+		$('#to_top_count').text(count);
+		stop=setTimeout(countdown,1000);
 		if(count==0){
 			clearTimeout(stop);
 			location.href="http://fukuroya.jp";

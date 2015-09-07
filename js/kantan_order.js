@@ -145,8 +145,8 @@ $(obj1).on('click blur keydown keyup keypress change',function(){
 //戻る時の処理
 if($('#input-title1').val()!=''){
 	var text =$('#input-title1').val();
-	text = text.replace(/(\n|\r)/g, "<br>");
-	$('#k-title1').html(text);
+	var textmod = text.replace(/(\n|\r)/g, "<br>");
+	$('#k-title1').html(textmod);
 }else if($('#input-title1').val()==''){
 	$('#k-title1').html('文字スペース1');
 }
