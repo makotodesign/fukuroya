@@ -29,9 +29,8 @@ a:focus, *:focus { outline:none; }
 .padding10{padding:10px;}
 .big-padding-top{padding-top:12%;}
 .mid-padding-top{padding-top:8%;}
-.f-right {
-	float: right;
-}
+.f-right {float: right;}
+.pointer{cursor: pointer;};
 .row_margin_clear{
 margin-left:0px;
 margin-right:0px;

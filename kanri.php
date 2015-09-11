@@ -6,7 +6,7 @@ define('PDO_DSN','mysql:host=mysql507.heteml.jp;dbname='.DB_DATABASE.';charset=u
 try {
   // connect
  $db = new PDO(PDO_DSN,DB_USERNAME,DB_PASSWORD);
-	$stmt = $db->query('SELECT * FROM orders ORDER BY modification_time DESC');
+	$stmt = $db->query('SELECT * FROM orders WHERE flag=1 ORDER BY modification_time DESC');
  	$results=$stmt->fetchAll(PDO::FETCH_ASSOC);
  	$stmt =$db->query('SELECT * FROM contact');
  	$contact=$stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -30,6 +30,7 @@ try {
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/animate.min.css">
     <link rel="stylesheet" href="css/orig.css">
+    <link rel="stylesheet" href="css/kanri.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -47,10 +48,12 @@ try {
 	  <button class="btn btn-default" onClick="location.href='#contact'">問い合わせ一覧</button>
 	</div>
 	<div id="order" class="panel panel-primary">
-	  <div class="panel-heading">
-	    <h3 class="panel-title">注文一覧</h3>
+	  <div class="panel-heading clearfix">
+	    <h3 class="panel-title inline-block left">通常（原稿ファイル受け取り）注文一覧</h3>
+	    <span id="orderbacge" class="badge inline-block left"></span>
+	    <i id="compress1" class="fa fa-expand f-right pointer inline-block"></i>
 	  </div>
-	  <div class="panel-body">
+	  <div id="orderbody" class="panel-body">
 	    <table class="table table-bordered table-striped" style="font-size:0.9rem;">
 			<thead>
 			<tr>
@@ -77,7 +80,7 @@ try {
 				
 			</tr>
 			</thead>
-			<tbody>
+			<tbody id="ordertable">
 			<?php foreach($results AS $result):?>
 				<tr>
 					<td><?php echo $result["creation_time"]; ?></td>
@@ -109,11 +112,22 @@ try {
 	    </table>
 	  </div>
 	</div>
+	<div id="order" class="panel panel-primary">
+	  <div class="panel-heading clearfix">
+	    <h3 class="panel-title inline-block left">簡単デザイン注文一覧</h3>
+	    <span id="orderbacge" class="badge inline-block left"></span>
+	    <i id="compress2" class="fa fa-expand f-right pointer inline-block"></i>
+	  </div>
+	  <div id="k-orderbody" class="panel-body">
+	  </div>
+	</div>
 	<div id="contact" class="panel panel-primary">
 	  <div class="panel-heading">
-	    <h3 class="panel-title">問い合わせ一覧</h3>
+	    <h3 class="panel-title inline-block left">問い合わせ一覧</h3>
+	    <span id="inquerybacge" class="badge inline-block left"></span>
+	    <i id="compress3" class="fa fa-expand f-right pointer inline-block"></i>
 	  </div>
-	  <div class="panel-body">
+	  <div id="inquerybody" class="panel-body">
 	  	<table class="table table-bordered table-striped" style="font-size:0.9rem;">
 			<thead>
 				<tr>
@@ -124,7 +138,7 @@ try {
 					<th width="300">問い合わせ内容</th>	
 				</tr>
 			</thead>
-			<tbody>
+			<tbody id="inquerytable">
 				<?php foreach($contact AS $msg):?>
 				<tr>
 					<td><?php echo $msg['creation_time']; ?></td>
@@ -145,4 +159,4 @@ try {
 
 
 
-<?php require_once('footer.php');?>
+<?php require_once('footer-kanri.php');?>

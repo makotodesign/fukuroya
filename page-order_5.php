@@ -34,7 +34,7 @@ require_once('header.php');
 		<div class="formbox col-sm-7">
 			<?php
 			if(is_uploaded_file($_FILES["upfile"]["tmp_name"])){
-				if($_FILES["upfile"]["tmp_name"]>$max_size){
+				if($_FILES["upfile"]["size"]>$max_size){
 					echo "ファイルの上限は50Mです";
 					echo "&nbsp;<button class='btn btn-primary' id='filesend_back'>戻る</button>";
 					exit;
