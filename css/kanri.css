@@ -1,3 +1,13 @@
 #orderbody,#inquerybody{
 	display: none;
 }
+
+#k-orderbody dt,#k-orderbody dd{
+	float: left;
+	font-size: 0.98em;
+	margin-bottom: 10px;
+}
+
+#k-orderbody dd{
+	margin-right:5px;
+}
