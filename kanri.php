@@ -16,7 +16,7 @@ try {
   echo $e->getMessage();
   exit;
 }
-var_dump($k_results);
+// var_dump($k_results);
 ?>
 <!DOCTYPE html>
 <html>
@@ -120,24 +120,28 @@ var_dump($k_results);
 	  <div id="k-orderbody" class="panel-body">
 	  	<?php foreach($k_results AS $k_result):?>
 	  		<div class="panel panel-default k-order-detail">
-	  			<div class="panel-heading">
-	  				<dl>
-	  					<dt>【ID】</dt>
-	  					<dd><?php echo $k_result['orderid'];?></dd>
-	  					<dt>【注文日時】</dt>
-	  					<dd><?php echo $k_result['time'];?></dd>
-	  					<dt>【注文者】</dt>
-	  					<dd><?php echo $k_result['company'].$k_result['name']."(".$k_result['kana'].")" ;?></dd>
-	  					<dt>【Email】</dt>
-	  					<dd><?php echo $k_result['email'];?></dd>
-	  					<dt>【tel/fax】</dt>
-	  					<dd><?php echo $k_result['tel'].'/'.$k_result['fax'];?></dd>
-	  					<dt class="clear">【住所】</dt>
-	  					<dd>〒<?php echo $k_result['postcode'].$k_result['pref'].$k_result['address2'].$k_result['address3'].$k_result['address4'];?></dd>
-						<dt>【届け先宛名】</dt>
-	  					<dd><?php echo $k_result['sendplace'];?></dd>	  	
-	  				</dl>
-	  				<p class="clear text-right"><button type="button" class="btn btn-primary k-order-detailbtn">注文原稿表示</button></p>	 
+	  			<div class="panel-heading clearfix">
+					<div class="col-md-10">	  			
+		  				<dl>
+		  					<dt>【ID】</dt>
+		  					<dd><?php echo $k_result['orderid'];?></dd>
+		  					<dt>【注文日時】</dt>
+		  					<dd><?php echo $k_result['time'];?></dd>
+		  					<dt class="clear">【注文者】</dt>
+		  					<dd><?php echo $k_result['company'].$k_result['name']."(".$k_result['kana'].")" ;?></dd>
+		  					<dt>【Email】</dt>
+		  					<dd><?php echo $k_result['email'];?></dd>
+		  					<dt>【tel/fax】</dt>
+		  					<dd><?php echo $k_result['tel'].'/'.$k_result['fax'];?></dd>
+		  					<dt class="clear">【住所】</dt>
+		  					<dd>〒<?php echo $k_result['postcode'].$k_result['pref'].$k_result['address2'].$k_result['address3'].$k_result['address4'];?></dd>
+							<dt>【届け先宛名】</dt>
+		  					<dd><?php echo $k_result['sendplace'];?></dd>	  	
+		  				</dl>
+	  				</div>
+	  				<div class="col-md-2 text-center">
+	  					<p class="clear text-right"><button type="button" class="btn btn-primary k-order-detailbtn">注文原稿表示</button></p>	 
+					</div>
 	  			</div>
 	  			<div class="panel-body k-order-detail-body">
 
